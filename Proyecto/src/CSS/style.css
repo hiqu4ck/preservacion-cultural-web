@@ -1,0 +1,35 @@
+*, 
+*::after,
+*::before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Nunito Sans", sans-serif;
+    background: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: var(--naranja);
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 1450px;
+    margin: auto;
+}
+
+.titulo {
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--naranja);
+    text-align: center;
+    margin-bottom: 40px;
+}
