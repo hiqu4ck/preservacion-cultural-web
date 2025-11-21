@@ -7,6 +7,36 @@
     <title>proyecto</title>
   </head>
   <body>
+
+    <!-- SECCIÓN DE COMENTARIOS -->
+<section id="comentarios-section">
+  <h2>Comentarios</h2>
+
+  <form id="formComentario">
+    <label for="nombre">Nombre</label>
+    <input
+      type="text"
+      id="nombre"
+      placeholder="Tu nombre"
+      required
+    />
+
+    <label for="mensaje">Comentario</label>
+    <textarea
+      id="mensaje"
+      placeholder="Escribe tu comentario..."
+      required
+    ></textarea>
+
+    <button type="submit">Enviar comentario</button>
+  </form>
+
+  <h3>Comentarios recientes</h3>
+  <div id="listaComentarios">
+    <!-- Aquí se van a pintar los comentarios -->
+  </div>
+</section>
+
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
