@@ -1,2 +1,8 @@
-import '../src/CSS/comentarios.css';
-import '../src/JS/comentarios.js';
+
+import './CSS/alexsection.css';
+import './CSS/comentarios.css';
+import './JS/comentarios.js';
+
+
+
+

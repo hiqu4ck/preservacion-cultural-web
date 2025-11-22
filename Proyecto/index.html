@@ -1,85 +1,134 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto</title>
 
-    <!-- Aquí luego enlazan TODOS los CSS -->
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto</title>
 
-  <body>
+  <!-- Aquí luego enlazan TODOS los CSS -->
+</head>
 
-    <header>
-      <!-- Header de quien le toque -->
-    </header>
+<body>
 
-    <main>
-      <section id="sec-hannia">
+  <header>
+    <!-- Header de quien le toque -->
+  </header>
+
+  <main>
+    <section id="sec-hannia">
+
+    </section>
+
+    <section id="sec-josue">
+
+    </section>
+
+    <section id="sec-alexandra">
+      <div class="overlay-video">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/B4LvDiIi128?si=axPYKNxZ-B4adnw8" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="comidas">
+        <h3>Comidas tipicas de la región</h3>
+        <p>Labore cupidatat cupidatat cupidatat aliquip do eu proident cillum fugiat incididunt eu ad nostrud. Aute
+          commodo duis incididunt ad mollit cupidatat et in. Mollit ipsum ut cupidatat deserunt amet officia do duis id
+          do anim. Excepteur id duis dolor cupidatat ad ullamco est.</p>
+      </div>
+
+      <section class="seccion-comidas">
+
+        <h2 class="titulo-comidas">Comidas típicas</h2>
+        <p class="descripcion-comidas">
+          Agregar información sobre las comidas de la región, en la parte de abajo se hará un apartado
+          para poner por aparte los tipos de dulces, comidas y bebidas
+        </p>
+
+        <div class="tarjetas-comida">
+
+          <!-- Tarjeta 1 -->
+          <div class="tarjeta">
+            <div class="tarjeta-imagen">imagen</div>
+            <div class="tarjeta-texto">Dulces</div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="tarjeta">
+            <div class="tarjeta-imagen">imagen</div>
+            <div class="tarjeta-texto">Comidas</div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="tarjeta">
+            <div class="tarjeta-imagen">imagen</div>
+            <div class="tarjeta-texto">Bebidas</div>
+          </div>
+
+        </div>
 
       </section>
+    </section>
 
-      <section id="sec-josue">
+    <section id="sec-logan">
 
+    </section>
+
+    <section id="sec-angel">
+      <section id="comentarios-section" class="comentarios">
+        <h2 class="comentarios__titulo">COMENTARIOS</h2>
+
+        <form id="formComentario" class="comentarios__form">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Tu nombre" required />
+
+          <label for="mensaje">Comentario</label>
+          <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
+
+          <button type="submit" class="btn-enviar">Enviar comentario</button>
+        </form>
+
+        <div id="listaComentarios" class="comentarios__lista">
+          <!-- Aquí pinta comentario.js -->
+        </div>
+
+        <div class="comentarios__more">
+          <button id="btnMas" class="btn-mas">
+            <span class="flecha">➜</span>
+            Leer más comentarios
+          </button>
+        </div>
       </section>
 
-      <section id="sec-alexandra">
+      <!-- MODAL DE COMENTARIOS -->
+      <div id="modalComentarios" class="comentarios-modal">
+        <div class="comentarios-modal__overlay"></div>
 
-      </section>
+        <div class="comentarios-modal__content">
+          <button id="cerrarModalComentarios" class="comentarios-modal__close">&times;</button>
+          <h3 class="comentarios-modal__title">Todos los comentarios</h3>
 
-      <section id="sec-logan">
-        
-      </section>
-
-      <section id="sec-angel">
-   <section id="comentarios-section" class="comentarios">
-  <h2 class="comentarios__titulo">COMENTARIOS</h2>
-
-  <form id="formComentario" class="comentarios__form">
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" placeholder="Tu nombre" required />
-
-    <label for="mensaje">Comentario</label>
-    <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
-
-    <button type="submit" class="btn-enviar">Enviar comentario</button>
-  </form>
-
-  <div id="listaComentarios" class="comentarios__lista">
-    <!-- Aquí pinta comentario.js -->
-  </div>
-
-  <div class="comentarios__more">
-    <button id="btnMas" class="btn-mas">
-      <span class="flecha">➜</span>
-      Leer más comentarios
-    </button>
-  </div>
-</section>
-
-<!-- MODAL DE COMENTARIOS -->
-<div id="modalComentarios" class="comentarios-modal">
-  <div class="comentarios-modal__overlay"></div>
-
-  <div class="comentarios-modal__content">
-    <button id="cerrarModalComentarios" class="comentarios-modal__close">&times;</button>
-    <h3 class="comentarios-modal__title">Todos los comentarios</h3>
-
-    <div id="listaComentariosModal" class="comentarios__lista">
-      <!-- Aquí se pintan TODOS los comentarios -->
-    </div>
-  </div>
-</div>
+          <div id="listaComentariosModal" class="comentarios__lista">
+            <!-- Aquí se pintan TODOS los comentarios -->
+          </div>
+        </div>
+      </div>
 
 
 
-        
-      </section>
-    </main>
 
-  
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    </section>
+  </main>
+
+
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
