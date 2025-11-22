@@ -33,7 +33,7 @@
       </section>
 
       <section id="sec-angel">
- <section id="comentarios-section" class="comentarios">
+   <section id="comentarios-section" class="comentarios">
   <h2 class="comentarios__titulo">COMENTARIOS</h2>
 
   <form id="formComentario" class="comentarios__form">
@@ -58,11 +58,27 @@
   </div>
 </section>
 
+<!-- MODAL DE COMENTARIOS -->
+<div id="modalComentarios" class="comentarios-modal">
+  <div class="comentarios-modal__overlay"></div>
+
+  <div class="comentarios-modal__content">
+    <button id="cerrarModalComentarios" class="comentarios-modal__close">&times;</button>
+    <h3 class="comentarios-modal__title">Todos los comentarios</h3>
+
+    <div id="listaComentariosModal" class="comentarios__lista">
+      <!-- Aquí se pintan TODOS los comentarios -->
+    </div>
+  </div>
+</div>
+
+
+
+        
       </section>
     </main>
 
   
-
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
