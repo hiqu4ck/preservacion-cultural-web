@@ -9,6 +9,6 @@ import './CSS/alexsection.css';
 import './CSS/comentarios.css';
 import './JS/comentarios.js';
 import './JS/loganSlider.js'
-
+import './CSS/leyendas.css'
 
 

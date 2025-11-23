@@ -20,6 +20,10 @@
             margin: 0;
             text-align: left;
             color: var(--naranja);
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 40px;
+
         }
 
         .descripcion {
