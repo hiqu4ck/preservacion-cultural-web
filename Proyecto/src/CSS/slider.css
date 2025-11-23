@@ -1,0 +1,142 @@
+/* === SLIDER MAYA === */
+
+.slider-maya {
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;  /* Oculta la barra de scroll */
+}
+
+.slide {
+  min-width: 48%;
+  background: #fdfbf6;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+}
+
+.slide img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.slide p {
+  color: #333;
+  font-size: .9rem;
+}
+
+.slide-link {
+  margin-top: .4rem;
+  font-weight: bold;
+  color: #4d5328;
+  cursor: pointer;
+  font-size: .9rem;
+}
+
+/* FLECHAS DEL SLIDER */
+.slider-btn {
+  border: none;
+  background: #fdfbf6;
+  color: #4d5328;
+  font-size: 1.8rem;
+  padding: .5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+.slider-btn:hover {
+  background: #eae6dc;
+}
+
+/* Responsive: en pantallas pequeñas solo 1 tarjeta */
+@media (max-width: 768px) {
+  .slide {
+    min-width: 90%;
+  }
+}
+
+/* ===== MODAL VER MÁS ===== */
+
+.modal-vermas {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+
+.modal-vermas.is-open {
+  display: flex;
+}
+
+.modal-vermas__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.modal-vermas__content {
+  position: relative;
+  background: #fdfbf6;
+  max-width: 800px;
+  width: 90%;
+  max-height: 85vh;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.25);
+  overflow-y: auto;
+}
+
+.modal-vermas__close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.modal-vermas__title {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.modal-vermas__text {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.modal-vermas__img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+}

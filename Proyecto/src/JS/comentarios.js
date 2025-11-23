@@ -104,7 +104,6 @@ function iniciarComentarios() {
       }
     } catch (error) {
       console.error(error);
-      listaComentarios.innerHTML = "<p>Error al cargar los comentarios.</p>";
       if (listaComentariosModal) {
         listaComentariosModal.innerHTML =
           "<p>Error al cargar los comentarios.</p>";
