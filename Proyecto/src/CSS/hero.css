@@ -1,48 +1,79 @@
-.hero {
+.hero-juegos,
+.hero-fiestas {
+    background: transparent;
+    border-radius: 26px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
     display: grid;
-    grid-template-columns: 55% 45%;
-    gap: 20px;
-    border-radius: 20px;
-    color: white;
-    position: relative;
-    z-index: 1;
-    padding: 50px;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 40px;
+    padding: 40px 40px;
+    align-items: center;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 
     .col-1 {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 34px;
 
         .titulo {
-            text-align: left;
             margin: 0;
+            text-align: left;
+            color: var(--naranja);
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 0;
+
         }
 
         .descripcion {
             font-size: 22px;
             color: #000;
             text-align: justify;
-            line-height: 140%;
-
+            line-height: 1.6;
         }
+
+    }
+
+    .ver-mas {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 22px;
+        margin-top: 6px;
+        border-radius: 999px;
+        background: var(--naranja);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .ver-mas:hover {
+        background: #d37212;
+        /* un naranja un poquito más oscuro */
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+        transform: translateY(-1px);
     }
 
     .col-2 {
         position: relative;
 
         .slideshow {
-
-            width: 85%;
-            margin-left: auto;
+            position: relative;
+            width: 100%;
+            margin-left: 0;
             margin-right: 0;
             border-radius: 10px;
             overflow: hidden;
+            background: transparent;
 
         }
 
         .slides {
             display: flex;
             flex-wrap: nowrap;
+            transition: transform 0.6s ease;
 
             .slide {
                 min-width: 100%;
@@ -51,10 +82,69 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    vertical-align: top;
+                    display: block;
                 }
             }
         }
     }
 
+}
+
+.hero-fiestas {
+    background: #727348;
+
+    .dobles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        justify-items: center;
+        background: transparent;
+
+    }
+
+    .text-box {
+        .slideshow {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            border-radius: 24px 24px 0 0;
+            overflow: hidden;
+            background: transparent;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            height: 100%;
+            transition: transform 0.6s ease;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .info-box {
+        width: 100%;
+        padding: 10px 16px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+        background: #727348;
+        color: var(--naranja);
+        border-radius: 0 0 12px 12px;
+    }
+
+}
+
+.hero-juegos:hover,
+.hero-fiestas:hover {
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }
