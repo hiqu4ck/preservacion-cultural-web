@@ -5,6 +5,9 @@
   padding: 2rem 1rem;
   background: #fdfbf6;   /* mismo tono del frame */
   border-radius: 16px;
+  width: 100%;
+  max-width: 1600px;
+
 
 }
 
