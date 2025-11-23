@@ -203,20 +203,24 @@
             <div class="leyendas-img">
 
               <div class="slides-L">
-                <div class="slide-L">
-                  <img src="./public/assets/img/La-leyenda-de-balam.jpg" alt="imagen">
+                <div class="slide-L" data-subtitulo="Leyenda1"
+                  data-description="Aquí va una introducción corta a la leyenda1.">>
+                  <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen">
                 </div>
 
-                <div class="slide-L">
-                  <img src="./public/assets/img/La-leyenda-de-balam.jpg" alt="imagen">
+                <div class="slide-L" data-subtitulo="Leyenda2"
+                  data-description="Aquí va una introducción corta a la leyenda2.">>
+                  <img src="./public/assets/img/leyenda-balam2.jpg" alt="imagen">
                 </div>
 
-                <div class="slide-L">
-                  <img src="./public/assets/img/La-leyenda-de-balam.jpg" alt="imagen">
+                <div class="slide-L" data-subtitulo="Leyenda3"
+                  data-description="Aquí va una introducción corta a la leyenda3.">>
+                  <img src="./public/assets/img/leyenda-balam3.png" alt="imagen">
                 </div>
 
-                <div class="slide-L">
-                  <img src="./public/assets/img/La-leyenda-de-balam.jpg" alt="imagen">
+                <div class="slide-L" data-subtitulo="Leyenda4"
+                  data-description="Aquí va una introducción corta a la leyenda4.">>
+                  <img src="./public/assets/img/leyenda-balam4.jpg" alt="imagen">
                 </div>
               </div>
 
@@ -225,16 +229,16 @@
           </div>
 
           <div class="boton-slide">
-              <button class="btn">
-                <span class="icono-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
-                  </svg>
-                </span>
-              </button>
-            </div>
+            <button class="btn">
+              <span class="icono-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                </svg>
+              </span>
+            </button>
+          </div>
 
           <div class="col-L2">
 
@@ -259,9 +263,21 @@
 
           </div>
 
+          <div class="modal-leyenda" id="modal-leyenda">
+            <div class="modal-leyenda__overlay"></div>
+
+            <div class="modal-leyenda__content">
+              <button class="modal-leyenda__close" aria-label="Cerrar">
+                &times;
+              </button>
+
+              <h2 class="modal-leyenda__title"></h2>
+              <p class="modal-leyenda__text"></p>
+            </div>
+          </div>
+
         </div>
       </div>
-
 
     </section>
 

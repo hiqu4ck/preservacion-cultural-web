@@ -89,6 +89,7 @@
         }
     }
 
+
     /*ABAJO ES EL BOTON PARA CAMBIAR SLIDE*/
 
     .boton-slide {
@@ -124,10 +125,6 @@
 
             }
         }
-    }
-
-    .btn-centro:hover {
-        background: #5c6035;
     }
 
     /*COL-L*/
