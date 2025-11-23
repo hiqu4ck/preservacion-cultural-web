@@ -80,15 +80,15 @@ function iniciarComentarios() {
       const comentarios = await res.json();
 
       if (!Array.isArray(comentarios) || comentarios.length === 0) {
-        // Debajo del formulario mostramos solo este mensaje
-        listaComentarios.innerHTML =
-          '<p style="font-size:.9rem;color:#666;">No hay comentarios aún.</p>';
+  // Debajo del formulario no mostramos nada
+  listaComentarios.innerHTML = "";
 
-        if (listaComentariosModal) {
-          listaComentariosModal.innerHTML = "<p>No hay comentarios aún.</p>";
-        }
-        return;
-      }
+  if (listaComentariosModal) {
+    listaComentariosModal.innerHTML = "<p>No hay comentarios aún.</p>";
+  }
+  return;
+}
+
 
       const ordenados = comentarios.slice().reverse();
 

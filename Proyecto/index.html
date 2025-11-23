@@ -509,30 +509,33 @@
 
 
 
-      <section id="comentarios-section" class="comentarios">
-        <h2 class="comentarios__titulo">COMENTARIOS</h2>
+    <div class="comentarios-bg">
+  <section id="comentarios-section" class="comentarios">
+    <h2 class="comentarios__titulo">COMENTARIOS</h2>
 
-        <form id="formComentario" class="comentarios__form">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" placeholder="Tu nombre" required />
+    <form id="formComentario" class="comentarios__form">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Tu nombre" required />
 
-          <label for="mensaje">Comentario</label>
-          <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
+      <label for="mensaje">Comentario</label>
+      <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
 
-          <button type="submit" class="btn-enviar">Enviar comentario</button>
-        </form>
+      <button type="submit" class="btn-enviar">Enviar comentario</button>
+    </form>
 
-        <div id="listaComentarios" class="comentarios__lista">
-          <!-- Aquí pinta comentario.js -->
-        </div>
+    <div id="listaComentarios" class="comentarios__lista">
+      <!-- Aquí pinta comentario.js -->
+    </div>
 
-        <div class="comentarios__more">
-          <button id="btnMas" class="btn-mas">
-            <span class="flecha">➜</span>
-            Leer más comentarios
-          </button>
-        </div>
-      </section>
+    <div class="comentarios__more">
+      <button id="btnMas" class="btn-mas">
+        <span class="flecha">➜</span>
+        Leer más comentarios
+      </button>
+    </div>
+  </section>
+</div>
+
 
       <!-- MODAL DE COMENTARIOS -->
       <div id="modalComentarios" class="comentarios-modal">
