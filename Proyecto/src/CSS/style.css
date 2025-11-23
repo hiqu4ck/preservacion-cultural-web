@@ -32,4 +32,5 @@ a{
     color: var(--naranja);
     text-align: center;
     margin-bottom: 40px;
+    margin: 0;
 }

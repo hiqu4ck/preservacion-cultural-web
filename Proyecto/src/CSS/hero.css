@@ -1,17 +1,19 @@
-.hero {
+.hero-juegos,
+.hero-fiestas {
+    background: #ffffff;
+    border-radius: 26px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
     display: grid;
-    grid-template-columns: 55% 45%;
-    gap: 20px;
-    border-radius: 20px;
-    color: white;
-    position: relative;
-    z-index: 1;
-    padding: 50px;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 40px;
+    padding: 40px 40px;
+    align-items: center;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 
     .col-1 {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 34px;
 
         .titulo {
             text-align: left;
@@ -20,10 +22,75 @@
 
         .descripcion {
             font-size: 22px;
-            color: #000;
+            color: #222;
             text-align: justify;
-            line-height: 140%;
+            line-height: 1.6;
+            max-width: 95%;
 
+        }
+    }
+
+    .ver-mas {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: var(--naranja);
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        margin-top: 6px;
+        transition: background 0.15s ease, transform 0.15s ease,
+            box-shadow 0.15s ease;
+    }
+
+    .ver-mas:hover {
+        background: #d37212;
+        /* un naranja un poquito más oscuro */
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+        transform: translateY(-1px);
+    }
+
+    .text-box {
+        background: #000;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .info-box {
+        background: white;
+        padding: 10px 18px;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--naranja);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        width: 70%;
+    }
+
+    .dobles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* dos columnas */
+        gap: 20px;
+
+        .slideshow {
+            width: 100%;
+            /* ocupar toda su columna */
+            height: 260px;
+            /* AUMENTA EL ALTO del carrusel */
+            border-radius: 14px;
+            overflow: hidden;
+            background: #fff;
+            /* evita bordes raros */
         }
     }
 
@@ -31,30 +98,40 @@
         position: relative;
 
         .slideshow {
-
+            position: relative;
             width: 85%;
-            margin-left: auto;
+            margin-left: 40px;
             margin-right: 0;
             border-radius: 10px;
             overflow: hidden;
 
         }
+    }
 
-        .slides {
-            display: flex;
-            flex-wrap: nowrap;
+    .slides {
+        display: flex;
+        flex-wrap: nowrap;
+        transition: transform 0.6s ease;
 
-            .slide {
-                min-width: 100%;
+        .slide {
+            min-width: 100%;
 
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    vertical-align: top;
-                }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
             }
         }
     }
+}
 
+.hero-fiestas {
+    background: #727348;
+}
+
+.hero-juegos:hover,
+.hero-fiestas:hover {
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }

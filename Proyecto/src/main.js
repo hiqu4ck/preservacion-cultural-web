@@ -8,7 +8,7 @@ import './JS/galeria.js';
 import './CSS/alexsection.css';
 import './CSS/comentarios.css';
 import './JS/comentarios.js';
-
+import './JS/loganSlider.js'
 
 
 
