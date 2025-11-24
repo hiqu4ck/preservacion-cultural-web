@@ -1,0 +1,25 @@
+:root{
+
+    /* === COLORES PRINCIPALES === */
+    --color-primario-naranja: #D2821C;
+    --color-primario-verde-oscuro: #727348;
+    --color-primario-verde-bosque: #3E3F21;
+
+    /* === COLORES SECUNDARIOS === */
+    --color-secundario-verde-marino: #5C918E;
+    --color-secundario-oliva-claro: #949746;
+
+    /* === TONOS NEUTROS === */
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --color-gris: #9AA09A;
+
+    /* === TONOS TIERRA / ARENA === */
+    --color-beige: #FFF5E9;
+    --color-beige-anaranjado: #EAC392;
+    --color-crema-amarillento: #E4DE9E;
+    --color-amarillo-suave: #FFF9B8;
+
+    /* === TONOS PIEL / SUAVES === */
+    --color-piel: #FFF5E8;
+}

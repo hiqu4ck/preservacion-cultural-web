@@ -1,0 +1,175 @@
+/* === SLIDER MAYA === */
+
+.slider-maya {
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1600px;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;  /* Oculta la barra de scroll */
+}
+
+.slide {
+  min-width: 48%;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;   /* puedes cambiar a 4/3 si quieres */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.slide p {
+  color: #333;
+  font-size: .9rem;
+}
+
+.slide-link {
+  margin-top: .4rem;
+  font-weight: bold;
+  color: #4d5328;
+  cursor: pointer;
+  font-size: .9rem;
+}
+
+/* FLECHAS DEL SLIDER */
+.slider-btn {
+  border: none;
+  background: #ffffff;
+  color: #4d5328;
+  font-size: 1.8rem;
+  padding: .5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+.slider-btn:hover {
+  background: #eae6dc;
+}
+
+/* Responsive: en pantallas pequeñas solo 1 tarjeta */
+@media (max-width: 768px) {
+  .slide {
+    min-width: 90%;
+  }
+}
+
+/* ===== MODAL VER MÁS ===== */
+
+/* Contenedor general del modal */
+.modal-vermas {
+  position: fixed;
+  inset: 0;
+  display: flex;                 /* siempre flex */
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+
+  opacity: 0;                    /* oculto por defecto */
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.modal-vermas.is-open {
+  opacity: 1;                    /* aparece suave */
+  pointer-events: auto;
+}
+
+.modal-vermas__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Contenedor blanco */
+.modal-vermas__content {
+  position: relative;
+  background: #ffffff;
+  max-width: 720px;
+  width: 90%;
+  max-height: 85vh;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.25);
+  padding: 20px;
+  overflow-y: auto;
+
+  /* animación de entrada */
+  transform: translateY(10px) scale(0.97);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* cuando el modal está abierto, aplicamos la animación */
+.modal-vermas.is-open .modal-vermas__content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Imagen arriba, sin recorte */
+.modal-vermas__img {
+  width: 100%;
+  height: auto;          /* respetamos proporción */
+  max-height: 230px;     /* controla qué tan alta puede ser */
+  object-fit: contain;   /* NO recorta la imagen */
+  display: block;
+  border-radius: 15px;
+  margin-bottom: 1.4rem;
+}
+
+/* Texto abajo */
+.modal-vermas__body {
+  padding: 0 0.6rem 0.8rem;
+}
+
+.modal-vermas__title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.modal-vermas__text {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Botón cerrar */
+.modal-vermas__close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
