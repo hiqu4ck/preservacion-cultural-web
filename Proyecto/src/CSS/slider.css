@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  max-width: 1600px;
+  width: 100%;
 }
 
 .slider-track {
@@ -22,7 +24,7 @@
 
 .slide {
   min-width: 48%;
-  background: #fdfbf6;
+  background: #ffffff;
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,.1);
@@ -33,7 +35,8 @@
 
 .slide img {
   width: 100%;
-  height: 160px;
+  height: auto;
+  aspect-ratio: 16 / 9;   /* puedes cambiar a 4/3 si quieres */
   object-fit: cover;
   border-radius: 10px;
 }
@@ -59,7 +62,7 @@
 /* FLECHAS DEL SLIDER */
 .slider-btn {
   border: none;
-  background: #fdfbf6;
+  background: #ffffff;
   color: #4d5328;
   font-size: 1.8rem;
   padding: .5rem 1rem;
@@ -81,17 +84,23 @@
 
 /* ===== MODAL VER MÁS ===== */
 
+/* Contenedor general del modal */
 .modal-vermas {
   position: fixed;
   inset: 0;
-  display: none;
+  display: flex;                 /* siempre flex */
   align-items: center;
   justify-content: center;
   z-index: 60;
+
+  opacity: 0;                    /* oculto por defecto */
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
 
 .modal-vermas.is-open {
-  display: flex;
+  opacity: 1;                    /* aparece suave */
+  pointer-events: auto;
 }
 
 .modal-vermas__overlay {
@@ -100,33 +109,51 @@
   background: rgba(0, 0, 0, 0.45);
 }
 
+/* Contenedor blanco */
 .modal-vermas__content {
   position: relative;
-  background: #fdfbf6;
-  max-width: 800px;
+  background: #ffffff;
+  max-width: 720px;
   width: 90%;
   max-height: 85vh;
-  padding: 2rem;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0,0,0,.25);
+  padding: 20px;
   overflow-y: auto;
+
+  /* animación de entrada */
+  transform: translateY(10px) scale(0.97);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-.modal-vermas__close {
-  position: absolute;
-  top: 0.8rem;
-  right: 1rem;
-  border: none;
-  background: transparent;
-  font-size: 1.8rem;
-  cursor: pointer;
+/* cuando el modal está abierto, aplicamos la animación */
+.modal-vermas.is-open .modal-vermas__content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Imagen arriba, sin recorte */
+.modal-vermas__img {
+  width: 100%;
+  height: auto;          /* respetamos proporción */
+  max-height: 230px;     /* controla qué tan alta puede ser */
+  object-fit: contain;   /* NO recorta la imagen */
+  display: block;
+  border-radius: 15px;
+  margin-bottom: 1.4rem;
+}
+
+/* Texto abajo */
+.modal-vermas__body {
+  padding: 0 0.6rem 0.8rem;
 }
 
 .modal-vermas__title {
   font-size: 1.6rem;
-  text-align: center;
-  margin-bottom: 1rem;
   font-weight: bold;
+  margin-bottom: 0.8rem;
+  text-align: left;
 }
 
 .modal-vermas__text {
@@ -135,8 +162,14 @@
   font-size: 1rem;
 }
 
-.modal-vermas__img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 1rem;
+/* Botón cerrar */
+.modal-vermas__close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
 }

@@ -308,36 +308,38 @@
 
           <!-- SLIDE 1 -->
           <div class="slide">
-            <img src="/assets/teologia-maya.jpg" alt="Teología Maya">
+            <img src="/assets/img/img.jpg" alt="Teología Maya">
             <h3>Teología maya</h3>
             <p>Poner una introducción teología.</p>
             <a href="#" class="slide-link" data-titulo="Teología maya"
-              data-texto="Aquí puedes escribir una explicación completa sobre la teología maya: dioses, cosmovisión, rituales y su importancia para las comunidades."
-              data-imagen="/assets/teologia-maya.jpg">
+             
+              data-imagen="/assets/img/img.jpg"
+              data-texto="Aquí puedes escribir una explicación completa sobre la teología maya: dioses, cosmovisión, rituales y su importancia para las comunidades.">
               Ver más
             </a>
           </div>
 
           <!-- SLIDE 2 -->
           <div class="slide">
-            <img src="/assets/ritual-maya.jpg" alt="Rituales y creencias">
+            <img src="/assets/img/img2.png" alt="Rituales y creencias">
             <h3>Rituales y creencias</h3>
             <p>Breve descripción de rituales mayas.</p>
             <a href="#" class="slide-link" data-titulo="Rituales y creencias"
-              data-texto="Información detallada sobre los rituales, ofrendas y ceremonias que forman parte de la espiritualidad maya."
-              data-imagen="/assets/ritual-maya.jpg">
+              data-imagen="/assets/img/img2.png"
+              data-texto="Información detallada sobre los rituales, ofrendas y ceremonias que forman parte de la espiritualidad maya.">
               Ver más
             </a>
           </div>
 
           <!-- SLIDE 3 -->
           <div class="slide">
-            <img src="/assets/piramide-social.jpg" alt="Organización social">
+            <img src="/assets/img/img3.jpg" alt="Organización social">
             <h3>Organización social</h3>
             <p>Poner una introducción a la pirámide social.</p>
             <a href="#" class="slide-link" data-titulo="Organización social"
-              data-texto="Describe los diferentes estratos de la sociedad maya, desde gobernantes hasta campesinos y artesanos."
-              data-imagen="/assets/piramide-social.jpg">
+              
+              data-imagen="/assets/img/img3.jpg"
+              data-texto="Describe los diferentes estratos de la sociedad maya, desde gobernantes hasta campesinos y artesanos.">
               Ver más
             </a>
           </div>
@@ -426,17 +428,24 @@
 
       </section>
 
-      <!-- MODAL GENERAL PARA "VER MÁS" -->
-      <div id="modalVerMas" class="modal-vermas">
-        <div class="modal-vermas__overlay"></div>
+   <!-- MODAL GENERAL PARA "VER MÁS" -->
+<div id="modalVerMas" class="modal-vermas">
+  <div class="modal-vermas__overlay"></div>
 
-        <div class="modal-vermas__content">
-          <button id="cerrarModalVerMas" class="modal-vermas__close">&times;</button>
+  <div class="modal-vermas__content">
+    <button id="cerrarModalVerMas" class="modal-vermas__close">&times;</button>
 
-          <!-- Aquí se carga el contenido dinámico -->
-          <div id="contenidoVerMas"></div>
-        </div>
-      </div>
+    <!-- Imagen arriba -->
+    <img id="modalVerMasImg" class="modal-vermas__img" src="" alt="Imagen del tema">
+
+    <!-- Texto abajo -->
+    <div class="modal-vermas__body">
+      <h3 id="modalVerMasTitulo" class="modal-vermas__title"></h3>
+      <p id="modalVerMasTexto" class="modal-vermas__text"></p>
+    </div>
+  </div>
+</div>
+
 
       <section id="galeria-fotos" class="galeria">
         <h2 class="galeria__titulo">GALERIA DE FOTOS</h2>
@@ -530,7 +539,7 @@
     <div class="comentarios__more">
       <button id="btnMas" class="btn-mas">
         <span class="flecha">➜</span>
-        Leer más comentarios
+        Leer comentarios
       </button>
     </div>
   </section>

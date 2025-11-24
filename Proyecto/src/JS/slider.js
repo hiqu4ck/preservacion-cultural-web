@@ -20,22 +20,27 @@ function iniciarSliderTemas() {
     ? modalVerMas.querySelector(".modal-vermas__overlay")
     : null;
   const cerrarModalVerMas = document.getElementById("cerrarModalVerMas");
-  const contenidoVerMas = document.getElementById("contenidoVerMas");
 
-  if (!modalVerMas || !contenidoVerMas) return;
+  // ELEMENTOS NUEVOS
+  const modalImg = document.getElementById("modalVerMasImg");
+  const modalTitulo = document.getElementById("modalVerMasTitulo");
+  const modalTexto = document.getElementById("modalVerMasTexto");
+
+  if (!modalVerMas || !modalImg || !modalTitulo || !modalTexto) return;
 
   // Función para abrir modal con contenido
   function abrirVerMas(titulo, texto, imagen) {
-    let html = `
-      <h2 class="modal-vermas__title">${titulo}</h2>
-      <p class="modal-vermas__text">${texto}</p>
-    `;
+
+    modalTitulo.textContent = titulo;
+    modalTexto.textContent = texto;
 
     if (imagen) {
-      html += `<img src="${imagen}" alt="${titulo}" class="modal-vermas__img">`;
+      modalImg.src = imagen;
+      modalImg.style.display = "block";
+    } else {
+      modalImg.style.display = "none";
     }
 
-    contenidoVerMas.innerHTML = html;
     modalVerMas.classList.add("is-open");
   }
 
