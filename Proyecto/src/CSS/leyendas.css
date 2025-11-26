@@ -3,6 +3,8 @@
     background: #fff;
     border-radius: 26px;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
 
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -55,28 +57,39 @@
         margin-top: 20px;
         box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
 
+        .icono-box,
+        .leer-mas {
+            display: flex;
+            align-items: center;
+            height: 48px;
+            /* MISMA ALTURA PARA AMBOS */
+        }
+
         .icono-box {
             background: #727348;
-            /* Fondo claro igual al ejemplo */
-            padding: 14px 22px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            /* Fondo oscuro */
+            border: none;
+            padding: 0 26px;
+            /* Solo padding horizontal */
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
 
             svg {
                 color: white;
-                width: 28px;
-                height: 30px;
-                transform: translateX(2px);
+                width: 26px;
+                height: 26px;
             }
 
         }
 
         .leer-mas {
             background: #424528;
-            /* Color oscuro de la imagen */
+            /* Fondo oscuro */
             border: none;
-            padding: 18px 38px;
+            padding: 0 26px;
+            /* Solo padding horizontal */
             color: white;
             font-size: 20px;
             font-weight: 500;
@@ -161,68 +174,86 @@
     }
 
     .modal-leyenda {
-  position: fixed;
-  inset: 0; /* top:0, right:0, bottom:0, left:0 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
+        position: fixed;
+        inset: 0;
+        /* top:0, right:0, bottom:0, left:0 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
 
-}
+    }
+
     .modal-leyenda.is-open {
-  opacity: 1;
-  pointer-events: auto;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modal-leyenda__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-leyenda__content {
+        position: relative;
+        max-width: 700px;
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        background: #fff;
+        border-radius: 18px;
+        padding: 28px 32px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+        z-index: 1;
+    }
+
+    .modal-leyenda__title {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .modal-leyenda__text {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .modal-leyenda__close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        border: none;
+        background: transparent;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .modal-leyenda__img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+
 }
 
-.modal-leyenda__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+.leyendas:hover {
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }
 
-.modal-leyenda__content {
-  position: relative;
-  max-width: 700px;
-  width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
-  background: #fff;
-  border-radius: 18px;
-  padding: 28px 32px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
-  z-index: 1;
+body.modal-open .leyendas:hover,
+body.modal-open .leyendas:hover {
+  transform: none; /* que no se muevan */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08); /* el mismo del estado normal */
 }
 
-.modal-leyenda__title {
-  font-size: 28px;
-  margin-bottom: 16px;
+body.modal-open {
+  overflow: hidden;
 }
 
-.modal-leyenda__text {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.modal-leyenda__close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  border: none;
-  background: transparent;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.modal-leyenda__img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 20px;
-}
-
-
-}

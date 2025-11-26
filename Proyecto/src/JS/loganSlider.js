@@ -1,4 +1,4 @@
-// Seleccionamos TODOS los contenedores .slides en juegos y fiestas
+// Seleccionamos TODOS los contenedores .slides en JUEGOS Y FIESTAS
 const sliders = document.querySelectorAll(".slides");
 
 sliders.forEach(slider => {
@@ -12,6 +12,87 @@ sliders.forEach(slider => {
   }, 3000);
 
 });
+
+
+
+
+
+
+
+// ================ DATOS DE JUEGOS (PRIMERO!!!!!!) =================
+// Lista de juegos
+const juegosInfoList = [
+  {
+    titulo: "Juegos tradicionales",
+    descripcionLarga: "Información completa del primer juego...",
+    imagen: "./public/assets/img/1.png"
+  },
+  {
+    titulo: "Carrera de costales",
+    descripcionLarga: "Descripción del juego segundo...",
+    imagen: "./public/assets/img/2.png"
+  },
+  {
+    titulo: "Palo encebado",
+    descripcionLarga: "Descripción del tercer juego...",
+    imagen: "./public/assets/img/3.png"
+  }
+];
+
+const juegosBtn = document.querySelector(".hero-juegos .ver-mas-j");
+const modalJuegos = document.getElementById("modal-juegos");
+const modalJuegosTitle = modalJuegos.querySelector(".modal-juegos__title");
+const modalJuegosText = modalJuegos.querySelector(".modal-juegos__text");
+const modalJuegosImg = modalJuegos.querySelector(".modal-juegos__img");
+const nextJuegoBtn = modalJuegos.querySelector(".modal-juegos__next");
+const modalJuegosClose = modalJuegos.querySelector(".modal-juegos__close");
+const modalJuegosOverlay = modalJuegos.querySelector(".modal-juegos__overlay");
+
+let juegoActual = 0;
+
+// Mostrar juego
+function mostrarJuego(index) {
+  const juego = juegosInfoList[index];
+  modalJuegosTitle.textContent = juego.titulo;
+  modalJuegosText.textContent = juego.descripcionLarga;
+  modalJuegosImg.src = juego.imagen;
+}
+
+// Abrir modal
+juegosBtn.addEventListener("click", () => {
+  juegoActual = 0;
+  mostrarJuego(juegoActual);
+  modalJuegos.classList.add("is-open");
+  document.body.classList.add("modal-open");
+});
+
+// Cambiar al siguiente juego
+nextJuegoBtn.addEventListener("click", () => {
+  juegoActual = (juegoActual + 1) % juegosInfoList.length;
+  mostrarJuego(juegoActual);
+});
+
+// Cerrar modal
+[modalJuegosClose, modalJuegosOverlay].forEach(el => {
+  el.addEventListener("click", () => {
+    modalJuegos.classList.remove("is-open");
+    document.body.classList.remove("modal-open");
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // ================= DATOS DE LEYENDAS (PRIMERO!!) =================
@@ -42,18 +123,49 @@ const leyendasInfo = [
   }
 ];
 
-// ===== INFO PARA LOS MODALES DE JUEGOS Y FIESTAS =====
-const juegosModalInfo = {
-  titulo: "Juegos tradicionales",
-  detalle: "Aquí puedes escribir la explicación completa de los juegos tradicionales: cómo se juegan, su origen, quiénes los practican, por qué son importantes para la comunidad, etc.",
-  img: "./public/assets/img/1.png" // pon la imagen que tú quieras
+// ================= MODAL "LEER MÁS" =================
+const leerMasBtn = document.querySelector(".leyendas .leer-mas");
+const modalLeyenda = document.getElementById("modal-leyenda");
+const modalTitle = modalLeyenda?.querySelector(".modal-leyenda__title");
+const modalText = modalLeyenda?.querySelector(".modal-leyenda__text");
+const modalClose = modalLeyenda?.querySelector(".modal-leyenda__close");
+const modalOverlay = modalLeyenda?.querySelector(".modal-leyenda__overlay");
+// Obtener referencia a la imagen dentro del modal
+const modalImg = modalLeyenda?.querySelector(".modal-leyenda__img");
+
+// función para abrir modal con cualquier data
+const abrirModalLeyenda = (data) => {
+  if (!modalLeyenda || !modalTitle || !modalText || !modalImg) return;
+
+  modalTitle.textContent = data.titulo;
+  modalText.textContent = data.detalle;
+  modalImg.src = data.img || "";
+  modalLeyenda.classList.add("is-open");
+  document.body.classList.add("modal-open"); // <<< AÑADIDO
 };
 
-const fiestasModalInfo = {
-  titulo: "Fiestas tradicionales",
-  detalle: "Aquí va la explicación completa de las fiestas tradicionales: fechas importantes, tipos de bailes, trajes típicos, significado cultural, etc.",
-  img: "./public/assets/img/2.png" // cambia la ruta a la imagen que quieras
-};
+// Botón "Leer más" de LEYENDAS (ya existía, lo adaptamos)
+if (leerMasBtn) {
+  leerMasBtn.addEventListener("click", () => {
+    const data = leyendasInfo[indexLeyenda] || leyendasInfo[0];
+    abrirModalLeyenda(data);
+  });
+}
+
+// Cerrar modal
+[modalClose, modalOverlay].forEach(el => {
+  if (!el) return;
+  el.addEventListener("click", () => {
+    modalLeyenda.classList.remove("is-open");
+    document.body.classList.remove("modal-open"); // <<< AÑADIDO
+  });
+});
+
+
+
+
+
+
 
 
 
@@ -90,59 +202,3 @@ if (leyendasSlider && leyendasSlides.length > 0 && leyendasBtn) {
     leyendaDescripcion.textContent = leyendasInfo[indexLeyenda].descripcion;
   });
 }
-
-
-// ================= MODAL "LEER MÁS" =================
-const leerMasBtn = document.querySelector(".leyendas .leer-mas");
-const modalLeyenda = document.getElementById("modal-leyenda");
-const modalTitle = modalLeyenda?.querySelector(".modal-leyenda__title");
-const modalText = modalLeyenda?.querySelector(".modal-leyenda__text");
-const modalClose = modalLeyenda?.querySelector(".modal-leyenda__close");
-const modalOverlay = modalLeyenda?.querySelector(".modal-leyenda__overlay");
-// Obtener referencia a la imagen dentro del modal
-const modalImg = modalLeyenda?.querySelector(".modal-leyenda__img");
-
-// función para abrir modal con cualquier data
-const abrirModalLeyenda = (data) => {
-  if (!modalLeyenda || !modalTitle || !modalText || !modalImg) return;
-
-  modalTitle.textContent = data.titulo;
-  modalText.textContent = data.detalle;
-  modalImg.src = data.img || "";
-  modalLeyenda.classList.add("is-open");
-};
-
-// Botón "Leer más" de LEYENDAS (ya existía, lo adaptamos)
-if (leerMasBtn) {
-  leerMasBtn.addEventListener("click", () => {
-    const data = leyendasInfo[indexLeyenda] || leyendasInfo[0];
-    abrirModalLeyenda(data);
-  });
-}
-
-// Botón "Ver más" de JUEGOS
-const verMasJuegos = document.querySelector(".hero-juegos .ver-mas");
-if (verMasJuegos) {
-  verMasJuegos.addEventListener("click", (e) => {
-    e.preventDefault();
-    abrirModalLeyenda(juegosModalInfo);
-  });
-}
-
-// Botón "Ver más" de FIESTAS
-const verMasFiestas = document.querySelector(".hero-fiestas .ver-mas");
-if (verMasFiestas) {
-  verMasFiestas.addEventListener("click", (e) => {
-    e.preventDefault();
-    abrirModalLeyenda(fiestasModalInfo);
-  });
-}
-
-
-// Cerrar modal
-[modalClose, modalOverlay].forEach(el => {
-  if (!el) return;
-  el.addEventListener("click", () => {
-    modalLeyenda.classList.remove("is-open");
-  });
-});

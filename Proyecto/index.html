@@ -90,9 +90,49 @@
               ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
             </p>
 
-            <a href="#" class="ver-mas">
-              Ver más
-            </a>
+            <div class="boton-vermas">
+              <span class="icono-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+              </span>
+              <button class="ver-mas-j">Ver más</button>
+            </div>
+
+            <!-- MODAL JUEGOS -->
+            <div id="modal-juegos" class="modal-juegos">
+              <div class="modal-juegos__overlay"></div>
+
+              <div class="modal-juegos__content">
+                <button class="modal-juegos__close">✕</button>
+
+                <img class="modal-juegos__img" src="" alt="Imagen del juego">
+
+                <h2 class="modal-juegos__title">Juegos tradicionales</h2>
+                <p class="modal-juegos__text">
+                  Aquí va la descripción completa...
+                </p>
+
+                <!-- BOTONES PARA CAMBIAR DE JUEGO DENTRO DEL FRAME -->
+                <div class="modal-juegos__selector">
+                  <button class="modal-juegos__next">
+                    <span class="icono-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+
+
           </div>
 
           <div class="col-2">
@@ -130,7 +170,7 @@
               ,kkkkkkkkkdddddddddddddddddddddddddddddddddddddddddddddd
             </p>
 
-            <a href="#" class="ver-mas">
+            <a href="#" class="ver-mas-f">
               Ver más
             </a>
           </div>
@@ -204,22 +244,22 @@
 
               <div class="slides-L">
                 <div class="slide-L" data-subtitulo="Leyenda1"
-                  data-description="Aquí va una introducción corta a la leyenda1.">>
+                  data-description="Aquí va una introducción corta a la leyenda1.">
                   <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen">
                 </div>
 
                 <div class="slide-L" data-subtitulo="Leyenda2"
-                  data-description="Aquí va una introducción corta a la leyenda2.">>
+                  data-description="Aquí va una introducción corta a la leyenda2.">
                   <img src="./public/assets/img/leyenda-balam2.jpg" alt="imagen">
                 </div>
 
                 <div class="slide-L" data-subtitulo="Leyenda3"
-                  data-description="Aquí va una introducción corta a la leyenda3.">>
+                  data-description="Aquí va una introducción corta a la leyenda3.">
                   <img src="./public/assets/img/leyenda-balam3.png" alt="imagen">
                 </div>
 
                 <div class="slide-L" data-subtitulo="Leyenda4"
-                  data-description="Aquí va una introducción corta a la leyenda4.">>
+                  data-description="Aquí va una introducción corta a la leyenda4.">
                   <img src="./public/assets/img/leyenda-balam4.jpg" alt="imagen">
                 </div>
               </div>
@@ -277,17 +317,6 @@
               <h2 class="modal-leyenda__title">Título de la leyenda</h2>
               <p class="modal-leyenda__text">
                 Aquí se mostrará el texto completo de la leyenda seleccionada.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia quas nostrum,
-                 enim pariatur facilis est, ipsa optio exercitationem totam officia tempora, 
-                 ea eos ducimus quasi velit. Recusandae dolores facere dolore?
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eligendi
-                  aperiam alias quae quasi, beatae maxime. Aperiam possimus ad consequuntur
-                   perferendis corrupti maxime, aut nam excepturi dignissimos sapiente rerum
-                    quisquam?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aut 
-                    porro, itaque ducimus commodi recusandae! Nihil non eveniet nulla. 
-                    Tenetur, impedit? Eveniet quas dolores molestias impedit ullam earum 
-                    debitis dolorum.
               </p>
             </div>
           </div>
@@ -311,9 +340,7 @@
             <img src="/assets/img/img.jpg" alt="Teología Maya">
             <h3>Teología maya</h3>
             <p>Poner una introducción teología.</p>
-            <a href="#" class="slide-link" data-titulo="Teología maya"
-             
-              data-imagen="/assets/img/img.jpg"
+            <a href="#" class="slide-link" data-titulo="Teología maya" data-imagen="/assets/img/img.jpg"
               data-texto="Aquí puedes escribir una explicación completa sobre la teología maya: dioses, cosmovisión, rituales y su importancia para las comunidades.">
               Ver más
             </a>
@@ -324,8 +351,7 @@
             <img src="/assets/img/img2.png" alt="Rituales y creencias">
             <h3>Rituales y creencias</h3>
             <p>Breve descripción de rituales mayas.</p>
-            <a href="#" class="slide-link" data-titulo="Rituales y creencias"
-              data-imagen="/assets/img/img2.png"
+            <a href="#" class="slide-link" data-titulo="Rituales y creencias" data-imagen="/assets/img/img2.png"
               data-texto="Información detallada sobre los rituales, ofrendas y ceremonias que forman parte de la espiritualidad maya.">
               Ver más
             </a>
@@ -336,9 +362,7 @@
             <img src="/assets/img/img3.jpg" alt="Organización social">
             <h3>Organización social</h3>
             <p>Poner una introducción a la pirámide social.</p>
-            <a href="#" class="slide-link" data-titulo="Organización social"
-              
-              data-imagen="/assets/img/img3.jpg"
+            <a href="#" class="slide-link" data-titulo="Organización social" data-imagen="/assets/img/img3.jpg"
               data-texto="Describe los diferentes estratos de la sociedad maya, desde gobernantes hasta campesinos y artesanos.">
               Ver más
             </a>
@@ -428,23 +452,23 @@
 
       </section>
 
-   <!-- MODAL GENERAL PARA "VER MÁS" -->
-<div id="modalVerMas" class="modal-vermas">
-  <div class="modal-vermas__overlay"></div>
+      <!-- MODAL GENERAL PARA "VER MÁS" -->
+      <div id="modalVerMas" class="modal-vermas">
+        <div class="modal-vermas__overlay"></div>
 
-  <div class="modal-vermas__content">
-    <button id="cerrarModalVerMas" class="modal-vermas__close">&times;</button>
+        <div class="modal-vermas__content">
+          <button id="cerrarModalVerMas" class="modal-vermas__close">&times;</button>
 
-    <!-- Imagen arriba -->
-    <img id="modalVerMasImg" class="modal-vermas__img" src="" alt="Imagen del tema">
+          <!-- Imagen arriba -->
+          <img id="modalVerMasImg" class="modal-vermas__img" src="" alt="Imagen del tema">
 
-    <!-- Texto abajo -->
-    <div class="modal-vermas__body">
-      <h3 id="modalVerMasTitulo" class="modal-vermas__title"></h3>
-      <p id="modalVerMasTexto" class="modal-vermas__text"></p>
-    </div>
-  </div>
-</div>
+          <!-- Texto abajo -->
+          <div class="modal-vermas__body">
+            <h3 id="modalVerMasTitulo" class="modal-vermas__title"></h3>
+            <p id="modalVerMasTexto" class="modal-vermas__text"></p>
+          </div>
+        </div>
+      </div>
 
 
       <section id="galeria-fotos" class="galeria">
@@ -518,32 +542,32 @@
 
 
 
-    <div class="comentarios-bg">
-  <section id="comentarios-section" class="comentarios">
-    <h2 class="comentarios__titulo">COMENTARIOS</h2>
+      <div class="comentarios-bg">
+        <section id="comentarios-section" class="comentarios">
+          <h2 class="comentarios__titulo">COMENTARIOS</h2>
 
-    <form id="formComentario" class="comentarios__form">
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" placeholder="Tu nombre" required />
+          <form id="formComentario" class="comentarios__form">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" required />
 
-      <label for="mensaje">Comentario</label>
-      <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
+            <label for="mensaje">Comentario</label>
+            <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
 
-      <button type="submit" class="btn-enviar">Enviar comentario</button>
-    </form>
+            <button type="submit" class="btn-enviar">Enviar comentario</button>
+          </form>
 
-    <div id="listaComentarios" class="comentarios__lista">
-      <!-- Aquí pinta comentario.js -->
-    </div>
+          <div id="listaComentarios" class="comentarios__lista">
+            <!-- Aquí pinta comentario.js -->
+          </div>
 
-    <div class="comentarios__more">
-      <button id="btnMas" class="btn-mas">
-        <span class="flecha">➜</span>
-        Leer comentarios
-      </button>
-    </div>
-  </section>
-</div>
+          <div class="comentarios__more">
+            <button id="btnMas" class="btn-mas">
+              <span class="flecha">➜</span>
+              Leer comentarios
+            </button>
+          </div>
+        </section>
+      </div>
 
 
       <!-- MODAL DE COMENTARIOS -->

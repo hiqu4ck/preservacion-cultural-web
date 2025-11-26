@@ -1,6 +1,6 @@
 .hero-juegos,
 .hero-fiestas {
-    background: transparent;
+    background: #fff;
     border-radius: 26px;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
     display: grid;
@@ -14,47 +14,81 @@
         display: flex;
         flex-direction: column;
         gap: 34px;
-
-        .titulo {
-            margin: 0;
-            text-align: left;
-            color: var(--naranja);
-            font-size: 50px;
-            font-weight: 400;
-            margin-bottom: 0;
-
-        }
-
-        .descripcion {
-            font-size: 22px;
-            color: #000;
-            text-align: justify;
-            line-height: 1.6;
-        }
-
     }
 
-    .ver-mas {
-        display: inline-flex;
+}
+
+.hero-juegos {
+
+    .titulo {
+        margin-top: -10px;
+        font-size: 60px;
+        color: #000;
+        text-align: left;
+        line-height: 1.6;
+        margin-bottom: 5px;
+    }
+
+    .descripcion {
+        margin-top: -15px;
+        text-align: left;
+        color: black;
+        font-size: 22px;
+        font-weight: 400;
+        max-width: 90%;
+    }
+
+    .boton-vermas {
+        display: flex;
         align-items: center;
-        justify-content: center;
-        padding: 10px 26px;
-        border-radius: 999px;
-        background: var(--naranja);
-        color: #fff;
-        font-size: 15px;
-        font-weight: 600;
-        text-decoration: none;
-        width: auto;
-        /* IMPORTANTE: que no se estire */
-        align-self: flex-start;
-    }
+        border-radius: 14px;
+        overflow: hidden;
+        width: fit-content;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
 
-    .ver-mas:hover {
-        background: #d37212;
-        /* un naranja un poquito más oscuro */
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-        transform: translateY(-1px);
+        .icono-box,
+        .ver-mas-j {
+            display: flex;
+            align-items: center;
+            height: 48px;
+            /* MISMA ALTURA PARA AMBOS */
+        }
+
+        .ver-mas-j {
+            background: #424528;
+            /* Fondo oscuro */
+            border: none;
+            padding: 0 26px;
+            /* Solo padding horizontal */
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .icono-box {
+            background: #727348;
+            /* Fondo claro */
+            padding: 0 18px;
+            /* Quitar padding vertical desigual */
+            justify-content: center;
+
+
+            svg {
+                color: white;
+                width: 26px;
+                height: 26px;
+            }
+
+        }
+
+        .leer-mas:hover {
+            background: #373a22;
+            /* tono más oscuro */
+        }
+
     }
 
     .col-2 {
@@ -64,11 +98,10 @@
         align-items: center;
 
         .slideshow {
+            margin-top: 45px;
             position: relative;
             width: 100%;
-            margin-left: 0;
-            margin-right: 0;
-            border-radius: 10px;
+            height: 420px;
             overflow: hidden;
             background: transparent;
 
@@ -92,11 +125,139 @@
         }
     }
 
+    /* BASE del modal de juegos */
+    .modal-juegos {
+        position: fixed;
+        inset: 0;
+        /* top, right, bottom, left = 0 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+    }
+
+    /* Cuando se abre */
+    .modal-juegos.is-open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modal-juegos__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-juegos__content {
+        position: relative;
+        max-width: 700px;
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        background: #fff;
+        border-radius: 18px;
+        padding: 28px 32px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+        z-index: 1;
+    }
+
+    .modal-juegos__title {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .modal-juegos__text {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .modal-juegos__close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        border: none;
+        background: transparent;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .modal-juegos__img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    /*AQUI EMPIEZA LOS ESTILOS DEL SELECTOR DE JUEGOS DENTRO DEL FRAME*/
+
+    .modal-juegos__selector {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .modal-juegos__next {
+        margin-right: 10px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-juegos__next:hover {
+        transform: scale(1.08);
+        /* crecimiento MUY leve (8%) */
+        color: #000;
+        /* sigue negro */
+    }
+
+    .modal-juegos__next svg {
+        width: 34px;
+        /* tamaño base un poco más pequeño */
+        height: 34px;
+        color: black;
+        transition: transform 0.7s ease, color 0.5s ease;
+    }
+
+
+    /* Estado activo (el juego que está mostrado) */
+    .modal-juegos__btn.is-active {
+        background: #424528;
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+
 }
 
 .hero-fiestas {
     background: #73805A;
     background-size: 40px 40px;
+
+    .titulo {
+        margin-top: 20px;
+        text-align: left;
+        color: var(--naranja);
+        font-size: 60px;
+        line-height: 1.6;
+        margin-bottom: 2px;
+    }
+
+    .descripcion {
+        margin-top: -15px;
+        font-size: 22px;
+        color: black;
+        text-align: left;
+        line-height: 1.6;
+        font-weight: 400;
+    }
 
     .dobles {
         display: grid;
@@ -105,6 +266,29 @@
         justify-items: center;
         background: transparent;
 
+    }
+
+    .ver-mas-f {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 26px;
+        border-radius: 999px;
+        background: var(--naranja);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        width: auto;
+        /* IMPORTANTE: que no se estire */
+        align-self: flex-start;
+    }
+
+    .ver-mas-f:hover {
+        background: #d37212;
+        /* un naranja un poquito más oscuro */
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+        transform: translateY(-1px);
     }
 
     .text-box {
@@ -154,4 +338,16 @@
 .hero-fiestas:hover {
     box-shadow: 0 22px 50px rgba(0, 0, 0, 0.12);
     transform: translateY(-2px);
+}
+
+body.modal-open .hero-juegos:hover,
+body.modal-open .hero-fiestas:hover {
+    transform: none;
+    /* que no se muevan */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    /* el mismo del estado normal */
+}
+
+body.modal-open {
+    overflow: hidden;
 }
