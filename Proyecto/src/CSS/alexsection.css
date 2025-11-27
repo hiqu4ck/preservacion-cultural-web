@@ -1,4 +1,5 @@
 .overlay-video {
+    margin: auto;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -23,17 +24,16 @@
 }
 
 .comidas {
-
+    max-width: 1600px;
+    margin: auto;
     text-align: center;
-    max-width: 600px;
-    /* Ajusta el ancho para que no se haga enorme */
-    margin: 0 auto;
-    /* Centrar el bloque */
     padding: 20px 0;
 }
 
-/* Fondo de la sección (usando tus variables) */
+
 .seccion-comidas {
+    max-width: 1600px;
+    margin: auto;
     background-color: var(--color-beige);
     padding: 40px 20px 60px;
     text-align: center;
@@ -134,13 +134,15 @@
 }
 
 .medicina {
+    max-width: 1600px;
     width: 100%;
+    margin: auto;
+    position: relative;
     aspect-ratio: 16/6;    /* altura proporcional automática */
     background-image: url("./assets/img/casa-guano.png");
     background-size: cover;
     background-position: center top; 
     background-repeat: no-repeat;
-    position: relative;
 
     display: flex;
     align-items: center;
