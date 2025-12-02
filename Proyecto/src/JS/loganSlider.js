@@ -1,7 +1,7 @@
-// Seleccionamos TODOS los contenedores .slides en JUEGOS Y FIESTAS
-const sliders = document.querySelectorAll(".slides");
+ // Seleccionamos TODOS los contenedores .slides en JUEGOS (SLIDER DE JUEGOOOSSSS!!!)
+const JuegoSliders = document.querySelectorAll(".hero-juegos .slides");
 
-sliders.forEach(slider => {
+JuegoSliders.forEach(slider => {
 
   const slides = slider.querySelectorAll(".slide");
   let index = 0;
@@ -16,6 +16,60 @@ sliders.forEach(slider => {
 
 
 
+
+
+// HOVER ALEATORIO EN FIESTAS!!!!!
+
+const fiestasHoverBoxes = document.querySelectorAll(".hero-fiestas .slideshow");
+
+fiestasHoverBoxes.forEach(fiestasHoverBox => {
+  const fiestasHoverImages = fiestasHoverBox.querySelectorAll(".slide img");
+  if (fiestasHoverImages.length === 0) return;
+
+  const mainImg = fiestasHoverBox.querySelector(".slide img");
+  if (!mainImg) return;
+
+  const fiestasHoverOriginal = mainImg.src;
+
+  // accion de desvanecer, cambiar, reaparecer
+  fiestasHoverBox.addEventListener("mouseenter", () => {
+    mainImg.style.opacity = "0"; // empieza a desaparecer
+
+    setTimeout(() => {
+      // elegir una imagen aleatoria distinta
+      let randomIndex = Math.floor(Math.random() * fiestasHoverImages.length);
+      if (fiestasHoverImages[randomIndex].src === mainImg.src && fiestasHoverImages.length > 1) {
+        randomIndex = (randomIndex + 1) % fiestasHoverImages.length;
+      }
+
+      mainImg.src = fiestasHoverImages[randomIndex].src;
+      mainImg.style.opacity = "1"; // reaparece suavemente
+    }, 250); // este tiempo debe ser un poco menor o igual al del transition (0.3s)
+  });
+
+  // accion de salir mouse: desvanecer, volver a la original
+  fiestasHoverBox.addEventListener("mouseleave", () => {
+    mainImg.style.opacity = "0";
+
+    setTimeout(() => {
+      mainImg.src = fiestasHoverOriginal;
+      mainImg.style.opacity = "1";
+    }, 200);
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
@@ -79,6 +133,79 @@ nextJuegoBtn.addEventListener("click", () => {
     document.body.classList.remove("modal-open");
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+// ================ DATOS DE FIESTAS (PRIMERO!!!!!!) =================
+// Lista de fiestas
+const fiestasInfoList = [
+  {
+    titulo: "Fiestas tradicionales",
+    descripcionLarga: "Información completa del primer juego...",
+    imagen: "./public/assets/img/1.png"
+  },
+  {
+    titulo: "Carrera de costales",
+    descripcionLarga: "Descripción del juego segundo...",
+    imagen: "./public/assets/img/2.png"
+  },
+  {
+    titulo: "Palo encebado",
+    descripcionLarga: "Descripción del tercer juego...",
+    imagen: "./public/assets/img/3.png"
+  }
+];
+
+const fiestasBtn = document.querySelector(".hero-fiestas .ver-mas-f");
+const modalFiestas = document.getElementById("modal-fiestas");
+const modalFiestasTitle = modalFiestas.querySelector(".modal-fiestas__title");
+const modalFiestasText = modalFiestas.querySelector(".modal-fiestas__text");
+const modalFiestasImg = modalFiestas.querySelector(".modal-fiestas__img");
+const nextFiestasBtn = modalFiestas.querySelector(".modal-fiestas__next");
+const modalFiestasClose = modalFiestas.querySelector(".modal-fiestas__close");
+const modalFiestasOverlay = modalFiestas.querySelector(".modal-fiestas__overlay");
+
+let fiestaActual = 0;
+
+// Mostrar juego
+function mostrarFiesta(index) {
+  const fiesta = fiestasInfoList[index];
+  modalFiestasTitle.textContent = fiesta.titulo;
+  modalFiestasText.textContent = fiesta.descripcionLarga;
+  modalFiestasImg.src = fiesta.imagen;
+}
+
+// Abrir modal
+fiestasBtn.addEventListener("click", () => {
+  fiestaActual = 0;
+  mostrarFiesta(fiestaActual);
+  modalFiestas.classList.add("is-open");
+  document.body.classList.add("modal-open");
+});
+
+// Cambiar al siguiente juego
+nextFiestasBtn.addEventListener("click", () => {
+  fiestaActual = (fiestaActual + 1) % fiestasInfoList.length;
+  mostrarFiesta(fiestaActual);
+});
+
+// Cerrar modal
+[modalFiestasClose, modalFiestasOverlay].forEach(el => {
+  el.addEventListener("click", () => {
+    modalFiestas.classList.remove("is-open");
+    document.body.classList.remove("modal-open");
+  });
+});
+ 
+
 
 
 

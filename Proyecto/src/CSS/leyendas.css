@@ -102,6 +102,11 @@
         }
     }
 
+    .boton-leermas:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+    }
+
     /*ABAJO ES EL BOTON PARA CAMBIAR SLIDE*/
 
     .boton-slide {

@@ -84,12 +84,13 @@
 
         }
 
-        .leer-mas:hover {
-            background: #373a22;
-            /* tono más oscuro */
-        }
-
     }
+
+    .boton-vermas:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+    }
+
 
     .col-2 {
         position: relative;
@@ -238,7 +239,7 @@
 }
 
 .hero-fiestas {
-    background: #73805A;
+    background: #D8E8C8;
     background-size: 40px 40px;
 
     .titulo {
@@ -268,27 +269,54 @@
 
     }
 
-    .ver-mas-f {
+    .boton-vermas {
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 26px;
+        align-items: stretch;
         border-radius: 999px;
-        background: var(--naranja);
-        color: #fff;
-        font-size: 15px;
-        font-weight: 600;
-        text-decoration: none;
-        width: auto;
-        /* IMPORTANTE: que no se estire */
-        align-self: flex-start;
+        /* forma de píldora */
+        overflow: hidden;
+        width: fit-content;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+
+        .ver-mas-f {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 24px;
+            height: 48px;
+            /* misma altura que el icono */
+            background: #d88a1a;
+            /* naranja cálido */
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Bloque del ícono */
+        .icono-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 16px;
+            background: #c57b15;
+
+            /* naranja más oscuro */
+            svg {
+                width: 22px;
+                height: 22px;
+                color: #fff;
+            }
+        }
+
     }
 
-    .ver-mas-f:hover {
-        background: #d37212;
-        /* un naranja un poquito más oscuro */
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-        transform: translateY(-1px);
+    .boton-vermas:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
     }
 
     .text-box {
@@ -318,6 +346,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            transition: opacity 0.5s ease;   /* suaviza el cambio */
         }
     }
 
@@ -326,11 +355,123 @@
         padding: 10px 16px;
         text-align: center;
         font-weight: 600;
-        font-size: 15px;
-        background: #73805A;
+        font-size: 25px;
+        background: #D8E8C8;
         color: var(--naranja);
         border-radius: 0 0 12px 12px;
     }
+
+
+
+     /* BASE del modal de fiestas */
+    .modal-fiestas {
+        position: fixed;
+        inset: 0;
+        /* top, right, bottom, left = 0 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+    }
+
+    /* Cuando se abre */
+    .modal-fiestas.is-open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modal-fiestas__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-fiestas__content {
+        position: relative;
+        max-width: 700px;
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        background: #fff;
+        border-radius: 18px;
+        padding: 28px 32px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+        z-index: 1;
+    }
+
+    .modal-fiestas__title {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .modal-fiestas__text {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .modal-fiestas__close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        border: none;
+        background: transparent;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .modal-fiestas__img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    /*AQUI EMPIEZA LOS ESTILOS DEL SELECTOR DE JUEGOS DENTRO DEL FRAME*/
+
+    .modal-fiestas__selector {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .modal-fiestas__next {
+        margin-right: 10px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-fiestas__next:hover {
+        transform: scale(1.08);
+        /* crecimiento MUY leve (8%) */
+        color: #000;
+        /* sigue negro */
+    }
+
+    .modal-fiestas__next svg {
+        width: 34px;
+        /* tamaño base un poco más pequeño */
+        height: 34px;
+        color: black;
+        transition: transform 0.7s ease, color 0.5s ease;
+    }
+
+
+    /* Estado activo (el juego que está mostrado) */
+    .modal-fiestas__btn.is-active {
+        background: #424528;
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
 
 }
 
