@@ -1,6 +1,6 @@
 .leyendas {
     position: relative;
-    background: #fff;
+    background: var(--color-blanco);
     border-radius: 26px;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -22,7 +22,7 @@
         .titulo {
             margin: 0;
             text-align: left;
-            color: black;
+            color: var(--color-negro);
             font-size: 50px;
             font-weight: 400;
             margin-bottom: 0;
@@ -31,7 +31,7 @@
 
         .subtitulo {
             font-size: 60px;
-            color: #000;
+            color: var(--color-negro);
             text-align: left;
             line-height: 1.6;
             margin-bottom: 10px;
@@ -40,7 +40,7 @@
 
         .descripcion {
             font-size: 22px;
-            color: #000;
+            color: var(--color-negro);
             text-align: left;
             line-height: 1.6;
             margin-bottom: 1px;
@@ -61,17 +61,17 @@
         .leer-mas {
             display: flex;
             align-items: center;
-            height: 48px;
+            height: 52px;
             /* MISMA ALTURA PARA AMBOS */
         }
 
         .icono-box {
-            background: #727348;
+            background: var(--color-primario-verde-oscuro);
             /* Fondo oscuro */
             border: none;
-            padding: 0 26px;
+            padding: 0 16px;
             /* Solo padding horizontal */
-            color: white;
+            color: var(--color-blanco);
             font-size: 20px;
             font-weight: 500;
             cursor: pointer;
@@ -85,20 +85,22 @@
         }
 
         .leer-mas {
-            background: #424528;
+            background: var(--color-primario-verde-bosque);
             /* Fondo oscuro */
             border: none;
             padding: 0 26px;
             /* Solo padding horizontal */
-            color: white;
+            color: var(--color-blanco);
             font-size: 20px;
             font-weight: 500;
             cursor: pointer;
         }
 
         .leer-mas:hover {
-            background: #373a22;
-            /* tono más oscuro */
+
+            background: #27311c;
+
+
         }
     }
 
@@ -121,8 +123,8 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: white;
-            border: 1px solid #000;
+            background: var(--color-blanco);
+            border: 1px solid var(--color-negro);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -209,7 +211,7 @@
         width: 90%;
         max-height: 80vh;
         overflow-y: auto;
-        background: #fff;
+        background: var(--color-blanco);
         border-radius: 18px;
         padding: 28px 32px;
         box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
@@ -254,11 +256,12 @@
 
 body.modal-open .leyendas:hover,
 body.modal-open .leyendas:hover {
-  transform: none; /* que no se muevan */
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08); /* el mismo del estado normal */
+    transform: none;
+    /* que no se muevan */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    /* el mismo del estado normal */
 }
 
 body.modal-open {
-  overflow: hidden;
+    overflow: hidden;
 }
-
