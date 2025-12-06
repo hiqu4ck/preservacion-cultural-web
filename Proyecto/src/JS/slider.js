@@ -32,7 +32,7 @@ function iniciarSliderTemas() {
   function abrirVerMas(titulo, texto, imagen) {
 
     modalTitulo.textContent = titulo;
-    modalTexto.textContent = texto;
+    modalTexto.innerHTML = texto;
 
     if (imagen) {
       modalImg.src = imagen;

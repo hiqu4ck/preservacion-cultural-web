@@ -1,31 +1,31 @@
-/* CONTENEDOR DETRÁS (fondo verde militar) */
+/* CONTENEDOR DETRÁS*/
 .comentarios-bg {
-  background: #727348;
-  width: 100%;
-  padding: 4rem 0;
-  display: flex;
+  background: #727348;         /* Fondo verde militar */
+  width: 100%;                   /* Ocupa todo el ancho */
+  padding: 4rem 0;               /* Espaciado vertical */
+  display: flex;                 /* Centra contenido horizontalmente */
   justify-content: center;
-  max-width: 1600px;
-  margin: auto;
+  max-width: 1600px;             /* Ancho máximo */
+  margin: auto;                  /* Centrado en la página */
 }
 
 /* TARJETA DE COMENTARIOS */
 .comentarios {
-  background: #fdfbf6;
-  border-radius: 20px;
+  background: #fdfbf6;           /* Fondo beige claro */
+  border-radius: 20px;           /* Bordes redondeados */
   width: 100%;
-  max-width: 900px;
-  padding: 3rem 3rem 2.5rem;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+  max-width: 900px;              /* Limita el ancho de la tarjeta */
+  padding: 3rem 3rem 2.5rem;     /* Espaciado interno */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18); /* Sombra suave */
   position: relative;
 }
 
 /* TÍTULO */
 .comentarios__titulo {
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 700;
-  letter-spacing: 3px;
+  text-align: center;            /* Centrado */
+  font-size: 2.2rem;             /* Tamaño grande */
+  font-weight: 700;              /* Negritas */
+  letter-spacing: 3px;           /* Espaciado entre letras */
   margin-bottom: 2.5rem;
   color: #000;
 }
@@ -33,125 +33,124 @@
 /* FORMULARIO */
 .comentarios__form {
   display: flex;
-  flex-direction: column;
-  gap: 1.3rem;
+  flex-direction: column;        /* Campos uno debajo del otro */
+  gap: 1.3rem;                   /* Espacio entre inputs */
 }
 
 .comentarios__form input,
 .comentarios__form textarea {
-  padding: 1rem;
-  border: 1px solid #c5c3bc;
-  border-radius: 12px;
+  padding: 1rem;                 
+  border: 1px solid #c5c3bc;     /* Borde gris claro */
+  border-radius: 12px;           
   font-size: 1rem;
   background: #fff;
-  transition: 0.2s ease;
+  transition: 0.2s ease;         /* Animación de enfoque */
 }
 
 .comentarios__form input:focus,
 .comentarios__form textarea:focus {
-  border-color: #4d5328;
+  border-color: #4d5328;         /* Se pone verde al enfocar */
   outline: none;
-  box-shadow: 0 0 0 3px rgba(77,83,40,0.2);
+  box-shadow: 0 0 0 3px rgba(77,83,40,0.2); /* Glow suave verde */
 }
 
 /* BOTÓN ENVIAR */
 .btn-enviar {
-  width: 180px;
-  padding: 0.85rem;
-  background: #4d5328;
+  width: 180px;                  /* Ancho fijo */
+  padding: 0.85rem;             
+  background: #4d5328;           /* Verde maya */
   color: #fff;
   border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
   border: none;
-  transition: 0.25s ease;
+  transition: 0.25s ease;        /* Efecto hover */
 }
 
 .btn-enviar:hover {
-  background: #3c421f;
+  background: #3c421f;           /* Verde más oscuro al pasar */
 }
 
 /* LISTA de comentarios debajo del formulario: la ocultamos */
 .comentarios__lista {
-  display: none;
+  display: none;                 /* Oculto fuera del modal */
 }
 
 /* PERO dentro del modal SÍ la mostramos */
 .comentarios-modal .comentarios__lista {
-  display: flex;
+  display: flex;                 /* Se muestra en forma de lista */
   flex-direction: column;
   gap: 1.5rem;
 }
 
 
-/* ===== MODAL DE COMENTARIOS ===== */
+/*MODAL DE COMENTARIOS*/
 
-/* ========= MODAL DE COMENTARIOS (ANIMACIÓN SUAVE) ========= */
-
+/* Modal general */
 .comentarios-modal {
-  position: fixed;
-  inset: 0;
+  position: fixed;               /* Cubre toda la pantalla */
+  inset: 0;                      
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 999;                  /* Por encima de todo */
 
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease; /* animación suave */
+  opacity: 0;                    /* Oculto por defecto */
+  pointer-events: none;          /* No interactuable */
+  transition: opacity 0.3s ease; /* Animación suave */
 }
 
 .comentarios-modal.is-open {
-  opacity: 1;
-  pointer-events: auto;
+  opacity: 1;                    /* Visible */
+  pointer-events: auto;          /* Se puede interactuar */
 }
 
 /* Overlay con animación */
 .comentarios-modal__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.45); /* Fondo oscuro transparente */
 
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .comentarios-modal.is-open .comentarios-modal__overlay {
-  opacity: 1;
+  opacity: 1;                    /* El overlay aparece suave */
 }
 
 /* Cuadro blanco del modal con animación */
 .comentarios-modal__content {
   position: relative;
-  background: #fdfbf6;
-  max-width: 800px;
+  background: #fdfbf6;           /* Fondo beige */
+  max-width: 800px;              
   width: 90%;
-  max-height: 80vh;
+  max-height: 80vh;              /* Altura controlada con scroll */
   padding: 1.8rem 1.5rem;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-  overflow-y: auto;
+  overflow-y: auto;              /* Scrollear contenido largo */
 
-  transform: scale(0.85);  /* empieza pequeño */
-  opacity: 0;              /* empieza invisible */
-  transition: 
+  transform: scale(0.85);        /* Comienza pequeño */
+  opacity: 0;                    /* Invisible inicialmente */
+  transition:
     opacity 0.3s ease,
     transform 0.3s ease;
 }
 
 .comentarios-modal.is-open .comentarios-modal__content {
-  transform: scale(1);     /* crece suavemente */
-  opacity: 1;              /* aparece suave */
+  transform: scale(1);           /* Se agranda suavemente */
+  opacity: 1;                    /* Aparece */
 }
 
 
 /* Tarjetas dentro del modal */
 .comentarios-modal .comentario {
   padding-bottom: 1.3rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; /* Línea divisoria */
 }
 
-/* Comentario simple */
+/* Comentario individual */
 .comentario {
   display: flex;
   flex-direction: column;
@@ -170,10 +169,10 @@
 .comentario__avatar {
   width: 32px;
   height: 32px;
-  background: #4d5328;
+  background: #4d5328;          /* Verde maya */
   color: white;
   font-weight: bold;
-  border-radius: 50%;
+  border-radius: 50%;           /* Avatar circular */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,7 +181,7 @@
 .comentario__texto {
   font-size: .95rem;
   color: #333;
-  line-height: 1.4;
+  line-height: 1.4;              /* Lectura agradable */
 }
 
 .comentarios-modal__title {
@@ -192,6 +191,7 @@
   font-size: 1.3rem;
 }
 
+/* Botón cerrar modal */
 .comentarios-modal__close {
   position: absolute;
   top: 0.6rem;
@@ -202,7 +202,7 @@
   cursor: pointer;
 }
 
-/* BOTÓN LEER MÁS */
+/* BOTÓN LEER MÁS (abre el modal) */
 .comentarios__more {
   display: flex;
   justify-content: center;
@@ -211,7 +211,7 @@
 
 .btn-mas {
   padding: 1rem 2.3rem;
-  background: #4d5328;
+  background: #4d5328;           /* Botón verde */
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -224,9 +224,9 @@
 }
 
 .btn-mas:hover {
-  background: #3c421f;
+  background: #3c421f;           /* Hover oscuro */
 }
 
 .btn-mas .flecha {
-  font-size: 1.3rem;
+  font-size: 1.3rem;             /* Tamaño icono flecha */
 }
