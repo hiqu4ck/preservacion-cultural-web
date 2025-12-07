@@ -63,6 +63,78 @@
         text-align: center;
         line-height: 1.6;
     }
+
+
+    /*APARTADO DEL MODAL=====!!!*/
+    /* ===== MODAL ARTESANÍAS ===== */
+
+.modal-artesania {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.modal-artesania.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-artesania__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-artesania__content {
+  position: relative;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 32px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.modal-artesania__img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.modal-artesania__title {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.modal-artesania__text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-negro);     
+  margin-top: 8px;
+}
+
+
+.modal-artesania__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
+
 }
 
 .artesanias:hover {
