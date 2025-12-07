@@ -1,0 +1,102 @@
+/* ================= SECCIÓN COMIDAS ================= */
+
+.comidas {
+    max-width: 1600px;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.seccion-comidas {
+    max-width: 1600px;
+    margin: auto;
+    background-color: var(--color-beige);
+    padding: 40px 20px 60px;
+    text-align: center;
+}
+
+/* Título */
+.titulo-comidas {
+    color: #c97919;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Descripción */
+.descripcion-comidas {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* Contenedor de tarjetas */
+.tarjetas-comida {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Cada tarjeta */
+.tarjeta {
+    width: 230px;
+    border-radius: 22px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen */
+.tarjeta-imagen {
+    background-color: #9ea39e;
+    height: 260px;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Texto debajo */
+.tarjeta-texto {
+    background-color: white;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* Flechas */
+.flechas-desplazamiento {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.btn-flecha {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-primario-naranja);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-flecha svg {
+    width: 14px;
+    height: 14px;
+    color: var(--color-primario-naranja);
+}
+
+.btn-flecha:hover {
+    background-color: rgba(210, 130, 28, 0.08);
+}

@@ -1,0 +1,75 @@
+/* ================= SECCIÓN MEDICINA ================= */
+
+.medicina {
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    aspect-ratio: 16/6;
+    background-image: url("./assets/img/casa-guano.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+/* Overlay */
+.medicina::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+/* Tarjeta */
+.card-medicina {
+    position: relative;
+    z-index: 2;
+    background: var(--color-blanco);
+    padding: 30px;
+    width: 360px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card-medicina h4 {
+    margin: 0;
+    color: var(--color-primario-verde-bosque);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.card-medicina h2 {
+    margin-top: 5px;
+    color: var(--color-primario-verde-oscuro);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.card-medicina p {
+    margin: 18px 0 25px;
+    color: var(--color-gris);
+    line-height: 1.4;
+}
+
+/* Botón */
+.btn-explorar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 22px;
+    background: var(--color-primario-verde-bosque);
+    color: var(--color-blanco);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.btn-explorar:hover {
+    background: var(--color-primario-verde-oscuro);
+}
