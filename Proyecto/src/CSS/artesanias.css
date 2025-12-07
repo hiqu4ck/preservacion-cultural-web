@@ -136,6 +136,12 @@
 }
 
 }
+.modal-artesania__img {
+    width: 100%;
+    height: auto;        /* Mantiene la proporción original */
+    object-fit: contain; /* Evita recortes */
+    border-radius: 14px;
+}
 
 .artesanias:hover {
     box-shadow: 0 22px 50px rgba(0, 0, 0, 0.12);

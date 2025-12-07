@@ -77,19 +77,260 @@ fiestasHoverBoxes.forEach(fiestasHoverBox => {
 // Lista de juegos
 const juegosInfoList = [
   {
-    titulo: "Juegos tradicionales",
-    descripcionLarga: "Información completa del primer juego...",
-    imagen: "./public/assets/img/1.png"
+    titulo: "Pok-ta-pok (Juego de Pelota) ",
+    descripcionLarga: `El Pok-ta-pok, también conocido como juego de pelota prehispánico maya, 
+es una de las manifestaciones deportivas, rituales y simbólicas más antiguas 
+de Mesoamérica, con un origen que se remonta a más de 2,000 años atrás. 
+Su práctica estaba estrechamente relacionada con la religión, la política y la 
+cosmovisión de los pueblos mayas. 
+Este juego se desarrollaba en canchas especiales, conocidas como tlachtli o 
+batabil, que tenían forma de pasillo largo y estrecho, con muros laterales 
+inclinados. En muchos sitios arqueológicos, como Chichén Itzá o Cobá, estos 
+muros presentan anillos o aros de piedra colocados a gran altura, a través de 
+los cuales los jugadores debían hacer pasar la pelota. Lograrlo era 
+extremadamente difícil y simbolizaba un triunfo espiritual y cósmico. 
+Reglas y forma de juego 
+La pelota era elaborada con hule macizo (látex natural) obtenido del árbol 
+Castilla elastica, mezclado con el jugo del bejuco Ipomoea alba, lo que 
+permitía que el material fuera más elástico y resistente. Su peso podía oscilar 
+entre 3 y 4 kilogramos, lo que la convertía en un objeto pesado y peligroso. 
+Los jugadores, organizados en equipos, no podían usar las manos ni los pies; 
+solo se permitía golpear la pelota con las caderas, los muslos, los codos y la 
+cabeza. El objetivo era mantenerla en juego el mayor tiempo posible y, en las 
+versiones más rituales, hacerla pasar por los anillos de piedra. 
+Debido a la dureza del balón y a la fuerza necesaria para impulsarlo, los 
+jugadores usaban protectores de cuero o algodón en las caderas y los 
+antebrazos. Algunos también portaban cinturones o yugos de madera o 
+cuero, y adornos que representaban a los dioses del juego. 
+Materiales y proceso de fabricación 
+1. Recolección del látex: se obtenía de la savia del árbol de hule (Castilla 
+elastica) mediante incisiones controladas en la corteza. 
+2. Mezcla con jugo vegetal: se combinaba con jugo de la enredadera Ipomoea 
+alba (bejuco) para vulcanizar el material de forma natural. 
+3. Amasado y modelado: la masa de hule se moldeaba en forma de esfera y se 
+dejaba secar a la sombra. 
+4. Ajuste del rebote: según la proporción de ingredientes, se lograban diferentes 
+niveles de dureza o elasticidad. 
+Este proceso muestra el alto conocimiento químico y técnico de los antiguos 
+mayas, quienes descubrieron la vulcanización natural siglos antes de que 
+Charles Goodyear la patentara en el siglo XIX. 
+Significado religioso y cultural 
+Más allá de su carácter deportivo, el Pok-ta-pok tenía un profundo significado 
+cosmológico y ritual. Representaba la lucha entre las fuerzas del bien y del 
+mal, la vida y la muerte, o incluso el movimiento del sol y los astros en el 
+cielo. 
+En los mitos del Popol Vuh, los héroes gemelos Hunahpú e Ixbalanqué 
+derrotan a los señores del inframundo (Xibalbá) a través de un juego de 
+pelota, lo que refuerza su valor simbólico como un acto de renovación del 
+mundo y del orden cósmico. 
+El juego también cumplía funciones políticas y sociales: se usaba para sellar 
+alianzas entre pueblos, resolver conflictos o rendir tributo a los dioses. En 
+algunas ocasiones, los partidos podían tener un carácter sacrificial, donde 
+los perdedores —o en ciertos mitos, los ganadores— ofrecían su vida como 
+ofrenda para mantener el equilibrio del universo. 
+En la época colonial 
+Durante la conquista y la colonia, el Pok-ta-pok fue prohibido por las 
+autoridades españolas, que lo consideraban un rito pagano. Sin embargo, el 
+juego no desapareció por completo: se siguió practicando en forma simbólica 
+y ritual en varias regiones de Yucatán y Quintana Roo, especialmente en 
+comunidades apartadas del control colonial. 
+El Pok-ta-pok en Felipe Carrillo Puerto, Quintana Roo 
+En la región de Felipe Carrillo Puerto, la herencia del Pok-ta-pok se conserva 
+tanto en la memoria colectiva como en los vestigios arqueológicos. 
+Cerca de la cabecera municipal se encuentran importantes sitios donde se 
+practicaba este juego, como Cobá, Muyil (Chunyaxché), Dzibanché, 
+Kohunlich y Tulum, todos dentro del territorio quintanarroense. 
+En la actualidad, las casas de cultura y escuelas locales realizan talleres de 
+Pok-ta-pok como parte de la enseñanza de las tradiciones mayas, 
+fomentando la identidad y el orgullo entre los jóvenes de la comunidad.. 
+`,
+    imagen: "./public/assets/img/Pok-ta-pok.png"
   },
   {
-    titulo: "Carrera de costales",
-    descripcionLarga: "Descripción del juego segundo...",
-    imagen: "./public/assets/img/2.png"
+    titulo: "Bul o Buul",
+    descripcionLarga: `El Bul (también conocido como Buul o Puluc) es un juego de azar y estrategia de 
+origen maya que combina elementos lúdicos, simbólicos y rituales. Era practicado 
+tanto por adultos como por jóvenes, y tenía un profundo significado religioso y 
+social dentro de las comunidades mayas. 
+El juego consiste en una guerra simbólica entre dos grupos de piezas, donde los 
+jugadores deben avanzar sus fichas en un tablero para capturar las del oponente. 
+Se utilizaban granos de maíz o frijoles marcados como dados, que determinaban 
+el número de movimientos. El tablero podía dibujarse directamente en el suelo o 
+en una superficie plana, con una serie de casillas o divisiones representadas con 
+líneas o piedritas. 
+Materiales y proceso de fabricación 
+“Dados”: cuatro o más granos de maíz o frijol, algunos marcados con carbón o 
+pintura natural para representar diferentes valores. 
+Tablero: una línea de casillas marcadas en la tierra, sobre una tabla o incluso 
+sobre un petate. 
+Fichas: pequeñas piedras, semillas, conchas o trozos de cerámica que 
+representaban los “guerreros” o ejércitos. 
+Decoraciones: en contextos ceremoniales, los tableros podían adornarse con 
+flores, velas o elementos simbólicos relacionados con los dioses tutelares del maíz 
+y la guerra. 
+Simbolismo y función ritual 
+El Bul no era solo un pasatiempo: también se consideraba un medio de 
+adivinación. Los sacerdotes (ah kinob) y chamanes lo usaban para consultar la 
+voluntad de los dioses y tomar decisiones sobre la siembra, la caza o la guerra. 
+Los resultados del juego podían interpretarse como mensajes divinos, y en 
+algunas regiones se jugaba antes de eventos importantes, como ceremonias 
+agrícolas o batallas. 
+Durante la época colonial 
+Con la llegada de los españoles, el Bul fue prohibido por su relación con la 
+adivinación y la cosmovisión maya. Sin embargo, el juego sobrevivió en 
+secreto, practicado dentro de los hogares o en reuniones comunitarias, 
+conservando su carácter tradicional, aunque adaptándose como juego de 
+entretenimiento. 
+El Bul en Felipe Carrillo Puerto, Quintana Roo 
+En comunidades mayas del municipio de Felipe Carrillo Puerto, como Señor, 
+Tihosuco, Chunhuhub y Tepich, el Bul sigue siendo recordado por los ancianos 
+y enseñado a los niños en talleres culturales y ferias tradicionales. 
+Durante las celebraciones del Janal Pixan o en encuentros comunitarios, se 
+organizan partidas demostrativas del juego como parte del rescate de las 
+costumbres mayas locales. Además, algunas escuelas bilingües lo incluyen en 
+actividades pedagógicas para fortalecer el vínculo con la lengua y cosmovisión 
+maya.`,
+    imagen: "./public/assets/img/Bul o Buul.png"
   },
   {
-    titulo: "Palo encebado",
-    descripcionLarga: "Descripción del tercer juego...",
-    imagen: "./public/assets/img/3.png"
+    titulo: "Tinjoroch",
+    descripcionLarga: `El Tinjoroch es un juego tradicional maya que combina habilidad, puntería y 
+competencia amistosa, practicado principalmente por niños y jóvenes en las 
+comunidades rurales de la Península de Yucatán, incluyendo la zona de Felipe 
+Carrillo Puerto, Quintana Roo. Aunque no tiene un origen ritual tan antiguo 
+como el Pok-ta-pok, el Tinjoroch se considera parte del legado cultural maya 
+transmitido oralmente a lo largo de generaciones. 
+Origen y significado 
+El Tinjoroch tiene sus raíces en los juegos de destreza que los antiguos mayas 
+realizaban para entrenar la coordinación y la fuerza física, especialmente en la 
+infancia. Su nombre proviene de una palabra maya que hace referencia al acto 
+de lanzar o golpear un objeto. En esencia, el Tinjoroch representa la conexión 
+entre la vida cotidiana y la naturaleza, ya que los materiales empleados 
+provenían del entorno inmediato: ramas, semillas, piedras y fibras vegetales. 
+Materiales y proceso de fabricación 
+• Base o tabla: se elaboraba con madera ligera o una raíz firme, clavada en 
+el suelo o sostenida entre piedras. 
+• Blanco o diana: a veces una botella, coco, mazorca seca o fruta, colocada 
+sobre la base. 
+• Proyectiles: pequeñas bolas de trapo, semillas, o piedras redondeadas 
+envueltas en hojas o fibras naturales. 
+• Instrumento de lanzamiento: en algunas versiones se usa una ramita en 
+forma de palanca o resorte de bejuco, mientras que en otras se lanza 
+directamente con la mano. 
+Cada comunidad podía adaptar las reglas, dependiendo de los materiales 
+disponibles o la edad de los jugadores. 
+Reglas y forma de juego 
+El objetivo del Tinjoroch es derribar o golpear un objeto a distancia, 
+demostrando puntería y control. Los jugadores se colocan en fila y, por turnos, 
+lanzan sus proyectiles intentando alcanzar el blanco. 
+Gana quien logre derribarlo con el menor número de intentos, o quien sume 
+más aciertos en una ronda determinada. En algunas versiones, los jugadores 
+apuestan pequeñas recompensas simbólicas, como frutas, dulces o fichas, lo 
+que refuerza el carácter social del juego. 
+Simbolismo y función cultural 
+Aunque carece del componente religioso de juegos como el Pok-ta-pok, el 
+Tinjoroch conserva un sentido comunitario profundo, pues solía practicarse 
+durante las fiestas patronales, reuniones de milpa o convivencias familiares, 
+donde los mayores enseñaban a los jóvenes las tradiciones de su pueblo. 
+El Tinjoroch en Felipe Carrillo Puerto, Quintana Roo 
+En el municipio de Felipe Carrillo Puerto, el Tinjoroch continúa practicándose 
+en comunidades como Señor, X-Hazil Sur, Tepich, Noh-Bec y Chumpón, 
+especialmente durante actividades escolares, ferias culturales y festivales del 
+Día del Niño. 
+De esta manera, el Tinjoroch se ha convertido no solo en un juego tradicional, 
+sino en un medio para transmitir valores de cooperación, creatividad y respeto 
+por la cultura ancestral.`,
+    imagen: "./public/assets/img/Tinjoroch.png"
+  },
+  {
+    titulo: "Kimbomba",
+    descripcionLarga: `El Kimbomba es un juego tradicional maya que es muy parecido al beisbol. 
+Aunque su forma actual ha adoptado variantes en distintas regiones de México 
+y Centroamérica, su origen se remonta a la tradición lúdica maya relacionada 
+con el uso de herramientas agrícolas y objetos cotidianos como instrumentos de 
+juego. En esencia, el Kimbomba consiste en golpear un pequeño palo con otro 
+más largo, lanzándolo al aire lo más lejos posible.  
+Origen y significado 
+El Kimbomba proviene de antiguas prácticas mayas donde los niños imitaban a 
+los adultos en las tareas de caza, corte o agricultura, desarrollando así fuerza y 
+coordinación. El juego también servía como una forma de entrenamiento físico 
+que preparaba a los jóvenes para las labores de la milpa o para actividades que 
+requerían agilidad y puntería. 
+En la lengua maya, “kimbomba” se asocia al sonido o acción de golpear o lanzar 
+algo con fuerza, evocando el impacto del palo al salir despedido. Aunque en 
+algunos lugares se le conoce con otros nombres (como chac-chic, tuk-tuk o 
+kimbombita), la dinámica esencial del juego se ha mantenido casi igual durante 
+siglos. 
+Materiales  
+• La bomba: un palo corto y afilado en ambos extremos (de unos 10 a 15 cm), 
+hecho de madera ligera como guayacán, jabín o ramón. 
+• El bate o varilla: un palo largo (de unos 60 a 80 cm) con un extremo liso, 
+usado para golpear la bomba. 
+• Superficie de juego: un terreno plano, de preferencia de tierra apisonada o 
+pasto. 
+• Líneas de distancia: marcadas con ramas, piedras o cuerdas para medir la 
+longitud del lanzamiento. 
+El proceso es sencillo, pero requiere cuidado: los jugadores afilaban los 
+extremos de la bomba para que pudiera levantarse con facilidad al golpearla, y 
+alisaban el bate con cuchillos o piedras para lograr un mejor impacto. 
+Reglas y forma de juego 
+El objetivo del Kimbomba es golpear la bomba con el palo más largo, haciéndola 
+saltar y luego lanzándola lo más lejos posible. El juego puede realizarse de forma 
+individual o en equipos. 
+1. El jugador coloca la bomba en el suelo. 
+2. Golpea una de sus puntas para hacerla saltar. 
+3. Cuando está en el aire, intenta golpearla de nuevo con el bate para enviarla 
+a distancia. 
+4. Se mide la distancia alcanzada; el jugador con el lanzamiento más largo 
+gana. 
+En algunas variantes, si el jugador falla el golpe, cede su turno o pierde puntos. 
+El juego puede incluir rondas eliminatorias o desafíos de precisión, como 
+alcanzar un blanco o mantener la bomba en el aire varias veces seguidas. 
+Simbolismo y función cultural 
+En la cosmovisión maya, el acto de golpear y elevar la bomba representa la 
+superación y el impulso del espíritu humano hacia el cielo, conectando el 
+esfuerzo físico con la dimensión espiritual. 
+En la actualidad 
+Hoy el Kimbomba es reconocido como un juego tradicional mexicano de origen 
+maya. Se enseña en escuelas bilingües, ferias culturales y encuentros 
+comunitarios organizados por instituciones como el INAH o la Secretaría de 
+Cultura. En algunos festivales, se han creado torneos locales y regionales que 
+promueven el rescate de este tipo de actividades tradicionales. 
+El Kimbomba en Felipe Carrillo Puerto, Quintana Roo 
+En las comunidades mayas del municipio de Felipe Carrillo Puerto, el 
+Kimbomba continúa vivo como una actividad recreativa y educativa. En 
+poblaciones como Tihosuco, Señor, X-Hazil Sur, Tepich, Noh-Bec y Chumpón, 
+los niños suelen jugarlo en los patios escolares o en los espacios abiertos 
+durante las festividades locales.`,
+    imagen: "./public/assets/img/Kimbomba.png"
+  },
+  {
+    titulo: "Chácara",
+    descripcionLarga: `El Chácara es un juego tradicional maya que es la versión maya del juego llamado 
+“avioncito”. Su nombre proviene del maya chak’ara o chaac’ar, que hace 
+referencia al acto de lanzar o rebotar algo pequeño. 
+En este juego, se dibuja una figura en el suelo y se va saltando por las casillas 
+numeradas sin pisar las líneas. También puede ser un instrumento de percusión 
+de origen canario, similar a las castañuelas, o un tipo de bolsa tejida con fibras 
+vegetales.  
+Es un juego tradicional que se juega lanzando una piedra (o "chácara") y saltando 
+por casillas dibujadas en el suelo, que generalmente van del 1 al 10.  
+Los jugadores lanzan la piedra a la primera casilla, luego saltan por las casillas 
+alternando un pie y dos pies, sin tocar las líneas. Gana el jugador que completa el 
+recorrido de ida y vuelta sin cometer errores.  
+Se relaciona con juegos similares de otras culturas y es parte de la herencia 
+cultural maya.`,
+    imagen: "./public/assets/img/Chácara.png"
+  },
+  {
+    titulo: "Caza Venado",
+    descripcionLarga: `Caza Venado es un juego maya en donde hay dos roles, el cazador y el o los 
+venados; el cazador es el único que debe tener un balón y debe de lanzarlo a los 
+demás con la intención de “cazarlos”, todos los demás tienen que evitar que los 
+casen, y esto lo evitan mientras corren del cazador, el juego acaba cuando el 
+cazador le haya pegado o más bien, haya cazado a todos los venados. 
+`,
+    imagen: "./public/assets/img/Caza Venado.png"
   }
 ];
 
