@@ -1,43 +1,43 @@
-/* === SLIDER MAYA === */
+/*SLIDER MAYA*/
 
 .slider-maya {
-  position: relative;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  max-width: 1600px;
-  width: 100%;
+  position: relative;        /* Para posicionar correctamente las flechas */
+  margin: auto;              /* Centra el slider */
+  display: flex;             
+  align-items: center;       /* Alinea flechas y track verticalmente */
+  gap: 1rem;                 /* Espacio entre flechas y el track */
+  max-width: 1600px;         /* Ancho máximo del slider */
+  width: 100%;               /* Ocupa todo el ancho posible */
 }
 
 .slider-track {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 1.5rem;
-  padding: 1rem;
+  display: flex;             /* Coloca las tarjetas en fila */
+  overflow-x: auto;          /* Permite desplazamiento horizontal */
+  scroll-behavior: smooth;   /* Desplazamiento suave */
+  gap: 1.5rem;               /* Espacio entre tarjetas */
+  padding: 1rem;             /* Separación interna */
 }
 
 .slider-track::-webkit-scrollbar {
-  display: none;  /* Oculta la barra de scroll */
+  display: none;             /* Oculta la barra de scroll */
 }
 
 .slide {
-  min-width: 48%;
-  background: #ffffff;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  min-width: 48%;            /* Dos tarjetas por fila en pantallas grandes */
+  background: #ffffff;       
+  padding: 1rem;             
+  border-radius: 12px;       /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);  /* Sombra suave */
   display: flex;
-  flex-direction: column;
+  flex-direction: column;    /* Imagen arriba, texto abajo */
   gap: .7rem;
 }
 
 .slide img {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;   /* puedes cambiar a 4/3 si quieres */
-  object-fit: cover;
+  aspect-ratio: 16 / 9;      /* Mantiene proporción tipo video */
+  object-fit: cover;         /* Rellena sin deformarse */
   border-radius: 10px;
 }
 
@@ -54,7 +54,7 @@
 .slide-link {
   margin-top: .4rem;
   font-weight: bold;
-  color: #4d5328;
+  color: #4d5328;            /* Color verde maya */
   cursor: pointer;
   font-size: .9rem;
 }
@@ -62,89 +62,88 @@
 /* FLECHAS DEL SLIDER */
 .slider-btn {
   border: none;
-  background: #ffffff;
+  background: #ffffff;       
   color: #4d5328;
-  font-size: 1.8rem;
+  font-size: 1.8rem;         /* Tamaño del icono */
   padding: .5rem 1rem;
-  border-radius: 50%;
+  border-radius: 50%;        /* Botón circular */
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,.15); /* Sombra */
 }
 
 .slider-btn:hover {
-  background: #eae6dc;
+  background: #eae6dc;       /* Color hover */
 }
 
 /* Responsive: en pantallas pequeñas solo 1 tarjeta */
 @media (max-width: 768px) {
   .slide {
-    min-width: 90%;
+    min-width: 90%;          /* Se muestra solo 1 tarjeta */
   }
 }
 
-/* ===== MODAL VER MÁS ===== */
+/*MODAL VER MÁS*/
 
 /* Contenedor general del modal */
 .modal-vermas {
-  position: fixed;
-  inset: 0;
-  display: flex;                 /* siempre flex */
+  position: fixed;           /* Se superpone a toda la pantalla */
+  inset: 0;                  /* Ocupa toda el área */
+  display: flex;             
   align-items: center;
   justify-content: center;
-  z-index: 60;
+  z-index: 60;               /* Encima de todo */
 
-  opacity: 0;                    /* oculto por defecto */
-  pointer-events: none;
-  transition: opacity 0.25s ease;
+  opacity: 0;                /* Oculto por defecto */
+  pointer-events: none;      /* No permite clics mientras está cerrado */
+  transition: opacity 0.25s ease; /* Animación de aparición */
 }
 
 .modal-vermas.is-open {
-  opacity: 1;                    /* aparece suave */
-  pointer-events: auto;
+  opacity: 1;                /* Visible */
+  pointer-events: auto;      /* Activado */
 }
 
 .modal-vermas__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.45);   /* Fondo oscuro */
 }
 
 /* Contenedor blanco */
 .modal-vermas__content {
   position: relative;
   background: #ffffff;
-  max-width: 720px;
+  max-width: 720px;          /* Ancho máximo del modal */
   width: 90%;
-  max-height: 85vh;
+  max-height: 85vh;          /* Limita altura (scroll interno) */
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0,0,0,.25);
   padding: 20px;
   overflow-y: auto;
 
-  /* animación de entrada */
-  transform: translateY(10px) scale(0.97);
-  opacity: 0;
+  transform: translateY(10px) scale(0.97); 
+  opacity: 0;                /* Empieza oculto y desplazado */
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-/* cuando el modal está abierto, aplicamos la animación */
+/* Animación cuando el modal se abre */
 .modal-vermas.is-open .modal-vermas__content {
-  transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1); /* Regresa a su posición normal */
   opacity: 1;
 }
 
-/* Imagen arriba, sin recorte */
+/* Imagen arriba sin recorte */
 .modal-vermas__img {
   width: 100%;
-  height: auto;          /* respetamos proporción */
-  max-height: 230px;     /* controla qué tan alta puede ser */
-  object-fit: contain;   /* NO recorta la imagen */
+  height: auto;
+  max-height: 230px;        /* Altura máxima */
+  object-fit: contain;      /* Mantiene la imagen completa sin recortar */
   display: block;
   border-radius: 15px;
   margin-bottom: 1.4rem;
 }
 
-/* Texto abajo */
+/* Texto del modal */
 .modal-vermas__body {
   padding: 0 0.6rem 0.8rem;
 }
@@ -168,7 +167,7 @@
   top: 0.8rem;
   right: 1rem;
   border: none;
-  background: transparent;
+  background: transparent;   /* Sin fondo */
   font-size: 1.8rem;
   cursor: pointer;
   color: #333;

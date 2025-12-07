@@ -1,26 +1,31 @@
-// ===================== COMENTARIOS =====================
+//COMENTARIOS
 
-// URL del backend (el que corre en backend/index.js)
+//URL del backend (el que corre en backend/index.js)
 const URL_API_COMENTARIOS = "http://localhost:4000/comments";
 
 function iniciarComentarios() {
+  //Obtener elementos del DOM
   const formComentario = document.getElementById("formComentario");
   const listaComentarios = document.getElementById("listaComentarios");
   const listaComentariosModal = document.getElementById("listaComentariosModal");
   const btnMas = document.getElementById("btnMas");
   const modal = document.getElementById("modalComentarios");
   const btnCerrarModal = document.getElementById("cerrarModalComentarios");
+
+  //Overlay del modal (fondo oscuro) si existe
   const overlayModal = modal
     ? modal.querySelector(".comentarios-modal__overlay")
     : null;
 
-  // Si no existe la sección aquí, no hacemos nada
+  //Si esta sección no existe en el HTML, detenemos la ejecución
   if (!formComentario || !listaComentarios) return;
 
-  // ------- función para generar el HTML de un comentario -------
+  //Función para generar el HTML de un comentario
   function renderComentario(c) {
+    // Inicial del usuario (primera letra del nombre)
     const inicial = c.nombre ? c.nombre.charAt(0).toUpperCase() : "?";
 
+    // Devuelve una tarjeta de comentario en HTML
     return `
       <article class="comentario">
         <div class="comentario__info">
@@ -37,13 +42,14 @@ function iniciarComentarios() {
     `;
   }
 
-  // ------- Enviar comentario -------
+  //Enviar comentario
   formComentario.addEventListener("submit", async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Evita recargar la página
 
     const nombre = document.getElementById("nombre").value.trim();
     const mensaje = document.getElementById("mensaje").value.trim();
 
+    //Validación básica
     if (!nombre || !mensaje) {
       alert("Por favor llena todos los campos");
       return;
@@ -52,6 +58,7 @@ function iniciarComentarios() {
     const nuevoComentario = { nombre, mensaje };
 
     try {
+      //Enviamos el comentario al backend
       const res = await fetch(URL_API_COMENTARIOS, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -60,47 +67,52 @@ function iniciarComentarios() {
 
       const data = await res.json();
 
+      //Si el servidor devuelve error
       if (!res.ok) {
         alert(data.error || "Error al guardar comentario");
         return;
       }
 
+      //Resetea el formulario tras enviar
       formComentario.reset();
-      cargarComentarios(); // recargar lista tras guardar
+
+      //Recargar lista de comentarios desde la BD
+      cargarComentarios();
     } catch (error) {
       console.error(error);
       alert("No se pudo conectar con el servidor de comentarios");
     }
   });
 
-  // ------- Cargar comentarios existentes -------
+  //Cargar comentarios desde el backend
   async function cargarComentarios() {
     try {
       const res = await fetch(URL_API_COMENTARIOS);
       const comentarios = await res.json();
 
+      // Si no hay comentarios aún
       if (!Array.isArray(comentarios) || comentarios.length === 0) {
-  // Debajo del formulario no mostramos nada
-  listaComentarios.innerHTML = "";
+        // No los mostramos debajo del formulario
+        listaComentarios.innerHTML = "";
 
-  if (listaComentariosModal) {
-    listaComentariosModal.innerHTML = "<p>No hay comentarios aún.</p>";
-  }
-  return;
-}
+        // En el modal mostramos mensaje vacío
+        if (listaComentariosModal) {
+          listaComentariosModal.innerHTML = "<p>No hay comentarios aún.</p>";
+        }
+        return;
+      }
 
-
+      // Ordenar de más reciente a más antiguo
       const ordenados = comentarios.slice().reverse();
 
-      // ⬇️ Debajo del formulario NO mostramos la lista de comentarios
-      // (queda vacío para que solo se vean en el modal)
+      // Debajo del formulario NO mostramos nada (lista vacía a propósito)
       listaComentarios.innerHTML = "";
 
-      // 🔹 Modal: TODOS los comentarios con el diseño simple
+      // En el modal sí mostramos TODOS los comentarios
       if (listaComentariosModal) {
         listaComentariosModal.innerHTML = ordenados
-          .map(renderComentario)
-          .join("");
+          .map(renderComentario) // Generar HTML
+          .join("");             // Unir en un solo bloque
       }
     } catch (error) {
       console.error(error);
@@ -111,24 +123,25 @@ function iniciarComentarios() {
     }
   }
 
-  // Llamar al cargar la página
+  //Llamar a la carga inicial de comentarios al entrar a la página
   cargarComentarios();
 
-  // ------- ABRIR MODAL -------
+  //ABRIR MODAL (botón "Leer más")
   if (btnMas && modal) {
     btnMas.addEventListener("click", (e) => {
       e.preventDefault();
-      modal.classList.add("is-open");
+      modal.classList.add("is-open"); // Activa la animación CSS del modal
     });
   }
 
-  // ------- CERRAR MODAL -------
+  //CERRAR MODAL (botón X)
   if (btnCerrarModal && modal) {
     btnCerrarModal.addEventListener("click", () => {
       modal.classList.remove("is-open");
     });
   }
 
+  //CERRAR MODAL al hacer clic en el overlay
   if (overlayModal && modal) {
     overlayModal.addEventListener("click", () => {
       modal.classList.remove("is-open");
@@ -136,5 +149,5 @@ function iniciarComentarios() {
   }
 }
 
-// Esperar a que cargue el HTML antes de buscar los elementos
+// Esperar a que el DOM esté listo para inicializar todo
 window.addEventListener("DOMContentLoaded", iniciarComentarios);
