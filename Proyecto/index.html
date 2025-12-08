@@ -8,6 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto</title>
 
+  <!-- Leaflet CSS (mapa libre) -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+/>
 
   <!-- Aquí luego enlazan TODOS los CSS -->
 </head>
@@ -142,9 +149,35 @@
   </div>
 </section>
 
-
     <section id="sec-josue">
+  <h2 class="comunidades-titulo">Comunidades</h2>
+  <p class="comunidades-desc">
+    Usa el buscador para localizar zonas arqueológicas, museos y otros lugares culturales
+    de la zona maya.
+  </p>
 
+  <div class="comunidades-busqueda">
+    <input
+      id="inputBusquedaLugar"
+      type="text"
+      placeholder="Buscar"
+      aria-label="Buscar lugares en el mapa"
+    />
+    <button id="btnBuscarLugar" type="button">Buscar</button>
+  </div>
+
+  <div class="comunidades-mapa">
+    <div id="mapaComunidad"></div>
+  </div>
+  <div class="comunidades-grid" id="comunidadesGrid">
+    <div class="com-item color1">
+      <p class="com-foto">
+        Selecciona un marcador en el mapa para ver la foto, el tipo de lugar,
+        la dirección y una breve descripción.
+      </p>
+      <h3 class="com-nombre">Nombre del sitio</h3>
+    </div>
+  </div>
     </section>
 
     <section id="sec-alexandra">
@@ -156,6 +189,7 @@
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
+
 
       <section class="seccion-comidas">
 
@@ -916,44 +950,62 @@
           </p>
 
           <div class="artesanias-grid">
-
-            <!-- Cuadritos de las artesanias -->
-            <article class="artesania-card">
+            <article class="artesania-card" data-id="textiles-bordados">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
+                <img src="./public/assets/img/textiles-bordados.png" alt="imagen de artesanìa" class="artesania-card__img">
               </div>
-              <span class="artesania-card__label">Artesanía</span>
+              <span class="artesania-card__label">Textiles y bordados tradicionales </span>
             </article>
 
-            <article class="artesania-card">
+            <article class="artesania-card" data-id="tallado-madera">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div> <span class="artesania-card__label">Artesanía</span>
+                <img src="./public/assets/img/tallado-madera.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Tallado en madera </span>
             </article>
 
-            <article class="artesania-card">
+            <article class="artesania-card"  data-id="ceramica-alfareria">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div> <span class="artesania-card__label">Artesanía</span>
+                <img src="./public/assets/img/ceramica-alfareria.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Cerámica y alfarería tradicional</span>
             </article>
 
-            <article class="artesania-card">
+            <article class="artesania-card" data-id="cesteria-palma">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div> <span class="artesania-card__label">Artesanía</span>
+                <img src="./public/assets/img/cesteria-palma.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Cestería, palma y fibras naturales</span>
             </article>
 
-            <article class="artesania-card">
+            <article class="artesania-card" data-id="joyeria-artesanal">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div><span class="artesania-card__label">Artesanía</span>
+                <img src="./public/assets/img/joyeria.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div><span class="artesania-card__label">Joyería artesanal</span>
             </article>
 
-            <article class="artesania-card">
+            <article class="artesania-card" data-id="velas-tradicionales">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div> <span class="artesania-card__label">Artesanía</span>
+                <img src="./public/assets/img/velas.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Elaboración de velas tradicionales (Cera y miel de abeja
+                melipona)</span>
             </article>
+
+            <article class="artesania-card" data-id="instrumentos-musicales">
+              <div class="artesania-card__img-contenedor">
+                <img src="./public/assets/img/instrumentos-musicales.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Elaboración de instrumentos musicales tradicionales </span>
+            </article>
+
+            <article class="artesania-card" data-id="figuras-esculturas">
+              <div class="artesania-card__img-contenedor">
+                <img src="./public/assets/img/figuras-esculturas_dePiedra.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div><span class="artesania-card__label">Producción de figurillas y esculturas con piedra y yeso </span>
+            </article>
+
+            <article class="artesania-card" data-id="jicaras-calabazas">
+              <div class="artesania-card__img-contenedor">
+                <img src="./public/assets/img/jicaras-calabazas.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Arte en jícaras y calabazas secas</span>
+            </article>
+
           </div>
 
           <!-- MODAL ARTESANÍAS -->
@@ -963,12 +1015,12 @@
             <div class="modal-artesania__content">
               <button class="modal-artesania__close">✕</button>
 
-              <img class="modal-artesania__img" src="" alt="Imagen de la artesanía">
-
               <h2 class="modal-artesania__title">Título de la artesanía</h2>
               <p class="modal-artesania__text">
                 Aquí se mostrará la descripción completa de la artesanía.
               </p>
+
+              <div class="modal-artesania__grid"> </div>
             </div>
           </div>
 
@@ -1246,162 +1298,162 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
         <!-- Carril horizontal que será auto-scroll en JS (id="galeriaTrack") -->
         <div class="galeria__track" id="galeriaTrack">
-        <div class="galeria__item">
-  <img src="/image/1.jpg" alt="Foto 1 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/2.jpg" alt="Foto 2 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/3.jpg" alt="Foto 3 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/4.jpg" alt="Foto 4 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/6.jpg" alt="Foto 6 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/7.jpg" alt="Foto 7 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/8.jpg" alt="Foto 8 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/9.jpg" alt="Foto 9 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/10.jpg" alt="Foto 10 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/11.jpg" alt="Foto 11 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/12.jpg" alt="Foto 12 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/13.jpg" alt="Foto 13 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/14.jpg" alt="Foto 14 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/15.jpg" alt="Foto 15 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/16.jpg" alt="Foto 16 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/17.jpg" alt="Foto 17 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/18.jpg" alt="Foto 18 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/19.jpg" alt="Foto 19 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/20.jpg" alt="Foto 20 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/21.jpg" alt="Foto 21 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/22.jpg" alt="Foto 22 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/23.jpg" alt="Foto 23 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/24.jpg" alt="Foto 24 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/25.jpg" alt="Foto 25 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/26.jpg" alt="Foto 26 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/27.jpg" alt="Foto 27 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/28.jpg" alt="Foto 28 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/29.jpg" alt="Foto 29 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/30.jpg" alt="Foto 30 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/31.jpg" alt="Foto 31 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/32.jpg" alt="Foto 32 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/33.jpg" alt="Foto 33 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/34.jpg" alt="Foto 34 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/35.jpg" alt="Foto 35 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/36.jpg" alt="Foto 36 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/37.jpg" alt="Foto 37 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/38.jpg" alt="Foto 38 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/39.jpg" alt="Foto 39 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/40.jpg" alt="Foto 40 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/41.jpg" alt="Foto 41 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/42.jpg" alt="Foto 42 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/43.jpg" alt="Foto 43 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/44.jpg" alt="Foto 44 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/45.jpg" alt="Foto 45 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/46.jpg" alt="Foto 46 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/47.jpg" alt="Foto 47 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/48.jpg" alt="Foto 48 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/49.jpg" alt="Foto 49 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/50.jpg" alt="Foto 50 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/51.jpg" alt="Foto 51 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/52.jpg" alt="Foto 52 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/53.jpg" alt="Foto 53 - descripción">
-</div>
+          <div class="galeria__item">
+            <img src="/image/1.jpg" alt="Foto 1 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/2.jpg" alt="Foto 2 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/3.jpg" alt="Foto 3 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/4.jpg" alt="Foto 4 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/6.jpg" alt="Foto 6 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/7.jpg" alt="Foto 7 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/8.jpg" alt="Foto 8 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/9.jpg" alt="Foto 9 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/10.jpg" alt="Foto 10 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/11.jpg" alt="Foto 11 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/12.jpg" alt="Foto 12 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/13.jpg" alt="Foto 13 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/14.jpg" alt="Foto 14 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/15.jpg" alt="Foto 15 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/16.jpg" alt="Foto 16 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/17.jpg" alt="Foto 17 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/18.jpg" alt="Foto 18 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/19.jpg" alt="Foto 19 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/20.jpg" alt="Foto 20 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/21.jpg" alt="Foto 21 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/22.jpg" alt="Foto 22 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/23.jpg" alt="Foto 23 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/24.jpg" alt="Foto 24 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/25.jpg" alt="Foto 25 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/26.jpg" alt="Foto 26 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/27.jpg" alt="Foto 27 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/28.jpg" alt="Foto 28 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/29.jpg" alt="Foto 29 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/30.jpg" alt="Foto 30 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/31.jpg" alt="Foto 31 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/32.jpg" alt="Foto 32 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/33.jpg" alt="Foto 33 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/34.jpg" alt="Foto 34 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/35.jpg" alt="Foto 35 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/36.jpg" alt="Foto 36 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/37.jpg" alt="Foto 37 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/38.jpg" alt="Foto 38 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/39.jpg" alt="Foto 39 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/40.jpg" alt="Foto 40 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/41.jpg" alt="Foto 41 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/42.jpg" alt="Foto 42 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/43.jpg" alt="Foto 43 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/44.jpg" alt="Foto 44 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/45.jpg" alt="Foto 45 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/46.jpg" alt="Foto 46 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/47.jpg" alt="Foto 47 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/48.jpg" alt="Foto 48 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/49.jpg" alt="Foto 49 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/50.jpg" alt="Foto 50 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/51.jpg" alt="Foto 51 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/52.jpg" alt="Foto 52 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/53.jpg" alt="Foto 53 - descripción">
+          </div>
 
           <!-- Puedes añadir más fotos -->
         </div>
@@ -1474,6 +1526,15 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
   <!-- Script de Vite -->
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
+
+<!-- Leaflet JS (mapa libre) -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
+
+
 </body>
 
 </html>

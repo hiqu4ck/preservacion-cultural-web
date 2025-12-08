@@ -1161,73 +1161,330 @@ if (leyendasSlider && leyendasSlides.length > 0 && leyendasBtn) {
 
 
 
-/// ===========SSECCION PARA ARTESANIASSSS =======!!!!!!!!
-//==============DATOS DE ARTESANIAS ===========!!
-// ================ DATOS DE ARTESANÍAS =================
-const artesaniasInfo = [
-  {
-    titulo: "Artesanía 1",
-    descripcion: "Descripción detallada de la artesanía 1: materiales, significado y quién la elabora.",
-    imagen: "./public/assets/img/artesania1.jpg"
+
+
+/// =========== SECCIÓN PARA ARTESANÍAS =======!!!!!!!!
+
+// Datos de las artesanías por categoría
+const artesaniasData = {
+  "textiles-bordados": {
+  
+    items: [
+      {
+        img: "./public/assets/img/telar-cintura.jpg",
+        title: "Telar de cintura",
+        description: `Herencia directa de los mayas precolombinos, consiste en un telar amarrado a la cintura de la tejedora y a un árbol o poste.`
+      },
+      {
+        img: "./public/assets/img/teñido-natural.jpg",
+        title: "Teñido natural",
+        description: `Pigmentos naturales: achiote, añil, cochinilla, jabín y guayacán.`
+      },
+      {
+        img: "./public/assets/img/Hilos-Telas.jpg",
+        title: "Hilos y telas",
+        description: `Se usa algodón hilado a mano, hilos de seda, lino o mezclas sintéticas 
+        según la pieza.`
+      },
+      {
+        img: "./public/assets/img/Hipil.jpg",
+        title: "Huipiles",
+        description: `Prendas femeninas tradicionales, con bordados que representan flores, 
+        animales, cruces solares y grecas geométricas. `
+      },
+      {
+        img: "./public/assets/img/Blusas-Faldas.jpg",
+        title: "Blusas y faldas bordadas",
+        description: `Adaptaciones modernas del huipil, usadas en festividades 
+        o vendidas al turismo. `
+      },
+      {
+        img: "./public/assets/img/Rebozos-Manteles.jpg",
+        title: "Rebozos y manteles",
+        description: `Tejidos en telar, utilizados tanto en la vida diaria como en 
+        rituales religiosos.`
+      },
+      {
+        img: "./public/assets/img/Bolso.jpg",
+        title: "Bolsos",
+        description: `Elaborados para uso doméstico y venta 
+        artesanal.`
+      },
+      {
+        img: "./public/assets/img/Servilleta.jpg",
+        title: "Servilletas",
+        description: `Elaborados para uso doméstico y venta 
+        artesanal.`
+      },
+      {
+        img: "./public/assets/img/Caminos-mesa.jpg",
+        title: "Caminos de mesa",
+        description: `Elaborados para uso doméstico y venta 
+        artesanal.`
+      },
+    ]
   },
-  {
-    titulo: "Artesanía 2",
-    descripcion: "Descripción completa de la artesanía 2...",
-    imagen: "./public/assets/img/artesania2.jpg"
+
+  "tallado-madera": {
+    
+    items: [
+      {
+        img: "./public/assets/img/Tronco.jpg",
+        title: "Materiales",
+        description: `Los artesanos utilizan maderas nobles de la selva maya, como: 
+        • Chicozapote: dura y rojiza, muy usada en utensilios y esculturas. 
+        • Tzalam y K’ulché: resistentes y de veta fina. 
+        • Cedro y caoba: preferidas para tallas decorativas o muebles pequeños. `
+      },
+      {
+        img: "./public/assets/img/Figuras-madera.jpg",
+        title: "Figuras zoomorfas",
+        description: `Jaguares, monos, aves y serpientes (símbolos de fuerza o 
+        sabiduría). `
+      },
+      {
+        img: "./public/assets/img/Mascaras.jpg",
+        title: "Máscaras rituales",
+        description: `Utilizadas en danzas tradicionales.`
+      },
+      {
+        img: "./public/assets/img/Objetos-domesticos.jpg",
+        title: "Objetos domésticos",
+        description: `Cucharones, platos, morteros o muebles rústicos.`
+      },
+      {
+        img: "./public/assets/img/Arte-decorativo.jpg",
+        title: "Arte decorativo contemporáneo",
+        description: `Inspirado en la selva o los mitos mayas.`
+      },
+     
+    ]
   },
-  {
-    titulo: "Artesanía 3",
-    descripcion: "Descripción completa de la artesanía 3...",
-    imagen: "./public/assets/img/artesania3.jpg"
+
+  "ceramica-alfareria": {
+    
+    items: [
+      {
+        img: "./public/assets/img/Ceramica-Alfareria.jpg",
+        title: "Cerámica y alfarería tradicional",
+        description: `Desde tiempos prehispánicos, la cerámica fue fundamental en la vida maya: servía 
+para almacenar agua, cocinar, guardar semillas y realizar rituales funerarios. 
+En la zona de Carrillo Puerto, algunas familias aún practican la alfarería de manera 
+tradicional, usando barro de los suelos rojos locales.`
+      },
+    ]
   },
-  {
-    titulo: "Artesanía 4",
-    descripcion: "Descripción completa de la artesanía 4...",
-    imagen: "./public/assets/img/artesania4.jpg"
+
+  "cesteria-palma": {
+    
+    items: [
+      {
+        img: "./public/assets/img/Cesteria.jpg",
+        title: "Cestería",
+        description: `El tejido con fibras vegetales refleja la armonía del pueblo maya con la selva. Las 
+        materias primas son recolectadas de manera sustentable, respetando los ciclos de la 
+        naturaleza.`
+      },
+    ]
   },
-  {
-    titulo: "Artesanía 5",
-    descripcion: "Descripción completa de la artesanía 5...",
-    imagen: "./public/assets/img/artesania5.jpg"
+
+  "joyeria-artesanal": {
+    
+    items: [
+      {
+        img: "./public/assets/img/Joyeria_1.jpg",
+        title: "Joyería artesanal",
+        description: `La joyería maya contemporánea combina elementos naturales y simbólicos. Los 
+diseños evocan el esplendor del arte prehispánico, especialmente los adornos usados 
+por sacerdotes y nobles mayas`
+      },
+      {
+        img: "./public/assets/img/Joyeria_2.jpg",
+        title: "Joyería artesanal",
+        description: `Se utilizan semillas silvestres, hueso, conchas, jade, obsidiana, madera, plata y cuerno. 
+En algunos talleres se experimenta con resinas ecológicas y metales reciclados. `
+      },
+      {
+        img: "./public/assets/img/Joyeria_3.jpg",
+        title: "Joyería artesanal",
+        description: `Los motivos suelen representar: 
+• El sol y la luna (dualidad de energía). 
+• Glifos mayas y símbolos calendáricos. 
+• Animales sagrados: jaguar (protección), colibrí (buen augurio), serpiente 
+(renovación).`
+      },
+    ]
   },
-  {
-    titulo: "Artesanía 6",
-    descripcion: "Descripción completa de la artesanía 6...",
-    imagen: "./public/assets/img/artesania6.jpg"
+
+  "velas-tradicionales": {
+   
+    items: [
+      {
+        img: "./public/assets/img/Vela-melipona.jpg",
+        title: "Velas de miel de melipona",
+        description: `La cera de abeja se utilizaba para fabricar velas ceremoniales, que aún hoy se 
+elaboran para ofrendas y fiestas religiosas como el Hanal Pixán (Día de Muertos) o 
+las celebraciones del Hetzmek. 
+Se elaboran de forma manual, enrollando pabilos de algodón y sumergiéndolos 
+repetidamente en cera fundida.`
+      },
+      {
+        img: "./public/assets/img/Jabon-melipona.jpg",
+        title: "Jabones de miel de melipona maya",
+        description: `Los mayas de la península practicaron desde tiempos antiguos la apicultura con la 
+abeja melipona (Xunán Kab’), una especie sin aguijón nativa del sureste de México. 
+De esta abeja obtenían miel, cera y propóleo, productos fundamentales en la 
+economía y en los rituales religiosos prehispánicos.`
+      },
+      {
+        img: "./public/assets/img/Melipocultura.jpg",
+        title: "Melipocultura",
+        description: `Además de las velas, los artesanos elaboran jabones, bálsamos, cosméticos y 
+amuletos a base de miel, cera y propóleos de abeja melipona, siguiendo fórmulas 
+tradicionales 
+heredadas 
+de 
+los 
+abuelos. 
+Estas artesanías son parte del conocimiento etnobotánico maya, donde la 
+naturaleza se usa con respeto y propósito medicinal o espiritual. 
+`
+      },
+    ]
+  },
+
+  "instrumentos-musicales": {
+    
+    items: [
+      {
+        img: "./public/assets/img/Bombo.jpg",
+        title: "Bombo o tunkul: ",
+        description: `Hecho de troncos ahuecados de k’ulché o chicozapote, cubiertos 
+con piel de venado. `
+      },
+      {
+        img: "./public/assets/img/Tambores.jpg",
+        title: "Tambores y tarolas",
+        description: `Utilizados en la música maya pax, derivada de la Guerra de 
+Castas.`
+      },
+      {
+        img: "./public/assets/img/Violin.jpg",
+        title: "Violín tradicional",
+        description: `Elaborado con madera local y cuerdas de henequén o tripas de 
+animal.`
+      },
+      {
+        img: "./public/assets/img/Maracas.jpg",
+        title: "Maracas y sonajas",
+        description: `Fabricadas con jícaras secas rellenas de semillas o piedrecillas.`
+      },
+      {
+        img: "./public/assets/img/Flauta.jpg",
+        title: "Flautas de carrizo y ocarinas",
+        description: `Inspiradas en instrumentos prehispánicos.`
+      },
+    ]
+  },
+
+  "figuras-esculturas": {
+  
+    items: [
+      {
+        img: "./public/assets/img/Esculturas_1.jpg",
+        title: "Producción de figurillas y esculturas con piedra y yeso ",
+        description: `En las zonas cercanas a ruinas arqueológicas como Tihosuco, Xpichil o Chunyaxché, 
+algunos artesanos reproducen figuras inspiradas en el arte escultórico maya 
+antiguo, combinando técnicas tradicionales con moldes modernos.`
+      },
+    ]
+  },
+
+  "jicaras-calabazas": {
+ 
+    items: [
+      {
+        img: "./public/assets/img/Jicaras_1.jpg",
+        title: "Arte en jícaras y calabazas secas ",
+        description: `Las jícaras (frutos del árbol Crescentia cujete) han sido utilizadas por siglos para hacer 
+utensilios, recipientes y adornos. 
+Elaboración 
+• Las frutas se secan al sol y se limpian. 
+• Se decoran con incisiones, pirograbado o pintura natural. 
+• Se barnizan con resina de copal o cera de abeja. 
+Usos 
+• Vasijas para agua o bebidas rituales (como el balché). 
+• Cucharones, vasos y jícaras decorativas. 
+• Recipientes ceremoniales usados por los jmeen (sacerdotes mayas).`
+      },
+      {
+        img: "./public/assets/img/Jicaras_2.jpg",
+        title: "Arte en jícaras y calabazas secas ",
+        description: ``
+      },
+    ]
   }
-];
+};
 
-// ================ MODAL ARTESANÍAS =================
-const artesaniaCards = document.querySelectorAll(".artesanias .artesania-card");
 
+// 1. Seleccionar tarjetas principales
+const artesaniaCards = document.querySelectorAll(".artesanias-grid .artesania-card");
+
+// 2. Elementos del modal
 const modalArtesania = document.getElementById("modal-artesania");
-const modalArtTitle = modalArtesania?.querySelector(".modal-artesania__title");
-const modalArtText = modalArtesania?.querySelector(".modal-artesania__text");
-const modalArtImg = modalArtesania?.querySelector(".modal-artesania__img");
-const modalArtClose = modalArtesania?.querySelector(".modal-artesania__close");
-const modalArtOverlay = modalArtesania?.querySelector(".modal-artesania__overlay");
+const modalArtTitle = modalArtesania.querySelector(".modal-artesania__title");
+const modalArtText = modalArtesania.querySelector(".modal-artesania__text");
+const modalArtGrid = modalArtesania.querySelector(".modal-artesania__grid");
+const modalArtClose = modalArtesania.querySelector(".modal-artesania__close");
+const modalArtOverlay = modalArtesania.querySelector(".modal-artesania__overlay");
 
-// Al hacer click en cada tarjeta de artesanía
-artesaniaCards.forEach((card, index) => {
+
+// 3. Evento clic — abrir modal
+artesaniaCards.forEach(card => {
   card.addEventListener("click", () => {
-    const data = artesaniasInfo[index];
-    if (!data || !modalArtesania || !modalArtTitle || !modalArtText || !modalArtImg) return;
 
-    modalArtTitle.textContent = data.titulo;
-    modalArtText.textContent = data.descripcion;
-    modalArtImg.src = data.imagen;
+    const categoryId = card.getAttribute("data-id");
+    const categoryData = artesaniasData[categoryId];
 
+    if (!categoryData) return;
+
+    // Título
+    modalArtTitle.textContent = categoryId.replace(/-/g, " ").toUpperCase();
+
+    // Descripción general (si existe)
+    modalArtText.textContent = categoryData.descripcion || "";
+
+    // Limpiar grid
+    modalArtGrid.innerHTML = "";
+
+    // Crear tarjetas internas
+    categoryData.items.forEach(item => {
+      const article = document.createElement("article");
+      article.classList.add("artesania-card");
+
+      article.innerHTML = `
+        <div class="artesania-card__img-contenedor">
+          <img src="${item.img}" alt="${item.title}" class="artesania-card__img">
+        </div>
+
+        <h3 class="artesania-card__title">${item.title}</h3>
+        <p>${item.description}</p>
+      `;
+
+      modalArtGrid.appendChild(article);
+    });
+
+    // Abrir modal
     modalArtesania.classList.add("is-open");
     document.body.classList.add("modal-open");
   });
 });
 
-// Cerrar modal (botón y overlay)
+
+// 4. Cerrar modal
 [modalArtClose, modalArtOverlay].forEach(el => {
-  if (!el) return;
   el.addEventListener("click", () => {
     modalArtesania.classList.remove("is-open");
     document.body.classList.remove("modal-open");
   });
 });
-
