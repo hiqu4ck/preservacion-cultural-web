@@ -29,13 +29,13 @@
 
 /* Colores de fondo por tarjeta (ajusta a tu paleta) */
 .cultura-card--bailes {
-    background-color: #727348;
+    background-color: var(--color-primario-verde-oscuro);
     /* verde olivo */
     color: #f7f3e9;
 }
 
 .cultura-card--musica {
-    background-color: #f7efb0;
+    background-color: var(--color-crema-amarillento);
     /* amarillo suave */
     color: #333;
 }
