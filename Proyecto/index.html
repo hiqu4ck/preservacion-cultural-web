@@ -28,11 +28,10 @@
     <section id="sec-alexandra">
       <div class="overlay-video">
         <div class="video">
-          <iframe src="https://www.youtube.com/embed/B4LvDiIi128?si=axPYKNxZ-B4adnw8" title="YouTube video player"
+          <iframe src="https://www.youtube.com/embed/wbPPEoNsjnE?si=4mjRrPDmwRl0fTCJ" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-          </iframe>
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
 
@@ -40,65 +39,50 @@
 
         <h2 class="titulo-comidas">Comidas típicas</h2>
         <p class="descripcion-comidas">
-          Agregar información sobre las comidas de la región, en la parte de abajo se hará un apartado
-          para poner por aparte los tipos de dulces, comidas y bebidas
+          En los siguientes apartados podrás leer sobre algunas comidas tipicas de la cultura maya.
         </p>
 
         <div class="tarjetas-comida">
 
           <!-- Tarjeta 1 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="dulces">
+            <div class="tarjeta-imagen1"></div>
             <div class="tarjeta-texto">Dulces</div>
           </div>
 
           <!-- Tarjeta 2 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="comidas">
+            <div class="tarjeta-imagen2"></div>
             <div class="tarjeta-texto">Comidas</div>
           </div>
 
           <!-- Tarjeta 3 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="bebidas">
+            <div class="tarjeta-imagen3"></div>
             <div class="tarjeta-texto">Bebidas</div>
           </div>
 
-          <!-- Tarjeta 4 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
-            <div class="tarjeta-texto">Bebidas</div>
-          </div>
-
-
-        </div>
-
-        <!-- Botones debajo, centrados -->
-        <div class="flechas-desplazamiento">
-          <button class="btn-flecha">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-chevron-left" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-            </svg>
-          </button>
-
-          <button class="btn-flecha">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-chevron-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-            </svg>
-          </button>
         </div>
       </section>
+
+      <!-- ================= MODAL ================= -->
+      <div id="modal-comidas" class="modal-comidas">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          <div id="modal-body"></div>
+        </div>
+      </div>
+
 
       <section class="medicina">
         <div class="card-medicina">
           <h4>Rituales tradicionales</h4>
           <h2>Medicina Tradicional</h2>
-          <p>Introducción pequeña a la medicinta tradicional maya y en la siguiente sección estarán los rituales
-            tradicionales
+          <p>La medicina tradicional maya es un sistema de conocimientos y prácticas de salud que ha sido transmitido de
+            generación en generación dentro de las comunidades mayas. A continuación, se presentan algunos remedios y
+            medicina tradicionales
           </p>
 
           <a href="#" class="btn-explorar">
@@ -110,6 +94,275 @@
           </a>
         </div>
       </section>
+      <!-- ========== MODAL MEDICINA ========== -->
+      <div id="modal-medicina" class="modal-medicina">
+        <div class="modal-medicina__overlay"></div>
+
+        <div class="modal-medicina__content">
+          <button class="modal-medicina__close">&times;</button>
+
+          <h2 class="modal-medicina__title">
+            MEDICINA TRADICIONAL MAYA DE QUINTANA ROO
+          </h2>
+
+          <div class="remedios-grid">
+
+            <!-- 1. Guayaba -->
+            <article class="remedio-card">
+              <img src="./public/medicina/guayaba.png" alt="Guayaba" class="remedio-card__img">
+              <h3 class="remedio-card__title">Guayaba (Psidium guajava) — hojas</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                infusionar 10 g de hojas secas por cada litro de agua hirviendo; dejar 10–15 minutos y colar. Tomar 1
+                taza 2-3 veces al día.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                diarreas, infecciones leves de estómago, lavado local para heridas (enfriada).
+              </p>
+            </article>
+
+            <!-- 2. Romero -->
+            <article class="remedio-card">
+              <img src="./public/medicina/romero.png" alt="Romero" class="remedio-card__img">
+              <h3 class="remedio-card__title">
+                Romero o hierbas locales parecidas (Lamiáceas locales) — infusión
+              </h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                5–10 g de hojas por taza de agua; infusionar 10 minutos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                malestares digestivos o como calmante leve.
+              </p>
+            </article>
+
+            <!-- 3. Copal / Bursera simaruba -->
+            <article class="remedio-card">
+              <img src="./public/medicina/copal.png" alt="Copal" class="remedio-card__img">
+              <h3 class="remedio-card__title">Copal / Bursera simaruba u otras Burseraceae — resina/hojas</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                resina o humo para fumigación; decocción de corteza para baños.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                problemas de piel, purificación ritual, infecciones cutáneas (uso tópico), mordeduras de insectos.
+              </p>
+            </article>
+
+            <!-- 4. Jobillo -->
+            <article class="remedio-card">
+              <img src="./public/medicina/jobillo.png" alt="Jobillo" class="remedio-card__img">
+              <h3 class="remedio-card__title">Jobillo (Astronium graveolens) — resina/corteza</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                aplicar resina tópica en heridas o abscesos; en algunos casos decocción de corteza para baños.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                curación de heridas y limpieza local.
+              </p>
+            </article>
+
+            <!-- 5. Pomolché -->
+            <article class="remedio-card">
+              <img src="./public/medicina/pomolche.png" alt="Pomolché" class="remedio-card__img">
+              <h3 class="remedio-card__title">Pomolché (Jatropha gaumeri / Jatropha spp.) — savia</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                uso tópico de la savia en zonas afectadas, limpiando antes la piel.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                tratamientos externos para granos y lesiones cutáneas.
+              </p>
+            </article>
+
+            <!-- 6. Thevetia gaumeri -->
+            <article class="remedio-card">
+              <img src="./public/medicina/thevetia.png" alt="Thevetia gaumeri" class="remedio-card__img">
+              <h3 class="remedio-card__title">Thevetia gaumeri (bursera local) — corteza/hojas</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocciones para baños tópicos; resina en curaciones externas. Uso tradicional controlado por
+                yerbateros.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                llagas, abscesos, problemas de la piel.
+              </p>
+            </article>
+
+            <!-- 7. Achiote -->
+            <article class="remedio-card">
+              <img src="./public/medicina/achiote.png" alt="Achiote" class="remedio-card__img">
+              <h3 class="remedio-card__title">Achiote (Bixa orellana) — semillas (pasta de annatto)</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                macerado de semillas para aplicaciones tópicas; en algunas tradiciones infusión suave para uso
+                digestivo.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                colorante y apoyo en algunas líneas curativas tradicionales.
+              </p>
+            </article>
+
+            <!-- 8. Guayacán / antiinflamatorias -->
+            <article class="remedio-card">
+              <img src="./public/medicina/guayacan.png" alt="Guayacán" class="remedio-card__img">
+              <h3 class="remedio-card__title">Guayacán y otras plantas antiinflamatorias locales</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocción de corteza o hojas en pequeñas cantidades.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                dolores musculares, inflamaciones.
+              </p>
+            </article>
+
+            <!-- 9. Hojas de plátano -->
+            <article class="remedio-card">
+              <img src="./public/medicina/hojas-platano.png" alt="Hojas de plátano" class="remedio-card__img">
+              <h3 class="remedio-card__title">Hojas de plátano (Musa spp.) — cataplasma</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                calentar hoja limpia y aplicar como cataplasma sobre la zona afectada.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                golpes, fracturas leves en combinación con sobadores tradicionales.
+              </p>
+            </article>
+
+            <!-- 10. Aloe / sábila -->
+            <article class="remedio-card">
+              <img src="./public/medicina/sabila.png" alt="Aloe vera" class="remedio-card__img">
+              <h3 class="remedio-card__title">Aloe / Sábila (Aloe vera) — gel</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                cortar penca, extraer el gel y aplicar de forma tópica. En jarabes tradicionales se prepara con cuidado.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                quemaduras, heridas, hidratación local de la piel.
+              </p>
+            </article>
+
+            <!-- 11. Flor de azahar / cítricos -->
+            <article class="remedio-card">
+              <img src="./public/medicina/florazahar.png" alt="Flor de azahar" class="remedio-card__img">
+              <h3 class="remedio-card__title">Flor de azahar y cítricos locales — infusión</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                infusionar flores (unos 5 g por taza) durante 10 minutos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                calma nervios, tensión ligera e insomnio leve.
+              </p>
+            </article>
+
+            <!-- 12. Hoja de ciruela -->
+            <article class="remedio-card">
+              <img src="./public/medicina/hoja-ciruela.png" alt="Hoja de ciruela" class="remedio-card__img">
+              <h3 class="remedio-card__title">Hoja de ciruela (Prunus sp. local) — infusión/tópico</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocción de hojas para baños o aplicaciones externas.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                problemas de la piel, erupciones y sarpullidos.
+              </p>
+            </article>
+
+            <!-- 13. Guayaco o raíces febrífugas -->
+            <article class="remedio-card">
+              <img src="./public/medicina/guayaco.png" alt="Guayaco" class="remedio-card__img">
+              <h3 class="remedio-card__title">Guayaco u otras raíces locales para fiebre</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocción suave de raíces (hervir 10–20 minutos) y tomar en sorbos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                fiebre leve y malestares generales.
+              </p>
+            </article>
+
+            <!-- 14. Infusiones para la tos -->
+            <article class="remedio-card">
+              <img src="./public/medicina/eucalipto.png" alt="Infusiones para la tos" class="remedio-card__img">
+              <h3 class="remedio-card__title">Infusiones para la tos (mezclas herbales locales)</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                combinar hojas de eucalipto local, orégano mexicano u otras plantas; infusionar y tomar 2–3 tazas al
+                día.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                alivio de tos y bronquitis leve, a veces combinado con vaporizaciones.
+              </p>
+            </article>
+
+            <!-- 15. Cataplasma de semillas -->
+            <article class="remedio-card">
+              <img src="./public/medicina/cataplasma.png" alt="Cataplasma de semillas" class="remedio-card__img">
+              <h3 class="remedio-card__title">Cataplasma de semillas molidas (pepitas/ajonjolí)</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                tostar y moler semillas; mezclar con agua o con pulpa de plantas mucilaginosas y aplicar como
+                cataplasma.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                ayudar a la cicatrización de heridas.
+              </p>
+            </article>
+
+
+            <!-- 19. Remedios estomacales -->
+            <article class="remedio-card">
+              <img src="./public/medicina/menta.png" alt="Remedios estomacales" class="remedio-card__img">
+              <h3 class="remedio-card__title">Remedios para problemas estomacales</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                infusiones de hojas de plantas locales como guayaba, menta u otras; 5–10 g por taza, tomar después de
+                los alimentos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                diarrea y malestar estomacal.
+              </p>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ============ SECCIÓN CULTURA (BAILES / MÚSICA / VESTIMENTA) ============ -->
+      <section class="cultura">
+        <div class="cultura-grid">
+
+          <!-- Tarjeta 1: Bailes -->
+          <article class="cultura-card cultura-card--bailes" data-tema="bailes">
+            <div class="cultura-card__img"></div>
+            <h3 class="cultura-card__title">
+              Bailes <span class="cultura-card__arrow">→</span>
+            </h3>
+            <p class="cultura-card__text">
+              Poner una introducción sobre los bailes tradicionales.
+            </p>
+          </article>
+
+          <!-- Tarjeta 2: Música -->
+          <article class="cultura-card cultura-card--musica" data-tema="musica">
+            <div class="cultura-card__img"></div>
+            <h3 class="cultura-card__title">
+              Música <span class="cultura-card__arrow">→</span>
+            </h3>
+            <p class="cultura-card__text">
+              Dato curioso sobre la música antigua dentro de la península.
+            </p>
+          </article>
+
+          <!-- Tarjeta 3: Vestimenta -->
+          <article class="cultura-card cultura-card--vestimenta" data-tema="vestimenta">
+            <div class="cultura-card__img"></div>
+            <h3 class="cultura-card__title">
+              Vestimenta <span class="cultura-card__arrow">→</span>
+            </h3>
+            <p class="cultura-card__text">
+              Introducción acerca de la importancia de la vestimenta tradicional.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============ MODAL CULTURA ============ -->
+      <div id="modal-cultura" class="modal-cultura">
+        <div class="modal-cultura__overlay"></div>
+
+        <div class="modal-cultura__content">
+          <button class="modal-cultura__close">&times;</button>
+          <div id="modal-cultura-body"></div>
+        </div>
+      </div>
+
     </section>
 
     <section id="sec-logan">
@@ -423,7 +676,7 @@
             <article class="artesania-card">
               <div class="artesania-card__img-contenedor">
                 <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div> <span class="artesania-card__label">Artesanía</span> 
+              </div> <span class="artesania-card__label">Artesanía</span>
             </article>
 
             <article class="artesania-card">
@@ -461,20 +714,13 @@
         <!-- Track/carril horizontal donde se colocan todas las tarjetas .slide -->
         <div class="slider-track" id="sliderTrack">
 
-          <!-- SLIDE 1: Tarjeta sobre Teología maya -->
-          <!-- Cada .slide es una tarjeta del slider con imagen, título, resumen y enlace "Ver más" -->
+          <!-- SLIDE 1 -->
 <!-- SLIDE 1 -->
 <div class="slide">
-  <!-- Imagen principal del slide, usada también en el modal por data-imagen -->
   <img src="/assets/img/img.jpg" alt="Teología Maya">
-  <!-- Título corto que aparece en la tarjeta -->
   <h3>Teología maya</h3>
-  <!-- Breve descripción/resumen que se muestra en la tarjeta -->
   <p>Explora la cosmovisión y espiritualidad maya.</p>
 
-  <!-- Enlace que abre el modal "Ver más". 
-       - class="slide-link" permite que JS lo seleccione.
-       - data-titulo, data-imagen y data-texto llevan la info larga que se mostrará en el modal. -->
   <a href="#"
      class="slide-link"
      data-titulo="Teología maya"
@@ -561,9 +807,9 @@ Conecta a las comunidades con sus raíces y su historia milenaria.<br><br>
 
 La teología maya es un sistema profundo que explica la creación del mundo, la relación entre el ser humano y la naturaleza y la importancia de mantener el equilibrio cósmico. Sus rituales, dioses y conocimientos siguen siendo esenciales para la identidad de las comunidades mayas contemporáneas.<br><br>
 ">
-     Ver más
-  </a>
-</div>
+              Ver más
+            </a>
+          </div>
 
 
           <!-- SLIDE 2: Tarjeta sobre rituales y creencias -->
@@ -572,7 +818,6 @@ La teología maya es un sistema profundo que explica la creación del mundo, la 
             <img src="/assets/img/img2.png" alt="Rituales y creencias">
             <!-- Título del tema -->
             <h3>Rituales y creencias</h3>
-           <!-- Descripción corta que se ve en la tarjeta -->
            <p>Conoce los rituales y creencias que conectaban a los mayas con la naturaleza y los dioses.</p>
 
             <!-- Enlace que abrirá el modal, con todo el contenido extendido en data-texto -->
@@ -601,7 +846,7 @@ El Día 1 se preparan ofrendas como pollo, hostias de maíz, masa para saká y v
 Ritual agrícola maya para bendecir la siembra o agradecer la cosecha. Su nombre puede significar día de la dificultad o alimentar al monte. Se practica en comunidades como Señor, Chunhuhub, Tepich y Noh Bec.<br><br>
 El ritual puede realizarse en la milpa o en la casa del milpero. Incluye ofrendas de maíz, tortillas, elotes, atole, tamales, copal, velas e incienso. Se pide permiso al monte antes de realizar la roza, tumba o quema tradicional.<br><br>
 Cuando aparecen los primeros frutos se realiza la primicia, donde se cocinan mazorcas dentro de la milpa y se ofrecen a los guardianes del monte. La ceremonia concluye con la comida compartida entre los participantes, símbolo de unión comunitaria.<br><br>
-" >
+">
               Ver más
             </a>
           </div>
@@ -657,7 +902,6 @@ En conjunto, esta organización social permitía que las ciudades mayas funciona
             <h3>Organización política</h3>
             <!-- Descripción corta que sirve como introducción -->
             <p>Descubre los cargos de autoridad y su papel en el gobierno maya.</p>
-            <!-- Enlace que envía título, texto e imagen al modal general -->
             <a href="#" class="slide-link" data-titulo="Organización política"
               data-texto="
 La organización política maya estaba basada en ciudades estado independientes llamadas batabiloob. Cada ciudad tenía su propio gobernante y sistema administrativo, aunque compartían cultura, religión y estructura social.<br><br>
@@ -687,12 +931,12 @@ Las decisiones importantes no eran tomadas solo por el gobernante. Había un equ
 Cada ciudad estado era independiente, con su propio gobierno, ejércitos, templos y territorio. Algunas ciudades formaban alianzas o entraban en conflictos entre sí. La política maya se basaba en la herencia del poder, la influencia religiosa y el control de tierras y recursos.<br><br>
 
 En conjunto, la organización política maya combinaba autoridad divina, administración local y toma de decisiones consultada, permitiendo que cada ciudad estado funcionara como un sistema complejo y autónomo dentro del mundo maya.<br><br>
-"
-              data-imagen="/assets/img/img4.jpg">
+" data-imagen="/assets/img/img4.jpg">
               Ver más
             </a>
           </div>
         
+
         </div>
 
         <!-- Flecha derecha del slider, controlada en JS con id="sliderRight" -->
@@ -731,7 +975,6 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
         <!-- Carril horizontal que será auto-scroll en JS (id="galeriaTrack") -->
         <div class="galeria__track" id="galeriaTrack">
-        <!-- Cada .galeria__item es una tarjeta que contiene una sola imagen -->
         <div class="galeria__item">
   <img src="/image/1.jpg" alt="Foto 1 - descripción">
 </div>
