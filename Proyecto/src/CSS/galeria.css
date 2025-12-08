@@ -1,64 +1,64 @@
 /*GALERÍA DE FOTOS*/
 
 .galeria {
-  margin: auto;                 /* Centra el contenedor dentro del máximo ancho */
-  padding: 2rem 1rem;           /* Espaciado interno */
-  background: #727348;          /* Fondo verde militar (igual que otros frames) */
-  width: 100%;                  /* Ocupa todo el ancho disponible */
-  max-width: 1600px;            /* Límite de ancho para pantallas grandes */
+  margin: auto;                 /* Centra todo el contenedor en la página dentro del ancho máximo permitido. */
+  padding: 2rem 1rem;           /* Agrega espacio interno arriba/abajo (2rem) y a los lados (1rem). */
+  background: #727348;          /* Aplica un fondo verde militar que coincide con los demás secciones del sitio. */
+  width: 100%;                  /* El contenedor ocupa todo el ancho disponible del viewport. */
+  max-width: 1600px;            /* Limita el ancho máximo para que no sea demasiado ancho en pantallas grandes. */
 }
 
 .galeria__titulo {
-  text-align: center;           /* Centrado del texto */
-  font-size: 1.8rem;            /* Tamaño del título */
-  margin-bottom: 2rem;          /* Separación inferior */
-  letter-spacing: 2px;          /* Espaciado entre letras */
-  color: #c77718;               /* Naranja quemado estilo mockup */
+  text-align: center;           /* Centra el texto del título horizontalmente. */
+  font-size: 1.8rem;            /* Aumenta el tamaño del texto del título. */
+  margin-bottom: 2rem;          /* Agrega espacio debajo del título para separarlo del track de imágenes. */
+  letter-spacing: 2px;          /* Aumenta ligeramente el espacio entre letras. */
+  color: #c77718;               /* Color naranja quemado para resaltar el título. */
 }
 
 /* TRACK HORIZONTAL: contenedor desplazable */
 .galeria__track {
-  display: flex;                 /* Coloca las tarjetas en fila */
-  gap: 1.5rem;                   /* Espacio entre tarjetas */
-  overflow-x: auto;              /* Scroll horizontal */
-  scroll-behavior: smooth;       /* Desplazamiento suave */
-  padding: .5rem .3rem;          /* Espaciado interno */
+  display: flex;                 /* Coloca las tarjetas en fila horizontal. */
+  gap: 1.5rem;                   /* Espacio entre cada tarjeta. */
+  overflow-x: auto;              /* Activa el desplazamiento horizontal si no caben todas las tarjetas. */
+  scroll-behavior: smooth;       /* Hace que el desplazamiento horizontal sea suave. */
+  padding: .5rem .3rem;          /* Espacio interno arriba/abajo (.5rem) y a los lados (.3rem). */
 }
 
 .galeria__track::-webkit-scrollbar {
-  display: none;                 /* Oculta la barra del scroll (Chrome/Safari) */
+  display: none;                 /* Oculta la barra de scroll solo en Chrome y Safari para un diseño más limpio. */
 }
 
-/* TARJETAS */
+/* TARJETAS DE LA GALERÍA */
 .galeria__item {
-  min-width: 220px;              /* Ancho mínimo de cada tarjeta */
-  height: 300px;                 /* Altura fija */
-  border-radius: 20px;           /* Bordes redondeados */
-  background: #90968f;           /* Placeholder gris verdoso */
-  overflow: hidden;              /* Oculta partes de la imagen que sobresalgan */
-  flex-shrink: 0;                /* Evita que la tarjeta se reduzca */
-  box-shadow: 0 4px 12px rgba(0,0,0,.15); /* Sombra suave */
-  display: flex;
-  align-items: center;
-  justify-content: center;       /* Centrado del contenido interno */
+  min-width: 220px;              /* Ancho mínimo de cada tarjeta. Garantiza que todas tengan base uniforme. */
+  height: 300px;                 /* Altura fija de la tarjeta. */
+  border-radius: 20px;           /* Bordes redondeados para un estilo más moderno. */
+  background: #90968f;           /* Fondo placeholder gris verdoso por si tarda la imagen en cargar. */
+  overflow: hidden;              /* Oculta cualquier parte de la imagen que se salga del contenedor. */
+  flex-shrink: 0;                /* Evita que el elemento se encoja al hacer scroll horizontal. */
+  box-shadow: 0 4px 12px rgba(0,0,0,.15); /* Sombra ligera para darle profundidad. */
+  display: flex;                 /* Usado para centrar la imagen dentro de la tarjeta. */
+  align-items: center;           /* Centra verticalmente la imagen dentro del contenedor. */
+  justify-content: center;       /* Centra horizontalmente la imagen. */
 }
 
 .galeria__item img {
-  width: 100%;                   /* La imagen cubre toda la tarjeta */
-  height: 100%;
-  object-fit: cover;             /* Recorta manteniendo proporción */
-  transition: transform .4s ease;/* Animación suave para hover */
+  width: 100%;                   /* La imagen ocupa todo el ancho disponible de la tarjeta. */
+  height: 100%;                  /* La imagen ocupa toda la altura del contenedor. */
+  object-fit: cover;             /* Recorta la imagen proporcionalmente para llenar el contenedor sin deformarse. */
+  transition: transform .4s ease;/* Suaviza la animación cuando la imagen hace zoom al pasar el mouse. */
 }
 
-/* Efecto moderno: zoom cuando el mouse pasa por encima */
+/* Efecto al pasar el mouse por encima */
 .galeria__item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05);        /* La imagen se agranda ligeramente para un efecto moderno tipo zoom. */
 }
 
-/* Responsivo: en móviles, las tarjetas son más grandes */
+/* Responsivo: en pantallas pequeñas las tarjetas se hacen más grandes */
 @media (max-width: 768px) {
   .galeria__item {
-    min-width: 80%;              /* Tarjeta más grande en pantallas chicas */
-    height: 260px;               /* Altura más pequeña */
+    min-width: 80%;              /* Cada tarjeta ocupa el 80% del ancho, facilitando la visualización en celulares. */
+    height: 260px;               /* Reduce la altura para una mejor proporción en pantallas pequeñas. */
   }
 }

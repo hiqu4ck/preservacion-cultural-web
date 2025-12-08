@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="es">
 
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto</title>
+
 
   <!-- Aquí luego enlazan TODOS los CSS -->
 </head>
@@ -28,11 +30,10 @@
     <section id="sec-alexandra">
       <div class="overlay-video">
         <div class="video">
-          <iframe src="https://www.youtube.com/embed/B4LvDiIi128?si=axPYKNxZ-B4adnw8" title="YouTube video player"
+          <iframe src="https://www.youtube.com/embed/wbPPEoNsjnE?si=4mjRrPDmwRl0fTCJ" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-          </iframe>
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
 
@@ -40,65 +41,50 @@
 
         <h2 class="titulo-comidas">Comidas típicas</h2>
         <p class="descripcion-comidas">
-          Agregar información sobre las comidas de la región, en la parte de abajo se hará un apartado
-          para poner por aparte los tipos de dulces, comidas y bebidas
+          En los siguientes apartados podrás leer sobre algunas comidas tipicas de la cultura maya.
         </p>
 
         <div class="tarjetas-comida">
 
           <!-- Tarjeta 1 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="dulces">
+            <div class="tarjeta-imagen1"></div>
             <div class="tarjeta-texto">Dulces</div>
           </div>
 
           <!-- Tarjeta 2 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="comidas">
+            <div class="tarjeta-imagen2"></div>
             <div class="tarjeta-texto">Comidas</div>
           </div>
 
           <!-- Tarjeta 3 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="bebidas">
+            <div class="tarjeta-imagen3"></div>
             <div class="tarjeta-texto">Bebidas</div>
           </div>
 
-          <!-- Tarjeta 4 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
-            <div class="tarjeta-texto">Bebidas</div>
-          </div>
-
-
-        </div>
-
-        <!-- Botones debajo, centrados -->
-        <div class="flechas-desplazamiento">
-          <button class="btn-flecha">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-chevron-left" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-            </svg>
-          </button>
-
-          <button class="btn-flecha">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-chevron-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-            </svg>
-          </button>
         </div>
       </section>
+
+      <!-- ================= MODAL ================= -->
+      <div id="modal-comidas" class="modal-comidas">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          <div id="modal-body"></div>
+        </div>
+      </div>
+
 
       <section class="medicina">
         <div class="card-medicina">
           <h4>Rituales tradicionales</h4>
           <h2>Medicina Tradicional</h2>
-          <p>Introducción pequeña a la medicinta tradicional maya y en la siguiente sección estarán los rituales
-            tradicionales
+          <p>La medicina tradicional maya es un sistema de conocimientos y prácticas de salud que ha sido transmitido de
+            generación en generación dentro de las comunidades mayas. A continuación, se presentan algunos remedios y
+            medicina tradicionales
           </p>
 
           <a href="#" class="btn-explorar">
@@ -110,6 +96,275 @@
           </a>
         </div>
       </section>
+      <!-- ========== MODAL MEDICINA ========== -->
+      <div id="modal-medicina" class="modal-medicina">
+        <div class="modal-medicina__overlay"></div>
+
+        <div class="modal-medicina__content">
+          <button class="modal-medicina__close">&times;</button>
+
+          <h2 class="modal-medicina__title">
+            MEDICINA TRADICIONAL MAYA DE QUINTANA ROO
+          </h2>
+
+          <div class="remedios-grid">
+
+            <!-- 1. Guayaba -->
+            <article class="remedio-card">
+              <img src="./public/medicina/guayaba.png" alt="Guayaba" class="remedio-card__img">
+              <h3 class="remedio-card__title">Guayaba (Psidium guajava) — hojas</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                infusionar 10 g de hojas secas por cada litro de agua hirviendo; dejar 10–15 minutos y colar. Tomar 1
+                taza 2-3 veces al día.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                diarreas, infecciones leves de estómago, lavado local para heridas (enfriada).
+              </p>
+            </article>
+
+            <!-- 2. Romero -->
+            <article class="remedio-card">
+              <img src="./public/medicina/romero.png" alt="Romero" class="remedio-card__img">
+              <h3 class="remedio-card__title">
+                Romero o hierbas locales parecidas (Lamiáceas locales) — infusión
+              </h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                5–10 g de hojas por taza de agua; infusionar 10 minutos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                malestares digestivos o como calmante leve.
+              </p>
+            </article>
+
+            <!-- 3. Copal / Bursera simaruba -->
+            <article class="remedio-card">
+              <img src="./public/medicina/copal.png" alt="Copal" class="remedio-card__img">
+              <h3 class="remedio-card__title">Copal / Bursera simaruba u otras Burseraceae — resina/hojas</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                resina o humo para fumigación; decocción de corteza para baños.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                problemas de piel, purificación ritual, infecciones cutáneas (uso tópico), mordeduras de insectos.
+              </p>
+            </article>
+
+            <!-- 4. Jobillo -->
+            <article class="remedio-card">
+              <img src="./public/medicina/jobillo.png" alt="Jobillo" class="remedio-card__img">
+              <h3 class="remedio-card__title">Jobillo (Astronium graveolens) — resina/corteza</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                aplicar resina tópica en heridas o abscesos; en algunos casos decocción de corteza para baños.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                curación de heridas y limpieza local.
+              </p>
+            </article>
+
+            <!-- 5. Pomolché -->
+            <article class="remedio-card">
+              <img src="./public/medicina/pomolche.png" alt="Pomolché" class="remedio-card__img">
+              <h3 class="remedio-card__title">Pomolché (Jatropha gaumeri / Jatropha spp.) — savia</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                uso tópico de la savia en zonas afectadas, limpiando antes la piel.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                tratamientos externos para granos y lesiones cutáneas.
+              </p>
+            </article>
+
+            <!-- 6. Thevetia gaumeri -->
+            <article class="remedio-card">
+              <img src="./public/medicina/thevetia.png" alt="Thevetia gaumeri" class="remedio-card__img">
+              <h3 class="remedio-card__title">Thevetia gaumeri (bursera local) — corteza/hojas</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocciones para baños tópicos; resina en curaciones externas. Uso tradicional controlado por
+                yerbateros.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                llagas, abscesos, problemas de la piel.
+              </p>
+            </article>
+
+            <!-- 7. Achiote -->
+            <article class="remedio-card">
+              <img src="./public/medicina/achiote.png" alt="Achiote" class="remedio-card__img">
+              <h3 class="remedio-card__title">Achiote (Bixa orellana) — semillas (pasta de annatto)</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                macerado de semillas para aplicaciones tópicas; en algunas tradiciones infusión suave para uso
+                digestivo.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                colorante y apoyo en algunas líneas curativas tradicionales.
+              </p>
+            </article>
+
+            <!-- 8. Guayacán / antiinflamatorias -->
+            <article class="remedio-card">
+              <img src="./public/medicina/guayacan.png" alt="Guayacán" class="remedio-card__img">
+              <h3 class="remedio-card__title">Guayacán y otras plantas antiinflamatorias locales</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocción de corteza o hojas en pequeñas cantidades.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                dolores musculares, inflamaciones.
+              </p>
+            </article>
+
+            <!-- 9. Hojas de plátano -->
+            <article class="remedio-card">
+              <img src="./public/medicina/hojas-platano.png" alt="Hojas de plátano" class="remedio-card__img">
+              <h3 class="remedio-card__title">Hojas de plátano (Musa spp.) — cataplasma</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                calentar hoja limpia y aplicar como cataplasma sobre la zona afectada.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                golpes, fracturas leves en combinación con sobadores tradicionales.
+              </p>
+            </article>
+
+            <!-- 10. Aloe / sábila -->
+            <article class="remedio-card">
+              <img src="./public/medicina/sabila.png" alt="Aloe vera" class="remedio-card__img">
+              <h3 class="remedio-card__title">Aloe / Sábila (Aloe vera) — gel</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                cortar penca, extraer el gel y aplicar de forma tópica. En jarabes tradicionales se prepara con cuidado.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                quemaduras, heridas, hidratación local de la piel.
+              </p>
+            </article>
+
+            <!-- 11. Flor de azahar / cítricos -->
+            <article class="remedio-card">
+              <img src="./public/medicina/florazahar.png" alt="Flor de azahar" class="remedio-card__img">
+              <h3 class="remedio-card__title">Flor de azahar y cítricos locales — infusión</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                infusionar flores (unos 5 g por taza) durante 10 minutos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                calma nervios, tensión ligera e insomnio leve.
+              </p>
+            </article>
+
+            <!-- 12. Hoja de ciruela -->
+            <article class="remedio-card">
+              <img src="./public/medicina/hoja-ciruela.png" alt="Hoja de ciruela" class="remedio-card__img">
+              <h3 class="remedio-card__title">Hoja de ciruela (Prunus sp. local) — infusión/tópico</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocción de hojas para baños o aplicaciones externas.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                problemas de la piel, erupciones y sarpullidos.
+              </p>
+            </article>
+
+            <!-- 13. Guayaco o raíces febrífugas -->
+            <article class="remedio-card">
+              <img src="./public/medicina/guayaco.png" alt="Guayaco" class="remedio-card__img">
+              <h3 class="remedio-card__title">Guayaco u otras raíces locales para fiebre</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocción suave de raíces (hervir 10–20 minutos) y tomar en sorbos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                fiebre leve y malestares generales.
+              </p>
+            </article>
+
+            <!-- 14. Infusiones para la tos -->
+            <article class="remedio-card">
+              <img src="./public/medicina/eucalipto.png" alt="Infusiones para la tos" class="remedio-card__img">
+              <h3 class="remedio-card__title">Infusiones para la tos (mezclas herbales locales)</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                combinar hojas de eucalipto local, orégano mexicano u otras plantas; infusionar y tomar 2–3 tazas al
+                día.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                alivio de tos y bronquitis leve, a veces combinado con vaporizaciones.
+              </p>
+            </article>
+
+            <!-- 15. Cataplasma de semillas -->
+            <article class="remedio-card">
+              <img src="./public/medicina/cataplasma.png" alt="Cataplasma de semillas" class="remedio-card__img">
+              <h3 class="remedio-card__title">Cataplasma de semillas molidas (pepitas/ajonjolí)</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                tostar y moler semillas; mezclar con agua o con pulpa de plantas mucilaginosas y aplicar como
+                cataplasma.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                ayudar a la cicatrización de heridas.
+              </p>
+            </article>
+
+
+            <!-- 19. Remedios estomacales -->
+            <article class="remedio-card">
+              <img src="./public/medicina/menta.png" alt="Remedios estomacales" class="remedio-card__img">
+              <h3 class="remedio-card__title">Remedios para problemas estomacales</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                infusiones de hojas de plantas locales como guayaba, menta u otras; 5–10 g por taza, tomar después de
+                los alimentos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                diarrea y malestar estomacal.
+              </p>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ============ SECCIÓN CULTURA (BAILES / MÚSICA / VESTIMENTA) ============ -->
+      <section class="cultura">
+        <div class="cultura-grid">
+
+          <!-- Tarjeta 1: Bailes -->
+          <article class="cultura-card cultura-card--bailes" data-tema="bailes">
+            <div class="cultura-card__img"></div>
+            <h3 class="cultura-card__title">
+              Bailes <span class="cultura-card__arrow">→</span>
+            </h3>
+            <p class="cultura-card__text">
+              Poner una introducción sobre los bailes tradicionales.
+            </p>
+          </article>
+
+          <!-- Tarjeta 2: Música -->
+          <article class="cultura-card cultura-card--musica" data-tema="musica">
+            <div class="cultura-card__img"></div>
+            <h3 class="cultura-card__title">
+              Música <span class="cultura-card__arrow">→</span>
+            </h3>
+            <p class="cultura-card__text">
+              Dato curioso sobre la música antigua dentro de la península.
+            </p>
+          </article>
+
+          <!-- Tarjeta 3: Vestimenta -->
+          <article class="cultura-card cultura-card--vestimenta" data-tema="vestimenta">
+            <div class="cultura-card__img"></div>
+            <h3 class="cultura-card__title">
+              Vestimenta <span class="cultura-card__arrow">→</span>
+            </h3>
+            <p class="cultura-card__text">
+              Introducción acerca de la importancia de la vestimenta tradicional.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============ MODAL CULTURA ============ -->
+      <div id="modal-cultura" class="modal-cultura">
+        <div class="modal-cultura__overlay"></div>
+
+        <div class="modal-cultura__content">
+          <button class="modal-cultura__close">&times;</button>
+          <div id="modal-cultura-body"></div>
+        </div>
+      </div>
+
     </section>
 
     <section id="sec-logan">
@@ -605,12 +860,14 @@
     </section>
 
     <section id="sec-angel">
+      <!-- CONTENEDOR GENERAL DE TODA LA SECCIÓN QUE HICISTE -->
 
       <!-- SECCIÓN SLIDER TEMAS MAYAS -->
       <section id="seccion-temas" class="slider-maya">
-
+        <!-- Flecha izquierda del slider, se conecta en JS con id="sliderLeft" -->
         <button class="slider-btn left" id="sliderLeft">❮</button>
 
+        <!-- Track/carril horizontal donde se colocan todas las tarjetas .slide -->
         <div class="slider-track" id="sliderTrack">
 
           <!-- SLIDE 1 -->
@@ -707,12 +964,15 @@ La teología maya es un sistema profundo que explica la creación del mundo, la 
           </div>
 
 
-          <!-- SLIDE 2 -->
+          <!-- SLIDE 2: Tarjeta sobre rituales y creencias -->
           <div class="slide">
+            <!-- Imagen representativa del tema -->
             <img src="/assets/img/img2.png" alt="Rituales y creencias">
+            <!-- Título del tema -->
             <h3>Rituales y creencias</h3>
             <p>Conoce los rituales y creencias que conectaban a los mayas con la naturaleza y los dioses.</p>
 
+            <!-- Enlace que abrirá el modal, con todo el contenido extendido en data-texto -->
             <a href="#" class="slide-link" data-titulo="Rituales y creencias" data-imagen="/assets/img/img2.png"
               data-texto="<b>Hetzmek (Ritual de presentación del bebé)</b><br><br>
 El Hetzmek es un ritual maya doméstico que se realiza cuando las niñas cumplen tres meses y los niños cuatro, aunque en algunas comunidades puede hacerse a los cinco meses. Su nombre proviene de las palabras que significan aligerar o aliviar la carga y abrazar.<br><br>
@@ -743,11 +1003,15 @@ Cuando aparecen los primeros frutos se realiza la primicia, donde se cocinan maz
             </a>
           </div>
 
-          <!-- SLIDE 3 -->
+          <!-- SLIDE 3: Tarjeta sobre organización social maya -->
           <div class="slide">
+            <!-- Imagen ilustrativa del tema -->
             <img src="/assets/img/img3.jpg" alt="Organización social">
+            <!-- Título del slide -->
             <h3>Organización social</h3>
+            <!-- Breve descripción en la tarjeta -->
             <p>Conoce cómo se estructuraba la sociedad maya y el papel de cada grupo.</p>
+            <!-- Enlace que manda al modal el contenido extendido desde data-texto -->
             <a href="#" class="slide-link" data-titulo="Organización social" data-imagen="/assets/img/img3.jpg"
               data-texto="
 La sociedad maya estaba organizada de forma jerárquica. Cada grupo social tenía funciones específicas para mantener el orden político, religioso y económico de la ciudad o comunidad.<br><br>
@@ -782,10 +1046,13 @@ En conjunto, esta organización social permitía que las ciudades mayas funciona
             </a>
           </div>
 
-          <!-- SLIDE 4 -->
+          <!-- SLIDE 4: Tarjeta sobre organización política maya -->
           <div class="slide">
+            <!-- Imagen principal del slide -->
             <img src="/assets/img/img4.jpg" alt="Organización política">
+            <!-- Título del tema -->
             <h3>Organización política</h3>
+            <!-- Descripción corta que sirve como introducción -->
             <p>Descubre los cargos de autoridad y su papel en el gobierno maya.</p>
             <a href="#" class="slide-link" data-titulo="Organización política" data-texto="
 La organización política maya estaba basada en ciudades estado independientes llamadas batabiloob. Cada ciudad tenía su propio gobernante y sistema administrativo, aunque compartían cultura, religión y estructura social.<br><br>
@@ -823,15 +1090,19 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
         </div>
 
+        <!-- Flecha derecha del slider, controlada en JS con id="sliderRight" -->
         <button class="slider-btn right" id="sliderRight">❯</button>
 
       </section>
 
-      <!-- MODAL GENERAL PARA "VER MÁS" -->
+      <!-- MODAL GENERAL PARA "VER MÁS" (reutilizado por todos los slides) -->
       <div id="modalVerMas" class="modal-vermas">
+        <!-- Fondo oscuro detrás del contenido del modal -->
         <div class="modal-vermas__overlay"></div>
 
+        <!-- Contenedor blanco del modal con imagen y texto -->
         <div class="modal-vermas__content">
+          <!-- Botón (X) para cerrar el modal, conectado en JS por id -->
           <button id="cerrarModalVerMas" class="modal-vermas__close">&times;</button>
 
           <!-- Imagen arriba -->
@@ -839,77 +1110,178 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
           <!-- Texto abajo -->
           <div class="modal-vermas__body">
+            <!-- Aquí se inserta dinámicamente el título desde JS -->
             <h3 id="modalVerMasTitulo" class="modal-vermas__title"></h3>
+            <!-- Aquí se inserta dinámicamente el contenido largo (data-texto) -->
             <p id="modalVerMasTexto" class="modal-vermas__text"></p>
           </div>
         </div>
       </div>
 
 
+      <!-- SECCIÓN GALERÍA DE FOTOS -->
       <section id="galeria-fotos" class="galeria">
+        <!-- Título de la galería -->
         <h2 class="galeria__titulo">GALERIA DE FOTOS</h2>
 
+        <!-- Carril horizontal que será auto-scroll en JS (id="galeriaTrack") -->
         <div class="galeria__track" id="galeriaTrack">
-          <div class="galeria__item">
-            <img src="/assets/galeria1.jpg" alt="Foto 1 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria2.jpg" alt="Foto 2 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria3.jpg" alt="Foto 3 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria4.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria5.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria6.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria7.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria8.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria9.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria10.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria11.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria12.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria13.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria14.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria15.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria16.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria17.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria18.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria19.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/assets/galeria20.jpg" alt="Foto 4 - descripción">
-          </div>
+        <div class="galeria__item">
+  <img src="/image/1.jpg" alt="Foto 1 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/2.jpg" alt="Foto 2 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/3.jpg" alt="Foto 3 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/4.jpg" alt="Foto 4 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/6.jpg" alt="Foto 6 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/7.jpg" alt="Foto 7 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/8.jpg" alt="Foto 8 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/9.jpg" alt="Foto 9 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/10.jpg" alt="Foto 10 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/11.jpg" alt="Foto 11 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/12.jpg" alt="Foto 12 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/13.jpg" alt="Foto 13 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/14.jpg" alt="Foto 14 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/15.jpg" alt="Foto 15 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/16.jpg" alt="Foto 16 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/17.jpg" alt="Foto 17 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/18.jpg" alt="Foto 18 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/19.jpg" alt="Foto 19 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/20.jpg" alt="Foto 20 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/21.jpg" alt="Foto 21 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/22.jpg" alt="Foto 22 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/23.jpg" alt="Foto 23 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/24.jpg" alt="Foto 24 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/25.jpg" alt="Foto 25 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/26.jpg" alt="Foto 26 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/27.jpg" alt="Foto 27 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/28.jpg" alt="Foto 28 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/29.jpg" alt="Foto 29 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/30.jpg" alt="Foto 30 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/31.jpg" alt="Foto 31 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/32.jpg" alt="Foto 32 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/33.jpg" alt="Foto 33 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/34.jpg" alt="Foto 34 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/35.jpg" alt="Foto 35 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/36.jpg" alt="Foto 36 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/37.jpg" alt="Foto 37 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/38.jpg" alt="Foto 38 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/39.jpg" alt="Foto 39 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/40.jpg" alt="Foto 40 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/41.jpg" alt="Foto 41 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/42.jpg" alt="Foto 42 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/43.jpg" alt="Foto 43 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/44.jpg" alt="Foto 44 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/45.jpg" alt="Foto 45 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/46.jpg" alt="Foto 46 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/47.jpg" alt="Foto 47 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/48.jpg" alt="Foto 48 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/49.jpg" alt="Foto 49 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/50.jpg" alt="Foto 50 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/51.jpg" alt="Foto 51 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/52.jpg" alt="Foto 52 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/53.jpg" alt="Foto 53 - descripción">
+</div>
 
           <!-- Puedes añadir más fotos -->
         </div>
@@ -917,24 +1289,35 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
 
 
+      <!-- FONDO DE LA SECCIÓN DE COMENTARIOS -->
       <div class="comentarios-bg">
+        <!-- Tarjeta principal de comentarios (formulario + botón para ver más) -->
         <section id="comentarios-section" class="comentarios">
+          <!-- Título de la sección de comentarios -->
           <h2 class="comentarios__titulo">COMENTARIOS</h2>
 
+          <!-- Formulario para enviar un nuevo comentario 
+               - Se conecta con JS por id="formComentario" -->
           <form id="formComentario" class="comentarios__form">
             <label for="nombre">Nombre</label>
+            <!-- Campo de texto para el nombre del usuario -->
             <input type="text" id="nombre" placeholder="Tu nombre" required />
 
             <label for="mensaje">Comentario</label>
+            <!-- Campo de texto largo para el comentario del usuario -->
             <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
 
+            <!-- Botón que dispara el submit, manejado por JS con addEventListener("submit", ...) -->
             <button type="submit" class="btn-enviar">Enviar comentario</button>
           </form>
 
+          <!-- Contenedor de posibles comentarios debajo del formulario 
+               (en tu JS lo mantienes vacío a propósito) -->
           <div id="listaComentarios" class="comentarios__lista">
             <!-- Aquí pinta comentario.js -->
           </div>
 
+          <!-- Botón que abre el modal con TODOS los comentarios -->
           <div class="comentarios__more">
             <button id="btnMas" class="btn-mas">
               <span class="flecha">➜</span>
@@ -945,24 +1328,27 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
       </div>
 
 
-      <!-- MODAL DE COMENTARIOS -->
+      <!-- MODAL DE COMENTARIOS (se abre al pulsar "Leer comentarios") -->
       <div id="modalComentarios" class="comentarios-modal">
+        <!-- Fondo oscuro del modal -->
         <div class="comentarios-modal__overlay"></div>
 
+        <!-- Contenedor blanco del modal donde se muestran los comentarios -->
         <div class="comentarios-modal__content">
+          <!-- Botón X para cerrar el modal -->
           <button id="cerrarModalComentarios" class="comentarios-modal__close">&times;</button>
+          <!-- Título dentro del modal -->
           <h3 class="comentarios-modal__title">Todos los comentarios</h3>
 
+          <!-- Contenedor donde JS inserta TODOS los comentarios renderizados -->
           <div id="listaComentariosModal" class="comentarios__lista">
             <!-- Aquí se pintan TODOS los comentarios -->
           </div>
         </div>
       </div>
 
-
-
-
     </section>
+
   </main>
 
   <!-- Script de Vite -->

@@ -1,65 +1,118 @@
-// backend/index.js
+// ===================== IMPORTACIÓN DE MÓDULOS =====================
+
+// Express: Framework para crear el servidor y manejar rutas HTTP
 const express = require("express");
+
+// CORS: Permite que tu frontend pueda comunicarse con tu backend sin bloqueo
 const cors = require("cors");
+
+// Mongoose: Librería para conectar y trabajar con MongoDB Atlas
 const mongoose = require("mongoose");
 
+
+
+// ===================== CONFIGURACIÓN INICIAL =====================
+
+// Crear la aplicación de Express
 const app = express();
+
+// Puerto donde correrá el backend (http://localhost:4000)
 const PORT = 4000;
 
-// Middlewares
+
+
+// ===================== MIDDLEWARES =====================
+
+// Habilitar CORS para permitir conexión desde la página web
 app.use(cors());
+
+// Permitir que Express reciba datos en formato JSON
 app.use(express.json());
 
-// 🔗 Pega aquí tu cadena de conexión de MongoDB Atlas
+
+
+// ===================== CONEXIÓN A MONGODB ATLAS =====================
+
+// Cadena de conexión a tu base de datos en la nube
+// IMPORTANTE: reemplazar la contraseña justo después de ARTURO1:
 const MONGODB_URI = "mongodb+srv://ARTURO1:ARTURO15@clusterdatademy.guouo9h.mongodb.net/?appName=ClusterDatademy";
 
-// Conexión a MongoDB
+// Intentar conectar a MongoDB Atlas
 mongoose
   .connect(MONGODB_URI)
-  .then(() => console.log("✅ Conectado a MongoDB Atlas"))
+  .then(() => console.log("✔ Conectado a MongoDB Atlas"))
   .catch((err) => console.error("❌ Error al conectar a MongoDB:", err));
 
-// Esquema y modelo de comentario
+
+
+// ===================== DEFINICIÓN DEL ESQUEMA =====================
+
+// Este esquema define cómo lucirá un comentario dentro de la base de datos
 const commentSchema = new mongoose.Schema(
   {
-    nombre: { type: String, required: true },
-    mensaje: { type: String, required: true },
+    nombre: { type: String, required: true },   // Nombre del usuario (obligatorio)
+    mensaje: { type: String, required: true }   // Comentario (obligatorio)
   },
-  { timestamps: true }
+  {
+    timestamps: true // Agrega automáticamente createdAt y updatedAt
+  }
 );
 
+// Crear el modelo basado en el esquema → esto crea la colección "comments"
 const Comment = mongoose.model("Comment", commentSchema);
 
-// GET /comments → obtener comentarios desde la BD
+
+
+// ===================== RUTA GET: Obtener comentarios =====================
+
+// Cuando el frontend pida GET /comments, devolvemos todos los comentarios
 app.get("/comments", async (req, res) => {
   try {
+    // Buscar todos los comentarios y ordenarlos del más nuevo al más viejo
     const comentarios = await Comment.find().sort({ createdAt: -1 });
+
     res.json(comentarios);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Error al obtener comentarios" });
   }
 });
 
-// POST /comments → guardar comentario en la BD
+
+
+// ===================== RUTA POST: Guardar un comentario =====================
+
+// Cuando el frontend envíe un nuevo comentario por POST /comments
 app.post("/comments", async (req, res) => {
+  const { nombre, mensaje } = req.body;
+
+  // Validación por si el frontend envía datos vacíos
+  if (!nombre || !mensaje) {
+    return res.status(400).json({ error: "Falta nombre o mensaje" });
+  }
+
   try {
-    const { nombre, mensaje } = req.body;
+    // Crear un nuevo comentario basado en el modelo
+    const nuevoComentario = new Comment({ nombre, mensaje });
 
-    if (!nombre || !mensaje) {
-      return res.status(400).json({ error: "Falta nombre o mensaje" });
-    }
+    // Guardarlo en la base de datos
+    await nuevoComentario.save();
 
-    const nuevo = await Comment.create({ nombre, mensaje });
+    // Devolverlo al frontend
+    res.json({
+      message: "✔ Comentario guardado correctamente",
+      comentario: nuevoComentario,
+    });
 
-    res.json({ message: "Guardado", comentario: nuevo });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Error al guardar comentario" });
+    res.status(500).json({ error: "Error al guardar el comentario" });
   }
 });
 
-// Iniciar servidor
+
+
+// ===================== INICIAR EL SERVIDOR =====================
+
+// Escuchar y levantar el servidor en el puerto 4000
 app.listen(PORT, () => {
-  console.log(`Servidor backend escuchando en http://localhost:${PORT}`);
+  console.log(`🚀 Servidor backend escuchando en http://localhost:${PORT}`);
 });
