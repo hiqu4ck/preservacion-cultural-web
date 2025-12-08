@@ -7,9 +7,10 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+  max-width: 1600px;
   width: 100%;
+  margin: auto;
+  padding: 0;
   height: 100%;
   overflow-x: hidden;
 }
@@ -26,6 +27,7 @@ body {
   background: #fff;
   color: var(--texto);
 }
+
 .page {
   width: 100%;
   max-width: 100%;
@@ -109,9 +111,10 @@ body {
 /* HERO / CARRUSEL*/
 
 .hero {
-  position: relative;                
+  position: relative;
   width: 100%;
-  height: calc(100vh - 72px);        /* fullscreen */
+  height: calc(100vh - 72px);
+  /* fullscreen */
   min-height: 600px;
   overflow: hidden;
 }
@@ -138,11 +141,9 @@ body {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.35)
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.35));
 }
 
 .hero__content {
@@ -248,12 +249,15 @@ body {
   .topbar {
     padding-inline: 1.25rem;
   }
+
   .section {
     padding-inline: 1.25rem;
   }
+
   .section__grid {
     grid-template-columns: 1fr;
   }
+
   .hero__controls {
     padding-inline: 1.5rem;
   }
