@@ -1443,7 +1443,6 @@ const modalArtGrid = modalArtesania.querySelector(".modal-artesania__grid");
 const modalArtClose = modalArtesania.querySelector(".modal-artesania__close");
 const modalArtOverlay = modalArtesania.querySelector(".modal-artesania__overlay");
 
-
 // 3. Evento clic — abrir modal
 artesaniaCards.forEach(card => {
   card.addEventListener("click", () => {
@@ -1480,7 +1479,7 @@ artesaniaCards.forEach(card => {
     });
 
     // Abrir modal
-    modalArtesania.classList.add("is-open");
+    modalArtesania.classList.add("activo");
     document.body.classList.add("modal-open");
   });
 });
@@ -1489,7 +1488,7 @@ artesaniaCards.forEach(card => {
 // 4. Cerrar modal
 [modalArtClose, modalArtOverlay].forEach(el => {
   el.addEventListener("click", () => {
-    modalArtesania.classList.remove("is-open");
+    modalArtesania.classList.remove("activo");
     document.body.classList.remove("modal-open");
   });
 });

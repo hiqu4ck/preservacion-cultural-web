@@ -5,7 +5,6 @@
     border-radius: 26px;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
-
     padding: 40px;
     align-items: center;
 
@@ -64,120 +63,122 @@
         line-height: 1.6;
     }
 
+}
 
-    /* =========================================================
+
+/* =========================================================
    MODAL ARTESANÍAS — ESTILOS COMPLETOS
    ========================================================= */
 
-    .modal-artesania {
-        position: fixed;
-        inset: 0;
-        display: none;
-        /* oculto por defecto */
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
-        font-family: inherit;
-    }
+.modal-artesania {
+    position: fixed;
+    inset: 0;
+    display: none;
+    /* oculto por defecto */
+    align-items: center;
+    justify-content: center;
+    z-index: 11000;
+    font-family: inherit;
+}
 
-    .modal-artesania.is-open {
-        display: flex;
-        /* se muestra cuando tiene "is-open" */
-    }
+.modal-artesania.activo {
+    display: flex;
+    /* se muestra cuando tiene "is-open" */
+}
 
-    .modal-artesania__overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.45);
-    }
+.modal-artesania__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
 
-    .modal-artesania__content {
-        position: relative;
-        background: #fff;
-        width: 95%;
-        max-width: 1000px;
-        max-height: 90vh;
-        padding: 24px 32px 28px;
-        border-radius: 18px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        overflow-y: auto;
-        z-index: 1;
-    }
+.modal-artesania__content {
+    position: relative;
+    background: #fff;
+    width: 95%;
+    max-width: 1000px;
+    max-height: 90vh;
+    padding: 24px 32px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    z-index: 1;
+}
 
-    .modal-artesania__close {
-        position: absolute;
-        top: 10px;
-        right: 16px;
-        border: none;
-        background: transparent;
-        font-size: 30px;
-        cursor: pointer;
-    }
+.modal-artesania__close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
 
-    .modal-artesania__title {
-        text-align: center;
-        margin: 0 0 24px;
-        font-size: 22px;
-        font-weight: 700;
-    }
+.modal-artesania__title {
+    text-align: center;
+    margin: 0 0 24px;
+    font-size: 22px;
+    font-weight: 700;
+}
 
-    .modal-artesania__text {
-        margin-bottom: 25px;
-        font-size: 16px;
-        line-height: 1.5;
-        text-align: justify;
-    }
+.modal-artesania__text {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
 
 
-    /* =========================================================
+/* =========================================================
    GRID DE ARTESANÍAS INTERNAS (ITEMS)
    ========================================================= */
 
-    .modal-artesania__grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
-        justify-items: center;
-        /* centra las tarjetas */
+/* =========================================================
+   GRID DE ARTESANÍAS INTERNAS (ITEMS)
+   ========================================================= */
 
-        .artesania-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            /* <-- evita el espacio arriba */
-            gap: 12px;
-            /* espacio bonito entre imagen, título, texto */
-            height: auto;
-            /* importante */
-        }
-    }
-
-    /* Solo afecta a las imágenes dentro del modal */
-    .modal-artesania__grid .artesania-card__img-contenedor {
-        width: 220px !important;
-        height: 220px !important;
-        border-radius: 50% !important;
-        object-fit: cover !important;
-        display: block;
-        margin: 0 auto 12px;
-    }
-
-    .artesania-card__title {
-        color: black;
-        font-size: 16px;
-        margin: 0 0 6px;
-        font-weight: 700;
-    }
-
-    .artesania-card p {
-        color: black;
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-
+.modal-artesania__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
+
+/* Esto NO puede ir anidado dentro del grid */
+.modal-artesania__grid .artesania-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    height: auto;
+}
+
+
+/* Solo afecta a las imágenes dentro del modal */
+.modal-artesania__grid .artesania-card__img-contenedor {
+    width: 220px !important;
+    height: 220px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+.artesania-card__title {
+    color: black;
+    font-size: 16px;
+    margin: 0 0 6px;
+    font-weight: 700;
+}
+
+.artesania-card p {
+    color: black;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
 
 /* ============================
    HOVER EFECTO SELECCIONABLE
@@ -193,7 +194,7 @@
 /* EFECTO: se levanta y resalta */
 .artesania-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 
 /* Que la imagen también reaccione */
@@ -211,7 +212,7 @@
 }
 
 .artesania-card:hover .artesania-card__label {
-    color: white; 
+    color: white;
 }
 
 
