@@ -19,6 +19,7 @@ import './JS/comentarios.js';
 import './JS/loganSlider.js'
 import './CSS/leyendas.css'
 import './CSS/artesanias.css'
+import './CSS/comunidades.css'
 
 // ===== TÍTULO DE LA PÁGINA =====
 document.title = "K’ajóol Lu’um";
@@ -114,3 +115,7 @@ if (slides.length > 1) {
   autoTimer = setInterval(nextSlide, AUTO_INTERVAL);
 }
 
+import { initMapaZonaMaya } from "./JS/zonasMayas.js";
+document.addEventListener("DOMContentLoaded", () => {
+  initMapaZonaMaya();
+});
