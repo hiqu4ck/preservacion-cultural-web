@@ -179,6 +179,42 @@
 
 }
 
+/* ============================
+   HOVER EFECTO SELECCIONABLE
+   ============================ */
+
+.artesania-card {
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+/* EFECTO: se levanta y resalta */
+.artesania-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+/* Que la imagen también reaccione */
+.artesania-card__img {
+    transition: transform 0.25s ease;
+}
+
+.artesania-card:hover .artesania-card__img {
+    transform: scale(1.05);
+}
+
+/* Etiqueta más nítida al pasar el mouse */
+.artesania-card__label {
+    transition: color 0.25s ease;
+}
+
+.artesania-card:hover .artesania-card__label {
+    color: white; 
+}
+
+
 
 
 .modal-artesania__img {
