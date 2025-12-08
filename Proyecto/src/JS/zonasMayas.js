@@ -24,6 +24,42 @@ const LUGARES_ZONA_MAYA = [
     imagen: "/assets/img/coba.jpg"
   },
   {
+    id: "Tihosuco",
+    nombre: "Tihosuco",
+    tipo: "Pueblo histórico",
+    etiquetas: ["historia", "cultura", "guerra de castas", "arquitectura"],
+    descripcionCorta:
+    "Tihosuco es una villa del estado mexicano de Quintana Roo, localizada al noroeste del territorio estatal en el Municipio de Felipe Carrillo Puerto, es una de las poblaciones más antiguas de Quintana Roo, famosa por sus construcciones coloniales y fue uno de los lugares de inicio de la Guerra de Castas.",
+    lat: 20.197147,
+    lng: -88.374148,
+    direccion: "Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/Tihosuco.jpg"
+  },
+  {
+    id: "Museo Cultural de Felipe Carrillo Puerto",
+    nombre: "Museo Cultural de Felipe Carrillo Puerto",
+    tipo: "Museo",
+    etiquetas: ["museo", "cultura", "historia", "arte"],
+    descripcionCorta:
+    "El Museo Histórico de Felipe Carrillo Puerto es un recinto cultural en Quintana Roo que narra la historia de la resistencia maya y la creación del estado, destacando la importancia de la Santa Cruz Parlante y figuras como María Uicab, a través de exposiciones que cubren desde la Guerra de Castas hasta el auge del chicle, mostrando la profunda identidad y cultura maya local, con salas temáticas que exploran la vida, la fe y la lucha por la autonomía de este pueblo.",
+    lat : 19.577790363163654,
+    lng: -88.04539789274929,
+    direccion: "Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/museo-felipe-carrillo.png"
+  },
+  {
+    id: "Santuario de la Santa Cruz Parlante",
+    nombre: "Santuario de la Santa Cruz Parlante",
+    tipo: "Sitio religioso",
+    etiquetas: ["religión", "cultura", "historia", "santuario"],
+    descripcionCorta:
+    "La Cruz Parlante es el corazón espiritual de Felipe Carrillo Puerto, Quintana Roo (antes Chan Santa Cruz), un símbolo sagrado y oráculo militar maya que surgió durante la Guerra de Castas (1847-1901)",
+    lat: 19.58052804959756, 
+    lng: -88.04885497116413,
+    direccion: "Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/Santuario-de-la-Cruz-Parlante.jpg"
+  },
+  {
     id: "tulum",
     nombre: "Zona arqueológica de Tulum",
     tipo: "Zona arqueológica",
@@ -34,6 +70,18 @@ const LUGARES_ZONA_MAYA = [
     lng: -87.429,
     direccion: "Tulum, Quintana Roo",
     imagen: "/assets/img/tulum.jpg"
+  },
+  {
+    id: "chichen_itza",
+    nombre: "Chichén Itzá",
+    tipo: "Zona arqueológica",
+    etiquetas: ["pirámide", "jaguar", "cenote", "patrimonio mundial"],
+    descripcionCorta:
+    "Chichén Itzá es una impresionante zona arqueológica maya en Yucatán, México, reconocida como Patrimonio de la Humanidad por la UNESCO y una de las Nuevas 7 Maravillas del Mundo, famosa por su centro ceremonial y arquitectónico, destacando la majestuosa Pirámide de Kukulcán, el Juego de Pelota y el Observatorio, que reflejan la avanzada cosmovisión maya-tolteca, especialmente durante los equinoccios, cuando se aprecia el descenso de la serpiente emplumada en la pirámide.",
+    lat: 20.6843,
+    lng: -88.5678,
+    direccion: "Tinum, Yucatán",
+    imagen: "/assets/img/chichen-itza.jpg"
   },
   {
     id: "sian_kaan",

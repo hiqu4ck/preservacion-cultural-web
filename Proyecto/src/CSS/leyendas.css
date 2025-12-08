@@ -171,10 +171,16 @@
                 min-width: 100%;
 
                 img {
-                    width: 100%;
+                    width: auto;
+                    /* ancho proporcional */
+                    max-width: 100%;
+                    /* no se salga del contenedor */
                     height: 100%;
-                    object-fit: cover;
+                    /* ocupa todo el alto del contenedor */
+                    object-fit: contain;
+                    /* evita recorte */
                     display: block;
+                    margin: 0 auto;
                 }
             }
         }

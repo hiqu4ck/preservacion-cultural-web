@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es">
 
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -26,28 +27,131 @@
 
   <main>
     <section id="sec-hannia">
-
-    </section>
-
-    <section id="sec-josue">
-
-    </section>
-
-    <section id="sec-alexandra">
-      <div class="overlay-video">
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/B4LvDiIi128?si=axPYKNxZ-B4adnw8" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-          </iframe>
-        </div>
+  <div class="page">
+    <!-- HEADER -->
+    <header class="topbar">
+      <div class="topbar__logo logo-wrapper">
+        <img
+          src="/img/logo.png"
+          alt="Logo K’ajóol Lu’um"
+          class="logo-img"
+        />
+        <span class="logo-text">K’ajóol Lu’um</span>
       </div>
 
-<section class="comunidades" id="sec-josue">
+      <nav class="topbar__nav">
+        <!-- Aquí luego puedes agregar más enlaces si quieres -->
+        <button class="topbar__btn">Iniciar sesión</button>
+        <div class="topbar__menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO / CARRUSEL -->
+    <section class="hero" id="hero">
+      <!-- SLIDE 1 -->
+      <div
+        class="hero__slide hero__slide--active"
+        style="background-image:url('/img/carrusel-1.jpg');"
+        data-subtitle="Donde la memoria de la tierra late"
+      ></div>
+
+      <!-- SLIDE 2 -->
+      <div
+        class="hero__slide"
+        style="background-image:url('/img/carrusel-2.jpeg');"
+        data-subtitle="Es comunidad y territorio vivo"
+      ></div>
+
+      <!-- SLIDE 3 -->
+      <div
+        class="hero__slide"
+        style="background-image:url('/img/carrusel-3.jpeg');"
+        data-subtitle="Es tradición, lengua y saber maya"
+      ></div>
+
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">K’ajóol Lu’um</h1>
+        <p class="hero__subtitle">
+          Donde la memoria de la tierra late
+        </p>
+      </div>
+
+      <div class="hero__controls">
+        <button class="hero__arrow" id="heroPrev">❮</button>
+        <button class="hero__arrow" id="heroNext">❯</button>
+      </div>
+
+      <div class="hero__dots" id="heroDots"></div>
+    </section>
+
+    <!-- SECCIÓN LENGUA MAYA -->
+    <section class="section section-about">
+      <div class="section-about__inner">
+        <h2 class="section__title section__title--center">Lengua maya</h2>
+
+        <div class="section__grid">
+          <div>
+            <p>
+              La lengua maya es una de las expresiones culturales más antiguas y
+              vivas de Mesoamérica. Representa un puente directo con los
+              conocimientos ancestrales y la memoria colectiva de los pueblos
+              que han habitado esta región por siglos. Hoy en día, es hablada
+              por más de 800,000 personas, lo que la convierte en una de las
+              lenguas originarias más fuertes y vivas del país.
+            </p>
+            <p>
+              Se considera una lengua
+              <span class="yellow">profundamente ligada al territorio</span>,
+              pues a través de sus palabras se conserva el nombre de plantas,
+              animales, sitios sagrados y fenómenos naturales que no existen en
+              español. La lengua, por sí misma, es un mapa vivo del mundo maya.
+            </p>
+          </div>
+
+          <div>
+            <p>
+              La transmisión de la lengua se realiza principalmente en el hogar
+              y en la comunidad. A través de ella se comparten enseñanzas sobre
+              agricultura, medicina tradicional, rituales y convivencia social.
+              Es una herramienta clave para preservar la
+              <span class="yellow">cosmovisión maya</span>, una forma de
+              entender la vida basada en el respeto, el equilibrio y la
+              reciprocidad con la naturaleza.
+            </p>
+            <p>
+              También es considerada un elemento de
+              <span class="yellow">identidad y resistencia cultural</span>, ya
+              que ha sobrevivido a procesos históricos de discriminación y
+              desplazamiento. Hoy, diversas comunidades trabajan en su
+              revitalización mediante escuelas comunitarias, talleres
+              culturales y proyectos que impulsan su uso en la vida cotidiana.
+            </p>
+            <p>
+              Preservar la lengua maya es garantizar la continuidad de un
+              conocimiento que ha acompañado a los pueblos mayas durante
+              milenios y que sigue siendo fundamental para comprender su forma
+              de vida y relación con el entorno.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-about__logo">
+          <img src="/img/logo.png" alt="Logo K’ajóol Lu’um" />
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+    <section id="sec-josue">
   <h2 class="comunidades-titulo">Comunidades</h2>
   <p class="comunidades-desc">
-    Explicar las comunidades mayas en la península y marcarlas en el mapa.
     Usa el buscador para localizar zonas arqueológicas, museos y otros lugares culturales
     de la zona maya.
   </p>
@@ -56,7 +160,7 @@
     <input
       id="inputBusquedaLugar"
       type="text"
-      placeholder="Buscar (ej. 'zona arqueológica', 'museo', 'Felipe Carrillo Puerto')"
+      placeholder="Buscar"
       aria-label="Buscar lugares en el mapa"
     />
     <button id="btnBuscarLugar" type="button">Buscar</button>
@@ -74,71 +178,67 @@
       <h3 class="com-nombre">Nombre del sitio</h3>
     </div>
   </div>
-</section>
+    </section>
+
+    <section id="sec-alexandra">
+      <div class="overlay-video">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/wbPPEoNsjnE?si=4mjRrPDmwRl0fTCJ" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
 
       <section class="seccion-comidas">
 
         <h2 class="titulo-comidas">Comidas típicas</h2>
         <p class="descripcion-comidas">
-          Agregar información sobre las comidas de la región, en la parte de abajo se hará un apartado
-          para poner por aparte los tipos de dulces, comidas y bebidas
+          En los siguientes apartados podrás leer sobre algunas comidas tipicas de la cultura maya.
         </p>
 
         <div class="tarjetas-comida">
 
           <!-- Tarjeta 1 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="dulces">
+            <div class="tarjeta-imagen1"></div>
             <div class="tarjeta-texto">Dulces</div>
           </div>
 
           <!-- Tarjeta 2 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="comidas">
+            <div class="tarjeta-imagen2"></div>
             <div class="tarjeta-texto">Comidas</div>
           </div>
 
           <!-- Tarjeta 3 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="bebidas">
+            <div class="tarjeta-imagen3"></div>
             <div class="tarjeta-texto">Bebidas</div>
           </div>
 
-          <!-- Tarjeta 4 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
-            <div class="tarjeta-texto">Bebidas</div>
-          </div>
-
-
-        </div>
-
-        <!-- Botones debajo, centrados -->
-        <div class="flechas-desplazamiento">
-          <button class="btn-flecha">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-chevron-left" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-            </svg>
-          </button>
-
-          <button class="btn-flecha">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-chevron-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-            </svg>
-          </button>
         </div>
       </section>
+
+      <!-- ================= MODAL ================= -->
+      <div id="modal-comidas" class="modal-comidas">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          <div id="modal-body"></div>
+        </div>
+      </div>
+
 
       <section class="medicina">
         <div class="card-medicina">
           <h4>Rituales tradicionales</h4>
           <h2>Medicina Tradicional</h2>
-          <p>Introducción pequeña a la medicinta tradicional maya y en la siguiente sección estarán los rituales
-            tradicionales
+          <p>La medicina tradicional maya es un sistema de conocimientos y prácticas de salud que ha sido transmitido de
+            generación en generación dentro de las comunidades mayas. A continuación, se presentan algunos remedios y
+            medicina tradicionales
           </p>
 
           <a href="#" class="btn-explorar">
@@ -150,6 +250,275 @@
           </a>
         </div>
       </section>
+      <!-- ========== MODAL MEDICINA ========== -->
+      <div id="modal-medicina" class="modal-medicina">
+        <div class="modal-medicina__overlay"></div>
+
+        <div class="modal-medicina__content">
+          <button class="modal-medicina__close">&times;</button>
+
+          <h2 class="modal-medicina__title">
+            MEDICINA TRADICIONAL MAYA DE QUINTANA ROO
+          </h2>
+
+          <div class="remedios-grid">
+
+            <!-- 1. Guayaba -->
+            <article class="remedio-card">
+              <img src="./public/medicina/guayaba.png" alt="Guayaba" class="remedio-card__img">
+              <h3 class="remedio-card__title">Guayaba (Psidium guajava) — hojas</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                infusionar 10 g de hojas secas por cada litro de agua hirviendo; dejar 10–15 minutos y colar. Tomar 1
+                taza 2-3 veces al día.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                diarreas, infecciones leves de estómago, lavado local para heridas (enfriada).
+              </p>
+            </article>
+
+            <!-- 2. Romero -->
+            <article class="remedio-card">
+              <img src="./public/medicina/romero.png" alt="Romero" class="remedio-card__img">
+              <h3 class="remedio-card__title">
+                Romero o hierbas locales parecidas (Lamiáceas locales) — infusión
+              </h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                5–10 g de hojas por taza de agua; infusionar 10 minutos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                malestares digestivos o como calmante leve.
+              </p>
+            </article>
+
+            <!-- 3. Copal / Bursera simaruba -->
+            <article class="remedio-card">
+              <img src="./public/medicina/copal.png" alt="Copal" class="remedio-card__img">
+              <h3 class="remedio-card__title">Copal / Bursera simaruba u otras Burseraceae — resina/hojas</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                resina o humo para fumigación; decocción de corteza para baños.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                problemas de piel, purificación ritual, infecciones cutáneas (uso tópico), mordeduras de insectos.
+              </p>
+            </article>
+
+            <!-- 4. Jobillo -->
+            <article class="remedio-card">
+              <img src="./public/medicina/jobillo.png" alt="Jobillo" class="remedio-card__img">
+              <h3 class="remedio-card__title">Jobillo (Astronium graveolens) — resina/corteza</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                aplicar resina tópica en heridas o abscesos; en algunos casos decocción de corteza para baños.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                curación de heridas y limpieza local.
+              </p>
+            </article>
+
+            <!-- 5. Pomolché -->
+            <article class="remedio-card">
+              <img src="./public/medicina/pomolche.png" alt="Pomolché" class="remedio-card__img">
+              <h3 class="remedio-card__title">Pomolché (Jatropha gaumeri / Jatropha spp.) — savia</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                uso tópico de la savia en zonas afectadas, limpiando antes la piel.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                tratamientos externos para granos y lesiones cutáneas.
+              </p>
+            </article>
+
+            <!-- 6. Thevetia gaumeri -->
+            <article class="remedio-card">
+              <img src="./public/medicina/thevetia.png" alt="Thevetia gaumeri" class="remedio-card__img">
+              <h3 class="remedio-card__title">Thevetia gaumeri (bursera local) — corteza/hojas</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocciones para baños tópicos; resina en curaciones externas. Uso tradicional controlado por
+                yerbateros.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                llagas, abscesos, problemas de la piel.
+              </p>
+            </article>
+
+            <!-- 7. Achiote -->
+            <article class="remedio-card">
+              <img src="./public/medicina/achiote.png" alt="Achiote" class="remedio-card__img">
+              <h3 class="remedio-card__title">Achiote (Bixa orellana) — semillas (pasta de annatto)</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                macerado de semillas para aplicaciones tópicas; en algunas tradiciones infusión suave para uso
+                digestivo.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                colorante y apoyo en algunas líneas curativas tradicionales.
+              </p>
+            </article>
+
+            <!-- 8. Guayacán / antiinflamatorias -->
+            <article class="remedio-card">
+              <img src="./public/medicina/guayacan.png" alt="Guayacán" class="remedio-card__img">
+              <h3 class="remedio-card__title">Guayacán y otras plantas antiinflamatorias locales</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocción de corteza o hojas en pequeñas cantidades.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                dolores musculares, inflamaciones.
+              </p>
+            </article>
+
+            <!-- 9. Hojas de plátano -->
+            <article class="remedio-card">
+              <img src="./public/medicina/hojas-platano.png" alt="Hojas de plátano" class="remedio-card__img">
+              <h3 class="remedio-card__title">Hojas de plátano (Musa spp.) — cataplasma</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                calentar hoja limpia y aplicar como cataplasma sobre la zona afectada.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                golpes, fracturas leves en combinación con sobadores tradicionales.
+              </p>
+            </article>
+
+            <!-- 10. Aloe / sábila -->
+            <article class="remedio-card">
+              <img src="./public/medicina/sabila.png" alt="Aloe vera" class="remedio-card__img">
+              <h3 class="remedio-card__title">Aloe / Sábila (Aloe vera) — gel</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                cortar penca, extraer el gel y aplicar de forma tópica. En jarabes tradicionales se prepara con cuidado.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                quemaduras, heridas, hidratación local de la piel.
+              </p>
+            </article>
+
+            <!-- 11. Flor de azahar / cítricos -->
+            <article class="remedio-card">
+              <img src="./public/medicina/florazahar.png" alt="Flor de azahar" class="remedio-card__img">
+              <h3 class="remedio-card__title">Flor de azahar y cítricos locales — infusión</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                infusionar flores (unos 5 g por taza) durante 10 minutos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                calma nervios, tensión ligera e insomnio leve.
+              </p>
+            </article>
+
+            <!-- 12. Hoja de ciruela -->
+            <article class="remedio-card">
+              <img src="./public/medicina/hoja-ciruela.png" alt="Hoja de ciruela" class="remedio-card__img">
+              <h3 class="remedio-card__title">Hoja de ciruela (Prunus sp. local) — infusión/tópico</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocción de hojas para baños o aplicaciones externas.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                problemas de la piel, erupciones y sarpullidos.
+              </p>
+            </article>
+
+            <!-- 13. Guayaco o raíces febrífugas -->
+            <article class="remedio-card">
+              <img src="./public/medicina/guayaco.png" alt="Guayaco" class="remedio-card__img">
+              <h3 class="remedio-card__title">Guayaco u otras raíces locales para fiebre</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                decocción suave de raíces (hervir 10–20 minutos) y tomar en sorbos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                fiebre leve y malestares generales.
+              </p>
+            </article>
+
+            <!-- 14. Infusiones para la tos -->
+            <article class="remedio-card">
+              <img src="./public/medicina/eucalipto.png" alt="Infusiones para la tos" class="remedio-card__img">
+              <h3 class="remedio-card__title">Infusiones para la tos (mezclas herbales locales)</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                combinar hojas de eucalipto local, orégano mexicano u otras plantas; infusionar y tomar 2–3 tazas al
+                día.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                alivio de tos y bronquitis leve, a veces combinado con vaporizaciones.
+              </p>
+            </article>
+
+            <!-- 15. Cataplasma de semillas -->
+            <article class="remedio-card">
+              <img src="./public/medicina/cataplasma.png" alt="Cataplasma de semillas" class="remedio-card__img">
+              <h3 class="remedio-card__title">Cataplasma de semillas molidas (pepitas/ajonjolí)</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                tostar y moler semillas; mezclar con agua o con pulpa de plantas mucilaginosas y aplicar como
+                cataplasma.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                ayudar a la cicatrización de heridas.
+              </p>
+            </article>
+
+
+            <!-- 19. Remedios estomacales -->
+            <article class="remedio-card">
+              <img src="./public/medicina/menta.png" alt="Remedios estomacales" class="remedio-card__img">
+              <h3 class="remedio-card__title">Remedios para problemas estomacales</h3>
+              <p><span class="remedio-label remedio-label--prep">Preparación:</span>
+                infusiones de hojas de plantas locales como guayaba, menta u otras; 5–10 g por taza, tomar después de
+                los alimentos.
+              </p>
+              <p><span class="remedio-label remedio-label--uso">Uso:</span>
+                diarrea y malestar estomacal.
+              </p>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ============ SECCIÓN CULTURA (BAILES / MÚSICA / VESTIMENTA) ============ -->
+      <section class="cultura">
+        <div class="cultura-grid">
+
+          <!-- Tarjeta 1: Bailes -->
+          <article class="cultura-card cultura-card--bailes" data-tema="bailes">
+            <div class="cultura-card__img" style="background-image: url(./public/assets/img/jarana-mestiza.png);"></div>
+            <h3 class="cultura-card__title">
+              Bailes <span class="cultura-card__arrow">→</span>
+            </h3>
+            <p class="cultura-card__text">
+              ¿Sabes cuales son los bailes tradicionales de nuestra región?
+            </p>
+          </article>
+
+          <!-- Tarjeta 2: Música -->
+          <article class="cultura-card cultura-card--musica" data-tema="musica">
+            <div class="cultura-card__img" style="background-image: url(./public/assets/img/instrumentos.png);"></div>
+            <h3 class="cultura-card__title">
+              Música <span class="cultura-card__arrow">→</span>
+            </h3>
+            <p class="cultura-card__text">
+              Algunos instrumentos musicales tradicionales.
+            </p>
+          </article>
+
+          <!-- Tarjeta 3: Vestimenta -->
+          <article class="cultura-card cultura-card--vestimenta" data-tema="vestimenta">
+            <div class="cultura-card__img" style="background-image: url(./public/assets/img/vestimenta.png);"></div>
+            <h3 class="cultura-card__title">
+              Vestimenta <span class="cultura-card__arrow">→</span>
+            </h3>
+            <p class="cultura-card__text">
+              Vestimenta tradicional maya
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============ MODAL CULTURA ============ -->
+      <div id="modal-cultura" class="modal-cultura">
+        <div class="modal-cultura__overlay"></div>
+
+        <div class="modal-cultura__content">
+          <button class="modal-cultura__close">&times;</button>
+          <div id="modal-cultura-body"></div>
+        </div>
+      </div>
+
     </section>
 
     <section id="sec-logan">
@@ -159,11 +528,8 @@
           <div class="col-1">
             <h2 class="titulo">Juegos tradicionales</h2>
             <p class="descripcion">
-              se agrega un poco de 0la info sobre los juegos tradicionales.
-              empezare a llenar esto y al final habra un ver mas para mas informacion.dnjnkdddddd
-              ddddddddddddddddddddddddddddddddddddddddddddddddddd
-              ddddddddddddddddddddddddddddddddd
-              ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+              Los juegos tradicionales son una expresión alegre de nuestra cultura.
+              Aquí descubrirás cómo se juegan, su origen y el papel que han tenido en la convivencia de la comunidad.
             </p>
 
             <div class="boton-vermas">
@@ -216,16 +582,22 @@
               <div class="slides">
 
                 <div class="slide">
-                  <img src="./public/assets/img/1.png" alt="img">
+                  <img src="./public/assets/img/Pok-ta-pok_1.png" alt="img">
                 </div>
                 <div class="slide">
-                  <img src="./public/assets/img/2.png" alt="img">
+                  <img src="./public/assets/img/Bul o Buul.png" alt="img">
                 </div>
                 <div class="slide">
-                  <img src="./public/assets/img/3.png" alt="img">
+                  <img src="./public/assets/img/Tinjoroch.png" alt="img">
                 </div>
                 <div class="slide">
-                  <img src="./public/assets/img/4.png" alt="img">
+                  <img src="./public/assets/img/Kimbomba.png" alt="img">
+                </div>
+                <div class="slide">
+                  <img src="./public/assets/img/Chácara.png" alt="img">
+                </div>
+                <div class="slide">
+                  <img src="./public/assets/img/Caza Venado.png" alt="img">
                 </div>
 
               </div>
@@ -239,11 +611,9 @@
             <h2 class="titulo">Fiestas tradicionales</h2>
             <p class="descripcion">
 
-              se agrega un poco de 0la info sobre las fiestas tradicionales. empezare a llenar esto y al final habra un
-              ver mas para mas informacion.
-
-              de igual manera se pondra de este lado un carrusel de fotos con las fotos de los tipos de baiiles
-              ,kkkkkkkkkdddddddddddddddddddddddddddddddddddddddddddddd
+              Las fiestas tradicionales son una expresión viva de nuestra cultura.
+              Aquí podrás descubrir el significado, historia y costumbres que acompañan a cada una de estas
+              celebraciones que fortalecen la identidad y unión de la comunidad.
             </p>
 
             <div class="boton-vermas">
@@ -267,6 +637,7 @@
                 <img class="modal-fiestas__img" src="" alt="Imagen del la fiesta">
 
                 <h2 class="modal-fiestas__title">Juegos tradicionales</h2>
+                <h2 class="modal-fiestas-comunidad">comunidad</h2>
                 <p class="modal-fiestas__text">
                   Aquí va la descripción completa...
                 </p>
@@ -298,16 +669,49 @@
                   <div class="slides">
 
                     <div class="slide">
-                      <img src="./public/assets/img/1.png" alt="img">
+                      <img src="./public/assets/img/ReyesMagos_1.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/2.png" alt="img">
+                      <img src="./public/assets/img/ReyesMagos_2.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/3.png" alt="img">
+                      <img src="./public/assets/img/ReyesMagos_3.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/4.png" alt="img">
+                      <img src="./public/assets/img/FiestaTresCruces.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSantaCruz.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_3.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRamon_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRamon_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanMiguel.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanAntonio_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanAntonio_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaNiñoJesus_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaNiñoJesus_2.png" alt="img">
                     </div>
 
                   </div>
@@ -325,16 +729,53 @@
                   <div class="slides">
 
                     <div class="slide">
-                      <img src="./public/assets/img/1.png" alt="img">
+                      <img src="./public/assets/img/FiestaSanRamon_2.png" alt="img">
+                    </div>
+
+                    <div class="slide">
+                      <img src="./public/assets/img/ReyesMagos_1.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/2.png" alt="img">
+                      <img src="./public/assets/img/ReyesMagos_2.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/3.png" alt="img">
+                      <img src="./public/assets/img/ReyesMagos_3.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/4.png" alt="img">
+                      <img src="./public/assets/img/FiestaTresCruces.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSantaCruz.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_3.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRamon_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRamon_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanMiguel.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanAntonio_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanAntonio_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaNiñoJesus_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaNiñoJesus_2.png" alt="img">
                     </div>
 
                   </div>
@@ -356,25 +797,89 @@
             <div class="leyendas-img">
 
               <div class="slides-L">
-                <div class="slide-L" data-subtitulo="Leyenda1"
-                  data-description="Aquí va una introducción corta a la leyenda1.">
+                <div class="slide-L" data-subtitulo="Balam"
+                  data-description="Aquí va una introducción corta a la leyenda.">
                   <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen">
                 </div>
 
-                <div class="slide-L" data-subtitulo="Leyenda2"
-                  data-description="Aquí va una introducción corta a la leyenda2.">
-                  <img src="./public/assets/img/leyenda-balam2.jpg" alt="imagen">
+                <div class="slide-L" data-subtitulo="Xtabay"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Xtabay.png" alt="imagen">
                 </div>
 
-                <div class="slide-L" data-subtitulo="Leyenda3"
-                  data-description="Aquí va una introducción corta a la leyenda3.">
-                  <img src="./public/assets/img/leyenda-balam3.png" alt="imagen">
+                <div class="slide-L" data-subtitulo="Cruz Parlante"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/CruzParlante_1.png" alt="imagen">
                 </div>
 
-                <div class="slide-L" data-subtitulo="Leyenda4"
-                  data-description="Aquí va una introducción corta a la leyenda4.">
-                  <img src="./public/assets/img/leyenda-balam4.jpg" alt="imagen">
+                <div class="slide-L" data-subtitulo="Aluxes"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Aluxes.png" alt="imagen">
                 </div>
+
+                <div class="slide-L" data-subtitulo="Huay Chivo"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Huay-Chivo.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Kinich y Tizic"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Kinich-Tizic.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Jacinto Pat"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Jacinto-Pat.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Cecilio Chi"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Cecilio-Chi.png" alt="imagen">
+                </div>
+                <div class="slide-L" data-subtitulo="Bernardino Ken y Florentino Cituk"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Bernardino_Ken-Florentino_Cituk.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Tesoro de los aluxes"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Tesoro_Aluxes.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Hombre-Alux"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Xaho'hot Tuun"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="" alt="imagen">
+                </div>
+                <div class="slide-L" data-subtitulo="Aluxes-encuentro"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Encuentro-Alux.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Azotes"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Azotes.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Ajkanul"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Xunaan Tunich"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Piedra-Mujer.png" alt="imagen">
+                </div>
+                <div class="slide-L" data-subtitulo="Boop"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Boop.png" alt="imagen">
+                </div>
+
+
               </div>
 
             </div>
@@ -440,7 +945,7 @@
           <h2 class="titulo-artesanias">Artesanías</h2>
 
           <p class="artesanias-descripcion">
-            Aquí puedes mostrar las artesanías más representativas de la comunidad.
+            Aquí puedes ver las artesanías más representativas de la comunidad.
             Cada cuadro puede abrir un "ver más" con detalles de la pieza, su historia y quién la elabora.
           </p>
 
@@ -463,7 +968,7 @@
             <article class="artesania-card">
               <div class="artesania-card__img-contenedor">
                 <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div> <span class="artesania-card__label">Artesanía</span> 
+              </div> <span class="artesania-card__label">Artesanía</span>
             </article>
 
             <article class="artesania-card">
@@ -484,6 +989,24 @@
               </div> <span class="artesania-card__label">Artesanía</span>
             </article>
           </div>
+
+          <!-- MODAL ARTESANÍAS -->
+          <div id="modal-artesania" class="modal-artesania">
+            <div class="modal-artesania__overlay"></div>
+
+            <div class="modal-artesania__content">
+              <button class="modal-artesania__close">✕</button>
+
+              <img class="modal-artesania__img" src="" alt="Imagen de la artesanía">
+
+              <h2 class="modal-artesania__title">Título de la artesanía</h2>
+              <p class="modal-artesania__text">
+                Aquí se mostrará la descripción completa de la artesanía.
+              </p>
+            </div>
+          </div>
+
+
         </div>
 
 
@@ -491,26 +1014,24 @@
     </section>
 
     <section id="sec-angel">
+      <!-- CONTENEDOR GENERAL DE TODA LA SECCIÓN QUE HICISTE -->
 
       <!-- SECCIÓN SLIDER TEMAS MAYAS -->
       <section id="seccion-temas" class="slider-maya">
-
+        <!-- Flecha izquierda del slider, se conecta en JS con id="sliderLeft" -->
         <button class="slider-btn left" id="sliderLeft">❮</button>
 
+        <!-- Track/carril horizontal donde se colocan todas las tarjetas .slide -->
         <div class="slider-track" id="sliderTrack">
 
           <!-- SLIDE 1 -->
-<!-- SLIDE 1 -->
-<div class="slide">
-  <img src="/assets/img/img.jpg" alt="Teología Maya">
-  <h3>Teología maya</h3>
-  <p>Explora la cosmovisión y espiritualidad maya.</p>
+          <!-- SLIDE 1 -->
+          <div class="slide">
+            <img src="/assets/img/img.jpg" alt="Teología Maya">
+            <h3>Teología maya</h3>
+            <p>Explora la cosmovisión y espiritualidad maya.</p>
 
-  <a href="#"
-     class="slide-link"
-     data-titulo="Teología maya"
-     data-imagen="/assets/img/img.jpg"
-     data-texto="La teología maya es el conjunto de creencias, narraciones sagradas y rituales mediante los cuales los pueblos mayas explicaron el origen del mundo, la naturaleza y el papel del ser humano. Es un sistema vivo que continúa presente en muchas comunidades actuales.<br><br>
+            <a href="#" class="slide-link" data-titulo="Teología maya" data-imagen="/assets/img/img.jpg" data-texto="La teología maya es el conjunto de creencias, narraciones sagradas y rituales mediante los cuales los pueblos mayas explicaron el origen del mundo, la naturaleza y el papel del ser humano. Es un sistema vivo que continúa presente en muchas comunidades actuales.<br><br>
 
 <b>Cosmovisión maya</b><br>
 La cosmovisión maya comprende el universo como un sistema equilibrado dividido en tres planos:<br><br>
@@ -592,17 +1113,20 @@ Conecta a las comunidades con sus raíces y su historia milenaria.<br><br>
 
 La teología maya es un sistema profundo que explica la creación del mundo, la relación entre el ser humano y la naturaleza y la importancia de mantener el equilibrio cósmico. Sus rituales, dioses y conocimientos siguen siendo esenciales para la identidad de las comunidades mayas contemporáneas.<br><br>
 ">
-     Ver más
-  </a>
-</div>
+              Ver más
+            </a>
+          </div>
 
 
-          <!-- SLIDE 2 -->
+          <!-- SLIDE 2: Tarjeta sobre rituales y creencias -->
           <div class="slide">
+            <!-- Imagen representativa del tema -->
             <img src="/assets/img/img2.png" alt="Rituales y creencias">
+            <!-- Título del tema -->
             <h3>Rituales y creencias</h3>
-           <p>Conoce los rituales y creencias que conectaban a los mayas con la naturaleza y los dioses.</p>
+            <p>Conoce los rituales y creencias que conectaban a los mayas con la naturaleza y los dioses.</p>
 
+            <!-- Enlace que abrirá el modal, con todo el contenido extendido en data-texto -->
             <a href="#" class="slide-link" data-titulo="Rituales y creencias" data-imagen="/assets/img/img2.png"
               data-texto="<b>Hetzmek (Ritual de presentación del bebé)</b><br><br>
 El Hetzmek es un ritual maya doméstico que se realiza cuando las niñas cumplen tres meses y los niños cuatro, aunque en algunas comunidades puede hacerse a los cinco meses. Su nombre proviene de las palabras que significan aligerar o aliviar la carga y abrazar.<br><br>
@@ -628,16 +1152,20 @@ El Día 1 se preparan ofrendas como pollo, hostias de maíz, masa para saká y v
 Ritual agrícola maya para bendecir la siembra o agradecer la cosecha. Su nombre puede significar día de la dificultad o alimentar al monte. Se practica en comunidades como Señor, Chunhuhub, Tepich y Noh Bec.<br><br>
 El ritual puede realizarse en la milpa o en la casa del milpero. Incluye ofrendas de maíz, tortillas, elotes, atole, tamales, copal, velas e incienso. Se pide permiso al monte antes de realizar la roza, tumba o quema tradicional.<br><br>
 Cuando aparecen los primeros frutos se realiza la primicia, donde se cocinan mazorcas dentro de la milpa y se ofrecen a los guardianes del monte. La ceremonia concluye con la comida compartida entre los participantes, símbolo de unión comunitaria.<br><br>
-" >
+">
               Ver más
             </a>
           </div>
 
-          <!-- SLIDE 3 -->
+          <!-- SLIDE 3: Tarjeta sobre organización social maya -->
           <div class="slide">
+            <!-- Imagen ilustrativa del tema -->
             <img src="/assets/img/img3.jpg" alt="Organización social">
+            <!-- Título del slide -->
             <h3>Organización social</h3>
+            <!-- Breve descripción en la tarjeta -->
             <p>Conoce cómo se estructuraba la sociedad maya y el papel de cada grupo.</p>
+            <!-- Enlace que manda al modal el contenido extendido desde data-texto -->
             <a href="#" class="slide-link" data-titulo="Organización social" data-imagen="/assets/img/img3.jpg"
               data-texto="
 La sociedad maya estaba organizada de forma jerárquica. Cada grupo social tenía funciones específicas para mantener el orden político, religioso y económico de la ciudad o comunidad.<br><br>
@@ -672,13 +1200,15 @@ En conjunto, esta organización social permitía que las ciudades mayas funciona
             </a>
           </div>
 
-          <!-- SLIDE 4 -->
+          <!-- SLIDE 4: Tarjeta sobre organización política maya -->
           <div class="slide">
+            <!-- Imagen principal del slide -->
             <img src="/assets/img/img4.jpg" alt="Organización política">
+            <!-- Título del tema -->
             <h3>Organización política</h3>
+            <!-- Descripción corta que sirve como introducción -->
             <p>Descubre los cargos de autoridad y su papel en el gobierno maya.</p>
-            <a href="#" class="slide-link" data-titulo="Organización política"
-              data-texto="
+            <a href="#" class="slide-link" data-titulo="Organización política" data-texto="
 La organización política maya estaba basada en ciudades estado independientes llamadas batabiloob. Cada ciudad tenía su propio gobernante y sistema administrativo, aunque compartían cultura, religión y estructura social.<br><br>
 
 <b>Halach Uinik</b><br>
@@ -706,24 +1236,27 @@ Las decisiones importantes no eran tomadas solo por el gobernante. Había un equ
 Cada ciudad estado era independiente, con su propio gobierno, ejércitos, templos y territorio. Algunas ciudades formaban alianzas o entraban en conflictos entre sí. La política maya se basaba en la herencia del poder, la influencia religiosa y el control de tierras y recursos.<br><br>
 
 En conjunto, la organización política maya combinaba autoridad divina, administración local y toma de decisiones consultada, permitiendo que cada ciudad estado funcionara como un sistema complejo y autónomo dentro del mundo maya.<br><br>
-"
-              data-imagen="/assets/img/img4.jpg">
+" data-imagen="/assets/img/img4.jpg">
               Ver más
             </a>
           </div>
-        
+
 
         </div>
 
+        <!-- Flecha derecha del slider, controlada en JS con id="sliderRight" -->
         <button class="slider-btn right" id="sliderRight">❯</button>
 
       </section>
 
-      <!-- MODAL GENERAL PARA "VER MÁS" -->
+      <!-- MODAL GENERAL PARA "VER MÁS" (reutilizado por todos los slides) -->
       <div id="modalVerMas" class="modal-vermas">
+        <!-- Fondo oscuro detrás del contenido del modal -->
         <div class="modal-vermas__overlay"></div>
 
+        <!-- Contenedor blanco del modal con imagen y texto -->
         <div class="modal-vermas__content">
+          <!-- Botón (X) para cerrar el modal, conectado en JS por id -->
           <button id="cerrarModalVerMas" class="modal-vermas__close">&times;</button>
 
           <!-- Imagen arriba -->
@@ -731,16 +1264,21 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
           <!-- Texto abajo -->
           <div class="modal-vermas__body">
+            <!-- Aquí se inserta dinámicamente el título desde JS -->
             <h3 id="modalVerMasTitulo" class="modal-vermas__title"></h3>
+            <!-- Aquí se inserta dinámicamente el contenido largo (data-texto) -->
             <p id="modalVerMasTexto" class="modal-vermas__text"></p>
           </div>
         </div>
       </div>
 
 
+      <!-- SECCIÓN GALERÍA DE FOTOS -->
       <section id="galeria-fotos" class="galeria">
+        <!-- Título de la galería -->
         <h2 class="galeria__titulo">GALERIA DE FOTOS</h2>
 
+        <!-- Carril horizontal que será auto-scroll en JS (id="galeriaTrack") -->
         <div class="galeria__track" id="galeriaTrack">
         <div class="galeria__item">
   <img src="/image/1.jpg" alt="Foto 1 - descripción">
@@ -905,24 +1443,35 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
 
 
+      <!-- FONDO DE LA SECCIÓN DE COMENTARIOS -->
       <div class="comentarios-bg">
+        <!-- Tarjeta principal de comentarios (formulario + botón para ver más) -->
         <section id="comentarios-section" class="comentarios">
+          <!-- Título de la sección de comentarios -->
           <h2 class="comentarios__titulo">COMENTARIOS</h2>
 
+          <!-- Formulario para enviar un nuevo comentario 
+               - Se conecta con JS por id="formComentario" -->
           <form id="formComentario" class="comentarios__form">
             <label for="nombre">Nombre</label>
+            <!-- Campo de texto para el nombre del usuario -->
             <input type="text" id="nombre" placeholder="Tu nombre" required />
 
             <label for="mensaje">Comentario</label>
+            <!-- Campo de texto largo para el comentario del usuario -->
             <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
 
+            <!-- Botón que dispara el submit, manejado por JS con addEventListener("submit", ...) -->
             <button type="submit" class="btn-enviar">Enviar comentario</button>
           </form>
 
+          <!-- Contenedor de posibles comentarios debajo del formulario 
+               (en tu JS lo mantienes vacío a propósito) -->
           <div id="listaComentarios" class="comentarios__lista">
             <!-- Aquí pinta comentario.js -->
           </div>
 
+          <!-- Botón que abre el modal con TODOS los comentarios -->
           <div class="comentarios__more">
             <button id="btnMas" class="btn-mas">
               <span class="flecha">➜</span>
@@ -933,24 +1482,27 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
       </div>
 
 
-      <!-- MODAL DE COMENTARIOS -->
+      <!-- MODAL DE COMENTARIOS (se abre al pulsar "Leer comentarios") -->
       <div id="modalComentarios" class="comentarios-modal">
+        <!-- Fondo oscuro del modal -->
         <div class="comentarios-modal__overlay"></div>
 
+        <!-- Contenedor blanco del modal donde se muestran los comentarios -->
         <div class="comentarios-modal__content">
+          <!-- Botón X para cerrar el modal -->
           <button id="cerrarModalComentarios" class="comentarios-modal__close">&times;</button>
+          <!-- Título dentro del modal -->
           <h3 class="comentarios-modal__title">Todos los comentarios</h3>
 
+          <!-- Contenedor donde JS inserta TODOS los comentarios renderizados -->
           <div id="listaComentariosModal" class="comentarios__lista">
             <!-- Aquí se pintan TODOS los comentarios -->
           </div>
         </div>
       </div>
 
-
-
-
     </section>
+
   </main>
 
   <!-- Script de Vite -->
