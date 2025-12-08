@@ -47,51 +47,39 @@
         <div class="tarjetas-comida">
 
           <!-- Tarjeta 1 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="dulces">
+            <div class="tarjeta-imagen1"></div>
             <div class="tarjeta-texto">Dulces</div>
           </div>
 
           <!-- Tarjeta 2 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="comidas">
+            <div class="tarjeta-imagen2"></div>
             <div class="tarjeta-texto">Comidas</div>
           </div>
 
           <!-- Tarjeta 3 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
-            <div class="tarjeta-texto">Bebidas</div>
-          </div>
-
-          <!-- Tarjeta 4 -->
-          <div class="tarjeta">
-            <div class="tarjeta-imagen">imagen</div>
+          <div class="tarjeta" data-tipo="bebidas">
+            <div class="tarjeta-imagen3"></div>
             <div class="tarjeta-texto">Bebidas</div>
           </div>
 
 
         </div>
 
-        <!-- Botones debajo, centrados -->
-        <div class="flechas-desplazamiento">
-          <button class="btn-flecha">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-chevron-left" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-            </svg>
-          </button>
 
-          <button class="btn-flecha">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-chevron-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-            </svg>
-          </button>
-        </div>
       </section>
+
+      <!-- ================= MODAL ================= -->
+      <div id="modal-comidas" class="modal-comidas">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          <div id="modal-body"></div>
+        </div>
+      </div>
+
 
       <section class="medicina">
         <div class="card-medicina">
@@ -423,7 +411,7 @@
             <article class="artesania-card">
               <div class="artesania-card__img-contenedor">
                 <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div> <span class="artesania-card__label">Artesanía</span> 
+              </div> <span class="artesania-card__label">Artesanía</span>
             </article>
 
             <article class="artesania-card">
@@ -460,17 +448,13 @@
         <div class="slider-track" id="sliderTrack">
 
           <!-- SLIDE 1 -->
-<!-- SLIDE 1 -->
-<div class="slide">
-  <img src="/assets/img/img.jpg" alt="Teología Maya">
-  <h3>Teología maya</h3>
-  <p>Explora la cosmovisión y espiritualidad maya.</p>
+          <!-- SLIDE 1 -->
+          <div class="slide">
+            <img src="/assets/img/img.jpg" alt="Teología Maya">
+            <h3>Teología maya</h3>
+            <p>Explora la cosmovisión y espiritualidad maya.</p>
 
-  <a href="#"
-     class="slide-link"
-     data-titulo="Teología maya"
-     data-imagen="/assets/img/img.jpg"
-     data-texto="La teología maya es el conjunto de creencias, narraciones sagradas y rituales mediante los cuales los pueblos mayas explicaron el origen del mundo, la naturaleza y el papel del ser humano. Es un sistema vivo que continúa presente en muchas comunidades actuales.<br><br>
+            <a href="#" class="slide-link" data-titulo="Teología maya" data-imagen="/assets/img/img.jpg" data-texto="La teología maya es el conjunto de creencias, narraciones sagradas y rituales mediante los cuales los pueblos mayas explicaron el origen del mundo, la naturaleza y el papel del ser humano. Es un sistema vivo que continúa presente en muchas comunidades actuales.<br><br>
 
 <b>Cosmovisión maya</b><br>
 La cosmovisión maya comprende el universo como un sistema equilibrado dividido en tres planos:<br><br>
@@ -552,16 +536,16 @@ Conecta a las comunidades con sus raíces y su historia milenaria.<br><br>
 
 La teología maya es un sistema profundo que explica la creación del mundo, la relación entre el ser humano y la naturaleza y la importancia de mantener el equilibrio cósmico. Sus rituales, dioses y conocimientos siguen siendo esenciales para la identidad de las comunidades mayas contemporáneas.<br><br>
 ">
-     Ver más
-  </a>
-</div>
+              Ver más
+            </a>
+          </div>
 
 
           <!-- SLIDE 2 -->
           <div class="slide">
             <img src="/assets/img/img2.png" alt="Rituales y creencias">
             <h3>Rituales y creencias</h3>
-           <p>Conoce los rituales y creencias que conectaban a los mayas con la naturaleza y los dioses.</p>
+            <p>Conoce los rituales y creencias que conectaban a los mayas con la naturaleza y los dioses.</p>
 
             <a href="#" class="slide-link" data-titulo="Rituales y creencias" data-imagen="/assets/img/img2.png"
               data-texto="<b>Hetzmek (Ritual de presentación del bebé)</b><br><br>
@@ -588,7 +572,7 @@ El Día 1 se preparan ofrendas como pollo, hostias de maíz, masa para saká y v
 Ritual agrícola maya para bendecir la siembra o agradecer la cosecha. Su nombre puede significar día de la dificultad o alimentar al monte. Se practica en comunidades como Señor, Chunhuhub, Tepich y Noh Bec.<br><br>
 El ritual puede realizarse en la milpa o en la casa del milpero. Incluye ofrendas de maíz, tortillas, elotes, atole, tamales, copal, velas e incienso. Se pide permiso al monte antes de realizar la roza, tumba o quema tradicional.<br><br>
 Cuando aparecen los primeros frutos se realiza la primicia, donde se cocinan mazorcas dentro de la milpa y se ofrecen a los guardianes del monte. La ceremonia concluye con la comida compartida entre los participantes, símbolo de unión comunitaria.<br><br>
-" >
+">
               Ver más
             </a>
           </div>
@@ -637,8 +621,7 @@ En conjunto, esta organización social permitía que las ciudades mayas funciona
             <img src="/assets/img/img4.jpg" alt="Organización política">
             <h3>Organización política</h3>
             <p>Descubre los cargos de autoridad y su papel en el gobierno maya.</p>
-            <a href="#" class="slide-link" data-titulo="Organización política"
-              data-texto="
+            <a href="#" class="slide-link" data-titulo="Organización política" data-texto="
 La organización política maya estaba basada en ciudades estado independientes llamadas batabiloob. Cada ciudad tenía su propio gobernante y sistema administrativo, aunque compartían cultura, religión y estructura social.<br><br>
 
 <b>Halach Uinik</b><br>
@@ -666,12 +649,11 @@ Las decisiones importantes no eran tomadas solo por el gobernante. Había un equ
 Cada ciudad estado era independiente, con su propio gobierno, ejércitos, templos y territorio. Algunas ciudades formaban alianzas o entraban en conflictos entre sí. La política maya se basaba en la herencia del poder, la influencia religiosa y el control de tierras y recursos.<br><br>
 
 En conjunto, la organización política maya combinaba autoridad divina, administración local y toma de decisiones consultada, permitiendo que cada ciudad estado funcionara como un sistema complejo y autónomo dentro del mundo maya.<br><br>
-"
-              data-imagen="/assets/img/img4.jpg">
+" data-imagen="/assets/img/img4.jpg">
               Ver más
             </a>
           </div>
-        
+
 
         </div>
 
