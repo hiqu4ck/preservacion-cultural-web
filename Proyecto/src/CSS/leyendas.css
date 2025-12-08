@@ -30,7 +30,7 @@
         }
 
         .subtitulo {
-            font-size: 55px;
+            font-size: 60px;
             color: var(--color-negro);
             text-align: left;
             line-height: 1.6;
@@ -149,7 +149,6 @@
     /*COL-L*/
 
     .col-L {
-        min-width: 380px;  
         position: relative;
 
         .leyendas-img {
@@ -157,7 +156,7 @@
             width: 100%;
             margin-left: 0;
             margin-right: 0;
-            border-radius: 14px;
+            border-radius: 10px;
             overflow: hidden;
             background: transparent;
 
@@ -226,7 +225,6 @@
 
     .modal-leyenda__text {
         font-size: 18px;
-        text-align: justify;
         line-height: 1.6;
     }
 
@@ -243,15 +241,9 @@
     .modal-leyenda__img {
         width: 100%;
         max-height: 300px;
-
+        object-fit: cover;
         border-radius: 12px;
         margin-bottom: 20px;
-
-        height: auto;
-        /* Mantiene la proporción original */
-        object-fit: contain;
-        /* Evita recortes */
-
     }
 
 
