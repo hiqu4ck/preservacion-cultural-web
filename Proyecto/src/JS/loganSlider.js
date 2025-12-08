@@ -613,7 +613,7 @@ const leyendasInfo = [
     detalle: ` 
 Tienes razón, el texto no estaba resumido. Aquí va una versión más corta:
 
-Hace mucho tiempo, los dioses crearon a los **Balames**, cuatro jaguares guardianes, para proteger a los pueblos mayas. Cada Balam estaba asociado con un punto cardinal y tenía la misión de vigilar la selva y proteger a los humanos de los peligros de la noche, como espíritus malignos y animales que amenazaban los cultivos. Se decía que los Balames tenían la capacidad de ver en la oscuridad y caminar sin dejar rastro, ahuyentando a los intrusos con un rugido fuerte.
+Hace mucho tiempo, los dioses crearon a los Balames, cuatro jaguares guardianes, para proteger a los pueblos mayas. Cada Balam estaba asociado con un punto cardinal y tenía la misión de vigilar la selva y proteger a los humanos de los peligros de la noche, como espíritus malignos y animales que amenazaban los cultivos. Se decía que los Balames tenían la capacidad de ver en la oscuridad y caminar sin dejar rastro, ahuyentando a los intrusos con un rugido fuerte.
 
 Los campesinos ofrecían ofrendas y velas para honrar a los Balames, quienes también cuidaban las milpas. Con el tiempo, el Balam se convirtió en símbolo de fuerza y sabiduría. Hoy en día, se cree que cada persona tiene un Balam que la cuida, protegiéndola en su camino, especialmente en la selva o en momentos difíciles.
 
