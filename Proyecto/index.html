@@ -6,8 +6,6 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto</title>
-
-  <!-- Aquí luego enlazan TODOS los CSS -->
 </head>
 
 <body>
@@ -653,22 +651,28 @@
     </section>
 
     <section id="sec-angel">
+      <!-- CONTENEDOR GENERAL DE TODA LA SECCIÓN QUE HICISTE -->
 
       <!-- SECCIÓN SLIDER TEMAS MAYAS -->
       <section id="seccion-temas" class="slider-maya">
-
+        <!-- Flecha izquierda del slider, se conecta en JS con id="sliderLeft" -->
         <button class="slider-btn left" id="sliderLeft">❮</button>
 
+        <!-- Track/carril horizontal donde se colocan todas las tarjetas .slide -->
         <div class="slider-track" id="sliderTrack">
 
           <!-- SLIDE 1 -->
-          <!-- SLIDE 1 -->
-          <div class="slide">
-            <img src="/assets/img/img.jpg" alt="Teología Maya">
-            <h3>Teología maya</h3>
-            <p>Explora la cosmovisión y espiritualidad maya.</p>
+<!-- SLIDE 1 -->
+<div class="slide">
+  <img src="/assets/img/img.jpg" alt="Teología Maya">
+  <h3>Teología maya</h3>
+  <p>Explora la cosmovisión y espiritualidad maya.</p>
 
-            <a href="#" class="slide-link" data-titulo="Teología maya" data-imagen="/assets/img/img.jpg" data-texto="La teología maya es el conjunto de creencias, narraciones sagradas y rituales mediante los cuales los pueblos mayas explicaron el origen del mundo, la naturaleza y el papel del ser humano. Es un sistema vivo que continúa presente en muchas comunidades actuales.<br><br>
+  <a href="#"
+     class="slide-link"
+     data-titulo="Teología maya"
+     data-imagen="/assets/img/img.jpg"
+     data-texto="La teología maya es el conjunto de creencias, narraciones sagradas y rituales mediante los cuales los pueblos mayas explicaron el origen del mundo, la naturaleza y el papel del ser humano. Es un sistema vivo que continúa presente en muchas comunidades actuales.<br><br>
 
 <b>Cosmovisión maya</b><br>
 La cosmovisión maya comprende el universo como un sistema equilibrado dividido en tres planos:<br><br>
@@ -755,12 +759,15 @@ La teología maya es un sistema profundo que explica la creación del mundo, la 
           </div>
 
 
-          <!-- SLIDE 2 -->
+          <!-- SLIDE 2: Tarjeta sobre rituales y creencias -->
           <div class="slide">
+            <!-- Imagen representativa del tema -->
             <img src="/assets/img/img2.png" alt="Rituales y creencias">
+            <!-- Título del tema -->
             <h3>Rituales y creencias</h3>
-            <p>Conoce los rituales y creencias que conectaban a los mayas con la naturaleza y los dioses.</p>
+           <p>Conoce los rituales y creencias que conectaban a los mayas con la naturaleza y los dioses.</p>
 
+            <!-- Enlace que abrirá el modal, con todo el contenido extendido en data-texto -->
             <a href="#" class="slide-link" data-titulo="Rituales y creencias" data-imagen="/assets/img/img2.png"
               data-texto="<b>Hetzmek (Ritual de presentación del bebé)</b><br><br>
 El Hetzmek es un ritual maya doméstico que se realiza cuando las niñas cumplen tres meses y los niños cuatro, aunque en algunas comunidades puede hacerse a los cinco meses. Su nombre proviene de las palabras que significan aligerar o aliviar la carga y abrazar.<br><br>
@@ -791,11 +798,15 @@ Cuando aparecen los primeros frutos se realiza la primicia, donde se cocinan maz
             </a>
           </div>
 
-          <!-- SLIDE 3 -->
+          <!-- SLIDE 3: Tarjeta sobre organización social maya -->
           <div class="slide">
+            <!-- Imagen ilustrativa del tema -->
             <img src="/assets/img/img3.jpg" alt="Organización social">
+            <!-- Título del slide -->
             <h3>Organización social</h3>
+            <!-- Breve descripción en la tarjeta -->
             <p>Conoce cómo se estructuraba la sociedad maya y el papel de cada grupo.</p>
+            <!-- Enlace que manda al modal el contenido extendido desde data-texto -->
             <a href="#" class="slide-link" data-titulo="Organización social" data-imagen="/assets/img/img3.jpg"
               data-texto="
 La sociedad maya estaba organizada de forma jerárquica. Cada grupo social tenía funciones específicas para mantener el orden político, religioso y económico de la ciudad o comunidad.<br><br>
@@ -830,12 +841,16 @@ En conjunto, esta organización social permitía que las ciudades mayas funciona
             </a>
           </div>
 
-          <!-- SLIDE 4 -->
+          <!-- SLIDE 4: Tarjeta sobre organización política maya -->
           <div class="slide">
+            <!-- Imagen principal del slide -->
             <img src="/assets/img/img4.jpg" alt="Organización política">
+            <!-- Título del tema -->
             <h3>Organización política</h3>
+            <!-- Descripción corta que sirve como introducción -->
             <p>Descubre los cargos de autoridad y su papel en el gobierno maya.</p>
-            <a href="#" class="slide-link" data-titulo="Organización política" data-texto="
+            <a href="#" class="slide-link" data-titulo="Organización política"
+              data-texto="
 La organización política maya estaba basada en ciudades estado independientes llamadas batabiloob. Cada ciudad tenía su propio gobernante y sistema administrativo, aunque compartían cultura, religión y estructura social.<br><br>
 
 <b>Halach Uinik</b><br>
@@ -867,19 +882,23 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
               Ver más
             </a>
           </div>
-
+        
 
         </div>
 
+        <!-- Flecha derecha del slider, controlada en JS con id="sliderRight" -->
         <button class="slider-btn right" id="sliderRight">❯</button>
 
       </section>
 
-      <!-- MODAL GENERAL PARA "VER MÁS" -->
+      <!-- MODAL GENERAL PARA "VER MÁS" (reutilizado por todos los slides) -->
       <div id="modalVerMas" class="modal-vermas">
+        <!-- Fondo oscuro detrás del contenido del modal -->
         <div class="modal-vermas__overlay"></div>
 
+        <!-- Contenedor blanco del modal con imagen y texto -->
         <div class="modal-vermas__content">
+          <!-- Botón (X) para cerrar el modal, conectado en JS por id -->
           <button id="cerrarModalVerMas" class="modal-vermas__close">&times;</button>
 
           <!-- Imagen arriba -->
@@ -887,173 +906,178 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
           <!-- Texto abajo -->
           <div class="modal-vermas__body">
+            <!-- Aquí se inserta dinámicamente el título desde JS -->
             <h3 id="modalVerMasTitulo" class="modal-vermas__title"></h3>
+            <!-- Aquí se inserta dinámicamente el contenido largo (data-texto) -->
             <p id="modalVerMasTexto" class="modal-vermas__text"></p>
           </div>
         </div>
       </div>
 
 
+      <!-- SECCIÓN GALERÍA DE FOTOS -->
       <section id="galeria-fotos" class="galeria">
+        <!-- Título de la galería -->
         <h2 class="galeria__titulo">GALERIA DE FOTOS</h2>
 
+        <!-- Carril horizontal que será auto-scroll en JS (id="galeriaTrack") -->
         <div class="galeria__track" id="galeriaTrack">
-          <div class="galeria__item">
-            <img src="/image/1.jpg" alt="Foto 1 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/2.jpg" alt="Foto 2 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/3.jpg" alt="Foto 3 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/4.jpg" alt="Foto 4 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/6.jpg" alt="Foto 6 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/7.jpg" alt="Foto 7 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/8.jpg" alt="Foto 8 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/9.jpg" alt="Foto 9 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/10.jpg" alt="Foto 10 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/11.jpg" alt="Foto 11 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/12.jpg" alt="Foto 12 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/13.jpg" alt="Foto 13 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/14.jpg" alt="Foto 14 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/15.jpg" alt="Foto 15 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/16.jpg" alt="Foto 16 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/17.jpg" alt="Foto 17 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/18.jpg" alt="Foto 18 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/19.jpg" alt="Foto 19 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/20.jpg" alt="Foto 20 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/21.jpg" alt="Foto 21 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/22.jpg" alt="Foto 22 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/23.jpg" alt="Foto 23 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/24.jpg" alt="Foto 24 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/25.jpg" alt="Foto 25 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/26.jpg" alt="Foto 26 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/27.jpg" alt="Foto 27 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/28.jpg" alt="Foto 28 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/29.jpg" alt="Foto 29 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/30.jpg" alt="Foto 30 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/31.jpg" alt="Foto 31 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/32.jpg" alt="Foto 32 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/33.jpg" alt="Foto 33 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/34.jpg" alt="Foto 34 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/35.jpg" alt="Foto 35 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/36.jpg" alt="Foto 36 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/37.jpg" alt="Foto 37 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/38.jpg" alt="Foto 38 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/39.jpg" alt="Foto 39 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/40.jpg" alt="Foto 40 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/41.jpg" alt="Foto 41 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/42.jpg" alt="Foto 42 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/43.jpg" alt="Foto 43 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/44.jpg" alt="Foto 44 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/45.jpg" alt="Foto 45 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/46.jpg" alt="Foto 46 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/47.jpg" alt="Foto 47 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/48.jpg" alt="Foto 48 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/49.jpg" alt="Foto 49 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/50.jpg" alt="Foto 50 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/51.jpg" alt="Foto 51 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/52.jpg" alt="Foto 52 - descripción">
-          </div>
-          <div class="galeria__item">
-            <img src="/image/53.jpg" alt="Foto 53 - descripción">
-          </div>
+        <div class="galeria__item">
+  <img src="/image/1.jpg" alt="Foto 1 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/2.jpg" alt="Foto 2 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/3.jpg" alt="Foto 3 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/4.jpg" alt="Foto 4 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/6.jpg" alt="Foto 6 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/7.jpg" alt="Foto 7 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/8.jpg" alt="Foto 8 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/9.jpg" alt="Foto 9 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/10.jpg" alt="Foto 10 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/11.jpg" alt="Foto 11 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/12.jpg" alt="Foto 12 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/13.jpg" alt="Foto 13 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/14.jpg" alt="Foto 14 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/15.jpg" alt="Foto 15 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/16.jpg" alt="Foto 16 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/17.jpg" alt="Foto 17 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/18.jpg" alt="Foto 18 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/19.jpg" alt="Foto 19 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/20.jpg" alt="Foto 20 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/21.jpg" alt="Foto 21 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/22.jpg" alt="Foto 22 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/23.jpg" alt="Foto 23 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/24.jpg" alt="Foto 24 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/25.jpg" alt="Foto 25 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/26.jpg" alt="Foto 26 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/27.jpg" alt="Foto 27 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/28.jpg" alt="Foto 28 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/29.jpg" alt="Foto 29 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/30.jpg" alt="Foto 30 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/31.jpg" alt="Foto 31 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/32.jpg" alt="Foto 32 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/33.jpg" alt="Foto 33 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/34.jpg" alt="Foto 34 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/35.jpg" alt="Foto 35 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/36.jpg" alt="Foto 36 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/37.jpg" alt="Foto 37 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/38.jpg" alt="Foto 38 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/39.jpg" alt="Foto 39 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/40.jpg" alt="Foto 40 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/41.jpg" alt="Foto 41 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/42.jpg" alt="Foto 42 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/43.jpg" alt="Foto 43 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/44.jpg" alt="Foto 44 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/45.jpg" alt="Foto 45 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/46.jpg" alt="Foto 46 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/47.jpg" alt="Foto 47 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/48.jpg" alt="Foto 48 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/49.jpg" alt="Foto 49 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/50.jpg" alt="Foto 50 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/51.jpg" alt="Foto 51 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/52.jpg" alt="Foto 52 - descripción">
+</div>
+<div class="galeria__item">
+  <img src="/image/53.jpg" alt="Foto 53 - descripción">
+</div>
 
           <!-- Puedes añadir más fotos -->
         </div>
@@ -1061,24 +1085,35 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
 
 
+      <!-- FONDO DE LA SECCIÓN DE COMENTARIOS -->
       <div class="comentarios-bg">
+        <!-- Tarjeta principal de comentarios (formulario + botón para ver más) -->
         <section id="comentarios-section" class="comentarios">
+          <!-- Título de la sección de comentarios -->
           <h2 class="comentarios__titulo">COMENTARIOS</h2>
 
+          <!-- Formulario para enviar un nuevo comentario 
+               - Se conecta con JS por id="formComentario" -->
           <form id="formComentario" class="comentarios__form">
             <label for="nombre">Nombre</label>
+            <!-- Campo de texto para el nombre del usuario -->
             <input type="text" id="nombre" placeholder="Tu nombre" required />
 
             <label for="mensaje">Comentario</label>
+            <!-- Campo de texto largo para el comentario del usuario -->
             <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
 
+            <!-- Botón que dispara el submit, manejado por JS con addEventListener("submit", ...) -->
             <button type="submit" class="btn-enviar">Enviar comentario</button>
           </form>
 
+          <!-- Contenedor de posibles comentarios debajo del formulario 
+               (en tu JS lo mantienes vacío a propósito) -->
           <div id="listaComentarios" class="comentarios__lista">
             <!-- Aquí pinta comentario.js -->
           </div>
 
+          <!-- Botón que abre el modal con TODOS los comentarios -->
           <div class="comentarios__more">
             <button id="btnMas" class="btn-mas">
               <span class="flecha">➜</span>
@@ -1089,24 +1124,27 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
       </div>
 
 
-      <!-- MODAL DE COMENTARIOS -->
+      <!-- MODAL DE COMENTARIOS (se abre al pulsar "Leer comentarios") -->
       <div id="modalComentarios" class="comentarios-modal">
+        <!-- Fondo oscuro del modal -->
         <div class="comentarios-modal__overlay"></div>
 
+        <!-- Contenedor blanco del modal donde se muestran los comentarios -->
         <div class="comentarios-modal__content">
+          <!-- Botón X para cerrar el modal -->
           <button id="cerrarModalComentarios" class="comentarios-modal__close">&times;</button>
+          <!-- Título dentro del modal -->
           <h3 class="comentarios-modal__title">Todos los comentarios</h3>
 
+          <!-- Contenedor donde JS inserta TODOS los comentarios renderizados -->
           <div id="listaComentariosModal" class="comentarios__lista">
             <!-- Aquí se pintan TODOS los comentarios -->
           </div>
         </div>
       </div>
 
-
-
-
     </section>
+
   </main>
 
   <!-- Script de Vite -->
