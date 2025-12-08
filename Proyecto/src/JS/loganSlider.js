@@ -1412,15 +1412,15 @@ Elaboración
 • Las frutas se secan al sol y se limpian. 
 • Se decoran con incisiones, pirograbado o pintura natural. 
 • Se barnizan con resina de copal o cera de abeja. 
-Usos 
-• Vasijas para agua o bebidas rituales (como el balché). 
-• Cucharones, vasos y jícaras decorativas. 
-• Recipientes ceremoniales usados por los jmeen (sacerdotes mayas).`
+`
       },
       {
         img: "./public/assets/img/Jicaras_2.jpg",
         title: "Arte en jícaras y calabazas secas ",
-        description: ``
+        description: `Usos 
+• Vasijas para agua o bebidas rituales (como el balché). 
+• Cucharones, vasos y jícaras decorativas. 
+• Recipientes ceremoniales usados por los jmeen (sacerdotes mayas).`
       },
     ]
   }
