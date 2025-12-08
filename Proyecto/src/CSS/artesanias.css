@@ -63,6 +63,97 @@
         text-align: center;
         line-height: 1.6;
     }
+
+
+    /*APARTADO DEL MODAL=====!!!*/
+    /* ===== MODAL ARTESANÍAS ===== */
+
+.modal-artesania {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    font-family: inherit;
+}
+
+.modal-artesania.is-open {
+    display: flex;
+}
+
+
+.modal-artesania__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.modal-artesania__content {
+    position: relative;
+    background: #fff;
+    width: 95%;
+    max-width: 1000px;
+    max-height: 90vh;
+    padding: 24px 32px 28px;
+    border-radius: 18px;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    text-align: center;
+}
+
+/* Botón cerrar */
+.modal-artesania__close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Imagen dentro del modal */
+.modal-artesania__img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 18px;
+}
+
+.modal-artesania__title {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.modal-artesania__text {
+    color: var(--color-negro);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+/* Si quieres mostrar más imágenes o detalles */
+.modal-artesania__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+}
+
+}
+
+
+
+.modal-artesania__img {
+    width: 100%;
+    height: auto;        /* Mantiene la proporción original */
+    object-fit: contain; /* Evita recortes */
+    border-radius: 14px;
 }
 
 .artesanias:hover {

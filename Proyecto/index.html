@@ -8,6 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto</title>
 
+  <!-- Leaflet CSS (mapa libre) -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+/>
 
   <!-- Aquí luego enlazan TODOS los CSS -->
 </head>
@@ -20,11 +27,157 @@
 
   <main>
     <section id="sec-hannia">
+  <div class="page">
+    <!-- HEADER -->
+    <header class="topbar">
+      <div class="topbar__logo logo-wrapper">
+        <img
+          src="/img/logo.png"
+          alt="Logo K’ajóol Lu’um"
+          class="logo-img"
+        />
+        <span class="logo-text">K’ajóol Lu’um</span>
+      </div>
 
+      <nav class="topbar__nav">
+        <!-- Aquí luego puedes agregar más enlaces si quieres -->
+        <button class="topbar__btn">Iniciar sesión</button>
+        <div class="topbar__menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO / CARRUSEL -->
+    <section class="hero" id="hero">
+      <!-- SLIDE 1 -->
+      <div
+        class="hero__slide hero__slide--active"
+        style="background-image:url('/img/carrusel-1.jpg');"
+        data-subtitle="Donde la memoria de la tierra late"
+      ></div>
+
+      <!-- SLIDE 2 -->
+      <div
+        class="hero__slide"
+        style="background-image:url('/img/carrusel-2.jpeg');"
+        data-subtitle="Es comunidad y territorio vivo"
+      ></div>
+
+      <!-- SLIDE 3 -->
+      <div
+        class="hero__slide"
+        style="background-image:url('/img/carrusel-3.jpeg');"
+        data-subtitle="Es tradición, lengua y saber maya"
+      ></div>
+
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">K’ajóol Lu’um</h1>
+        <p class="hero__subtitle">
+          Donde la memoria de la tierra late
+        </p>
+      </div>
+
+      <div class="hero__controls">
+        <button class="hero__arrow" id="heroPrev">❮</button>
+        <button class="hero__arrow" id="heroNext">❯</button>
+      </div>
+
+      <div class="hero__dots" id="heroDots"></div>
     </section>
 
-    <section id="sec-josue">
+    <!-- SECCIÓN LENGUA MAYA -->
+    <section class="section section-about">
+      <div class="section-about__inner">
+        <h2 class="section__title section__title--center">Lengua maya</h2>
 
+        <div class="section__grid">
+          <div>
+            <p>
+              La lengua maya es una de las expresiones culturales más antiguas y
+              vivas de Mesoamérica. Representa un puente directo con los
+              conocimientos ancestrales y la memoria colectiva de los pueblos
+              que han habitado esta región por siglos. Hoy en día, es hablada
+              por más de 800,000 personas, lo que la convierte en una de las
+              lenguas originarias más fuertes y vivas del país.
+            </p>
+            <p>
+              Se considera una lengua
+              <span class="yellow">profundamente ligada al territorio</span>,
+              pues a través de sus palabras se conserva el nombre de plantas,
+              animales, sitios sagrados y fenómenos naturales que no existen en
+              español. La lengua, por sí misma, es un mapa vivo del mundo maya.
+            </p>
+          </div>
+
+          <div>
+            <p>
+              La transmisión de la lengua se realiza principalmente en el hogar
+              y en la comunidad. A través de ella se comparten enseñanzas sobre
+              agricultura, medicina tradicional, rituales y convivencia social.
+              Es una herramienta clave para preservar la
+              <span class="yellow">cosmovisión maya</span>, una forma de
+              entender la vida basada en el respeto, el equilibrio y la
+              reciprocidad con la naturaleza.
+            </p>
+            <p>
+              También es considerada un elemento de
+              <span class="yellow">identidad y resistencia cultural</span>, ya
+              que ha sobrevivido a procesos históricos de discriminación y
+              desplazamiento. Hoy, diversas comunidades trabajan en su
+              revitalización mediante escuelas comunitarias, talleres
+              culturales y proyectos que impulsan su uso en la vida cotidiana.
+            </p>
+            <p>
+              Preservar la lengua maya es garantizar la continuidad de un
+              conocimiento que ha acompañado a los pueblos mayas durante
+              milenios y que sigue siendo fundamental para comprender su forma
+              de vida y relación con el entorno.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-about__logo">
+          <img src="/img/logo.png" alt="Logo K’ajóol Lu’um" />
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+    <section id="sec-josue">
+  <h2 class="comunidades-titulo">Comunidades</h2>
+  <p class="comunidades-desc">
+    Usa el buscador para localizar zonas arqueológicas, museos y otros lugares culturales
+    de la zona maya.
+  </p>
+
+  <div class="comunidades-busqueda">
+    <input
+      id="inputBusquedaLugar"
+      type="text"
+      placeholder="Buscar"
+      aria-label="Buscar lugares en el mapa"
+    />
+    <button id="btnBuscarLugar" type="button">Buscar</button>
+  </div>
+
+  <div class="comunidades-mapa">
+    <div id="mapaComunidad"></div>
+  </div>
+  <div class="comunidades-grid" id="comunidadesGrid">
+    <div class="com-item color1">
+      <p class="com-foto">
+        Selecciona un marcador en el mapa para ver la foto, el tipo de lugar,
+        la dirección y una breve descripción.
+      </p>
+      <h3 class="com-nombre">Nombre del sitio</h3>
+    </div>
+  </div>
     </section>
 
     <section id="sec-alexandra">
@@ -36,6 +189,7 @@
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
+
 
       <section class="seccion-comidas">
 
@@ -321,34 +475,34 @@
 
           <!-- Tarjeta 1: Bailes -->
           <article class="cultura-card cultura-card--bailes" data-tema="bailes">
-            <div class="cultura-card__img"></div>
+            <div class="cultura-card__img" style="background-image: url(./public/assets/img/jarana-mestiza.png);"></div>
             <h3 class="cultura-card__title">
               Bailes <span class="cultura-card__arrow">→</span>
             </h3>
             <p class="cultura-card__text">
-              Poner una introducción sobre los bailes tradicionales.
+              ¿Sabes cuales son los bailes tradicionales de nuestra región?
             </p>
           </article>
 
           <!-- Tarjeta 2: Música -->
           <article class="cultura-card cultura-card--musica" data-tema="musica">
-            <div class="cultura-card__img"></div>
+            <div class="cultura-card__img" style="background-image: url(./public/assets/img/instrumentos.png);"></div>
             <h3 class="cultura-card__title">
               Música <span class="cultura-card__arrow">→</span>
             </h3>
             <p class="cultura-card__text">
-              Dato curioso sobre la música antigua dentro de la península.
+              Algunos instrumentos musicales tradicionales.
             </p>
           </article>
 
           <!-- Tarjeta 3: Vestimenta -->
           <article class="cultura-card cultura-card--vestimenta" data-tema="vestimenta">
-            <div class="cultura-card__img"></div>
+            <div class="cultura-card__img" style="background-image: url(./public/assets/img/vestimenta.png);"></div>
             <h3 class="cultura-card__title">
               Vestimenta <span class="cultura-card__arrow">→</span>
             </h3>
             <p class="cultura-card__text">
-              Introducción acerca de la importancia de la vestimenta tradicional.
+              Vestimenta tradicional maya
             </p>
           </article>
 
@@ -374,11 +528,8 @@
           <div class="col-1">
             <h2 class="titulo">Juegos tradicionales</h2>
             <p class="descripcion">
-              se agrega un poco de 0la info sobre los juegos tradicionales.
-              empezare a llenar esto y al final habra un ver mas para mas informacion.dnjnkdddddd
-              ddddddddddddddddddddddddddddddddddddddddddddddddddd
-              ddddddddddddddddddddddddddddddddd
-              ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+              Los juegos tradicionales son una expresión alegre de nuestra cultura.
+              Aquí descubrirás cómo se juegan, su origen y el papel que han tenido en la convivencia de la comunidad.
             </p>
 
             <div class="boton-vermas">
@@ -431,16 +582,22 @@
               <div class="slides">
 
                 <div class="slide">
-                  <img src="./public/assets/img/1.png" alt="img">
+                  <img src="./public/assets/img/Pok-ta-pok_1.png" alt="img">
                 </div>
                 <div class="slide">
-                  <img src="./public/assets/img/2.png" alt="img">
+                  <img src="./public/assets/img/Bul o Buul.png" alt="img">
                 </div>
                 <div class="slide">
-                  <img src="./public/assets/img/3.png" alt="img">
+                  <img src="./public/assets/img/Tinjoroch.png" alt="img">
                 </div>
                 <div class="slide">
-                  <img src="./public/assets/img/4.png" alt="img">
+                  <img src="./public/assets/img/Kimbomba.png" alt="img">
+                </div>
+                <div class="slide">
+                  <img src="./public/assets/img/Chácara.png" alt="img">
+                </div>
+                <div class="slide">
+                  <img src="./public/assets/img/Caza Venado.png" alt="img">
                 </div>
 
               </div>
@@ -454,11 +611,9 @@
             <h2 class="titulo">Fiestas tradicionales</h2>
             <p class="descripcion">
 
-              se agrega un poco de 0la info sobre las fiestas tradicionales. empezare a llenar esto y al final habra un
-              ver mas para mas informacion.
-
-              de igual manera se pondra de este lado un carrusel de fotos con las fotos de los tipos de baiiles
-              ,kkkkkkkkkdddddddddddddddddddddddddddddddddddddddddddddd
+              Las fiestas tradicionales son una expresión viva de nuestra cultura.
+              Aquí podrás descubrir el significado, historia y costumbres que acompañan a cada una de estas
+              celebraciones que fortalecen la identidad y unión de la comunidad.
             </p>
 
             <div class="boton-vermas">
@@ -482,6 +637,7 @@
                 <img class="modal-fiestas__img" src="" alt="Imagen del la fiesta">
 
                 <h2 class="modal-fiestas__title">Juegos tradicionales</h2>
+                <h2 class="modal-fiestas-comunidad">comunidad</h2>
                 <p class="modal-fiestas__text">
                   Aquí va la descripción completa...
                 </p>
@@ -513,16 +669,49 @@
                   <div class="slides">
 
                     <div class="slide">
-                      <img src="./public/assets/img/1.png" alt="img">
+                      <img src="./public/assets/img/ReyesMagos_1.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/2.png" alt="img">
+                      <img src="./public/assets/img/ReyesMagos_2.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/3.png" alt="img">
+                      <img src="./public/assets/img/ReyesMagos_3.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/4.png" alt="img">
+                      <img src="./public/assets/img/FiestaTresCruces.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSantaCruz.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_3.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRamon_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRamon_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanMiguel.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanAntonio_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanAntonio_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaNiñoJesus_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaNiñoJesus_2.png" alt="img">
                     </div>
 
                   </div>
@@ -540,16 +729,53 @@
                   <div class="slides">
 
                     <div class="slide">
-                      <img src="./public/assets/img/1.png" alt="img">
+                      <img src="./public/assets/img/FiestaSanRamon_2.png" alt="img">
+                    </div>
+
+                    <div class="slide">
+                      <img src="./public/assets/img/ReyesMagos_1.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/2.png" alt="img">
+                      <img src="./public/assets/img/ReyesMagos_2.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/3.png" alt="img">
+                      <img src="./public/assets/img/ReyesMagos_3.png" alt="img">
                     </div>
                     <div class="slide">
-                      <img src="./public/assets/img/4.png" alt="img">
+                      <img src="./public/assets/img/FiestaTresCruces.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSantaCruz.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRoman_3.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRamon_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanRamon_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanMiguel.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanAntonio_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaSanAntonio_2.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaNiñoJesus_1.png" alt="img">
+                    </div>
+                    <div class="slide">
+                      <img src="./public/assets/img/FiestaNiñoJesus_2.png" alt="img">
                     </div>
 
                   </div>
@@ -571,25 +797,89 @@
             <div class="leyendas-img">
 
               <div class="slides-L">
-                <div class="slide-L" data-subtitulo="Leyenda1"
-                  data-description="Aquí va una introducción corta a la leyenda1.">
+                <div class="slide-L" data-subtitulo="Balam"
+                  data-description="Aquí va una introducción corta a la leyenda.">
                   <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen">
                 </div>
 
-                <div class="slide-L" data-subtitulo="Leyenda2"
-                  data-description="Aquí va una introducción corta a la leyenda2.">
-                  <img src="./public/assets/img/leyenda-balam2.jpg" alt="imagen">
+                <div class="slide-L" data-subtitulo="Xtabay"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Xtabay.png" alt="imagen">
                 </div>
 
-                <div class="slide-L" data-subtitulo="Leyenda3"
-                  data-description="Aquí va una introducción corta a la leyenda3.">
-                  <img src="./public/assets/img/leyenda-balam3.png" alt="imagen">
+                <div class="slide-L" data-subtitulo="Cruz Parlante"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/CruzParlante_1.png" alt="imagen">
                 </div>
 
-                <div class="slide-L" data-subtitulo="Leyenda4"
-                  data-description="Aquí va una introducción corta a la leyenda4.">
-                  <img src="./public/assets/img/leyenda-balam4.jpg" alt="imagen">
+                <div class="slide-L" data-subtitulo="Aluxes"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Aluxes.png" alt="imagen">
                 </div>
+
+                <div class="slide-L" data-subtitulo="Huay Chivo"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Huay-Chivo.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Kinich y Tizic"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Kinich-Tizic.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Jacinto Pat"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Jacinto-Pat.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Cecilio Chi"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Cecilio-Chi.png" alt="imagen">
+                </div>
+                <div class="slide-L" data-subtitulo="Bernardino Ken y Florentino Cituk"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Bernardino_Ken-Florentino_Cituk.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Tesoro de los aluxes"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Tesoro_Aluxes.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Hombre-Alux"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Xaho'hot Tuun"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="" alt="imagen">
+                </div>
+                <div class="slide-L" data-subtitulo="Aluxes-encuentro"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Encuentro-Alux.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Azotes"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Azotes.png" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Ajkanul"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="" alt="imagen">
+                </div>
+
+                <div class="slide-L" data-subtitulo="Xunaan Tunich"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Piedra-Mujer.png" alt="imagen">
+                </div>
+                <div class="slide-L" data-subtitulo="Boop"
+                  data-description="Aquí va una introducción corta a la leyenda.">
+                  <img src="./public/assets/img/Boop.png" alt="imagen">
+                </div>
+
+
               </div>
 
             </div>
@@ -655,50 +945,86 @@
           <h2 class="titulo-artesanias">Artesanías</h2>
 
           <p class="artesanias-descripcion">
-            Aquí puedes mostrar las artesanías más representativas de la comunidad.
+            Aquí puedes ver las artesanías más representativas de la comunidad.
             Cada cuadro puede abrir un "ver más" con detalles de la pieza, su historia y quién la elabora.
           </p>
 
           <div class="artesanias-grid">
-
-            <!-- Cuadritos de las artesanias -->
-            <article class="artesania-card">
+            <article class="artesania-card" data-id="textiles-bordados">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
+                <img src="./public/assets/img/textiles-bordados.png" alt="imagen de artesanìa" class="artesania-card__img">
               </div>
-              <span class="artesania-card__label">Artesanía</span>
+              <span class="artesania-card__label">Textiles y bordados tradicionales </span>
             </article>
 
-            <article class="artesania-card">
+            <article class="artesania-card" data-id="tallado-madera">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div> <span class="artesania-card__label">Artesanía</span>
+                <img src="./public/assets/img/tallado-madera.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Tallado en madera </span>
             </article>
 
-            <article class="artesania-card">
+            <article class="artesania-card"  data-id="ceramica-alfareria">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div> <span class="artesania-card__label">Artesanía</span>
+                <img src="./public/assets/img/ceramica-alfareria.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Cerámica y alfarería tradicional</span>
             </article>
 
-            <article class="artesania-card">
+            <article class="artesania-card" data-id="cesteria-palma">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div> <span class="artesania-card__label">Artesanía</span>
+                <img src="./public/assets/img/cesteria-palma.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Cestería, palma y fibras naturales</span>
             </article>
 
-            <article class="artesania-card">
+            <article class="artesania-card" data-id="joyeria-artesanal">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div><span class="artesania-card__label">Artesanía</span>
+                <img src="./public/assets/img/joyeria.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div><span class="artesania-card__label">Joyería artesanal</span>
             </article>
 
-            <article class="artesania-card">
+            <article class="artesania-card" data-id="velas-tradicionales">
               <div class="artesania-card__img-contenedor">
-                <img src="./public/assets/img/leyenda-balam1.jpg" alt="imagen de artesanìa" class="artesania-card__img">
-              </div> <span class="artesania-card__label">Artesanía</span>
+                <img src="./public/assets/img/velas.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Elaboración de velas tradicionales (Cera y miel de abeja
+                melipona)</span>
             </article>
+
+            <article class="artesania-card" data-id="instrumentos-musicales">
+              <div class="artesania-card__img-contenedor">
+                <img src="./public/assets/img/instrumentos-musicales.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Elaboración de instrumentos musicales tradicionales </span>
+            </article>
+
+            <article class="artesania-card" data-id="figuras-esculturas">
+              <div class="artesania-card__img-contenedor">
+                <img src="./public/assets/img/figuras-esculturas_dePiedra.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div><span class="artesania-card__label">Producción de figurillas y esculturas con piedra y yeso </span>
+            </article>
+
+            <article class="artesania-card" data-id="jicaras-calabazas">
+              <div class="artesania-card__img-contenedor">
+                <img src="./public/assets/img/jicaras-calabazas.png" alt="imagen de artesanìa" class="artesania-card__img">
+              </div> <span class="artesania-card__label">Arte en jícaras y calabazas secas</span>
+            </article>
+
           </div>
+
+          <!-- MODAL ARTESANÍAS -->
+          <div id="modal-artesania" class="modal-artesania">
+            <div class="modal-artesania__overlay"></div>
+
+            <div class="modal-artesania__content">
+              <button class="modal-artesania__close">✕</button>
+
+              <h2 class="modal-artesania__title">Título de la artesanía</h2>
+              <p class="modal-artesania__text">
+                Aquí se mostrará la descripción completa de la artesanía.
+              </p>
+
+              <div class="modal-artesania__grid"> </div>
+            </div>
+          </div>
+
+
         </div>
 
 
@@ -717,17 +1043,13 @@
         <div class="slider-track" id="sliderTrack">
 
           <!-- SLIDE 1 -->
-<!-- SLIDE 1 -->
-<div class="slide">
-  <img src="/assets/img/img.jpg" alt="Teología Maya">
-  <h3>Teología maya</h3>
-  <p>Explora la cosmovisión y espiritualidad maya.</p>
+          <!-- SLIDE 1 -->
+          <div class="slide">
+            <img src="/assets/img/img.jpg" alt="Teología Maya">
+            <h3>Teología maya</h3>
+            <p>Explora la cosmovisión y espiritualidad maya.</p>
 
-  <a href="#"
-     class="slide-link"
-     data-titulo="Teología maya"
-     data-imagen="/assets/img/img.jpg"
-     data-texto="La teología maya es el conjunto de creencias, narraciones sagradas y rituales mediante los cuales los pueblos mayas explicaron el origen del mundo, la naturaleza y el papel del ser humano. Es un sistema vivo que continúa presente en muchas comunidades actuales.<br><br>
+            <a href="#" class="slide-link" data-titulo="Teología maya" data-imagen="/assets/img/img.jpg" data-texto="La teología maya es el conjunto de creencias, narraciones sagradas y rituales mediante los cuales los pueblos mayas explicaron el origen del mundo, la naturaleza y el papel del ser humano. Es un sistema vivo que continúa presente en muchas comunidades actuales.<br><br>
 
 <b>Cosmovisión maya</b><br>
 La cosmovisión maya comprende el universo como un sistema equilibrado dividido en tres planos:<br><br>
@@ -820,7 +1142,7 @@ La teología maya es un sistema profundo que explica la creación del mundo, la 
             <img src="/assets/img/img2.png" alt="Rituales y creencias">
             <!-- Título del tema -->
             <h3>Rituales y creencias</h3>
-           <p>Conoce los rituales y creencias que conectaban a los mayas con la naturaleza y los dioses.</p>
+            <p>Conoce los rituales y creencias que conectaban a los mayas con la naturaleza y los dioses.</p>
 
             <!-- Enlace que abrirá el modal, con todo el contenido extendido en data-texto -->
             <a href="#" class="slide-link" data-titulo="Rituales y creencias" data-imagen="/assets/img/img2.png"
@@ -904,8 +1226,7 @@ En conjunto, esta organización social permitía que las ciudades mayas funciona
             <h3>Organización política</h3>
             <!-- Descripción corta que sirve como introducción -->
             <p>Descubre los cargos de autoridad y su papel en el gobierno maya.</p>
-            <a href="#" class="slide-link" data-titulo="Organización política"
-              data-texto="
+            <a href="#" class="slide-link" data-titulo="Organización política" data-texto="
 La organización política maya estaba basada en ciudades estado independientes llamadas batabiloob. Cada ciudad tenía su propio gobernante y sistema administrativo, aunque compartían cultura, religión y estructura social.<br><br>
 
 <b>Halach Uinik</b><br>
@@ -937,7 +1258,7 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
               Ver más
             </a>
           </div>
-        
+
 
         </div>
 
@@ -977,162 +1298,162 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
         <!-- Carril horizontal que será auto-scroll en JS (id="galeriaTrack") -->
         <div class="galeria__track" id="galeriaTrack">
-        <div class="galeria__item">
-  <img src="/image/1.jpg" alt="Foto 1 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/2.jpg" alt="Foto 2 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/3.jpg" alt="Foto 3 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/4.jpg" alt="Foto 4 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/6.jpg" alt="Foto 6 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/7.jpg" alt="Foto 7 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/8.jpg" alt="Foto 8 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/9.jpg" alt="Foto 9 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/10.jpg" alt="Foto 10 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/11.jpg" alt="Foto 11 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/12.jpg" alt="Foto 12 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/13.jpg" alt="Foto 13 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/14.jpg" alt="Foto 14 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/15.jpg" alt="Foto 15 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/16.jpg" alt="Foto 16 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/17.jpg" alt="Foto 17 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/18.jpg" alt="Foto 18 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/19.jpg" alt="Foto 19 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/20.jpg" alt="Foto 20 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/21.jpg" alt="Foto 21 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/22.jpg" alt="Foto 22 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/23.jpg" alt="Foto 23 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/24.jpg" alt="Foto 24 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/25.jpg" alt="Foto 25 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/26.jpg" alt="Foto 26 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/27.jpg" alt="Foto 27 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/28.jpg" alt="Foto 28 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/29.jpg" alt="Foto 29 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/30.jpg" alt="Foto 30 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/31.jpg" alt="Foto 31 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/32.jpg" alt="Foto 32 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/33.jpg" alt="Foto 33 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/34.jpg" alt="Foto 34 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/35.jpg" alt="Foto 35 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/36.jpg" alt="Foto 36 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/37.jpg" alt="Foto 37 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/38.jpg" alt="Foto 38 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/39.jpg" alt="Foto 39 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/40.jpg" alt="Foto 40 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/41.jpg" alt="Foto 41 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/42.jpg" alt="Foto 42 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/43.jpg" alt="Foto 43 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/44.jpg" alt="Foto 44 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/45.jpg" alt="Foto 45 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/46.jpg" alt="Foto 46 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/47.jpg" alt="Foto 47 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/48.jpg" alt="Foto 48 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/49.jpg" alt="Foto 49 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/50.jpg" alt="Foto 50 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/51.jpg" alt="Foto 51 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/52.jpg" alt="Foto 52 - descripción">
-</div>
-<div class="galeria__item">
-  <img src="/image/53.jpg" alt="Foto 53 - descripción">
-</div>
+          <div class="galeria__item">
+            <img src="/image/1.jpg" alt="Foto 1 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/2.jpg" alt="Foto 2 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/3.jpg" alt="Foto 3 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/4.jpg" alt="Foto 4 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/6.jpg" alt="Foto 6 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/7.jpg" alt="Foto 7 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/8.jpg" alt="Foto 8 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/9.jpg" alt="Foto 9 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/10.jpg" alt="Foto 10 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/11.jpg" alt="Foto 11 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/12.jpg" alt="Foto 12 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/13.jpg" alt="Foto 13 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/14.jpg" alt="Foto 14 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/15.jpg" alt="Foto 15 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/16.jpg" alt="Foto 16 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/17.jpg" alt="Foto 17 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/18.jpg" alt="Foto 18 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/19.jpg" alt="Foto 19 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/20.jpg" alt="Foto 20 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/21.jpg" alt="Foto 21 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/22.jpg" alt="Foto 22 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/23.jpg" alt="Foto 23 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/24.jpg" alt="Foto 24 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/25.jpg" alt="Foto 25 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/26.jpg" alt="Foto 26 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/27.jpg" alt="Foto 27 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/28.jpg" alt="Foto 28 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/29.jpg" alt="Foto 29 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/30.jpg" alt="Foto 30 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/31.jpg" alt="Foto 31 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/32.jpg" alt="Foto 32 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/33.jpg" alt="Foto 33 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/34.jpg" alt="Foto 34 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/35.jpg" alt="Foto 35 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/36.jpg" alt="Foto 36 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/37.jpg" alt="Foto 37 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/38.jpg" alt="Foto 38 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/39.jpg" alt="Foto 39 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/40.jpg" alt="Foto 40 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/41.jpg" alt="Foto 41 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/42.jpg" alt="Foto 42 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/43.jpg" alt="Foto 43 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/44.jpg" alt="Foto 44 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/45.jpg" alt="Foto 45 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/46.jpg" alt="Foto 46 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/47.jpg" alt="Foto 47 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/48.jpg" alt="Foto 48 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/49.jpg" alt="Foto 49 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/50.jpg" alt="Foto 50 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/51.jpg" alt="Foto 51 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/52.jpg" alt="Foto 52 - descripción">
+          </div>
+          <div class="galeria__item">
+            <img src="/image/53.jpg" alt="Foto 53 - descripción">
+          </div>
 
           <!-- Puedes añadir más fotos -->
         </div>
@@ -1205,6 +1526,15 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
   <!-- Script de Vite -->
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
+
+<!-- Leaflet JS (mapa libre) -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
+
+
 </body>
 
 </html>

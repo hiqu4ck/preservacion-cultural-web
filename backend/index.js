@@ -2,25 +2,25 @@
 // Express: Framework para crear el servidor y manejar rutas HTTP
 const express = require("express");
 
-// CORS: Permite que tu frontend pueda comunicarse con tu backend sin bloqueo
+// CORS: Permite que el frontend pueda comunicarse con el backend sin bloqueos
 const cors = require("cors");
 
 // Mongoose: Librería para conectar y trabajar con MongoDB Atlas
 const mongoose = require("mongoose");
       /*
-      require(...): es la forma de importar librerías en Node.js.
+      require(...): es la forma de importar librerías en Node.js
 
-      express: framework para crear el servidor y las rutas (/comments).
+      express: framework para crear el servidor y las rutas (/comments)
 
-      cors: permite que la página (frontend en localhost:5173) pueda hacer peticiones al backend (localhost:4000) sin que el navegador las bloquee.
+      cors: permite que la página (frontend en localhost:5173) pueda hacer peticiones al backend (localhost:4000) sin que el navegador las bloquee
 
-      mongoose: es un “traductor” entre tu código JS y MongoDB. Te permite trabajar con documentos de la base de datos usando clases y métodos (Comment.find(), new Comment(), etc).*/
+      mongoose: es un “traductor” entre tu código JS y MongoDB. Te permite trabajar con documentos de la base de datos usando clases y métodos (Comment.find(), new Comment(), etc)*/
 
 
 
 // ------->  CONFIGURACIÓN(2)
 
-// Crear la aplicación de Express
+// Cree la aplicación de Express
 const app = express();
 
 // Puerto donde correrá el backend (http://localhost:4000)
@@ -44,9 +44,9 @@ app.use(express.json());
       ¿Qué es un middleware?
       Es una función que se ejecuta entre que llega la petición y la ruta que la atiende. Modifica o prepara los datos.
 
-      app.use(cors()): activa CORS. Sin esto, el navegador no dejaría que tu frontend (otro puerto) pida cosas a tu backend (política de mismo origen).
+      app.use(cors()): activa CORS. Sin esto, el navegador no dejaría que el frontend (otro puerto) pida cosas al backend.
 
-      app.use(express.json()): le dice a Express: “si llega una petición con cuerpo en formato JSON, conviértelo automáticamente en un objeto JS para que pueda leer req.body”. */
+      app.use(express.json()): le dice a Express: “si llega una petición con cuerpo en formato JSON, conviértelo automáticamente en un objeto JS para que pueda leerlo”. */
 
 
 
