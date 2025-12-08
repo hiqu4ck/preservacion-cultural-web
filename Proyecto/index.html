@@ -451,21 +451,30 @@
     </section>
 
     <section id="sec-angel">
+      <!-- CONTENEDOR GENERAL DE TODA LA SECCIÓN QUE HICISTE -->
 
       <!-- SECCIÓN SLIDER TEMAS MAYAS -->
       <section id="seccion-temas" class="slider-maya">
-
+        <!-- Flecha izquierda del slider, se conecta en JS con id="sliderLeft" -->
         <button class="slider-btn left" id="sliderLeft">❮</button>
 
+        <!-- Track/carril horizontal donde se colocan todas las tarjetas .slide -->
         <div class="slider-track" id="sliderTrack">
 
-          <!-- SLIDE 1 -->
+          <!-- SLIDE 1: Tarjeta sobre Teología maya -->
+          <!-- Cada .slide es una tarjeta del slider con imagen, título, resumen y enlace "Ver más" -->
 <!-- SLIDE 1 -->
 <div class="slide">
+  <!-- Imagen principal del slide, usada también en el modal por data-imagen -->
   <img src="/assets/img/img.jpg" alt="Teología Maya">
+  <!-- Título corto que aparece en la tarjeta -->
   <h3>Teología maya</h3>
+  <!-- Breve descripción/resumen que se muestra en la tarjeta -->
   <p>Explora la cosmovisión y espiritualidad maya.</p>
 
+  <!-- Enlace que abre el modal "Ver más". 
+       - class="slide-link" permite que JS lo seleccione.
+       - data-titulo, data-imagen y data-texto llevan la info larga que se mostrará en el modal. -->
   <a href="#"
      class="slide-link"
      data-titulo="Teología maya"
@@ -557,12 +566,16 @@ La teología maya es un sistema profundo que explica la creación del mundo, la 
 </div>
 
 
-          <!-- SLIDE 2 -->
+          <!-- SLIDE 2: Tarjeta sobre rituales y creencias -->
           <div class="slide">
+            <!-- Imagen representativa del tema -->
             <img src="/assets/img/img2.png" alt="Rituales y creencias">
+            <!-- Título del tema -->
             <h3>Rituales y creencias</h3>
+           <!-- Descripción corta que se ve en la tarjeta -->
            <p>Conoce los rituales y creencias que conectaban a los mayas con la naturaleza y los dioses.</p>
 
+            <!-- Enlace que abrirá el modal, con todo el contenido extendido en data-texto -->
             <a href="#" class="slide-link" data-titulo="Rituales y creencias" data-imagen="/assets/img/img2.png"
               data-texto="<b>Hetzmek (Ritual de presentación del bebé)</b><br><br>
 El Hetzmek es un ritual maya doméstico que se realiza cuando las niñas cumplen tres meses y los niños cuatro, aunque en algunas comunidades puede hacerse a los cinco meses. Su nombre proviene de las palabras que significan aligerar o aliviar la carga y abrazar.<br><br>
@@ -593,11 +606,15 @@ Cuando aparecen los primeros frutos se realiza la primicia, donde se cocinan maz
             </a>
           </div>
 
-          <!-- SLIDE 3 -->
+          <!-- SLIDE 3: Tarjeta sobre organización social maya -->
           <div class="slide">
+            <!-- Imagen ilustrativa del tema -->
             <img src="/assets/img/img3.jpg" alt="Organización social">
+            <!-- Título del slide -->
             <h3>Organización social</h3>
+            <!-- Breve descripción en la tarjeta -->
             <p>Conoce cómo se estructuraba la sociedad maya y el papel de cada grupo.</p>
+            <!-- Enlace que manda al modal el contenido extendido desde data-texto -->
             <a href="#" class="slide-link" data-titulo="Organización social" data-imagen="/assets/img/img3.jpg"
               data-texto="
 La sociedad maya estaba organizada de forma jerárquica. Cada grupo social tenía funciones específicas para mantener el orden político, religioso y económico de la ciudad o comunidad.<br><br>
@@ -632,11 +649,15 @@ En conjunto, esta organización social permitía que las ciudades mayas funciona
             </a>
           </div>
 
-          <!-- SLIDE 4 -->
+          <!-- SLIDE 4: Tarjeta sobre organización política maya -->
           <div class="slide">
+            <!-- Imagen principal del slide -->
             <img src="/assets/img/img4.jpg" alt="Organización política">
+            <!-- Título del tema -->
             <h3>Organización política</h3>
+            <!-- Descripción corta que sirve como introducción -->
             <p>Descubre los cargos de autoridad y su papel en el gobierno maya.</p>
+            <!-- Enlace que envía título, texto e imagen al modal general -->
             <a href="#" class="slide-link" data-titulo="Organización política"
               data-texto="
 La organización política maya estaba basada en ciudades estado independientes llamadas batabiloob. Cada ciudad tenía su propio gobernante y sistema administrativo, aunque compartían cultura, religión y estructura social.<br><br>
@@ -672,18 +693,21 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
             </a>
           </div>
         
-
         </div>
 
+        <!-- Flecha derecha del slider, controlada en JS con id="sliderRight" -->
         <button class="slider-btn right" id="sliderRight">❯</button>
 
       </section>
 
-      <!-- MODAL GENERAL PARA "VER MÁS" -->
+      <!-- MODAL GENERAL PARA "VER MÁS" (reutilizado por todos los slides) -->
       <div id="modalVerMas" class="modal-vermas">
+        <!-- Fondo oscuro detrás del contenido del modal -->
         <div class="modal-vermas__overlay"></div>
 
+        <!-- Contenedor blanco del modal con imagen y texto -->
         <div class="modal-vermas__content">
+          <!-- Botón (X) para cerrar el modal, conectado en JS por id -->
           <button id="cerrarModalVerMas" class="modal-vermas__close">&times;</button>
 
           <!-- Imagen arriba -->
@@ -691,17 +715,23 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
           <!-- Texto abajo -->
           <div class="modal-vermas__body">
+            <!-- Aquí se inserta dinámicamente el título desde JS -->
             <h3 id="modalVerMasTitulo" class="modal-vermas__title"></h3>
+            <!-- Aquí se inserta dinámicamente el contenido largo (data-texto) -->
             <p id="modalVerMasTexto" class="modal-vermas__text"></p>
           </div>
         </div>
       </div>
 
 
+      <!-- SECCIÓN GALERÍA DE FOTOS -->
       <section id="galeria-fotos" class="galeria">
+        <!-- Título de la galería -->
         <h2 class="galeria__titulo">GALERIA DE FOTOS</h2>
 
+        <!-- Carril horizontal que será auto-scroll en JS (id="galeriaTrack") -->
         <div class="galeria__track" id="galeriaTrack">
+        <!-- Cada .galeria__item es una tarjeta que contiene una sola imagen -->
         <div class="galeria__item">
   <img src="/image/1.jpg" alt="Foto 1 - descripción">
 </div>
@@ -865,24 +895,35 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
 
 
+      <!-- FONDO DE LA SECCIÓN DE COMENTARIOS -->
       <div class="comentarios-bg">
+        <!-- Tarjeta principal de comentarios (formulario + botón para ver más) -->
         <section id="comentarios-section" class="comentarios">
+          <!-- Título de la sección de comentarios -->
           <h2 class="comentarios__titulo">COMENTARIOS</h2>
 
+          <!-- Formulario para enviar un nuevo comentario 
+               - Se conecta con JS por id="formComentario" -->
           <form id="formComentario" class="comentarios__form">
             <label for="nombre">Nombre</label>
+            <!-- Campo de texto para el nombre del usuario -->
             <input type="text" id="nombre" placeholder="Tu nombre" required />
 
             <label for="mensaje">Comentario</label>
+            <!-- Campo de texto largo para el comentario del usuario -->
             <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
 
+            <!-- Botón que dispara el submit, manejado por JS con addEventListener("submit", ...) -->
             <button type="submit" class="btn-enviar">Enviar comentario</button>
           </form>
 
+          <!-- Contenedor de posibles comentarios debajo del formulario 
+               (en tu JS lo mantienes vacío a propósito) -->
           <div id="listaComentarios" class="comentarios__lista">
             <!-- Aquí pinta comentario.js -->
           </div>
 
+          <!-- Botón que abre el modal con TODOS los comentarios -->
           <div class="comentarios__more">
             <button id="btnMas" class="btn-mas">
               <span class="flecha">➜</span>
@@ -893,24 +934,27 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
       </div>
 
 
-      <!-- MODAL DE COMENTARIOS -->
+      <!-- MODAL DE COMENTARIOS (se abre al pulsar "Leer comentarios") -->
       <div id="modalComentarios" class="comentarios-modal">
+        <!-- Fondo oscuro del modal -->
         <div class="comentarios-modal__overlay"></div>
 
+        <!-- Contenedor blanco del modal donde se muestran los comentarios -->
         <div class="comentarios-modal__content">
+          <!-- Botón X para cerrar el modal -->
           <button id="cerrarModalComentarios" class="comentarios-modal__close">&times;</button>
+          <!-- Título dentro del modal -->
           <h3 class="comentarios-modal__title">Todos los comentarios</h3>
 
+          <!-- Contenedor donde JS inserta TODOS los comentarios renderizados -->
           <div id="listaComentariosModal" class="comentarios__lista">
             <!-- Aquí se pintan TODOS los comentarios -->
           </div>
         </div>
       </div>
 
-
-
-
     </section>
+
   </main>
 
   <!-- Script de Vite -->

@@ -1,30 +1,32 @@
 //COMENTARIOS
 
 //URL del backend (el que corre en backend/index.js)
-const URL_API_COMENTARIOS = "http://localhost:4000/comments";
+const URL_API_COMENTARIOS = "http://localhost:4000/comments"; 
+// Constante que guarda la URL base de la API donde se guardan y se leen los comentarios.
 
+/* Función principal que inicializa toda la lógica de la sección de comentarios */
 function iniciarComentarios() {
   //Obtener elementos del DOM
-  const formComentario = document.getElementById("formComentario");
-  const listaComentarios = document.getElementById("listaComentarios");
-  const listaComentariosModal = document.getElementById("listaComentariosModal");
-  const btnMas = document.getElementById("btnMas");
-  const modal = document.getElementById("modalComentarios");
-  const btnCerrarModal = document.getElementById("cerrarModalComentarios");
+  const formComentario = document.getElementById("formComentario");          // Formulario donde el usuario escribe nombre y comentario.
+  const listaComentarios = document.getElementById("listaComentarios");      // Contenedor (debajo del formulario) para la lista de comentarios (aquí lo dejas vacío a propósito).
+  const listaComentariosModal = document.getElementById("listaComentariosModal"); // Contenedor de la lista de comentarios dentro del modal.
+  const btnMas = document.getElementById("btnMas");                          // Botón "Leer comentarios" que abre el modal.
+  const modal = document.getElementById("modalComentarios");                 // Contenedor general del modal de comentarios.
+  const btnCerrarModal = document.getElementById("cerrarModalComentarios");  // Botón (X) para cerrar el modal.
 
   //Overlay del modal (fondo oscuro) si existe
-  const overlayModal = modal
-    ? modal.querySelector(".comentarios-modal__overlay")
-    : null;
+  const overlayModal = modal                                                 // Si el modal existe...
+    ? modal.querySelector(".comentarios-modal__overlay")                     // ...busco el elemento overlay dentro del modal.
+    : null;                                                                  // Si no existe el modal, overlayModal será null.
 
   //Si esta sección no existe en el HTML, detenemos la ejecución
-  if (!formComentario || !listaComentarios) return;
+  if (!formComentario || !listaComentarios) return;                          // Si no hay formulario o lista, salgo de la función para evitar errores.
 
   //Función para generar el HTML de un comentario
-  function renderComentario(c) {
+  function renderComentario(c) {                                             // Función que recibe un objeto comentario y devuelve un bloque HTML.
     // Inicial del usuario (primera letra del nombre)
-    const inicial = c.nombre ? c.nombre.charAt(0).toUpperCase() : "?";
-
+    const inicial = c.nombre ? c.nombre.charAt(0).toUpperCase() : "?";       // Toma la primera letra del nombre, la pasa a mayúscula. Si no hay nombre, usa "?".
+    
     // Devuelve una tarjeta de comentario en HTML
     return `
       <article class="comentario">
@@ -40,114 +42,116 @@ function iniciarComentarios() {
         </div>
       </article>
     `;
+    // Este template string construye la estructura HTML de un comentario,
+    // incluyendo avatar con inicial, nombre del usuario y el texto del mensaje.
   }
 
   //Enviar comentario
-  formComentario.addEventListener("submit", async (e) => {
-    e.preventDefault(); // Evita recargar la página
+  formComentario.addEventListener("submit", async (e) => {                   // Cuando el usuario envíe el formulario...
+    e.preventDefault(); // Evita recargar la página                           // Detengo el comportamiento por defecto (no recargar la página).
 
-    const nombre = document.getElementById("nombre").value.trim();
-    const mensaje = document.getElementById("mensaje").value.trim();
+    const nombre = document.getElementById("nombre").value.trim();           // Obtengo el valor del input 'nombre' y le quito espacios sobrantes.
+    const mensaje = document.getElementById("mensaje").value.trim();         // Obtengo el valor del textarea 'mensaje' y también lo recorto.
 
     //Validación básica
-    if (!nombre || !mensaje) {
-      alert("Por favor llena todos los campos");
-      return;
+    if (!nombre || !mensaje) {                                               // Si alguno de los campos está vacío...
+      alert("Por favor llena todos los campos");                             // ...muestro un mensaje de alerta al usuario.
+      return;                                                                // y salgo de la función (no se envía nada).
     }
 
-    const nuevoComentario = { nombre, mensaje };
+    const nuevoComentario = { nombre, mensaje };                             // Creo un objeto con los datos del nuevo comentario.
 
     try {
       //Enviamos el comentario al backend
-      const res = await fetch(URL_API_COMENTARIOS, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(nuevoComentario),
+      const res = await fetch(URL_API_COMENTARIOS, {                         // Hago una petición HTTP al backend usando fetch.
+        method: "POST",                                                      // Método POST porque estoy creando un nuevo recurso.
+        headers: { "Content-Type": "application/json" },                     // Indico que el cuerpo se envía en formato JSON.
+        body: JSON.stringify(nuevoComentario),                               // Convierto el objeto 'nuevoComentario' a JSON y lo mando en el cuerpo.
       });
 
-      const data = await res.json();
+      const data = await res.json();                                         // Espero la respuesta del servidor y la convierto de JSON a objeto JS.
 
       //Si el servidor devuelve error
-      if (!res.ok) {
-        alert(data.error || "Error al guardar comentario");
-        return;
+      if (!res.ok) {                                                         // Si el estatus HTTP no está en el rango 200–299...
+        alert(data.error || "Error al guardar comentario");                  // ...muestro el mensaje de error del backend o uno genérico.
+        return;                                                              // Salgo de la función sin continuar.
       }
 
       //Resetea el formulario tras enviar
-      formComentario.reset();
+      formComentario.reset();                                                // Limpio los campos del formulario para que queden vacíos.
 
       //Recargar lista de comentarios desde la BD
-      cargarComentarios();
-    } catch (error) {
-      console.error(error);
-      alert("No se pudo conectar con el servidor de comentarios");
+      cargarComentarios();                                                   // Llamo a la función que vuelve a consultar los comentarios al backend.
+    } catch (error) {                                                        // Si ocurre un error en la petición (por ejemplo, el servidor no responde)...
+      console.error(error);                                                  // Lo muestro en la consola para depuración.
+      alert("No se pudo conectar con el servidor de comentarios");           // Aviso al usuario que hubo un problema de conexión.
     }
   });
 
   //Cargar comentarios desde el backend
-  async function cargarComentarios() {
+  async function cargarComentarios() {                                       // Función asíncrona para leer los comentarios desde la API.
     try {
-      const res = await fetch(URL_API_COMENTARIOS);
-      const comentarios = await res.json();
+      const res = await fetch(URL_API_COMENTARIOS);                          // Hago una petición GET a la misma URL.
+      const comentarios = await res.json();                                  // Convierto la respuesta en un arreglo de comentarios.
 
       // Si no hay comentarios aún
-      if (!Array.isArray(comentarios) || comentarios.length === 0) {
+      if (!Array.isArray(comentarios) || comentarios.length === 0) {         // Verifico que sea un arreglo y que tenga al menos 1 elemento.
         // No los mostramos debajo del formulario
-        listaComentarios.innerHTML = "";
+        listaComentarios.innerHTML = "";                                     // Aseguro que debajo del formulario siga vacío.
 
         // En el modal mostramos mensaje vacío
-        if (listaComentariosModal) {
-          listaComentariosModal.innerHTML = "<p>No hay comentarios aún.</p>";
+        if (listaComentariosModal) {                                         // Si existe el contenedor del modal...
+          listaComentariosModal.innerHTML = "<p>No hay comentarios aún.</p>";// ...muestro un mensaje indicando que no hay comentarios.
         }
-        return;
+        return;                                                              // Salgo de la función porque ya no hay nada más que renderizar.
       }
 
       // Ordenar de más reciente a más antiguo
-      const ordenados = comentarios.slice().reverse();
+      const ordenados = comentarios.slice().reverse();                       // Creo una copia del arreglo y lo invierto para ver primero los más recientes.
 
       // Debajo del formulario NO mostramos nada (lista vacía a propósito)
-      listaComentarios.innerHTML = "";
+      listaComentarios.innerHTML = "";                                       // Dejo vacía la lista que está debajo del formulario (diseño decidido así).
 
       // En el modal sí mostramos TODOS los comentarios
-      if (listaComentariosModal) {
-        listaComentariosModal.innerHTML = ordenados
-          .map(renderComentario) // Generar HTML
-          .join("");             // Unir en un solo bloque
+      if (listaComentariosModal) {                                           // Si existe la lista dentro del modal...
+        listaComentariosModal.innerHTML = ordenados                          // Asigno el HTML generado al contenedor:
+          .map(renderComentario) // Generar HTML                              // - Con map convierto cada comentario en un bloque HTML usando renderComentario().
+          .join("");             // Unir en un solo bloque                    // - Con join uno todos los bloques en un solo string.
       }
-    } catch (error) {
-      console.error(error);
-      if (listaComentariosModal) {
+    } catch (error) {                                                        // Si ocurre un error al hacer el fetch...
+      console.error(error);                                                  // Lo muestro en consola.
+      if (listaComentariosModal) {                                           // Si existe el contenedor del modal...
         listaComentariosModal.innerHTML =
-          "<p>Error al cargar los comentarios.</p>";
+          "<p>Error al cargar los comentarios.</p>";                         // Muestro un mensaje de error al usuario.
       }
     }
   }
 
   //Llamar a la carga inicial de comentarios al entrar a la página
-  cargarComentarios();
+  cargarComentarios();                                                       // Apenas se inicializa la sección, consulto y pinto los comentarios existentes.
 
   //ABRIR MODAL (botón "Leer más")
-  if (btnMas && modal) {
-    btnMas.addEventListener("click", (e) => {
-      e.preventDefault();
-      modal.classList.add("is-open"); // Activa la animación CSS del modal
+  if (btnMas && modal) {                                                     // Si existen el botón "Leer comentarios" y el modal...
+    btnMas.addEventListener("click", (e) => {                                // Agrego un listener al click del botón.
+      e.preventDefault();                                                    // Evito comportamiento por defecto (por si es parte de un link/form).
+      modal.classList.add("is-open"); // Activa la animación CSS del modal   // Agrego la clase 'is-open' para abrir el modal (CSS se encarga del efecto).
     });
   }
 
   //CERRAR MODAL (botón X)
-  if (btnCerrarModal && modal) {
-    btnCerrarModal.addEventListener("click", () => {
-      modal.classList.remove("is-open");
+  if (btnCerrarModal && modal) {                                             // Si existen el botón de cierre y el modal...
+    btnCerrarModal.addEventListener("click", () => {                         // Agrego listener al botón X.
+      modal.classList.remove("is-open");                                     // Quito la clase 'is-open' para cerrar el modal.
     });
   }
 
   //CERRAR MODAL al hacer clic en el overlay
-  if (overlayModal && modal) {
-    overlayModal.addEventListener("click", () => {
-      modal.classList.remove("is-open");
+  if (overlayModal && modal) {                                               // Si existen el overlay y el modal...
+    overlayModal.addEventListener("click", () => {                           // Agrego listener al hacer clic sobre el fondo oscuro.
+      modal.classList.remove("is-open");                                     // También cierro el modal.
     });
   }
 }
 
 // Esperar a que el DOM esté listo para inicializar todo
-window.addEventListener("DOMContentLoaded", iniciarComentarios);
+window.addEventListener("DOMContentLoaded", iniciarComentarios);             // Cuando el HTML termina de cargar, ejecuto iniciarComentarios().
