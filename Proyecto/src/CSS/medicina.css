@@ -171,11 +171,11 @@
 }
 
 .remedio-label--prep {
-    color: #c97e1f;
+    color: var(--color-naranja-flecha-ve-mas);
     /* naranja */
 }
 
 .remedio-label--uso {
-    color: #2154c9;
+    color: var(--color-primario-verde-bosque);
     /* azul */
 }
