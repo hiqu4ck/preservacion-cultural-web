@@ -1,6 +1,6 @@
 //Aquí inicializo el slider de temas mayas.
 //Primero obtengo el contenedor donde están las tarjetas (sliderTrack) y las dos flechas.
-//Luego, si los tres elementos existen, les asigno eventos: al hacer clic en la flecha derecha, desplazo el slider 400 píxeles hacia la derecha, y con la flecha izquierda lo muevo 400 píxeles hacia la izquierda.
+//Luego, si los tres elementos existen, les asigno eventos: al hacer clic en la flecha derecha, desplazo el slider 800 píxeles hacia la derecha, y con la flecha izquierda lo muevo 800 píxeles hacia la izquierda.
 //Uso scrollBy con behavior: "smooth" para que el movimiento sea suave.
 // |
 // v
@@ -12,11 +12,11 @@ function iniciarSliderTemas() {                // Declaro la función principal 
 
   if (sliderTrack && btnLeft && btnRight) {                     // Solo si existen estos tres elementos en el DOM, configuro los eventos.
     btnRight.addEventListener("click", () => {                  // Cuando se hace clic en la flecha derecha...
-      sliderTrack.scrollBy({ left: 800, behavior: "smooth" });  // ...desplazo el track 400px hacia la derecha con animación suave.
+      sliderTrack.scrollBy({ left: 800, behavior: "smooth" });  // ...desplazo el track 800px hacia la derecha con animación suave.
     });
 
     btnLeft.addEventListener("click", () => {                   // Cuando se hace clic en la flecha izquierda...
-      sliderTrack.scrollBy({ left: -800, behavior: "smooth" }); // ...desplazo el track 400px hacia la izquierda con animación suave.
+      sliderTrack.scrollBy({ left: -800, behavior: "smooth" }); // ...desplazo el track 800px hacia la izquierda con animación suave.
     });
   }
 
@@ -105,3 +105,5 @@ function iniciarSliderTemas() {                // Declaro la función principal 
 // v
 // Esperar a que cargue el HTML antes de iniciar
 window.addEventListener("DOMContentLoaded", iniciarSliderTemas); // Cuando todo el HTML está cargado, llamo a iniciarSliderTemas().
+//- Gracias al DOM, JavaScript puede acceder, modificar y reaccionar a los elementos de la página en tiempo real.
+
