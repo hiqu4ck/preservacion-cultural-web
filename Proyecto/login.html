@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="src/CSS/login.css">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+</head>
+
+<body>
+  <header>
+    <!-- Aquí va tu logo y navegación -->
+    <div class="header-logo">
+      <img src="/img/logo.png" alt="Logo K’ajóol Lu’um">
+      <span>K’ajóol Lu’um</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="login-container">
+      <div class="login-box">
+        <h2>Inicia sesión o regístrate</h2>
+
+        <form id="form-login">
+          <label for="country">País/Región</label>
+          <select id="country">
+            <option value="MX">México (+52)</option>
+            <!-- Otras opciones -->
+
+          </select>
+          <input type="user" id="user" placeholder="Nombre de usuario" required>
+
+     <button type="submit">Iniciar sesión</button>
+
+        <div class="social-login-G">
+          <button>Continuar con Google</button>
+        </div>
+
+        <div class="social-login-A">
+          <button>Continuar con Apple</button>
+        </div>
+
+        <div class="social-login-C">
+          <button>Continuar con correo electrónico</button>
+        </div>
+
+        <div class="social-login-F ">
+          <button>Continuar con Facebook</button>
+        </div>
+
+        <p>¿No tienes cuenta? <a href="register.html">Crear cuenta</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div class="btoncito">
+<button onclick="window.location.href='index.html'">Página Principal</button>
+</div>
+
+<script src="src/JS/login.js"></script>
+<script src="src/js/login.js" defer></script>
+
+
+</body>
+
+</html>
