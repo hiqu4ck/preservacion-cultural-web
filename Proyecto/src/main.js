@@ -11,5 +11,8 @@ import './JS/comentarios.js';
 import './JS/loganSlider.js'
 import './CSS/leyendas.css'
 import './CSS/artesanias.css'
-
-
+import './CSS/comunidades.css'
+import { initMapaZonaMaya } from "./JS/zonasMayas.js";
+document.addEventListener("DOMContentLoaded", () => {
+  initMapaZonaMaya();
+});

@@ -7,6 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto</title>
 
+  <!-- Leaflet CSS (mapa libre) -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+/>
+
   <!-- Aquí luego enlazan TODOS los CSS -->
 </head>
 
@@ -35,6 +43,38 @@
           </iframe>
         </div>
       </div>
+
+<section class="comunidades" id="sec-josue">
+  <h2 class="comunidades-titulo">Comunidades</h2>
+  <p class="comunidades-desc">
+    Explicar las comunidades mayas en la península y marcarlas en el mapa.
+    Usa el buscador para localizar zonas arqueológicas, museos y otros lugares culturales
+    de la zona maya.
+  </p>
+
+  <div class="comunidades-busqueda">
+    <input
+      id="inputBusquedaLugar"
+      type="text"
+      placeholder="Buscar (ej. 'zona arqueológica', 'museo', 'Felipe Carrillo Puerto')"
+      aria-label="Buscar lugares en el mapa"
+    />
+    <button id="btnBuscarLugar" type="button">Buscar</button>
+  </div>
+
+  <div class="comunidades-mapa">
+    <div id="mapaComunidad"></div>
+  </div>
+  <div class="comunidades-grid" id="comunidadesGrid">
+    <div class="com-item color1">
+      <p class="com-foto">
+        Selecciona un marcador en el mapa para ver la foto, el tipo de lugar,
+        la dirección y una breve descripción.
+      </p>
+      <h3 class="com-nombre">Nombre del sitio</h3>
+    </div>
+  </div>
+</section>
 
       <section class="seccion-comidas">
 
@@ -916,6 +956,15 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
   <!-- Script de Vite -->
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
+
+<!-- Leaflet JS (mapa libre) -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
+
+
 </body>
 
 </html>
