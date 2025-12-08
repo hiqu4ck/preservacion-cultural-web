@@ -342,6 +342,7 @@ const modalJuegosImg = modalJuegos.querySelector(".modal-juegos__img");
 const nextJuegoBtn = modalJuegos.querySelector(".modal-juegos__next");
 const modalJuegosClose = modalJuegos.querySelector(".modal-juegos__close");
 const modalJuegosOverlay = modalJuegos.querySelector(".modal-juegos__overlay");
+const modalJuegosContent = modalJuegos?.querySelector(".modal-juegos__content");
 
 let juegoActual = 0;
 
@@ -351,6 +352,10 @@ function mostrarJuego(index) {
   modalJuegosTitle.textContent = juego.titulo;
   modalJuegosText.textContent = juego.descripcionLarga;
   modalJuegosImg.src = juego.imagen;
+
+  if (modalJuegosContent) {
+    modalJuegosContent.scrollTop = 0;
+  }
 }
 
 // Abrir modal
@@ -838,7 +843,7 @@ const modalFiestasContent = modalFiestas?.querySelector(".modal-fiestas__content
 
 let fiestaActual = 0;
 
-// Mostrar juego
+// Mostrar fiesta
 function mostrarFiesta(index) {
   const fiesta = fiestasInfoList[index];
   modalFiestasTitle.textContent = fiesta.titulo;
@@ -860,7 +865,7 @@ fiestasBtn.addEventListener("click", () => {
   document.body.classList.add("modal-open");
 });
 
-// Cambiar al siguiente juego
+// Cambiar a la siguiente fiesta 
 nextFiestasBtn.addEventListener("click", () => {
   fiestaActual = (fiestaActual + 1) % fiestasInfoList.length;
   mostrarFiesta(fiestaActual);
