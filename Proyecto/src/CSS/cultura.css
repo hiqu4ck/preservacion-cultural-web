@@ -1,0 +1,151 @@
+/* =========================================================
+   SECCIÓN CULTURA (BAILES / MÚSICA / VESTIMENTA)
+   ========================================================= */
+
+.cultura {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: var(--color-beige);
+}
+
+.cultura-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Tarjeta base */
+.cultura-card {
+    flex: 1 1 33.33%;
+    min-width: 260px;
+    min-height: 360px;
+    padding: 32px 26px;
+    box-sizing: border-box;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+}
+
+/* Colores de fondo por tarjeta (ajusta a tu paleta) */
+.cultura-card--bailes {
+    background-color: #727348;
+    /* verde olivo */
+    color: #f7f3e9;
+}
+
+.cultura-card--musica {
+    background-color: #f7efb0;
+    /* amarillo suave */
+    color: #333;
+}
+
+.cultura-card--vestimenta {
+    background-color: #4c7f7f;
+    /* verde azulado */
+    color: #f7f3e9;
+}
+
+/* Cuadro de imagen gris */
+.cultura-card__img {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 1 / 1;
+    background-color: #9ea39e;
+    border-radius: 24px;
+    margin-bottom: 8px;
+}
+
+/* Título y flecha */
+.cultura-card__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cultura-card__arrow {
+    font-size: 18px;
+}
+
+/* Texto */
+.cultura-card__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 260px;
+}
+
+/* Hover ligero */
+.cultura-card:hover {
+    filter: brightness(1.03);
+    transform: translateY(-2px);
+    transition: 0.18s ease;
+}
+
+/* =========================================================
+   MODAL CULTURA
+   ========================================================= */
+
+.modal-cultura {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-family: inherit;
+}
+
+.modal-cultura.activo {
+    display: flex;
+}
+
+.modal-cultura__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.modal-cultura__content {
+    position: relative;
+    background: #fff;
+    width: 95%;
+    max-width: 900px;
+    max-height: 90vh;
+    padding: 24px 32px 28px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.modal-cultura__close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Contenido dentro del modal cultura */
+#modal-cultura-body h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 22px;
+    color: #2f3b2f;
+}
+
+#modal-cultura-body h3 {
+    margin-top: 16px;
+    font-size: 18px;
+}
+
+#modal-cultura-body p {
+    margin: 6px 0;
+    line-height: 1.45;
+}
