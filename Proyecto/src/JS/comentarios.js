@@ -1,5 +1,10 @@
 //COMENTARIOS
 
+//Aquí inicializo toda la lógica de la sección de comentarios.
+//Primero defino la constante URL_API_COMENTARIOS, que es la ruta de mi backend donde se guardan y se leen los comentarios.
+//Luego, en la función iniciarComentarios, obtengo del DOM todos los elementos que necesito: el formulario, la lista de comentarios, el modal y los botones. Esta función es la que se ejecuta cuando carga la página y se encarga de conectar la interfaz con el backend.
+// |
+// v
 //URL del backend (el que corre en backend/index.js)
 const URL_API_COMENTARIOS = "http://localhost:4000/comments"; 
 // Constante que guarda la URL base de la API donde se guardan y se leen los comentarios.
@@ -22,6 +27,12 @@ function iniciarComentarios() {
   //Si esta sección no existe en el HTML, detenemos la ejecución
   if (!formComentario || !listaComentarios) return;                          // Si no hay formulario o lista, salgo de la función para evitar errores.
 
+//Esta función recibe un comentario que viene del backend y lo transforma en HTML.
+//Primero saco la inicial del nombre para mostrarla dentro del avatar redondo.
+//Luego regreso un template string con la estructura del comentario: nombre, inicial y mensaje.
+//Esta función la uso después para pintar todos los comentarios dentro del modal.
+// |
+// v
   //Función para generar el HTML de un comentario
   function renderComentario(c) {                                             // Función que recibe un objeto comentario y devuelve un bloque HTML.
     // Inicial del usuario (primera letra del nombre)
@@ -46,6 +57,13 @@ function iniciarComentarios() {
     // incluyendo avatar con inicial, nombre del usuario y el texto del mensaje.
   }
 
+
+//Aquí manejo el envío del formulario de comentarios.
+//Cancelo el envío tradicional con preventDefault() para que la página no se recargue.
+//Leo el nombre y el mensaje, hago una validación básica para que no vayan vacíos y, si todo está bien, construyo un objeto nuevoComentario.
+//Luego uso fetch con método POST hacia mi API (URL_API_COMENTARIOS), mando los datos en formato JSON y, si la respuesta es correcta, limpio el formulario y vuelvo a cargar la lista de comentarios.
+// |
+// v
   //Enviar comentario
   formComentario.addEventListener("submit", async (e) => {                   // Cuando el usuario envíe el formulario...
     e.preventDefault(); // Evita recargar la página                           // Detengo el comportamiento por defecto (no recargar la página).
@@ -88,6 +106,12 @@ function iniciarComentarios() {
     }
   });
 
+//Esta función se encarga de leer los comentarios que ya existen en la base de datos.
+//Hago una petición GET con fetch a la misma URL de la API, convierto la respuesta a JSON y reviso si hay comentarios.
+//Si no hay, muestro un mensaje de ‘No hay comentarios aún’.
+//Si sí hay, los ordeno del más reciente al más antiguo usando reverse() y luego uso map(renderComentario) para convertir cada comentario en HTML antes de insertarlos dentro del modal.
+// |
+// v
   //Cargar comentarios desde el backend
   async function cargarComentarios() {                                       // Función asíncrona para leer los comentarios desde la API.
     try {
@@ -130,6 +154,12 @@ function iniciarComentarios() {
   //Llamar a la carga inicial de comentarios al entrar a la página
   cargarComentarios();                                                       // Apenas se inicializa la sección, consulto y pinto los comentarios existentes.
 
+//Esta parte controla la apertura y cierre del modal donde se ven todos los comentarios.
+//Cuando el usuario hace clic en el botón ‘Leer comentarios’, agrego la clase is-open al modal para que se muestre con la animación definida en CSS.
+//También programé que se cierre tanto al hacer clic en la X como al hacer clic en el fondo oscuro (overlay), quitando esa misma clase.
+//Toda la interacción visual del modal depende de agregar o quitar esa clase.
+// |
+// v
   //ABRIR MODAL (botón "Leer más")
   if (btnMas && modal) {                                                     // Si existen el botón "Leer comentarios" y el modal...
     btnMas.addEventListener("click", (e) => {                                // Agrego un listener al click del botón.
@@ -153,5 +183,10 @@ function iniciarComentarios() {
   }
 }
 
+
+//Aquí me aseguro de que toda la lógica de comentarios se ejecute hasta que el HTML esté completamente cargado.
+//Cuando ocurre el evento DOMContentLoaded, llamo a iniciarComentarios(), que es donde conecto el DOM, el formulario, el modal y las peticiones al backend.
+// |
+// v
 // Esperar a que el DOM esté listo para inicializar todo
 window.addEventListener("DOMContentLoaded", iniciarComentarios);             // Cuando el HTML termina de cargar, ejecuto iniciarComentarios().
