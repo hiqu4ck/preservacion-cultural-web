@@ -178,6 +178,7 @@
 
     .modal-juegos__text {
         font-size: 18px;
+        text-align: justify;
         line-height: 1.6;
     }
 

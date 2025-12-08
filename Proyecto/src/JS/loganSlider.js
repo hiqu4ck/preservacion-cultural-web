@@ -895,28 +895,184 @@ nextFiestasBtn.addEventListener("click", () => {
 const leyendasInfo = [
   {
     titulo: "La leyenda del Balam",
-    descripcion: "El Balam es un espíritu protector de las selvas mayas...",
-    detalle: "Aquí se mostrará el texto completo de la leyenda seleccionada.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia quas nostrum,enim pariatur facilis est, ipsa optio exercitationem totam officia tempora, ea eos ducimus quasi velit. Recusandae dolores facere dolore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eligendiaperiam alias quae quasi, beatae maxime. Aperiam possimus ad consequunturperferendis corrupti maxime, aut nam excepturi dignissimos sapiente rerumquisquam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aut porro, itaque ducimus commodi recusandae! Nihil non eveniet nulla. Tenetur, impedit? Eveniet quas dolores molestias impedit ullam earum debitis dolorum.",
-    img: "./public/assets/img/leyenda-balam1.jpg"
-  },
-  {
-    titulo: "La Xtabay",
-    descripcion: "La Xtabay atrae a los hombres en los caminos solitarios...",
-    detalle: "Aquí se mostrará el texto completo de la leyenda seleccionada.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia quas nostrum,enim pariatur facilis est, ipsa optio exercitationem totam officia tempora, ea eos ducimus quasi velit. Recusandae dolores facere dolore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eligendiaperiam alias quae quasi, beatae maxime. Aperiam possimus ad consequunturperferendis corrupti maxime, aut nam excepturi dignissimos sapiente rerumquisquam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aut porro, itaque ducimus commodi recusandae! Nihil non eveniet nulla. Tenetur, impedit? Eveniet quas dolores molestias impedit ullam earum debitis dolorum.",
+    descripcion: "    En la tradición maya, la palabra Balam significa jaguar, pero no se refiere únicamente al animal: es un ser protector, un guardián espiritual relacionado con la noche, la selva y la fuerza sagrada. El Balam aparece en muchas leyendas y relatos donde cumple el papel de defensor del pueblo, del maíz, de los hogares y de los caminos.",
+    detalle: ` 
+Hace muchos, muchos años, cuando el mundo aún estaba joven y las noches eran más oscuras que ahora, los pueblos mayas vivían rodeados por la inmensa selva. Allí habitaban animales poderosos, espíritus antiguos y fuerzas que los humanos aún no comprendían. Entre todos esos seres, ninguno era tan temido y respetado como el Balam, el jaguar sagrado.
+Cuenta la leyenda que el jaguar no era un animal cualquiera, sino un ser espiritual enviado por los dioses para proteger a los hombres. Cuando los primeros pobladores llegaron a la tierra y comenzaron a sembrar maíz, no sabían cómo defenderse de los peligros de la noche. Los vientos fríos, los espíritus traviesos y las criaturas de la oscuridad amenazaban las aldeas.
+Fue entonces cuando los dioses crearon a los Balames, cuatro jaguares guardianes, cada uno ubicado en un punto cardinal.
+
+Balam Kin, guardián del Este, recibía la fuerza del sol naciente.
+
+Balam Ix, guardián del Norte, vigilaba los vientos y el espíritu de los animales.
+
+Balam Chak, guardián del Oeste, controlaba los atardeceres y el mundo de las sombras.
+
+Balam Ux, guardián del Sur, protegía el agua, la lluvia y la vida que brota de la tierra.
+
+Cada Balam tenía el poder de recorrer la selva en silencio y de ver lo que ningún humano podía ver. Sus ojos brillantes eran capaces de atravesar la oscuridad, y sus pasos al caminar no dejaban rastro. Por eso, cuando la noche caía sobre los pueblos, la gente sabía que los Balames caminaban entre los árboles, vigilando a los suyos.
+
+Se dice que, cuando un espíritu maligno intentaba entrar en una casa, el Balam aparecía en la puerta, con los colmillos blancos como el copal ardiendo, y ahuyentaba al intruso con un rugido que hacía temblar la tierra. Por eso, los antiguos mayas decían que mientras se escuchara el rugido de un jaguar cerca del pueblo, no había nada que temer, pues el guardián estaba haciendo su trabajo.
+
+También cuentan que los Balames protegían las milpas, espantando a los animales que querían destruir el maíz y cuidando los cultivos durante la noche. Los campesinos, agradecidos, dejaban ofrendas de comida y encendían velas de cera para honrar a los jaguares protectores.
+
+Con el paso de los siglos, la figura del Balam se convirtió en símbolo de fuerza, equilibrio y sabiduría. Incluso hoy, en muchas comunidades, se dice que todos tenemos un Balam que cuida nuestro camino, y que cuando caminamos por la selva o pasamos noches difíciles, su espíritu nos acompaña.
+
+Así, la leyenda del Balam sigue viva:
+un jaguar sagrado, protector del pueblo maya, guardián de la noche y defensor de la vida.`,
     img: "./public/assets/img/leyenda-balam2.jpg"
   },
   {
-    titulo: "El Huay Chivo",
-    descripcion: "Un brujo capaz de transformarse en una criatura mezcla de hombre y bestia...",
-    detalle: "Aquí se mostrará el texto completo de la leyenda seleccionada.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia quas nostrum,enim pariatur facilis est, ipsa optio exercitationem totam officia tempora, ea eos ducimus quasi velit. Recusandae dolores facere dolore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eligendiaperiam alias quae quasi, beatae maxime. Aperiam possimus ad consequunturperferendis corrupti maxime, aut nam excepturi dignissimos sapiente rerumquisquam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aut porro, itaque ducimus commodi recusandae! Nihil non eveniet nulla. Tenetur, impedit? Eveniet quas dolores molestias impedit ullam earum debitis dolorum.",
-    img: "./public/assets/img/leyenda-balam3.png"
+    titulo: "La Xtá’abay: La mujer seductora de la selva",
+    descripcion: "Esta es una de las leyendas más conocidas en la zona maya de Quintana Roo, narrada en pueblos como Felipe Carrillo Puerto, Lázaro Cárdenas, Tulum y José María Morelos. ",
+    detalle: `Xtá’abay es una hermosa mujer que emerge de la selva en noches de luna llena, atrayendo a hombres ebrios o infieles con su encanto. Viste un hipil transparente y se peina con espinas de cactus venenoso (tzá’akan) bajo un yaxche’ (ceiba sagrada). Sus pies son mutados: uno como pezuña de chivo y otro como pata de pavo, produciendo un sonido "tsss’ tak" al caminar. Lleva a sus víctimas a una cueva para "amarlas" hasta la muerte.
+El origen se remonta a dos mujeres: la "x k’eban" (pecadora pero bondadosa), que se transformó en la flor dulce del xtabentún, y la "utz kó’olel" (aparentemente virtuosa pero egoísta), que se convirtió en la Xtá’abay, una flor espinosa y venenosa. Para protegerse, se recomienda no embriagarse y, si aparece, dar tres cintarazos para transformarla en una serpiente que huye. En Felipe Carrillo Puerto, el museo Noh Kah Santa Cruz Balan Nah expone pinturas sobre esta leyenda, y recientemente (octubre 2025) se inauguró una exposición en la Casa de la Cultura.
+`,
+    img: "./public/assets/img/Xtabay_2.png"
   },
   {
-    titulo: "La Llorona Maya",
-    descripcion: "Una mujer que vaga buscando a su hijo entre los cenotes y selvas...",
-    detalle: "Aquí se mostrará el texto completo de la leyenda seleccionada.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia quas nostrum,enim pariatur facilis est, ipsa optio exercitationem totam officia tempora, ea eos ducimus quasi velit. Recusandae dolores facere dolore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eligendiaperiam alias quae quasi, beatae maxime. Aperiam possimus ad consequunturperferendis corrupti maxime, aut nam excepturi dignissimos sapiente rerumquisquam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aut porro, itaque ducimus commodi recusandae! Nihil non eveniet nulla. Tenetur, impedit? Eveniet quas dolores molestias impedit ullam earum debitis dolorum.",
-    img: "./public/assets/img/leyenda-balam4.jpg"
-  }
+    titulo: "La Cruz Parlante: El símbolo de la resistencia maya",
+    descripcion: "Esta leyenda histórica surge durante la Guerra de Castas (1847-1901), un levantamiento maya contra la opresión en Quintana Roo.",
+    detalle: `En un manantial cerca de lo que hoy es Felipe Carrillo Puerto (antes Chan Santa Cruz), un mestizo llamado José María Barrera encontró un cedro y pintó una cruz en él. El árbol creció y "habló", guiando a los rebeldes mayas con mensajes divinos transmitidos por líderes como Barrera o Manuel Nahuat. La cruz, tallada en madera de caoba (de 7-10 cm), se convirtió en oráculo: otorgaba protección, legitimidad y estrategias militares, fusionando creencias católicas con elementos prehispánicos como la ceiba sagrada y el maíz.
+    Representó un gobierno teocrático independiente, inspirando a figuras como la sacerdotisa María Petrona Uicab, quien consultaba el oráculo en Tulum. Aunque el ejército mexicano tomó Chan Santa Cruz en 1901, el culto persiste. Hoy, la cruz se venera en el Santuario de la Cruz Parlante en Felipe Carrillo Puerto, con fiestas el 3 de mayo.`,
+    img: "./public/assets/img/CruzParlante_2.png"
+  },
+  {
+    titulo: "Los Aluxes: Los guardianes traviesos de la naturaleza",
+    descripcion: "Los aluxes (aluxo’ob en maya) son pequeños duendes de la mitología maya, altos como hasta las rodillas, vestidos como antiguos mayas.",
+    detalle: `Viven en selvas, grutas y cenotes de la península de Yucatán, incluyendo Quintana Roo. Son invisibles pero pueden materializarse para interactuar. Protegen el Xibalbá (inframundo maya) y los campos: ayudan a crecer el maíz, llaman la lluvia y espantan ladrones si se les deja ofrendas. Si se les irrespeta, causan accidentes, enfermedades o travesuras como ruidos extraños.
+Creados por sacerdotes mayas con barro, miel y flores, se activan con rituales. En Quintana Roo, una famosa anécdota es el puente de Cancún, derribado por aluxes hasta que les construyeron una casa. Para entrar en sus territorios, pide permiso y deja ofrendas para buena suerte.
+`,
+    img: "./public/assets/img/Aluxes.png"
+  },
+  {
+    titulo: "El Huay Chivo: El brujo transformado en bestia",
+    descripcion: "Esta leyenda de terror maya habla de un hechicero que se transforma en un ser mitad hombre, mitad chivo, con ojos rojos, pelo negro y cuernos...",
+    detalle: `
+    Ataca a viajeros, ganado o infieles por las noches, dejando un hedor a azufre. En una versión local cerca de Felipe Carrillo Puerto, un curandero respetado llamado Don Eustaquio curaba con rituales, pero se convertía en Huay Chivo bajo la luna llena. Un joven lo descubrió y el pueblo lo confrontó, obligándolo a huir a un cenote, donde maldijo al lugar. Desde entonces, se escucha su aullido en tormentas, y se advierte no confiar en curanderos sospechosos ni invocar espíritus.
+`,
+    img: "./public/assets/img/Huay-Chivo.png"
+  },
+  {
+    titulo: "Los hermanos Kinich y Tizic: El origen del Chechén y el Chacá",
+    descripcion: "Esta leyenda, narrada por habitantes de Felipe Carrillo Puerto como Gregorio Canchén, se ambienta en la selva de Quintana Roo y explica el equilibrio natural entre el bien y el mal...",
+    detalle: `Dos príncipes guerreros mayas, Kinich (el bondadoso y amado) y Tizic (el arrogante y cruel), se enamoran de la hermosa Nicté-Ha. Para resolver su rivalidad, se enfrentan en un duelo mortal donde ambos perecen. En el inframundo, suplican a los dioses mayas por una segunda oportunidad para ver a Nicté-Ha. Los dioses les permiten regresar, pero unidos para siempre: Tizic se transforma en el árbol chechén (Metopium brownei), cuya resina causa quemaduras y llagas, simbolizando el mal; Kinich en el chacá (Bursera simaruba), cuyo néctar alivia los efectos del chechén, representando el bien. En la selva, estos árboles siempre crecen cerca uno del otro, y se usan en la medicina tradicional maya. La moraleja enseña el respeto a la naturaleza y el dualismo del mundo.`,
+    img: "./public/assets/img/Kinich-Tizic_2.png"
+  },
+  {
+    titulo: "La leyenda de Jacinto Pat: El guerrero protegido por la Cruz",
+    descripcion: "Originaria de comunidades como Tihosuco y Chumpon, cerca de Felipe Carrillo Puerto, esta historia heroica de la Guerra de Castas (1847-1901) retrata a Jacinto Pat como un líder invulnerable...",
+    detalle: `. Pat, un "tigre" con machete, es protegido por la gracia divina de la Santísima Cruz y poderes de way (transformación). En una noche, corta 60 cabezas de enemigos sin ser herido, guiado por órdenes de Dios.
+     Embosca a perseguidores en rutas hacia Bacalar y Ascensión, usando tácticas como falsos campamentos con cadáveres enterrados en pib (hornos tradicionales) para aterrorizar a los soldados, simulando canibalismo.
+      La leyenda enfatiza la resistencia maya y la fe en lo divino para la liberación.`,
+    img: "./public/assets/img/Jacinto-Pat.png"
+  },
+  {
+    titulo: "La leyenda de la violación de la hija de Cecilio Chi: El detonante de la Guerra de Castas",
+    descripcion: "Esta narración fundacional se cuenta en Tihosuco, Chetumal y Nohbec, cercanas a Felipe Carrillo Puerto, y explica el inicio de la rebelión maya...",
+    detalle: `Un sacerdote viola a la hija de Cecilio Chi (o en variantes, de Jacinto Pat), entregada para educación. Los mayas, furiosos, decapitan al cura en Polenk'in ("cabeza del cura"). Simboliza la opresión colonial y la redención de la feminidad maya y la tierra. Esto lleva al levantamiento contra los "dzules" (blancos), oponiendo la Iglesia Católica a la Santísima Cruz. La moraleja resalta la justicia y la defensa de la dignidad indígena.`,
+    img: "./public/assets/img/Cecilio-Chi.png"
+  },
+  {
+    titulo: "La historia de Bernardino Ken y Florentino Cituk",
+    descripcion: "Proveniente de relatos orales en Noh Kah Balam Na (Felipe Carrillo Puerto) y Vigía Chico, esta leyenda describe la tenaz oposición de Ken y Cituk contra el general Bravo a inicios del siglo XX...",
+    detalle: `Con 100 hombres, se esconden en cuevas, reciben mensajes divinos del cielo y sabotean trenes con dinamita, protegidos por rezos. La lucha termina con una epidemia de viruela negra, dejando solo "semilla" para futuras generaciones. Enfatiza la devoción a Dios y la entrega por la libertad maya, con elementos de profecías catastrofistas.`,
+    img: "./public/assets/img/Bernardino_Ken-Florentino_Cituk.png"
+  },
+  {
+    titulo: "El tesoro arqueológico de los aluxes",
+    descripcion: "En esta leyenda, asociada a comunidades rurales de Quintana Roo, un hombre llamado Santiago entra en una gruta durante excavaciones y...",
+    detalle: `En esta leyenda, asociada a comunidades rurales de Quintana Roo, un hombre llamado Santiago entra en una gruta durante excavaciones y encuentra aluxes que lo guían a un tesoro de figuras de jade y 
+    barro custodiado por una serpiente. Él distribuye las piezas, pero una cobra vida por las noches, recordando el respeto a los guardianes mayas y el castigo por profanar sitios sagrados.`,
+    img: "./public/assets/img/Tesoro_Aluxes.png"
+  },
+  {
+    titulo: "El hombre que fue convertido en alux",
+    descripcion: "Relatada en contextos de Quintana Roo durante la construcción de carreteras, obreros roban reliquias mayas de un adoratorio y...",
+    detalle: `Relatada en contextos de Quintana Roo durante la construcción de carreteras, obreros roban reliquias mayas de un adoratorio y son castigados con accidentes y enfermedades.
+    Uno de ellos se encoge progresivamente hasta convertirse en un alux, sirviendo como advertencia eterna contra el robo de la herencia cultural.`,
+    img: "./public/assets/img/Hombre-Alux.png"
+  },
+  {
+    titulo: "Xaho'hot Tuun: El sacrificio del Guerrero",
+    descripcion: "Esta narración prehispánica habla de un guerrero que seduce a una vestal dedicada a la diosa Suhuy K'aak'...",
+    detalle: `Esta narración prehispánica habla de un guerrero que seduce a una vestal dedicada a la diosa Suhuy K'aak'. Como castigo, le sacan el corazón en un sacrificio y usan su piel, mientras la vestal es arrojada a un cenote por perder su pureza.
+    Enfatiza el culto a la castidad y los rituales sagrados en la sociedad maya.`,
+    img: "./public/assets/img/Xaho'hot Tuun.png"
+  },
+  {
+    titulo: "El primer encuentro con los aluxes",
+    descripcion: "Esta leyenda, relatada por Gaspar Antonio Xiu Cachón, ocurrió en 1954 en la comunidad de Sabán, Quintana Roo...",
+    detalle: `Dos niños mayas observan a dos aluxes saliendo de la selva, quienes los invitan a su morada con promesas de diversión y comida. Los niños, prudentes, rechazan la oferta y huyen al oír a su hermana.
+    Enseña sobre la curiosidad infantil y el respeto a los espíritus guardianes de la naturaleza, comunes en zonas rurales mayas`,
+    img: "./public/assets/img/Encuentro-Alux.png"
+  },
+  {
+    titulo: "La Pila de los Azotes: El castigo indígena",
+    descripcion: "Más que una leyenda pura, es un relato histórico con tintes míticos de Chan Santa Cruz (actual Felipe Carrillo Puerto).",
+    detalle: `Durante la Guerra de Castas y hasta 1920, esta pila de piedra se usaba para azotar a infractores de las leyes mayas, como adúlteros (50 azotes cada uno, seguidos de jugo de naranja agria en las heridas) o desobedientes. Construida en 1918 por el general Francisco May Pech, simboliza la justicia indígena y el rigor social.
+    Se dice que los gritos de los castigados aún resuenan en el sitio, advirtiendo sobre el respeto a las costumbres.`,
+    img: "./public/assets/img/Azotes.png"
+  },
+  {
+    titulo: "El cuidador del bosque (Ajkanul)",
+    descripcion: "De un libro reciente de leyendas mayas, esta historia destaca la valentía de guerreros y el respeto a la naturaleza...",
+    detalle: `Ajkanul, un guardián del bosque, protege la selva de amenazas, fusionando elementos ancestrales con lecciones sobre familia y rituales. Aunque no exclusiva de Felipe Carrillo Puerto, se relaciona con la cosmovisión de comunidades quintanarroenses.`,
+    img: "./public/assets/img/Ajkanul.png"
+  },
+  {
+    titulo: "Xunaan Tunich: La piedra mujer",
+    descripcion: "En Muna (Yucatán, pero con paralelos en Quintana Roo), Saasil Eek, hija de un sacerdote, se enamora de un guerrero enemigo y queda embarazada...",
+    detalle: `Su padre la mata y entierra, dejando su busto expuesto en una cueva como humillación. El cuerpo se petrifica, visible aún hoy. Advierte sobre la castidad y conflictos sociales en la era prehispánica, común en relatos de la península.
+Hay muchas más en antologías universitarias y orales, como variaciones de aluxes o espíritus en cenotes. Si quieres enfocarte en una temática (ej. más sobre justicia o naturaleza) o versiones completas, dime para buscar más detalles.
+`,
+    img: "./public/assets/img/Piedra-Mujer.png"
+  },
+  {
+    titulo: "El Boop (o Boob): La bestia fétida",
+    descripcion: "Una criatura peluda y maloliente que ataca a viajeros solitarios en la selva, causando vómitos y muerte. Advierte sobre los peligros de la noche y el respeto al inframundo maya...",
+    detalle: `Dicen los abuelos que, en los montes profundos de la antigua tierra maya, existe un ser que nadie desea encontrar.
+No corre rápido como el venado ni ruge como el jaguar.
+Su presencia no se anuncia con pisadas, sino con algo peor:
+un olor tan fuerte y tan podrido que se clava en el pecho y hace temblar el alma.
+
+A ese ser lo llaman El Boop, La Bestia Fétida.
+
+Cuentan que, hace mucho tiempo, cuando los hombres comenzaron a abrir caminos entre la selva, molestaron a ciertos espíritus antiguos que dormían bajo la tierra húmeda. Entre ellos estaba el Boop, guardián oscuro del monte, encargado de mantener lejos a cualquiera que no respetara la naturaleza.
+
+No era una criatura hecha de carne viva, sino un espíritu atrapado en el cuerpo de un animal grande y pesado, parecido a un cerdo salvaje, cubierto de lodo y heridas viejas que jamás cicatrizaban. Sus ojos brillaban como brasas, y su aliento era tan espeso que marchitaba las hojas a su paso.
+
+Dicen que, cuando el Boop despierta, la selva entera guarda silencio.
+Ni los grillos cantan.
+Ni los árboles se mueven.
+Y solo entonces, desde esa quietud profunda, surge el hedor:
+un olor tan intenso que hace llorar, marear y perderse a quien lo respira.
+
+Los antiguos caminantes sabían que, si ese olor aparecía en el camino, no debían avanzar.
+Porque el Boop no ataca por hambre.
+Ataca a quienes desafían su advertencia.
+
+Una vez, un cazador que no creía en cuentos decidió seguir adelante aunque el aire se hubiera vuelto irrespirable. Cada paso lo llevaba más hondo al monte, donde el olor se hacía más denso. De pronto, el suelo se volvió blando como lodo fresco y las sombras parecían moverse solas.
+
+Allá, entre los árboles, vio dos ojos encendidos.
+Y antes de que pudiera levantar su antorcha, el Boop se levantó ante él, enorme, cubierto de barro y heridas purulentas. El cazador sintió que el aire se volvía pesado como piedra. Quiso correr, pero sus piernas ya no le respondían.
+Dicen que nadie volvió a verlo.
+
+Desde entonces, los abuelos repiten siempre las mismas palabras:
+
+“Si el monte te avisa con su olor, retrocede.
+El Boop no persigue:
+espera a que tú seas quien decida perderse.”
+
+Algunos creen que es una criatura maldita.
+Otros, un espíritu que protege la selva.
+Pero todos coinciden en algo:
+
+De noche, en los montes de la Península, el Boop aún camina,
+silencioso, invisible, apestado…
+esperando a quien ignore su advertencia.`,
+    img: "./public/assets/img/Boop.png"
+  },
+
 ];
 
 // ================= MODAL "LEER MÁS" =================
@@ -934,7 +1090,7 @@ const abrirModalLeyenda = (data) => {
   if (!modalLeyenda || !modalTitle || !modalText || !modalImg) return;
 
   modalTitle.textContent = data.titulo;
-  modalText.textContent = data.detalle;
+  modalText.innerHTML = data.detalle;
   modalImg.src = data.img || "";
   modalLeyenda.classList.add("is-open");
   document.body.classList.add("modal-open");
