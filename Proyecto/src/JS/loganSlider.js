@@ -1160,74 +1160,196 @@ if (leyendasSlider && leyendasSlides.length > 0 && leyendasBtn) {
 
 
 
-
 /// ===========SSECCION PARA ARTESANIASSSS =======!!!!!!!!
-//==============DATOS DE ARTESANIAS ===========!!
-// ================ DATOS DE ARTESANÍAS =================
-const artesaniasInfo = [
-  {
-    titulo: "Artesanía 1",
-    descripcion: "Descripción detallada de la artesanía 1: materiales, significado y quién la elabora.",
-    imagen: "./public/assets/img/artesania1.jpg"
-  },
-  {
-    titulo: "Artesanía 2",
-    descripcion: "Descripción completa de la artesanía 2...",
-    imagen: "./public/assets/img/artesania2.jpg"
-  },
-  {
-    titulo: "Artesanía 3",
-    descripcion: "Descripción completa de la artesanía 3...",
-    imagen: "./public/assets/img/artesania3.jpg"
-  },
-  {
-    titulo: "Artesanía 4",
-    descripcion: "Descripción completa de la artesanía 4...",
-    imagen: "./public/assets/img/artesania4.jpg"
-  },
-  {
-    titulo: "Artesanía 5",
-    descripcion: "Descripción completa de la artesanía 5...",
-    imagen: "./public/assets/img/artesania5.jpg"
-  },
-  {
-    titulo: "Artesanía 6",
-    descripcion: "Descripción completa de la artesanía 6...",
-    imagen: "./public/assets/img/artesania6.jpg"
-  }
-];
+// Datos de las artesanías por categoría
+const artesaniasData = {
+  "textiles-bordados": [
+    {
+      img: "./public/assets/img/textil1.jpg",
+      title: "Blusa bordada",
+      description: "Bordado a mano con flor tradicional."
+    },
+    {
+      img: "./public/assets/img/textil2.jpg",
+      title: "Huipil tradicional",
+      description: "Diseño de origen ancestral."
+    }
+  ],
 
-// ================ MODAL ARTESANÍAS =================
-const artesaniaCards = document.querySelectorAll(".artesanias .artesania-card");
+   "tallado-madera": [
+    {
+      img: "./public/assets/img/tallado1.jpg",
+      title: "Máscara ceremonial",
+      description: "Tallada en madera de chicozapote."
+    },
+    {
+      img: "./public/assets/img/tallado2.jpg",
+      title: "Figuras prehispánicas",
+      description: "Recreaciones detalladas inspiradas en arte maya."
+    }
+  ],
 
+    "ceramica-alfareria": [
+    {
+      img: "./public/assets/img/cera1.jpg",
+      title: "Plato de barro",
+      description: "Decoración con pintura natural."
+    }
+  ],
+
+    "cesteria-palma": [
+    {
+      img: "./public/assets/img/cera1.jpg",
+      title: "Plato de barro",
+      description: "Decoración con pintura natural."
+    }
+  ],
+
+
+  "joyeria-artesanal": [
+    {
+      img: "./public/assets/img/joya1.jpg",
+      title: "Pulsera de cuentas",
+      description: "Hecha a mano con semillas y piedras naturales."
+    },
+    {
+      img: "./public/assets/img/joya2.jpg",
+      title: "Collar tradicional",
+      description: "Diseño inspirado en símbolos mayas."
+    },
+    {
+      img: "./public/assets/img/joya3.jpg",
+      title: "Aretes artesanales",
+      description: "Trabajo minucioso con técnicas tradicionales."
+    }
+  ],
+
+   "velas-tradicionales": [
+    {
+      img: "./public/assets/img/joya1.jpg",
+      title: "Pulsera de cuentas",
+      description: "Hecha a mano con semillas y piedras naturales."
+    },
+    {
+      img: "./public/assets/img/joya2.jpg",
+      title: "Collar tradicional",
+      description: "Diseño inspirado en símbolos mayas."
+    },
+    {
+      img: "./public/assets/img/joya3.jpg",
+      title: "Aretes artesanales",
+      description: "Trabajo minucioso con técnicas tradicionales."
+    }
+  ],
+
+  "instrumentos-musicales": [
+    {
+      img: "./public/assets/img/joya1.jpg",
+      title: "Pulsera de cuentas",
+      description: "Hecha a mano con semillas y piedras naturales."
+    },
+    {
+      img: "./public/assets/img/joya2.jpg",
+      title: "Collar tradicional",
+      description: "Diseño inspirado en símbolos mayas."
+    },
+    {
+      img: "./public/assets/img/joya3.jpg",
+      title: "Aretes artesanales",
+      description: "Trabajo minucioso con técnicas tradicionales."
+    }
+  ],
+
+  "figuras-esculturas": [
+    {
+      img: "./public/assets/img/joya1.jpg",
+      title: "Pulsera de cuentas",
+      description: "Hecha a mano con semillas y piedras naturales."
+    },
+    {
+      img: "./public/assets/img/joya2.jpg",
+      title: "Collar tradicional",
+      description: "Diseño inspirado en símbolos mayas."
+    },
+    {
+      img: "./public/assets/img/joya3.jpg",
+      title: "Aretes artesanales",
+      description: "Trabajo minucioso con técnicas tradicionales."
+    }
+  ],
+
+  "jicaras-calabazas": [
+    {
+      img: "./public/assets/img/joya1.jpg",
+      title: "Pulsera de cuentas",
+      description: "Hecha a mano con semillas y piedras naturales."
+    },
+    {
+      img: "./public/assets/img/joya2.jpg",
+      title: "Collar tradicional",
+      description: "Diseño inspirado en símbolos mayas."
+    },
+    {
+      img: "./public/assets/img/joya3.jpg",
+      title: "Aretes artesanales",
+      description: "Trabajo minucioso con técnicas tradicionales."
+    }
+  ],
+};
+
+// 1. Seleccionar las tarjetas del grid principal
+const artesaniaCards = document.querySelectorAll(".artesanias-grid .artesania-card");
+
+// 2. Elementos del modal
 const modalArtesania = document.getElementById("modal-artesania");
-const modalArtTitle = modalArtesania?.querySelector(".modal-artesania__title");
-const modalArtText = modalArtesania?.querySelector(".modal-artesania__text");
-const modalArtImg = modalArtesania?.querySelector(".modal-artesania__img");
-const modalArtClose = modalArtesania?.querySelector(".modal-artesania__close");
-const modalArtOverlay = modalArtesania?.querySelector(".modal-artesania__overlay");
+const modalArtTitle = modalArtesania.querySelector(".modal-artesania__title");
+const modalArtGrid = modalArtesania.querySelector(".modal-artesania__grid");
+const modalArtClose = modalArtesania.querySelector(".modal-artesania__close");
+const modalArtOverlay = modalArtesania.querySelector(".modal-artesania__overlay");
 
-// Al hacer click en cada tarjeta de artesanía
-artesaniaCards.forEach((card, index) => {
+// 3. Al hacer clic en cualquier tarjeta
+artesaniaCards.forEach(card => {
   card.addEventListener("click", () => {
-    const data = artesaniasInfo[index];
-    if (!data || !modalArtesania || !modalArtTitle || !modalArtText || !modalArtImg) return;
 
-    modalArtTitle.textContent = data.titulo;
-    modalArtText.textContent = data.descripcion;
-    modalArtImg.src = data.imagen;
+    const categoryId = card.getAttribute("data-id");
+    const items = artesaniasData[categoryId];
 
+    if (!items) return;
+
+    // Título del modal
+    modalArtTitle.textContent = categoryId.replace(/-/g, " ").toUpperCase();
+
+    // Limpiar grid
+    modalArtGrid.innerHTML = "";
+
+    // Crear cada tarjeta interna del modal
+    items.forEach(item => {
+      const article = document.createElement("article");
+      article.classList.add("artesania-card");
+
+      article.innerHTML = `
+        <div class="artesania-card__img-contenedor">
+          <img src="${item.img}" alt="${item.title}" class="artesania-card__img">
+        </div>
+
+        <h3 class="artesania-card__title">${item.title}</h3>
+
+        <p>${item.description}</p>
+      `;
+
+      modalArtGrid.appendChild(article);
+    });
+
+    // Abrir el modal
     modalArtesania.classList.add("is-open");
     document.body.classList.add("modal-open");
   });
 });
 
-// Cerrar modal (botón y overlay)
+// 4. Cerrar modal
 [modalArtClose, modalArtOverlay].forEach(el => {
-  if (!el) return;
   el.addEventListener("click", () => {
     modalArtesania.classList.remove("is-open");
     document.body.classList.remove("modal-open");
   });
 });
-
