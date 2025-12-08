@@ -1,14 +1,17 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>proyecto</title>
-  </head>
-  <body>
+<html lang="es">
 
-    
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto</title>
+
+  <!-- Aquí luego enlazan TODOS los CSS -->
+</head>
+
+<body>
+
     <!-- SECCIÓN DE COMENTARIOS -->
 <section id="comentarios-section">
   <h2>Comentarios</h2>
@@ -22,23 +25,57 @@
       required
     />
 
-    <label for="mensaje">Comentario</label>
-    <textarea
-      id="mensaje"
-      placeholder="Escribe tu comentario..."
-      required
-    ></textarea>
+            <label for="mensaje">Comentario</label>
+            <!-- Campo de texto largo para el comentario del usuario -->
+            <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
 
-    <button type="submit">Enviar comentario</button>
-  </form>
+            <!-- Botón que dispara el submit, manejado por JS con addEventListener("submit", ...) -->
+            <button type="submit" class="btn-enviar">Enviar comentario</button>
+          </form>
 
-  <h3>Comentarios recientes</h3>
-  <div id="listaComentarios">
-    <!-- Aquí se van a pintar los comentarios -->
-  </div>
-</section>
+          <!-- Contenedor de posibles comentarios debajo del formulario 
+               (en tu JS lo mantienes vacío a propósito) -->
+          <div id="listaComentarios" class="comentarios__lista">
+            <!-- Aquí pinta comentario.js -->
+          </div>
 
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+          <!-- Botón que abre el modal con TODOS los comentarios -->
+          <div class="comentarios__more">
+            <button id="btnMas" class="btn-mas">
+              <span class="flecha">➜</span>
+              Leer comentarios
+            </button>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- MODAL DE COMENTARIOS (se abre al pulsar "Leer comentarios") -->
+      <div id="modalComentarios" class="comentarios-modal">
+        <!-- Fondo oscuro del modal -->
+        <div class="comentarios-modal__overlay"></div>
+
+        <!-- Contenedor blanco del modal donde se muestran los comentarios -->
+        <div class="comentarios-modal__content">
+          <!-- Botón X para cerrar el modal -->
+          <button id="cerrarModalComentarios" class="comentarios-modal__close">&times;</button>
+          <!-- Título dentro del modal -->
+          <h3 class="comentarios-modal__title">Todos los comentarios</h3>
+
+          <!-- Contenedor donde JS inserta TODOS los comentarios renderizados -->
+          <div id="listaComentariosModal" class="comentarios__lista">
+            <!-- Aquí se pintan TODOS los comentarios -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Script de Vite -->
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

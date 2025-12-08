@@ -1,0 +1,191 @@
+/*SLIDER MAYA*/
+
+/* Contenedor principal del slider (flechas + tarjetas) */
+.slider-maya {
+  position: relative;        /* El contenedor sirve de referencia para posicionar elementos internos (por ejemplo, flechas absolutas si las usara). */
+  margin: auto;              /* Centra horizontalmente el slider dentro de su contenedor padre. */
+  display: flex;             /* Coloca las flechas y el track en una misma fila. */
+  align-items: center;       /* Alinea verticalmente al centro las flechas y el track. */
+  gap: 1rem;                 /* Deja un espacio de 1rem entre las flechas y el track. */
+  max-width: 1600px;         /* Limita el ancho máximo del slider para que no se expanda demasiado en pantallas grandes. */
+  width: 100%;               /* Permite que el slider ocupe todo el ancho disponible hasta llegar al max-width. */
+}
+
+/* Carril donde van todas las tarjetas (slides) */
+.slider-track {
+  display: flex;             /* Coloca las tarjetas .slide una junto a la otra en fila. */
+  overflow-x: auto;          /* Permite desplazarse horizontalmente cuando no caben todas las tarjetas. */
+  scroll-behavior: smooth;   /* Hace que el scroll horizontal sea suave (usado también con scrollBy en JS). */
+  gap: 1.5rem;               /* Deja espacio entre cada tarjeta para que no queden pegadas. */
+  padding: 1rem;             /* Agrega separación interna alrededor de las tarjetas. */
+}
+
+/* Personalización de la barra de scroll (para navegadores WebKit) */
+.slider-track::-webkit-scrollbar {
+  display: none;             /* Oculta la barra de desplazamiento para que no se vea la línea gris. */
+}
+
+/* Tarjeta individual del slider (cada tema maya) */
+.slide {
+  min-width: 48%;            /* Cada tarjeta ocupa casi la mitad del ancho visible (cabem dos a la vez en pantallas grandes). */
+  background: #ffffff;       /* Fondo blanco para contraste con el fondo de la página. */
+  padding: 1rem;             /* Espaciado interno para que el contenido no pegue a los bordes. */
+  border-radius: 12px;       /* Bordes redondeados para un aspecto más moderno. */
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);  /* Sombra suave para que parezca una tarjeta elevada. */
+  display: flex;             /* Usamos flexbox para acomodar los elementos internos (imagen, texto, link). */
+  flex-direction: column;    /* Ordena los elementos internos en columna: primero imagen, luego texto y enlace. */
+  gap: .7rem;                /* Espacio vertical entre los elementos internos. */
+}
+
+/* Imagen dentro de la tarjeta */
+.slide img {
+  width: 100%;               /* La imagen ocupa todo el ancho disponible de la tarjeta. */
+  height: auto;              /* La altura se ajusta proporcionalmente al ancho. */
+  aspect-ratio: 16 / 9;      /* Fuerza a la imagen a mantener proporción similar a un video (16:9). */
+  object-fit: cover;         /* Hace que la imagen rellene el espacio recortando lo que sobre sin deformarse. */
+  border-radius: 10px;       /* Bordes redondeados para que coincidan con el estilo de la tarjeta. */
+}
+
+/* Título del slide */
+.slide h3 {
+  font-size: 1.3rem;         /* Tamaño de fuente un poco más grande que el texto normal. */
+  margin: 0;                 /* Quita el margen por defecto del h3 para controlar mejor el espaciado. */
+}
+
+/* Párrafo de resumen del slide */
+.slide p {
+  color: #333;               /* Color de texto gris oscuro para mejor legibilidad. */
+  font-size: .9rem;          /* Tamaño ligeramente más pequeño para diferenciarlo del título. */
+}
+
+/* Enlace "Ver más" dentro del slide */
+.slide-link {
+  margin-top: .4rem;         /* Un pequeño espacio por encima del enlace para separarlo del párrafo. */
+  font-weight: bold;         /* Texto en negritas para que se note como acción. */
+  color: #4d5328;            /* Color verde característico (paleta maya). */
+  cursor: pointer;           /* Cambia el cursor a mano para indicar que es clickeable. */
+  font-size: .9rem;          /* Tamaño similar al del párrafo para mantener proporción. */
+}
+
+/*FLECHAS DEL SLIDER*/
+
+.slider-btn {
+  border: none;              /* Quita el borde por defecto del botón. */
+  background: #ffffff;       /* Fondo blanco del botón para destacar sobre el fondo. */
+  color: #4d5328;            /* Color del ícono/flecha (verde de la paleta). */
+  font-size: 1.8rem;         /* Tamaño grande del ícono (❮ ❯). */
+  padding: .5rem 1rem;       /* Relleno interno para que el botón no quede muy pequeño. */
+  border-radius: 50%;        /* Bordes redondeados al 100%, formando un círculo. */
+  cursor: pointer;           /* Cursor de mano al pasar encima. */
+  box-shadow: 0 4px 12px rgba(0,0,0,.15); /* Sombra para simular un botón flotante. */
+}
+
+/* Estilo al pasar el mouse por encima de la flecha */
+.slider-btn:hover {
+  background: #eae6dc;       /* Cambia ligeramente el color de fondo al hacer hover. */
+}
+
+/*RESPONSIVE*/
+/* En pantallas pequeñas (máximo 768px de ancho) */
+@media (max-width: 768px) {
+  .slide {
+    min-width: 90%;          /* Cada tarjeta ocupa casi todo el ancho: se muestra solo una a la vez. */
+  }
+}
+
+/*MODAL VER MÁS*/
+
+/* Contenedor general del modal (cubre toda la ventana) */
+.modal-vermas {
+  position: fixed;           /* Se posiciona relativo a la ventana, no al contenido (queda flotando sobre todo). */
+  inset: 0;                  /* Equivalente a top:0; right:0; bottom:0; left:0; ocupa toda la pantalla. */
+  display: flex;             /* Usa flexbox para centrar el contenido interno. */
+  align-items: center;       /* Centra verticalmente el contenido del modal. */
+  justify-content: center;   /* Centra horizontalmente el contenido del modal. */
+  z-index: 60;               /* Se coloca por encima de otros elementos de la página. */
+
+  opacity: 0;                /* Invisible por defecto. */
+  pointer-events: none;      /* No recibe clics mientras está oculto (deja pasar los eventos hacia lo de atrás). */
+  transition: opacity 0.25s ease; /* Transición suave al cambiar la opacidad al abrir/cerrar. */
+}
+
+/* Estado del modal cuando está abierto (se le añade la clase is-open con JS) */
+.modal-vermas.is-open {
+  opacity: 1;                /* Vuelve visible el contenedor general. */
+  pointer-events: auto;      /* Ahora sí recibe clics e interacciones. */
+}
+
+/* Capa oscura detrás del contenido del modal */
+.modal-vermas__overlay {
+  position: absolute;        /* Se posiciona dentro del contenedor del modal. */
+  inset: 0;                  /* Cubre todo el área del modal, de borde a borde. */
+  background: rgba(0, 0, 0, 0.45);   /* Fondo negro semitransparente (efecto de oscurecer el fondo). */
+}
+
+/* Contenedor blanco con el contenido del modal (tarjeta central) */
+.modal-vermas__content {
+  position: relative;        /* Permite posicionar elementos internos como el botón de cerrar. */
+  background: #ffffff;       /* Fondo blanco para el contenido del texto. */
+  max-width: 720px;          /* Ancho máximo del cuadro del modal. */
+  width: 90%;                /* Ocupa el 90% del ancho de la pantalla en tamaños pequeños. */
+  max-height: 85vh;          /* Limita la altura al 85% del alto de la ventana (si el texto es muy largo hace scroll interno). */
+  border-radius: 20px;       /* Bordes redondeados para estilo de tarjeta. */
+  box-shadow: 0 15px 35px rgba(0,0,0,.25); /* Sombra más fuerte para resaltar sobre el overlay oscuro. */
+  padding: 20px;             /* Espaciado interno alrededor del contenido. */
+  overflow-y: auto;          /* Si el contenido es más largo que el alto, permite scroll vertical dentro del modal. */
+
+  transform: translateY(10px) scale(0.97); 
+  /* Comienza levemente hacia abajo y un poco reducido para animarlo al entrar. */
+  opacity: 0;                /* Empieza invisible (aunque el contenedor general ya está visible). */
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  /* Anima tanto el movimiento/escala como la opacidad cuando cambian. */
+}
+
+/* Cuando el modal está abierto, animamos el cuadro blanco a su posición final */
+.modal-vermas.is-open .modal-vermas__content {
+  transform: translateY(0) scale(1); /* Lo regresa a su posición original y tamaño normal. */
+  opacity: 1;                        /* Lo vuelve visible. */
+}
+
+/* Imagen que aparece en la parte superior del modal */
+.modal-vermas__img {
+  width: 100%;               /* La imagen ocupa todo el ancho del modal. */
+  height: auto;              /* La altura se adapta según la proporción original. */
+  max-height: 230px;         /* Altura máxima para que la imagen no sea demasiado grande. */
+  object-fit: contain;       /* Ajusta la imagen para que se vea completa sin recortarse. */
+  display: block;            /* Se asegura de que la imagen sea un elemento de bloque (ocupa toda la línea). */
+  border-radius: 15px;       /* Bordes redondeados para mantener la estética general. */
+  margin-bottom: 1.4rem;     /* Espacio hacia abajo para separar la imagen del texto. */
+}
+
+/* Contenedor del texto dentro del modal */
+.modal-vermas__body {
+  padding: 0 0.6rem 0.8rem;  /* Relleno lateral y en la parte de abajo para que el texto no pegue al borde. */
+}
+
+/* Título del modal */
+.modal-vermas__title {
+  font-size: 1.6rem;         /* Tamaño de fuente grande para destacar el título. */
+  font-weight: bold;         /* Negritas para dar importancia. */
+  margin-bottom: 0.8rem;     /* Espacio hacia abajo para separar del texto. */
+  text-align: left;          /* Alineación del título a la izquierda. */
+}
+
+/* Texto principal del modal */
+.modal-vermas__text {
+  color: #333;               /* Color gris oscuro para buena legibilidad. */
+  line-height: 1.6;          /* Altura de línea amplia para que el texto largo sea cómodo de leer. */
+  font-size: 1rem;           /* Tamaño estándar del texto. */
+}
+
+/* Botón para cerrar el modal (la X en la esquina) */
+.modal-vermas__close {
+  position: absolute;        /* Se posiciona relativamente al contenedor blanco del modal. */
+  top: 0.8rem;               /* Separado 0.8rem de la parte superior. */
+  right: 1rem;               /* Separado 1rem del borde derecho. */
+  border: none;              /* Sin borde alrededor del botón. */
+  background: transparent;   /* Fondo transparente, solo se ve el ícono (la X). */
+  font-size: 1.8rem;         /* Tamaño grande para que la X sea visible. */
+  cursor: pointer;           /* Manita al pasar el mouse. */
+  color: #333;               /* Color gris oscuro del ícono. */
+}
