@@ -1443,6 +1443,10 @@ const modalArtGrid = modalArtesania.querySelector(".modal-artesania__grid");
 const modalArtClose = modalArtesania.querySelector(".modal-artesania__close");
 const modalArtOverlay = modalArtesania.querySelector(".modal-artesania__overlay");
 
+if (modalArtesania.parentElement !== document.body) {
+    document.body.appendChild(modalArtesania);
+}
+
 // 3. Evento clic — abrir modal
 artesaniaCards.forEach(card => {
   card.addEventListener("click", () => {

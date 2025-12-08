@@ -156,15 +156,22 @@
 }
 
 
-/* Solo afecta a las imágenes dentro del modal */
+/* BLOQUEA los estilos del grid principal dentro del modal */
 .modal-artesania__grid .artesania-card__img-contenedor {
     width: 220px !important;
     height: 220px !important;
+    aspect-ratio: unset !important;
     border-radius: 50% !important;
-    object-fit: cover !important;
-    display: block;
-    margin: 0 auto 12px;
+    overflow: hidden !important;
 }
+
+/* Imagen dentro del modal */
+.modal-artesania__grid .artesania-card__img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
 
 .artesania-card__title {
     color: black;
@@ -225,7 +232,7 @@
     border-radius: 14px;
 }
 
-.artesanias:hover {
-    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
+body.modal-open .artesanias {
+    transform: none !important;
+    box-shadow: none !important;
 }
