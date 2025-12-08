@@ -4,7 +4,7 @@
 
 .cultura {
     max-width: 1600px;
-    margin: 0 auto;
+    margin: auto;
     background-color: var(--color-beige);
 }
 
@@ -51,10 +51,13 @@
     width: 100%;
     max-width: 260px;
     aspect-ratio: 1 / 1;
-    background-color: #9ea39e;
+    background-size: cover;     /* La imagen cubre todo */
+    background-position: center; /* Centrada dentro del cuadro */
     border-radius: 24px;
-    margin-bottom: 8px;
+    margin: 0 auto 8px auto;     /* 🔥 Centra horizontalmente */
 }
+
+
 
 /* Título y flecha */
 .cultura-card__title {
@@ -148,4 +151,25 @@
 #modal-cultura-body p {
     margin: 6px 0;
     line-height: 1.45;
+}
+
+/* Línea divisoria entre cada item de cultura */
+.cultura-item {
+    padding: 16px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.cultura-item:first-of-type {
+    border-top: none;
+    /* primera no tiene línea */
+}
+
+/* Imagen de cada item */
+.cultura-item__img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 10px;
+    display: block;
+    margin: 8px auto 10px auto;
+    object-fit: cover;
 }
