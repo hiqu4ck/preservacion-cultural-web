@@ -1,6 +1,6 @@
 // Contenido que se mostrará en el modal según la tarjeta
 const datosComidas = {
-    dulces: `
+  dulces: `
       <h2>Dulces y Snacks</h2>
 
       <div class="platillo">
@@ -77,7 +77,7 @@ const datosComidas = {
       </div>
     
     `,
-    comidas: `
+  comidas: `
       <h2>Comidas tradicionales mayas</h2>
 
       <div class="platillo">
@@ -106,7 +106,7 @@ const datosComidas = {
         <p><strong>Costumbres y prácticas comunitarias:</strong> Se prepara colectivamente por las mujeres, mientras los hombres realizan oraciones en el altar del monte.</p>
       </div>
     `,
-    bebidas: `
+  bebidas: `
       <h2>Bebidas tradicionales mayas</h2>
 
       <div class="platillo">
@@ -132,17 +132,18 @@ const cerrarBtn = modal.querySelector('.modal-close');
 
 // Abrir modal cuando se hace clic en una tarjeta
 document.querySelectorAll('.seccion-comidas .tarjeta').forEach(tarjeta => {
-    tarjeta.addEventListener('click', () => {
-        const tipo = tarjeta.dataset.tipo;
-        modalBody.innerHTML = datosComidas[tipo] || '<p>No hay información disponible.</p>';
-        modal.classList.add('activo');
-    });
+  tarjeta.addEventListener('click', () => {
+    const tipo = tarjeta.dataset.tipo;
+    modalBody.innerHTML = datosComidas[tipo] || '<p>No hay información disponible.</p>';
+    modal.classList.add('activo');
+  });
 });
 
 // Cerrar modal al hacer clic en la X o en el overlay
 function cerrarModal() {
-    modal.classList.remove('activo');
+  modal.classList.remove('activo');
 }
 
 cerrarBtn.addEventListener('click', cerrarModal);
 overlay.addEventListener('click', cerrarModal);
+

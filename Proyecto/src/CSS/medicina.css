@@ -73,3 +73,109 @@
 .btn-explorar:hover {
     background: var(--color-primario-verde-oscuro);
 }
+
+/* =========================================================
+   MODAL MEDICINA TRADICIONAL — ESTILOS COMPLETOS
+   ========================================================= */
+
+.modal-medicina {
+    position: fixed;
+    inset: 0;
+    display: none;
+    /* oculto por defecto */
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    font-family: inherit;
+}
+
+.modal-medicina.activo {
+    display: flex;
+    /* se muestra cuando tiene la clase "activo" */
+}
+
+.modal-medicina__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.modal-medicina__content {
+    position: relative;
+    background: #fff;
+    width: 95%;
+    max-width: 1000px;
+    max-height: 90vh;
+    padding: 24px 32px 28px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.modal-medicina__close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal-medicina__title {
+    text-align: center;
+    margin: 0 0 24px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GRID DE REMEDIOS
+   ========================================================= */
+
+.remedios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px 40px;
+}
+
+.remedio-card {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.remedio-card__img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+.remedio-card__title {
+    font-size: 16px;
+    margin: 0 0 6px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ETIQUETAS DE PREPARACIÓN Y USO
+   ========================================================= */
+
+.remedio-label {
+    font-weight: 600;
+}
+
+.remedio-label--prep {
+    color: #c97e1f;
+    /* naranja */
+}
+
+.remedio-label--uso {
+    color: #2154c9;
+    /* azul */
+}

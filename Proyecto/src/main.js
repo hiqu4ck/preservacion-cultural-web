@@ -9,6 +9,7 @@ import './CSS/video.css';
 import './CSS/comida.css';
 import './JS/comidas.js';
 import './CSS/medicina.css';
+import './JS/medicina.js';
 import './CSS/comentarios.css';
 import './JS/comentarios.js';
 import './JS/loganSlider.js'
