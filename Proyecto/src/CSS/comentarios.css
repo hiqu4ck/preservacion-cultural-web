@@ -1,0 +1,231 @@
+/*CONTENEDOR DETRÁS*/
+.comentarios-bg {
+  background: #727348;         /* Fondo verde militar, consistente con otras secciones del sitio. */
+  width: 100%;                 /* El contenedor ocupa todo el ancho disponible. */
+  padding: 4rem 0;             /* Espaciado vertical grande arriba y abajo. */
+  display: flex;               /* Se usa flexbox para poder centrar el contenido interno. */
+  justify-content: center;     /* Centra horizontalmente la tarjeta de comentarios. */
+  max-width: 1600px;           /* Limita el ancho total de la sección. */
+  margin: auto;                /* Centra la sección en la página cuando el ancho es menor al máximo. */
+}
+
+/*TARJETA DE COMENTARIOS*/
+.comentarios {
+  background: #fdfbf6;         /* Fondo beige claro para contrastar con el verde exterior. */
+  border-radius: 20px;         /* Bordes redondeados para un estilo moderno. */
+  width: 100%;                 /* Ocupa todo el ancho disponible dentro del contenedor padre. */
+  max-width: 900px;            /* Tamaño máximo de la tarjeta para evitar que se haga demasiado ancha. */
+  padding: 3rem 3rem 2.5rem;   /* Espacio interno: arriba/lados 3rem, abajo 2.5rem. */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18); /* Sombra para dar sensación de elevación. */
+  position: relative;          /* Permite posicionar elementos internos de forma absoluta si es necesario. */
+}
+
+/*TÍTULO DE LA SECCIÓN*/
+.comentarios__titulo {
+  text-align: center;          /* Centra el título horizontalmente. */
+  font-size: 2.2rem;           /* Tamaño grande para destacarlo. */
+  font-weight: 700;            /* Negritas fuertes. */
+  letter-spacing: 3px;         /* Espaciado entre letras para estilo más elegante y limpio. */
+  margin-bottom: 2.5rem;       /* Espacio debajo del título. */
+  color: #000;                 /* Texto negro para máximo contraste. */
+}
+
+/*FORMULARIO*/
+.comentarios__form {
+  display: flex;               /* Organiza los elementos del formulario con flexbox. */
+  flex-direction: column;      /* Coloca cada campo uno debajo del otro. */
+  gap: 1.3rem;                 /* Espacio vertical uniforme entre los campos. */
+}
+
+.comentarios__form input,
+.comentarios__form textarea {
+  padding: 1rem;               /* Relleno interno para facilitar la lectura y el clic. */
+  border: 1px solid #c5c3bc;   /* Borde gris claro. */
+  border-radius: 12px;         /* Bordes redondeados. */
+  font-size: 1rem;             /* Tamaño de texto estándar. */
+  background: #fff;            /* Fondo blanco para los campos. */
+  transition: 0.2s ease;       /* Transición suave cuando el usuario enfoca el campo. */
+}
+
+.comentarios__form input:focus,
+.comentarios__form textarea:focus {
+  border-color: #4d5328;       /* El borde se vuelve verde cuando recibe enfoque. */
+  outline: none;               /* Quita el borde azul predeterminado del navegador. */
+  box-shadow: 0 0 0 3px rgba(77,83,40,0.2); /* Resplandor (glow) verde alrededor del campo. */
+}
+
+/*BOTÓN DE ENVIAR*/
+.btn-enviar {
+  width: 180px;                /* Ancho fijo para que el botón sea consistente. */
+  padding: 0.85rem;            /* Relleno interno para hacerlo más cómodo. */
+  background: #4d5328;         /* Color verde característico de la paleta maya. */
+  color: #fff;                 /* Texto blanco para contraste. */
+  border-radius: 10px;         /* Bordes redondeados. */
+  font-size: 1rem;             /* Tamaño de texto estándar. */
+  cursor: pointer;             /* Cursor de mano al pasar encima. */
+  border: none;                /* Sin borde adicional. */
+  transition: 0.25s ease;      /* Suaviza la animación al pasar el mouse. */
+}
+
+.btn-enviar:hover {
+  background: #3c421f;         /* Cambia a un verde más oscuro en hover. */
+}
+
+/*LISTADO DE COMENTARIOS*/
+/* Oculto fuera del modal */
+.comentarios__lista {
+  display: none;               /* Aquí no se muestran comentarios; se muestran dentro del modal. */
+}
+
+/* Dentro del modal sí se muestran */
+.comentarios-modal .comentarios__lista {
+  display: flex;               /* Los comentarios se organizan con flexbox. */
+  flex-direction: column;      /* Cada comentario uno debajo del otro. */
+  gap: 1.5rem;                 /* Espacio entre tarjetas de comentario. */
+}
+
+/*MODAL DE COMENTARIOS*/
+
+/* Modal general */
+.comentarios-modal {
+  position: fixed;             /* Cubre toda la pantalla (como un overlay completo). */
+  inset: 0;                    /* top:0, bottom:0, left:0, right:0 → ocupa toda la ventana. */
+  display: flex;               /* Se usa flexbox para centrar la caja del modal. */
+  justify-content: center;     /* Centrado horizontal. */
+  align-items: center;         /* Centrado vertical. */
+  z-index: 999;                /* Capa más alta para que esté encima de todo. */
+
+  opacity: 0;                  /* Invisible por defecto. */
+  pointer-events: none;        /* No permite interacción mientras está cerrado. */
+  transition: opacity 0.3s ease; /* Suaviza la aparición/desaparición. */
+}
+
+.comentarios-modal.is-open {
+  opacity: 1;                  /* Modal visible. */
+  pointer-events: auto;        /* Ahora sí recibe interacciones. */
+}
+
+/* Fondo oscuro detrás del modal */
+.comentarios-modal__overlay {
+  position: absolute;          /* Cubre todo el contenedor del modal. */
+  inset: 0;                    /* Ocupa toda la pantalla. */
+  background: rgba(0, 0, 0, 0.45); /* Oscurece el fondo detrás del modal. */
+
+  opacity: 0;                  /* Invisible inicialmente. */
+  transition: opacity 0.3s ease;
+}
+
+.comentarios-modal.is-open .comentarios-modal__overlay {
+  opacity: 1;                  /* Overlay visible al abrir el modal. */
+}
+
+/* Contenido blanco del modal */
+.comentarios-modal__content {
+  position: relative;          /* Permite colocar la X de cerrar en la esquina. */
+  background: #fdfbf6;         /* Fondo beige claro similar al formulario. */
+  max-width: 800px;            /* Ancho máximo del modal. */
+  width: 90%;                  /* Se adapta al ancho de la pantalla en móviles. */
+  max-height: 80vh;            /* Altura máxima: si hay mucho contenido, hace scroll. */
+  padding: 1.8rem 1.5rem;      /* Espaciado interno. */
+  border-radius: 20px;         /* Bordes redondeados. */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25); /* Sombra fuerte para sobresalir. */
+  overflow-y: auto;            /* Permite scroll interno si el contenido es largo. */
+
+  transform: scale(0.85);      /* Empieza ligeramente pequeño para animación de entrada. */
+  opacity: 0;                  /* Invisible al inicio de la animación. */
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.comentarios-modal.is-open .comentarios-modal__content {
+  transform: scale(1);         /* Vuelve a tamaño normal en la animación. */
+  opacity: 1;                  /* Se vuelve visible. */
+}
+
+/*TARJETAS DE COMENTARIOS DENTRO DEL MODAL*/
+.comentarios-modal .comentario {
+  padding-bottom: 1.3rem;      /* Espaciado inferior entre comentarios. */
+  border-bottom: 1px solid #ccc; /* Línea divisoria entre cada comentario. */
+}
+
+/* Comentario individual */
+.comentario {
+  display: flex;               /* Flexbox para organizar el avatar y el texto. */
+  flex-direction: column;      /* En columna: usuario arriba, texto abajo. */
+  gap: .6rem;                  /* Separación entre elementos. */
+}
+
+.comentario__usuario {
+  display: flex;               /* Coloca avatar y nombre en fila. */
+  align-items: center;         /* Alinea verticalmente al centro. */
+  gap: .6rem;                  /* Espacio entre avatar y nombre. */
+  font-size: .9rem;            /* Tamaño de texto del nombre. */
+  font-weight: bold;           /* Negritas para destacar el nombre. */
+  color: #444;                 /* Color gris oscuro. */
+}
+
+.comentario__avatar {
+  width: 32px;                 /* Tamaño cuadrado del avatar. */
+  height: 32px;
+  background: #4d5328;         /* Fondo verde. */
+  color: white;                /* Letra blanca para contraste. */
+  font-weight: bold;           /* Inicial en negritas. */
+  border-radius: 50%;          /* Lo hace circular. */
+  display: flex;
+  justify-content: center;     /* Centra la letra dentro del círculo. */
+  align-items: center;
+}
+
+.comentario__texto {
+  font-size: .95rem;           /* Tamaño ligeramente más grande que el nombre. */
+  color: #333;                 /* Texto gris oscuro. */
+  line-height: 1.4;            /* Espaciado para facilitar la lectura. */
+}
+
+.comentarios-modal__title {
+  text-align: center;          /* Centra el título del modal. */
+  margin: 0 0 1.5rem;          /* Margen inferior para separarlo del contenido. */
+  letter-spacing: 1px;         /* Espaciado entre letras. */
+  font-size: 1.3rem;           /* Tamaño de fuente del título. */
+}
+
+/*BOTÓN DE CERRAR MODAL*/
+.comentarios-modal__close {
+  position: absolute;          /* Se posiciona relativo al cuadro del modal. */
+  top: 0.6rem;                 /* Distancia desde el borde superior. */
+  right: 0.7rem;               /* Distancia desde el borde derecho. */
+  border: none;                /* Sin borde. */
+  background: transparent;     /* Fondo transparente: solo se ve la X. */
+  font-size: 1.6rem;           /* Tamaño de la X. */
+  cursor: pointer;             /* Manita al pasar. */
+}
+
+/*BOTÓN "LEER MÁS" (abre el modal)*/
+.comentarios__more {
+  display: flex;               /* Usado para centrar el botón. */
+  justify-content: center;
+  margin-top: 2.5rem;          /* Espacio superior respecto al formulario. */
+}
+
+.btn-mas {
+  padding: 1rem 2.3rem;        /* Tamaño grande del botón. */
+  background: #4d5328;         /* Color verde. */
+  color: #fff;                 /* Texto blanco. */
+  border: none;                /* Sin borde. */
+  border-radius: 12px;         /* Bordes redondeados. */
+  cursor: pointer;             /* Cursor de mano. */
+  display: flex;               /* Permite alinear icono y texto. */
+  align-items: center;
+  gap: 1rem;                   /* Espacio entre flecha y texto. */
+  font-size: 1rem;             /* Tamaño de texto. */
+  transition: 0.25s ease;      /* Animación suave al pasar el mouse. */
+}
+
+.btn-mas:hover {
+  background: #3c421f;         /* Color verde más oscuro al pasar el mouse. */
+}
+
+.btn-mas .flecha {
+  font-size: 1.3rem;           /* Tamaño del ícono de flecha. */
+}

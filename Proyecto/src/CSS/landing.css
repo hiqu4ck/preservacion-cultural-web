@@ -116,6 +116,7 @@ body {
   overflow: hidden;
 }
 
+/* hijos absolutos */
 .hero__slide {
   position: absolute;
   top: 0;
@@ -216,6 +217,8 @@ body {
   background: var(--blanco);
 }
 
+/* ───────── CONTENIDO LENGUA ───────── */
+
 .section {
   background: var(--blanco);
   padding: 2.5rem 2.5rem 3rem;
@@ -239,6 +242,7 @@ body {
   margin-bottom: 1.1rem;
 }
 
+/* ───────── RESPONSIVE ───────── */
 
 @media (max-width: 800px) {
   .topbar {
@@ -255,7 +259,7 @@ body {
   }
 }
 
-/*  LOGO  */
+/* ───────── LOGO ───────── */
 
 .logo-wrapper {
   display: flex;
@@ -264,7 +268,7 @@ body {
 }
 
 .logo-img {
-  height: 45px;
+  height: 55px;
   width: auto;
 }
 

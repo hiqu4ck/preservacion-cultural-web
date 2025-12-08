@@ -1,0 +1,26 @@
+{
+  "name": "preservacion-cultural-web",
+  "version": "1.0.0",
+  "description": "esta es una aplicación web para la preservación de las culturas, costumbres y tradiciones mayas",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiqu4ck/preservacion-cultural-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hiqu4ck/preservacion-cultural-web/issues"
+  },
+  "homepage": "https://github.com/hiqu4ck/preservacion-cultural-web#readme",
+  "dependencies": {
+    "vite": "^7.2.7"
+  }
+}

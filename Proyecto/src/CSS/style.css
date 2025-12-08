@@ -8,7 +8,7 @@ html, body {
 #app, .page {
   width: 100%;
   max-width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -41,3 +41,30 @@ html, body {
   opacity: 0.9;
 }
 
+*, 
+*::after,
+*::before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Nunito Sans", sans-serif;
+    background: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: var(--naranja);
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+}
