@@ -12,11 +12,11 @@ function iniciarSliderTemas() {                // Declaro la función principal 
 
   if (sliderTrack && btnLeft && btnRight) {                     // Solo si existen estos tres elementos en el DOM, configuro los eventos.
     btnRight.addEventListener("click", () => {                  // Cuando se hace clic en la flecha derecha...
-      sliderTrack.scrollBy({ left: 400, behavior: "smooth" });  // ...desplazo el track 400px hacia la derecha con animación suave.
+      sliderTrack.scrollBy({ left: 800, behavior: "smooth" });  // ...desplazo el track 400px hacia la derecha con animación suave.
     });
 
     btnLeft.addEventListener("click", () => {                   // Cuando se hace clic en la flecha izquierda...
-      sliderTrack.scrollBy({ left: -400, behavior: "smooth" }); // ...desplazo el track 400px hacia la izquierda con animación suave.
+      sliderTrack.scrollBy({ left: -800, behavior: "smooth" }); // ...desplazo el track 400px hacia la izquierda con animación suave.
     });
   }
 
