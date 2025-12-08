@@ -1,11 +1,4 @@
-/* ================= SECCIÓN COMIDAS ================= */
-
-.comidas {
-    max-width: 1600px;
-    margin: auto;
-    text-align: center;
-    padding: 20px 0;
-}
+/* SECCIÓN COMIDAS */
 
 .seccion-comidas {
     max-width: 1600px;
@@ -15,7 +8,6 @@
     text-align: center;
 }
 
-/* Título */
 .titulo-comidas {
     color: #c97919;
     font-size: 28px;
@@ -23,7 +15,6 @@
     margin-bottom: 10px;
 }
 
-/* Descripción */
 .descripcion-comidas {
     max-width: 600px;
     margin: 0 auto 40px auto;
@@ -41,62 +32,142 @@
     margin: 0 auto;
 }
 
-/* Cada tarjeta */
+/* Cada tarjeta – COMO LAS TENÍAS ANTES */
 .tarjeta {
     width: 230px;
     border-radius: 22px;
     overflow: hidden;
     background-color: white;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    /* quitamos display:flex y flex-direction */
 }
 
-/* Imagen */
-.tarjeta-imagen {
-    background-color: #9ea39e;
-    height: 260px;
-    color: white;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Parte gris de arriba – alta */
+.tarjeta-imagen1,
+.tarjeta-imagen2,
+.tarjeta-imagen3 {
+    background-size: cover;        /* Ajusta imagen sin deformar */
+    background-position: center;   /* Centra la imagen */
+    background-repeat: no-repeat;  /* No repetir */
+    height: 260px;                 /* Alto de la tarjeta */
+    width: 100%;                   /* Asegura que ocupe todo el ancho */
+    border-radius: 0;              /* Mantener el borde igual */
 }
 
-/* Texto debajo */
+/* Imagen 1 */
+.tarjeta-imagen1 {
+    background-image: url("./assets/img/dulce-fondo.png");
+}
+
+/* Imagen 2 */
+.tarjeta-imagen2 {
+    background-image: url("./assets/img/fondo-comida.png");
+}
+
+/* Imagen 3 */
+.tarjeta-imagen3 {
+    background-image: url("./assets/img/bebida-fondo.png");
+}
+
+/* Texto debajo – centrado y más grande */
 .tarjeta-texto {
     background-color: white;
     padding: 12px 0;
     font-size: 16px;
     font-weight: 600;
     color: #000;
+    text-align: center;
+    /* quitamos max-height y overflow-y */
 }
 
-/* Flechas */
-.flechas-desplazamiento {
-    margin-top: 24px;
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-}
 
-.btn-flecha {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1.5px solid var(--color-primario-naranja);
-    background-color: transparent;
-    display: flex;
+/* ============ MODAL ============ */
+
+.modal-comidas {
+    position: fixed;
+    inset: 0;
+    display: none;
     align-items: center;
     justify-content: center;
+    z-index: 9999;
+}
+
+.modal-comidas.activo {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    width: 90%;
+    max-width: 750px;
+    max-height: 85vh;
+    padding: 24px 28px;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+    z-index: 2;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
     cursor: pointer;
-    padding: 0;
 }
 
-.btn-flecha svg {
-    width: 14px;
-    height: 14px;
-    color: var(--color-primario-naranja);
+#modal-body h2 {
+    margin-top: 0;
+    color: #c97919;
 }
 
-.btn-flecha:hover {
-    background-color: rgba(210, 130, 28, 0.08);
+#modal-body h3 {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+#modal-body p {
+    margin: 6px 0;
+    line-height: 1.45;
+}
+
+/* Platillos dentro del modal */
+#modal-body .platillo {
+    padding: 16px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Que el primero no tenga línea arriba */
+#modal-body .platillo:first-of-type {
+    border-top: none;
+}
+
+/* Título del platillo */
+#modal-body .platillo h3 {
+    margin: 0 0 6px 0;
+    font-size: 18px;
+}
+
+/* Párrafos del platillo */
+#modal-body .platillo p {
+    margin: 2px 0;
+    line-height: 1.45;
+}
+
+/* Imagen opcional del platillo */
+#modal-body .platillo-imagen {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 10px;
+    display: block;
+    margin: 8px 0 10px 0;
 }

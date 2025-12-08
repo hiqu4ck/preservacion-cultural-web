@@ -7,6 +7,7 @@ import './CSS/galeria.css';
 import './JS/galeria.js';
 import './CSS/video.css';
 import './CSS/comida.css';
+import './JS/comidas.js';
 import './CSS/medicina.css';
 import './CSS/comentarios.css';
 import './JS/comentarios.js';
