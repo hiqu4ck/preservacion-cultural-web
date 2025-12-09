@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crear Cuenta</title>
-  <link rel="stylesheet" href="src/CSS/register.css" />
-  <link rel="stylesheet" href="src/CSS/login.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta en K'ajóol Lu'um</title>
+    <link rel="stylesheet" href="src/CSS/register.css">
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <span class="logo">K'ajóol Lu'um</span>
-    </div>
-    <div class="content">
-      <h2>¡Te damos la bienvenida!</h2>
-      <form id="registerForm">
-        <input type="text" id="nombre" placeholder="Nombre" required />
-        <input type="email" id="correo" placeholder="Correo" required />
-        <input type="password" id="contrasena" placeholder="Contraseña" required />
-        <button type="submit" class="btn-register">Registrarse</button>
-      </form>
-      <div class="redirect">
-        <p>¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></p>
-      </div>
-    </div>
-  </div>
-  <script src="src/js/egister.js"></script>
-  <script src="src/js/egister.js" defer></script>
 
+    <!-- BARRA SUPERIOR -->
+    <header class="top-bar">
+        <div class="logo-wrapper">
+            <img src="img/logo.png" alt="Logo K’ajóol Lu’um" class="logo-img">
+            <span class="logo-text">K’ajóol Lu’um</span>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="main-container">
+
+        <!-- LADO IZQUIERDO (IMAGEN) -->
+        <div class="left-panel">
+            <img src="img/3.jpeg" alt="Fondo naturaleza" class="bg-image">
+            <h1>¡Te damos la bienvenida!</h1>
+        </div>
+
+        <!-- LADO DERECHO (FORMULARIO) -->
+        <div class="right-panel">
+            <div class="form-container">
+                <h2>Crear cuenta en K'ajóol Lu'um</h2>
+
+                <form>
+                    <div class="input-group">
+                        <select>
+                            <option>México (+52)</option>
+                            <option>Estados Unidos (+1)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" placeholder="Usuario">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" placeholder="Contraseña">
+                    </div>
+
+                    <button class="btn-continue">Continuar</button>
+                </form>
+
+                <p class="login-link">
+                    ¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a>
+                </p>
+
+                <div class="social-login">
+                    <button>Continuar con Google</button>
+                    <button>Continuar con Apple</button>
+                    <button>Continuar con correo electrónico</button>
+                    <button>Continuar con Facebook</button>
+                </div>
+
+                <a href="index.html" class="back-link">Volver</a>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 </html>
