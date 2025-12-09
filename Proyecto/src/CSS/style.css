@@ -43,8 +43,8 @@ a:hover {
 
 /* ===== UTILIDADES GENERALES ===== */
 .contenedor {
-  width: 95%;
-  max-width: 1450px;
+  width: 100%;
+  max-width: 1600px;
   margin: auto;
 }
 
@@ -104,7 +104,7 @@ a{
 }
 
 .contenedor {
-    width: 95%;
+    width: 100%;
     max-width: 1600px;
     margin: auto;
 }

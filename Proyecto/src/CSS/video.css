@@ -1,22 +1,22 @@
 /* ================= VIDEO ================= */
 
 .overlay-video {
-    margin: auto;
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .overlay-video .video {
     width: 100%;
-    max-width: 1400px; 
-    margin: 0 auto;
+    max-width: 1600px;
 }
 
 .overlay-video .video iframe {
     width: 100%;
-    height: 500px;
+    height: 700px;
+    aspect-ratio: 16 / 9;
     border: none;
     border-radius: 10px;
     display: block;
 }
+

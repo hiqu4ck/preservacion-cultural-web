@@ -1,5 +1,5 @@
-// ---------> MODULOS (1)
-// Express: Framework para crear el servidor y manejar rutas HTTP
+// ---------> MODULOS-Librerias (1)
+// Express: Framework para crear el servidor y manejar las rutas HTTP
 const express = require("express");
 
 // CORS: Permite que el frontend pueda comunicarse con el backend sin bloqueos
@@ -15,7 +15,6 @@ const mongoose = require("mongoose");
       cors: permite que la página (frontend en localhost:5173) pueda hacer peticiones al backend (localhost:4000) sin que el navegador las bloquee
 
       mongoose: es un “traductor” entre tu código JS y MongoDB. Te permite trabajar con documentos de la base de datos usando clases y métodos (Comment.find(), new Comment(), etc)*/
-
 
 
 // ------->  CONFIGURACIÓN(2)
@@ -37,7 +36,7 @@ const PORT = 4000;
 // Habilitar CORS para permitir conexión desde la página web
 app.use(cors());
 
-// Permitir que Express reciba datos en formato JSON
+// Permite que Express reciba datos en formato JSON
 app.use(express.json());
 
       /*
@@ -108,7 +107,7 @@ const Comment = mongoose.model("Comment", commentSchema);
 
       "Comment" será el nombre del modelo (y en la base de datos la colección se llamará comments).
 
-      Con Comment puedes:
+      Con Comment puedo:
 
       crear comentarios → new Comment(...)
 
@@ -123,7 +122,7 @@ const Comment = mongoose.model("Comment", commentSchema);
 // Cuando el frontend pida GET /comments, devolvemos todos los comentarios
 app.get("/comments", async (req, res) => {
   try {
-    // Buscar todos los comentarios y ordenarlos del más nuevo al más viejo
+    // Buscar todos los comentarios y se ordenan del más nuevo al más viejo
     const comentarios = await Comment.find().sort({ createdAt: -1 });
 
     res.json(comentarios);
