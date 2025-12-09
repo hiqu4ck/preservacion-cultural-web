@@ -9,7 +9,7 @@ function iniciarGaleria() {  // Función principal que inicializa el auto-scroll
 // v
   const track = document.getElementById("galeriaTrack"); // Obtengo el contenedor horizontal donde están todas las fotos.
 
-//Hago una verificación defensiva: si el elemento no está en el DOM, detengo la función para evitar errores.
+//Hago una verificación defensiva: si el elemento no está en el DOM, detengo la función para evitar errores. 
 //Esto ayuda a que el script no falle aunque la sección no cargue
 // |
 // v

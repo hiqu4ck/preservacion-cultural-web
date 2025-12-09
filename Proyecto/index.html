@@ -18,6 +18,8 @@
 
   <!-- Aquí luego enlazan TODOS los CSS -->
 </head>
+ <link rel="stylesheet" href="src/CSS/style.css" />
+ <link rel="stylesheet" href="src/CSS/style.css?v=1.0" />
 
 <body>
 
@@ -40,8 +42,11 @@
       </div>
 
       <nav class="topbar__nav">
-        <!-- Aquí luego puedes agregar más enlaces si quieres -->
-        <button class="topbar__btn">Iniciar sesión</button>
+        
+        <button class="topbar__btn" 
+        onclick="window.location.href='login.html'"
+        >Iniciar sesión</button>
+
         <div class="topbar__menu">
           <span></span>
           <span></span>
@@ -56,7 +61,7 @@
       <div
         class="hero__slide hero__slide--active"
         style="background-image:url('/img/carrusel-1.jpg');"
-        data-subtitle="Donde la memoria de la tierra late"
+        data-subtitle="Donde la memoria de la tierra Maya late"
       ></div>
 
       <!-- SLIDE 2 -->
@@ -140,9 +145,6 @@
             </p>
           </div>
         </div>
-
-        <div class="section-about__logo">
-          <img src="/img/logo.png" alt="Logo K’ajóol Lu’um" />
         </div>
       </div>
     </section>
@@ -1024,7 +1026,6 @@
             </div>
           </div>
 
-
         </div>
 
 
@@ -1536,5 +1537,7 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
 
 
 </body>
+
+
 
 </html>
