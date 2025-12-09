@@ -1,105 +1,144 @@
-/* RESET */
+/* ========================================================= */
+/*                     RESET GENERAL CSS                      */
+/* ========================================================= */
+
+/* Quita márgenes y padding predeterminados en TODOS los elementos */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Hace que width incluya padding y borde */
 }
 
+/* Estilos globales del cuerpo de la página */
 body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
+    font-family: Arial, sans-serif; /* Fuente general */
+    height: 100vh;                  /* Ocupa toda la pantalla */
 }
 
-/* HEADER */
+
+/* ========================================================= */
+/*                           HEADER                           */
+/* ========================================================= */
+
+/* Barra superior que contiene el logo */
 .top-bar {
     width: 100%;
     height: 70px;
-    background-color: #4a4a1f;
+    background-color: #4a4a1f; /* Verde oscuro */
     display: flex;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 40px;           /* Espaciado lateral */
 }
 
+/* Contenedor que agrupa logo + texto */
 .logo-wrapper {
     display: flex;
     align-items: center;
 }
 
+/* Imagen del logo */
 .logo-img {
     height: 50px;
 }
 
+/* Texto del nombre del proyecto */
 .logo-text {
     color: white;
     font-weight: bold;
     font-size: 1.3rem;
-    margin-left: 12px;
+    margin-left: 12px; /* Espacio entre imagen y texto */
 }
 
 
-/* CONTENEDOR DIVIDIDO */
+/* ========================================================= */
+/*                 CONTENEDOR DIVIDIDO EN 2                   */
+/* ========================================================= */
+
+/* Contenedor general dividido en izquierda y derecha */
 .main-container {
-    display: flex;
+    display: flex; /* Pone los paneles uno junto al otro */
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 70px); /* Resta la altura del header */
 }
 
-/* PANEL IZQUIERDO */
+
+/* ========================================================= */
+/*                        PANEL IZQUIERDO                     */
+/* ========================================================= */
+
+/* Mitad izquierda donde va la imagen */
 .left-panel {
     width: 50%;
-    position: relative;
-    overflow: hidden;
+    position: relative; /* Necesario para posicionar elementos dentro */
+    overflow: hidden;   /* Evita desbordes de la imagen */
 }
 
+/* Imagen de fondo */
 .bg-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;  /* Cubre todo sin deformarse */
     position: absolute;
     top: 0;
     left: 0;
 }
 
+/* Texto centrado encima de la imagen */
 .left-panel h1 {
     position: absolute;
-    z-index: 2;
+    z-index: 2;             /* Asegura que esté encima de la imagen */
     color: white;
     font-size: 3.2rem;
     font-weight: bold;
     text-align: center;
     padding: 20px 40px;
-    background: rgba(0, 0, 0, 0.35);
+
+    background: rgba(0, 0, 0, 0.35); /* Fondo translúcido */
     border-radius: 10px;
+
+    /* Centrado EXACTO */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 
-/* PANEL DERECHO */
+/* ========================================================= */
+/*                        PANEL DERECHO                       */
+/* ========================================================= */
+
+/* Mitad derecha: contiene el formulario */
 .right-panel {
     width: 50%;
     background: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;   /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
 }
 
+/* Caja donde va todo el formulario */
 .form-container {
-    width: 380px;
+    width: 380px; /* Ancho estándar cómodo */
 }
 
+/* Título del formulario */
 .form-container h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #d47b1f;
+    color: #d47b1f; /* Naranja temático */
 }
 
-/* Inputs */
+
+/* ========================================================= */
+/*                       INPUTS Y SELECT                      */
+/* ========================================================= */
+
+/* Espacio entre los inputs */
 .input-group {
     margin-bottom: 15px;
 }
 
+/* Estilo general para inputs y selects */
 input, select {
     width: 100%;
     padding: 12px;
@@ -108,11 +147,15 @@ input, select {
     font-size: 1rem;
 }
 
-/* Botón */
+
+/* ========================================================= */
+/*                       BOTÓN CONTINUAR                      */
+/* ========================================================= */
+
 .btn-continue {
     width: 100%;
     padding: 12px;
-    background-color: #2cc1b4;
+    background-color: #2cc1b4; /* Verde agua */
     color: white;
     border: none;
     border-radius: 6px;
@@ -121,11 +164,16 @@ input, select {
     cursor: pointer;
 }
 
+/* Color cuando se pasa el mouse encima */
 .btn-continue:hover {
     background-color: #23a298;
 }
 
-/* Login */
+
+/* ========================================================= */
+/*                    ENLACE "INICIAR SESIÓN"                 */
+/* ========================================================= */
+
 .login-link {
     margin: 15px 0;
     text-align: center;
@@ -136,16 +184,26 @@ input, select {
     text-decoration: none;
 }
 
+
+/* ========================================================= */
+/*                    BOTONES DE REDES SOCIALES               */
+/* ========================================================= */
+
 .social-login button {
     width: 100%;
     padding: 12px;
-    background: black;
+    background: black;   /* Puedes personalizar por plataforma */
     color: white;
     border: none;
     border-radius: 6px;
     margin-bottom: 10px;
     cursor: pointer;
 }
+
+
+/* ========================================================= */
+/*                 ENLACE PARA VOLVER A INICIO               */
+/* ========================================================= */
 
 .back-link {
     display: block;

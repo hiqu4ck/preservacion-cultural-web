@@ -1,155 +1,173 @@
-/* GENERAL */
+/* ============================
+   ESTILOS GENERALES DE LA PÁGINA
+   ============================ */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: #FFF;
+  margin: 0;                     /* Elimina márgenes por defecto */
+  padding: 0;                    /* Elimina relleno por defecto */
+  font-family: Arial, sans-serif;/* Fuente principal de la página */
+  background: #FFF;              /* Fondo blanco */
 }
 
-/* HEADER */
+/* ============================
+   HEADER SUPERIOR (TOPBAR)
+   ============================ */
 .topbar {
-  width: 100%;
-  height: 68px;
-  background: #4B4C27;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 35px;
+  width: 100%;                   /* Ocupa todo el ancho */
+  height: 68px;                  /* Altura del encabezado */
+  background: #4B4C27;           /* Color verde oscuro */
+  display: flex;                 /* Flexbox para organizar elementos */
+  align-items: center;           /* Centra verticalmente */
+  justify-content: space-between;/* Espacio entre logo y menú */
+  padding: 0 35px;               /* Espaciado horizontal */
 }
 
 .header-logo {
-  display: flex;
-  align-items: center;
+  display: flex;                 /* Permite alinear imagen y texto */
+  align-items: center;           /* Ambos centrados verticalmente */
 }
 
 .header-logo img {
-  width: 45px;
+  width: 45px;                   /* Tamaño del logo */
 }
 
 .header-logo span {
-  color: white;
-  font-size: 20px;
-  margin-left: 12px;
+  color: white;                  /* Texto blanco */
+  font-size: 20px;               /* Tamaño del texto */
+  margin-left: 12px;             /* Espacio entre imagen y texto */
 }
 
 .menu-icon {
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
+  color: white;                  /* Icono blanco */
+  font-size: 30px;               /* Tamaño del ícono */
+  cursor: pointer;               /* Cambia cursor al pasar encima */
 }
 
-/* CONTENEDOR */
+/* ============================
+   CONTENEDOR PRINCIPAL
+   ============================ */
 main {
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
-  background: #F3EEDC;
-  min-height: calc(100vh - 68px);
+  display: flex;                 /* Centra la caja del login */
+  justify-content: center;       /* Centrado horizontal */
+  padding-top: 40px;             /* Espacio arriba */
+  background: #F3EEDC;           /* Fondo beige */
+  min-height: calc(100vh - 68px);/* Altura mínima (restando el header) */
 }
 
-/* CAJA CENTRAL */
+/* ============================
+   CAJA DE LOGIN
+   ============================ */
 .login-box {
-  background: #FAF1E4;
-  width: 520px;
-  padding: 35px;
-  border-radius: 25px;
-  position: relative;
+  background: #FAF1E4;           /* Fondo crema */
+  width: 520px;                  /* Ancho del cuadro */
+  padding: 35px;                 /* Espaciado interno */
+  border-radius: 25px;           /* Esquinas redondeadas */
+  position: relative;            /* Para posicionar botón X */
 }
 
-/* BOTÓN CERRAR */
+/* ============================
+   BOTÓN PARA CERRAR
+   ============================ */
 .close-btn {
-  background: none;
-  border: none;
-  font-size: 28px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  cursor: pointer;
+  background: none;              /* Sin fondo */
+  border: none;                  /* Sin borde */
+  font-size: 28px;               /* Tamaño del símbolo X */
+  position: absolute;            /* Posición absoluta dentro del cuadro */
+  top: 20px;                     /* Distancia desde arriba */
+  left: 20px;                    /* Distancia desde la izquierda */
+  cursor: pointer;               /* Mano al pasar encima */
 }
 
-/* TITULOS */
+/* ============================
+   TÍTULOS DEL FORMULARIO
+   ============================ */
 .title {
-  text-align: center;
-  font-size: 22px;
-  margin-top: 5px;
-  font-weight: bold;
+  text-align: center;            /* Centrado */
+  font-size: 22px;               /* Tamaño del texto */
+  margin-top: 5px;               /* Espacio superior */
+  font-weight: bold;             /* Negrita */
 }
 
 .line {
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 18px 0;
+  border: 0;                     /* Sin borde normal */
+  border-top: 1px solid #ccc;    /* Línea gris */
+  margin: 18px 0;                /* Espaciado vertical */
 }
 
 .welcome {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 26px;               /* Texto grande */
+  font-weight: bold;             /* Negrita */
+  margin-bottom: 20px;           /* Espacio inferior */
 }
 
-/* FORMULARIO */
+/* ============================
+   FORMULARIO
+   ============================ */
 .label {
-  font-size: 13px;
-  color: #444;
+  font-size: 13px;               /* Tamaño pequeño */
+  color: #444;                   /* Gris oscuro */
 }
 
 .select-wrapper select {
-  width: 100%;
-  padding: 12px;
-  margin: 5px 0 12px;
-  border: 1px solid #C9C9C9;
-  border-radius: 6px;
-  font-size: 15px;
+  width: 100%;                   /* Ocupa todo el ancho */
+  padding: 12px;                 /* Relleno */
+  margin: 5px 0 12px;            /* Margen */
+  border: 1px solid #C9C9C9;     /* Borde gris claro */
+  border-radius: 6px;            /* Bordes redondeados */
+  font-size: 15px;               /* Tamaño del texto */
 }
 
 input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #C9C9C9;
-  border-radius: 6px;
-  font-size: 15px;
+  width: 100%;                   /* Input ocupa todo el ancho */
+  padding: 12px;                 /* Relleno interno */
+  border: 1px solid #C9C9C9;     /* Borde gris claro */
+  border-radius: 6px;            /* Esquinas redondeadas */
+  font-size: 15px;               /* Texto legible */
 }
 
 .text-info {
-  font-size: 12px;
-  color: #D4821F;
-  margin-top: 8px;
-  margin-bottom: 20px;
+  font-size: 12px;               /* Texto pequeño */
+  color: #D4821F;                /* Color naranja */
+  margin-top: 8px;               /* Espaciado superior */
+  margin-bottom: 20px;           /* Espaciado inferior */
 }
 
-/* BOTÓN PRINCIPAL */
+/* ============================
+   BOTÓN PRINCIPAL (Continuar)
+   ============================ */
 .btn-main {
-  width: 100%;
-  background: #9FDAC7;
-  border: none;
-  padding: 12px;
-  font-size: 17px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 10px;
+  width: 100%;                   /* Ocupa todo el ancho */
+  background: #9FDAC7;           /* Verde pastel */
+  border: none;                  /* Sin borde */
+  padding: 12px;                 /* Relleno */
+  font-size: 17px;               /* Texto grande */
+  border-radius: 8px;            /* Esquinas redondeadas */
+  cursor: pointer;               /* Cursor de mano */
+  margin-top: 10px;              /* Espacio arriba */
 }
 
 .create {
-  text-align: center;
-  margin: 12px 0;
-  color: #444;
+  text-align: center;            /* Centra texto */
+  margin: 12px 0;                /* Espaciado vertical */
+  color: #444;                   /* Gris oscuro */
 }
 
-/* Login */
+/* ENLACE A LOGIN */
 .login-link {
-    margin: 15px 0;
-    text-align: center;
+    margin: 15px 0;              /* Margen vertical */
+    text-align: center;          /* Texto centrado */
 }
 
 .login-link a {
-    color: #2cc1b4;
-    text-decoration: none;
+    color: #2cc1b4;              /* Azul verdoso */
+    text-decoration: none;       /* Quita subrayado */
 }
 
-/* BOTÓN PRINCIPAL */
+/* ============================
+   BOTÓN SECUNDARIO "Crear cuenta"
+   ============================ */
 .btn-create {
   width: 100%;
-  background: #F3EEDC;
+  background: #F3EEDC;           /* Color beige suave */
   border: none;
   padding: 12px;
   font-size: 17px;
@@ -164,47 +182,52 @@ input {
   color: #444;
 }
 
-/* BOTONES SOCIALES */
+/* ============================
+   BOTONES DE LOGIN SOCIAL
+   ============================ */
 .btn-social {
-  width: 100%;
-  background: white;
-  border: 1px solid #C9C9C9;
-  padding: 14px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  margin-bottom: 12px;
-  cursor: pointer;
+  width: 100%;                   /* Ocupan todo el ancho */
+  background: white;             /* Fondo blanco */
+  border: 1px solid #C9C9C9;     /* Borde gris claro */
+  padding: 14px;                 /* Relleno */
+  border-radius: 8px;            /* Bordes redondeados */
+  display: flex;                 /* Alineación horizontal */
+  align-items: center;           /* Centra ícono y texto */
+  font-size: 16px;               /* Tamaño del texto */
+  margin-bottom: 12px;           /* Espacio entre botones */
+  cursor: pointer;               /* Cursor de mano */
 }
 
 .btn-social img {
-  width: 22px;
-  margin-right: 10px;
+  width: 22px;                   /* Tamaño del ícono */
+  margin-right: 10px;            /* Espacio entre icono y texto */
 }
 
+/* Cambia automáticamente la imagen según la clase */
 .google img { content: url("/img/google.png"); }
 .apple img { content: url("/img/apple.png"); }
 .mail img { content: url("/img/mail.png"); }
 .facebook img { content: url("/img/facebook.png"); }
 
+/* ============================
+   ALERTAS DE ERROR Y ÉXITO
+   ============================ */
 .alert-error {
-  background: #ffb3b3;
-  border-left: 5px solid #e60000;
+  background: #ffb3b3;           /* Rojo suave */
+  border-left: 5px solid #e60000;/* Barra roja */
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 5px;
-  color: #800000;
+  color: #800000;                /* Rojo oscuro */
   font-size: 14px;
 }
 
 .alert-success {
-  background: #c5f7d1;
-  border-left: 5px solid #1d9237;
+  background: #c5f7d1;           /* Verde suave */
+  border-left: 5px solid #1d9237;/* Barra verde */
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 5px;
-  color: #1d9237;
+  color: #1d9237;                /* Verde oscuro */
   font-size: 14px;
 }
-
