@@ -628,10 +628,7 @@ const leyendasInfo = [
   {
     titulo: "La leyenda del Balam",
     descripcion: "    En la tradición maya, la palabra Balam significa jaguar, pero no se refiere únicamente al animal: es un ser protector, un guardián espiritual relacionado con la noche, la selva y la fuerza sagrada. El Balam aparece en muchas leyendas y relatos donde cumple el papel de defensor del pueblo, del maíz, de los hogares y de los caminos.",
-    detalle: ` 
-Tienes razón, el texto no estaba resumido. Aquí va una versión más corta:
-
-Hace mucho tiempo, los dioses crearon a los Balames, cuatro jaguares guardianes, para proteger a los pueblos mayas. Cada Balam estaba asociado con un punto cardinal y tenía la misión de vigilar la selva y proteger a los humanos de los peligros de la noche, como espíritus malignos y animales que amenazaban los cultivos. Se decía que los Balames tenían la capacidad de ver en la oscuridad y caminar sin dejar rastro, ahuyentando a los intrusos con un rugido fuerte.
+    detalle: `Hace mucho tiempo, los dioses crearon a los Balames, cuatro jaguares guardianes, para proteger a los pueblos mayas. Cada Balam estaba asociado con un punto cardinal y tenía la misión de vigilar la selva y proteger a los humanos de los peligros de la noche, como espíritus malignos y animales que amenazaban los cultivos. Se decía que los Balames tenían la capacidad de ver en la oscuridad y caminar sin dejar rastro, ahuyentando a los intrusos con un rugido fuerte.
 
 Los campesinos ofrecían ofrendas y velas para honrar a los Balames, quienes también cuidaban las milpas. Con el tiempo, el Balam se convirtió en símbolo de fuerza y sabiduría. Hoy en día, se cree que cada persona tiene un Balam que la cuida, protegiéndola en su camino, especialmente en la selva o en momentos difíciles.
 
@@ -844,10 +841,8 @@ if (
 function actualizarSlider() {
   leyendasSlider.style.transform = `translateX(-${indexLeyenda * 100}%)`;
 
-  const slideActual = leyendasSlides[indexLeyenda];
-
-  leyendaTitulo.textContent = slideActual.dataset.subtitulo;
-  leyendaDescripcion.textContent = slideActual.dataset.description;
+  leyendaTitulo.textContent = leyendasInfo[indexLeyenda].titulo;
+  leyendaDescripcion.textContent = leyendasInfo[indexLeyenda].descripcion;
 }
 
 
