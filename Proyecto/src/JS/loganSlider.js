@@ -173,6 +173,7 @@ const modalJuegos = document.getElementById("modal-juegos");
 const modalJuegosTitle = modalJuegos.querySelector(".modal-juegos__title");
 const modalJuegosText = modalJuegos.querySelector(".modal-juegos__text");
 const modalJuegosImg = modalJuegos.querySelector(".modal-juegos__img");
+const nextJuegoBtnBack = modalJuegos.querySelector(".modal-juegos__back");
 const nextJuegoBtn = modalJuegos.querySelector(".modal-juegos__next");
 const modalJuegosClose = modalJuegos.querySelector(".modal-juegos__close");
 const modalJuegosOverlay = modalJuegos.querySelector(".modal-juegos__overlay");
@@ -198,6 +199,14 @@ juegosBtn.addEventListener("click", () => {
   mostrarJuego(juegoActual);
   modalJuegos.classList.add("is-open");
   document.body.classList.add("modal-open");
+});
+
+// Regresar al juego anterior
+nextJuegoBtnBack.addEventListener("click", () => {
+  // Sumamos la longitud antes de restar para evitar números negativos
+  // y luego aplicamos el módulo.
+  juegoActual = (juegoActual - 1 + juegosInfoList.length) % juegosInfoList.length;
+  mostrarJuego(juegoActual);
 });
 
 // Cambiar al siguiente juego
@@ -543,6 +552,7 @@ const modalFiestas = document.getElementById("modal-fiestas");
 const modalFiestasTitle = modalFiestas.querySelector(".modal-fiestas__title");
 const modalFiestasText = modalFiestas.querySelector(".modal-fiestas__text");
 const modalFiestasImg = modalFiestas.querySelector(".modal-fiestas__img");
+const nextFiestaBtnBack = modalFiestas.querySelector(".modal-fiestas__back");
 const nextFiestasBtn = modalFiestas.querySelector(".modal-fiestas__next");
 const modalFiestasClose = modalFiestas.querySelector(".modal-fiestas__close");
 const modalFiestasOverlay = modalFiestas.querySelector(".modal-fiestas__overlay");
@@ -572,6 +582,14 @@ fiestasBtn.addEventListener("click", () => {
   mostrarFiesta(fiestaActual);
   modalFiestas.classList.add("is-open");
   document.body.classList.add("modal-open");
+});
+
+// Regresar a la fiesta anterior
+nextFiestaBtnBack.addEventListener("click", () => {
+  // Sumamos la longitud antes de restar para evitar números negativos
+  // y luego aplicamos el módulo.
+  fiestaActual = (fiestaActual - 1 + fiestasInfoList.length) % fiestasInfoList.length;
+  mostrarFiesta(fiestaActual);
 });
 
 // Cambiar a la siguiente fiesta 
@@ -744,6 +762,7 @@ Hoy, se dice que el Boop sigue caminando por los montes, esperando a aquellos qu
 ];
 
 // ================= MODAL "LEER MÁS" =================
+const slidesL = document.querySelectorAll('.slide-L');
 const leerMasBtn = document.querySelector(".leyendas .leer-mas");
 const modalLeyenda = document.getElementById("modal-leyenda");
 const modalTitle = modalLeyenda?.querySelector(".modal-leyenda__title");
@@ -788,39 +807,47 @@ if (leerMasBtn) {
 
 
 
-
 // ================= SLIDER DE LEYENDAS =================
 const leyendasSlider = document.querySelector(".leyendas .slides-L");
 const leyendasSlides = leyendasSlider ? leyendasSlider.querySelectorAll(".slide-L") : [];
-const leyendasBtn = document.querySelector(".leyendas .boton-slide .btn");
+const leyendasBtnNext = document.querySelector(".leyendas .boton-slide .btnNext");
+const leyendasBtnBack = document.querySelector(".leyendas .boton-slide .btnBack");
 
 const leyendaTitulo = document.querySelector(".leyendas .col-L2 .subtitulo");
 const leyendaDescripcion = document.querySelector(".leyendas .col-L2 .descripcion");
 
-// index global para usarlo también en el modal
 let indexLeyenda = 0;
 
-// Estado inicial
-if (leyendasInfo.length > 0 && leyendaTitulo && leyendaDescripcion) {
-  leyendaTitulo.textContent = leyendasInfo[0].titulo;
-  leyendaDescripcion.textContent = leyendasInfo[0].descripcion;
+if (
+  leyendasSlider &&
+  leyendasSlides.length > 0 &&
+  leyendasBtnNext &&
+  leyendasBtnBack &&
+  leyendaTitulo &&
+  leyendaDescripcion
+) {
+
+  leyendasBtnNext.addEventListener("click", () => {
+    indexLeyenda = (indexLeyenda + 1) % leyendasSlides.length;
+    actualizarSlider();
+  });
+
+  leyendasBtnBack.addEventListener("click", () => {
+    indexLeyenda = (indexLeyenda - 1 + leyendasSlides.length) % leyendasSlides.length;
+    actualizarSlider();
+  });
+
+  // 🔥 IMPORTANTE: inicializar
+  actualizarSlider();
 }
 
+function actualizarSlider() {
+  leyendasSlider.style.transform = `translateX(-${indexLeyenda * 100}%)`;
 
-// Controlador por botón
-if (leyendasSlider && leyendasSlides.length > 0 && leyendasBtn) {
+  const slideActual = leyendasSlides[indexLeyenda];
 
-  leyendasBtn.addEventListener("click", () => {
-
-    indexLeyenda = (indexLeyenda + 1) % leyendasSlides.length;
-
-    // Cambiar imagen
-    leyendasSlider.style.transform = `translateX(-${indexLeyenda * 100}%)`;
-
-    // Cambiar texto
-    leyendaTitulo.textContent = leyendasInfo[indexLeyenda].titulo;
-    leyendaDescripcion.textContent = leyendasInfo[indexLeyenda].descripcion;
-  });
+  leyendaTitulo.textContent = slideActual.dataset.subtitulo;
+  leyendaDescripcion.textContent = slideActual.dataset.description;
 }
 
 
