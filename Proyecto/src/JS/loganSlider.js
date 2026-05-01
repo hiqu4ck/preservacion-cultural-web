@@ -317,128 +317,7 @@ El compadrazgo juega un papel importante, fortaleciendo las relaciones familiare
 La comunidad entera participa en las celebraciones: niños, ancianos y jóvenes acompañan a la Virgen en procesión, tocan en las bandas o bailan con trajes típicos. Tras la misa y los rezos, la procesión regresa y es seguida de una vaquería (baile nocturno). La comida ofrendada se comparte públicamente, con el guiso principal repartido entre todos los asistentes al sonar la campana.
 
 `,
-    imagen: "./public/assets/img/3.png"
-  },
-  {
-    titulo: "Virgen María de Concepción",
-    comunidad: "Tixcacal Guardia, Xpichil, Laguna K’ana",
-    descripcionLarga: `
-En las comunidades mayas del municipio de Felipe Carrillo Puerto, la Inmaculada Concepción de María se celebra con ferias tradicionales que combinan rituales católicos y costumbres ancestrales. Las festividades, que varían según la comunidad, se celebran en fechas como del 6 al 13 de diciembre en Tixcacal Guardia, del 7 al 15 de agosto en X-Pichil y del 13 al 18 de abril en Laguna K’ana. En cada lugar, la fiesta comienza con la siembra del **yaxché** (ceiba), árbol sagrado que simboliza la vida y la esperanza.
-
-Estas festividades coinciden con las celebraciones patronales, donde la Virgen de la Concepción es la patrona principal en Tixcacal Guardia y Laguna K’ana, y en X-Pichil se venera a la Virgen de la Asunción (a veces conocida como “Concepción”). Los ritos religiosos incluyen ofrendas de comida y flores, donde las familias llevan platillos típicos mayas como tamales, chilmole (guiso de carne con recado negro), chicharra, y pib (guisos cocidos bajo tierra), que se reparten entre los asistentes como comida comunitaria. En Kantunilkín, durante los novenarios, se ofrecen tamales, champurrado y postres, mientras se rezan oraciones y se queman copal.
-
-Para la comunidad maya-católica, la Virgen de la Concepción representa la maternidad divina y la prosperidad. La fiesta fusiona símbolos cristianos, como la cruz y la imagen de la Virgen, con signos mayas ancestrales, como la plantación del yaxché, que expresa la esperanza de un año próspero. Así, el culto a la Virgen se celebra con bailes, música, rezos en maya y ofrendas, manteniendo vivas las tradiciones mayas mientras se expresa la fe cristiana.
-
-`,
-    imagen: "./public/assets/img/3.png"
-  },
-  {
-    titulo: "Las Santas Cruces",
-    comunidad: "Señor",
-    descripcionLarga: `
-En Felipe Carrillo Puerto, la comunidad maya de **Señor** celebra cada año la **Fiesta de Las Santas Cruces** del 19 al 24 de marzo, fusionando la fe católica con ritos mayas ancestrales. La festividad tiene sus raíces en la leyenda cristiana de Santa Elena, quien encontró las tres cruces de Cristo en el año 292, pero los mayas de Chan Santa Cruz (hoy Felipe Carrillo Puerto) adaptaron esta tradición, asociando la cruz con los cuatro puntos cardinales y usándola como símbolo de resistencia durante la **Guerra de Castas** de 1847.
-
-La celebración incluye procesiones y plegarias en lengua maya, con la imagen de la cruz (o una réplica) recorriendo las calles del pueblo al ritmo de flautas y tambores. Los rezadores mayas alternan letanías católicas con oraciones ancestrales, y los asistentes participan llevando velas, flores y ofrendas a lo largo del recorrido.
-
-La fiesta es organizada por comités comunitarios integrados por varias familias que se encargan de coordinar las novenas, financiar la música y preparar la comida. La festividad mezcla actos religiosos con actividades sociales como vaquerías, juegos y convivios, en los que participan jóvenes, ancianos, músicos y grupos de vaqueras.
-
-La **Cruz Parlante**, venerada en la fiesta, representa la intersección de los rumbos del universo y el centro del mundo maya. Además, rememora la historia de la Guerra de Castas, cuando la cruz simbolizó la resistencia indígena. La celebración refuerza la identidad maya al ser celebrada en su idioma y con música ancestral, uniendo a las familias y manteniendo vivas las tradiciones del pueblo.
-
-`,
-    imagen: "./public/assets/img/3.png"
-  },
-  {
-    titulo: "Virgen Morena de Guadalupe",
-    comunidad: "Señor",
-    descripcionLarga: `
-La Virgen de Guadalupe es la patrona de México, vinculada a las apariciones marianas de 1531 a Juan Diego. En Felipe Carrillo Puerto, la devoción se fusiona con la herencia indígena, asociando a la Virgen con la diosa maya Tonatzín.
-
-La festividad comienza la víspera del 12 de diciembre, cuando miles de fieles cantan las mañanitas y asisten a misas multitudinarias. En la Misa de Coronación, que reúne a cerca de 1,500 personas, las comunidades mayas participan en gremios y procesiones, como las cuadrillas de la Legión de María y los palqueros.
-
-La fiesta es comunitaria, protagonizada por la población indígena local, y la participación de las comunidades cercanas en la organización de la fiesta (música, bailes, comida) refuerza la transmisión de tradiciones.
-
-A diferencia de otras regiones, en Felipe Carrillo Puerto se celebra fuera de la fecha oficial de diciembre, destacando el uso de la lengua maya, música maya pax, danzas autóctonas y la vaquería (baile de jarana). Además, se incluyen corridas de toros y orquestas locales, como la orquesta La Dinastía, y una gastronomía festiva típica del sureste, como el chilmole y el relleno negro.
-
-`,
-    imagen: "./public/assets/img/3.png"
-  },
-  {
-    titulo: "San Bernardino de Siena",
-    comunidad: "Xyatil",
-    descripcionLarga: `
-La fiesta patronal de San Bernardino de Siena en Xyatil se celebra del 15 al 21 de mayo, con el 20 de mayo como el día central. Esta festividad combina la devoción católica con tradiciones mayas locales, reflejando un fuerte sincretismo cultural.
-
-La celebración incluye novenas religiosas en honor a San Bernardino, donde se ofrecen comidas tradicionales como chilmole de pollo y se organizan bailes comunitarios. Un ritual clave es el corte y replantación del ya’axche (ceiba sagrada), que simboliza la petición de lluvias.
-
-También se realizan vaquerías y danzas folklóricas con música regional y trajes típicos mayas. La gastronomía típica incluye el reparto de platillos mayas, especialmente el chilmole, en el "cuartel maya". Al final de la festividad, se llevan a cabo juegos populares y un baile nocturno de clausura.
-
-La fiesta es comunitaria, uniendo a las familias mayahablantes, y se enfoca en valores de solidaridad y respeto. Además, el uso del payalchiʼ (oraciones en maya) y el sincretismo entre los ritos agrícolas mayas y la devoción católica refuerzan la identidad cultural de Xyatil. La celebración destaca el orgullo de ser mayahablantes y mantiene vivas las tradiciones locales.
-
-`,
-    imagen: "./public/assets/img/3.png"
-  },
-  {
-    titulo: "San Ramón",
-    comunidad: "San Ramón",
-    descripcionLarga: `
-<div class="modal-fiestas__row modal-fiestas__row--reverse">
-      <p>
-       
-
-La fiesta tradicional de San Ramón se celebra anualmente en el municipio de Felipe Carrillo Puerto, Quintana Roo, particularmente en la comunidad maya de San Ramón.
-</p>
-<img src="./public/assets/img/FiestaSanRamon_2.png" alt="Procesión de Reyes Magos" />
-    </div>
-La localidad de San Ramón fue fundada a mediados del siglo XX, y desde entonces, sus pobladores instauraron una fiesta patronal en honor a San Ramón. Esta tradición se ha mantenido viva por generaciones. La fiesta refleja la mezcla de influencias maya y mestiza, típica de la Zona Maya de Quintana Roo, y refuerza la identidad histórica del pueblo.
-
-La festividad tiene un fuerte componente religioso y ceremonial, con novenas y misas solemnes en honor a San Ramón. La comunidad organiza una procesión por las calles, llevando la imagen del santo acompañada de rezos en español y maya, música maya (maya pax) y flores. Se realiza la siembra del yaxché (ceiba sagrada), pidiendo lluvias y protección. La vaquería, un baile tradicional, inicia la fiesta, y la comunidad participa activamente en los rituales, rezos y convivios.
-
-La fiesta también tiene un profundo significado cultural y social, fortaleciendo la unidad de la comunidad. Es un espacio de encuentro intergeneracional, donde familias de fuera regresan a San Ramón para reencontrarse. Además, la fiesta refuerza la identidad maya, al mantener vivas las tradiciones y la fe, fusionando elementos católicos y mayas en un solo evento sincrético.
-
-`,
-    imagen: "./public/assets/img/FiestaSanRamon_1.png"
-  },
-  {
-    titulo: "San Cristo de Amor",
-    comunidad: "Chankah de Repente, Chunhuas.",
-    descripcionLarga: `
-La fiesta del Santo Cristo de Amor tiene raíces coloniales en Yucatán y se ha extendido a varias comunidades mayas de la Zona Maya de Quintana Roo, como Chunhuas, Chancah de Repente y Polyuc. En estas localidades, la celebración se realiza entre marzo y abril, dependiendo del pueblo, y refleja un sincretismo cultural, combinando rituales católicos con costumbres mayas.
-
-La festividad incluye novenas, procesiones y misas solemnes en honor al santo, junto con danzas tradicionales y la siembra de un yaxché (ceiba sagrada) como rito simbólico. En algunas comunidades, se instalan máakanes (chozas de palma) donde se hacen oraciones en maya, y se sirve comida como chirmole.
-
-La vaquería (baile regional) es uno de los eventos centrales de la fiesta, acompañada de música de maya pax. Además, se celebran corridas de toros y actividades recreativas. La festividad tiene un fuerte significado religioso, social y cultural, siendo un acto de fe y una oportunidad para renovar el pacto espiritual con el santo, así como un espacio de convivencia comunitaria.
-
-A lo largo del tiempo, la fiesta ha enfrentado desafíos, como la migración y la disminución de la participación juvenil, pero ha visto esfuerzos de preservación. Los habitantes, con el apoyo de autoridades y nuevos participantes, continúan celebrando la tradición, adaptándola a los tiempos modernos sin perder su esencia cultural y espiritual.
-
-
-`,
-    imagen: "./public/assets/img/3.png"
-  },
-  {
-    titulo: "San Juan Bautista",
-    comunidad: "K’opch’en",
-    descripcionLarga: `
-La fiesta de San Juan Bautista en Felipe Carrillo Puerto tiene orígenes coloniales y ha sido transmitida por generaciones. En la región, las festividades de San Juan combinan el culto católico con rituales mayas, como la siembra del yaxché (ceiba sagrada), pidiendo lluvias para las cosechas. La celebración incluye misas, procesiones, rezos en maya y español, y actividades culturales como la vaquería (baile tradicional) y la gastronomía local.
-
-San Juan es venerado como el intercesor por la lluvia y la fertilidad, y la fiesta se lleva a cabo entre el 20 y el 25 de junio, con la peregrinación del santo entre comunidades. Además de los ritos religiosos, la comunidad organiza eventos como la vaquería y corridas de toros. Las familias anfitrionas participan en la organización y la fiesta incluye juegos, danzas y alimentos tradicionales.
-
-La festividad tiene un gran significado religioso, social y cultural. Refuerza la identidad maya, con la lengua y música maya presentes, y se ve como una oportunidad para fortalecer los lazos comunitarios. A pesar de los desafíos, como la migración y la modernidad, las comunidades han trabajado para preservar la fiesta, adaptándola a los tiempos actuales sin perder su esencia cultural.
-
-`,
-    imagen: "./public/assets/img/3.png"
-  },
-  {
-    titulo: "San Miguel",
-    comunidad: "X-Hazil ",
-    descripcionLarga: `
-La fiesta tradicional en honor a San Miguel Arcángel se celebra principalmente en la comunidad de X-Hazil Sur, en el municipio de Felipe Carrillo Puerto, Quintana Roo. Esta festividad combina tradiciones católicas con elementos mayas, destacando el sincretismo religioso de la zona. Aunque no es la fiesta principal de la cabecera municipal, en X-Hazil Sur se celebra con gran fervor, atrayendo tanto a locales como visitantes.
-
-La celebración principal tiene lugar del 24 al 30 de septiembre, culminando el 29 de septiembre, día de San Miguel Arcángel. También se celebra del 7 al 12 de febrero, aunque de manera menos documentada. Las fechas pueden variar ligeramente, pero se mantienen cercanas al calendario litúrgico católico. En 2025, los eventos se promocionaron del 28 de septiembre al 1 de octubre.
-
-La fiesta combina rituales religiosos, culturales y festivos. Entre las tradiciones destacan la **siembra del yaxché** (ceiba sagrada), el **mayapaax** (música tradicional maya), **danza de los voladores**, procesiones, misas, y **ferias** con comida típica, juegos mecánicos y bailes populares con grupos locales. La celebración honra tanto a San Miguel Arcángel como a las raíces indígenas de la comunidad.
-
-`,
-    imagen: "./public/assets/img/FiestaSanMiguel.png"
+    imagen: "./public/assets/img/vm.jpg"
   },
   {
     titulo: "San Román",
@@ -532,19 +411,7 @@ La fiesta refuerza la identidad maya y la unidad familiar, adaptándose a los ca
 `,
     imagen: "./public/assets/img/FiestaNiñoJesus_1.png"
   },
-  {
-    titulo: "San José",
-    comunidad: "Chun On, Tepich, San José II",
-    descripcionLarga: `
-La fiesta de San José en Felipe Carrillo Puerto tiene raíces coloniales y refleja el sincretismo cultural entre las tradiciones católicas y mayas. Celebrada del 21 de diciembre al 1 de enero, con el 25 de diciembre como el día central, la fiesta honra al santo patrono y es una muestra de la herencia histórica y la lucha entre el bien y el mal, especialmente relacionada con la Guerra de Castas.
-
-La celebración incluye rituales como la siembra del yaxché (ceiba sagrada), danzas como la de los pastores, misas, procesiones y ofrendas. También se realizan actividades culturales como la vaquería, música de jarana y gastronomía tradicional. Además, se combinan elementos religiosos y rituales mayas, como la petición de lluvia a través del ritual de Ch’a Cháak.
-
-La comunidad participa activamente en la organización, con roles asignados a diferentes grupos, incluidos mayordomos, gremios y jóvenes. La fiesta también refleja la preservación cultural, adaptándose a los cambios sociales y manteniendo viva la tradición. A pesar de la modernización, la festividad sigue siendo un evento de unidad social y religiosa, transmitiendo la identidad maya y católica de la comunidad.
-
-`,
-    imagen: "./public/assets/img/1.png"
-  }
+ 
 ];
 
 const fiestasBtn = document.querySelector(".hero-fiestas .ver-mas-f");
@@ -701,38 +568,18 @@ Creados por sacerdotes mayas con barro, miel y flores, se activan con rituales. 
     img: "./public/assets/img/Tesoro_Aluxes.png"
   },
   {
-    titulo: "El hombre que fue convertido en alux",
-    descripcion: "Relatada en contextos de Quintana Roo durante la construcción de carreteras, obreros roban reliquias mayas de un adoratorio y...",
-    detalle: `Relatada en contextos de Quintana Roo durante la construcción de carreteras, obreros roban reliquias mayas de un adoratorio y son castigados con accidentes y enfermedades.
-    Uno de ellos se encoge progresivamente hasta convertirse en un alux, sirviendo como advertencia eterna contra el robo de la herencia cultural.`,
-    img: "./public/assets/img/Hombre-Alux.png"
-  },
-  {
-    titulo: "Xaho'hot Tuun: El sacrificio del Guerrero",
-    descripcion: "Esta narración prehispánica habla de un guerrero que seduce a una vestal dedicada a la diosa Suhuy K'aak'...",
-    detalle: `Esta narración prehispánica habla de un guerrero que seduce a una vestal dedicada a la diosa Suhuy K'aak'. Como castigo, le sacan el corazón en un sacrificio y usan su piel, mientras la vestal es arrojada a un cenote por perder su pureza.
-    Enfatiza el culto a la castidad y los rituales sagrados en la sociedad maya.`,
-    img: "./public/assets/img/Xaho'hot Tuun.png"
-  },
-  {
     titulo: "El primer encuentro con los aluxes",
     descripcion: "Esta leyenda, relatada por Gaspar Antonio Xiu Cachón, ocurrió en 1954 en la comunidad de Sabán, Quintana Roo...",
     detalle: `Dos niños mayas observan a dos aluxes saliendo de la selva, quienes los invitan a su morada con promesas de diversión y comida. Los niños, prudentes, rechazan la oferta y huyen al oír a su hermana.
     Enseña sobre la curiosidad infantil y el respeto a los espíritus guardianes de la naturaleza, comunes en zonas rurales mayas`,
     img: "./public/assets/img/Encuentro-Alux.png"
   },
-  {
+ {
     titulo: "La Pila de los Azotes: El castigo indígena",
     descripcion: "Más que una leyenda pura, es un relato histórico con tintes míticos de Chan Santa Cruz (actual Felipe Carrillo Puerto).",
     detalle: `Durante la Guerra de Castas y hasta 1920, esta pila de piedra se usaba para azotar a infractores de las leyes mayas, como adúlteros (50 azotes cada uno, seguidos de jugo de naranja agria en las heridas) o desobedientes. Construida en 1918 por el general Francisco May Pech, simboliza la justicia indígena y el rigor social.
     Se dice que los gritos de los castigados aún resuenan en el sitio, advirtiendo sobre el respeto a las costumbres.`,
     img: "./public/assets/img/Azotes.png"
-  },
-  {
-    titulo: "El cuidador del bosque (Ajkanul)",
-    descripcion: "De un libro reciente de leyendas mayas, esta historia destaca la valentía de guerreros y el respeto a la naturaleza...",
-    detalle: `Ajkanul, un guardián del bosque, protege la selva de amenazas, fusionando elementos ancestrales con lecciones sobre familia y rituales. Aunque no exclusiva de Felipe Carrillo Puerto, se relaciona con la cosmovisión de comunidades quintanarroenses.`,
-    img: "./public/assets/img/Ajkanul.png"
   },
   {
     titulo: "Xunaan Tunich: La piedra mujer",

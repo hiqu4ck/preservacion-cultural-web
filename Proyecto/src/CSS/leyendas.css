@@ -112,48 +112,49 @@
     /*ABAJO ES EL BOTON PARA CAMBIAR SLIDE*/
 
     .boton-slide {
-       position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translateY(-50%);
 
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
 
-  pointer-events: none;
-  z-index: 10; /* 🔥 importante */     
+        pointer-events: none;
+        z-index: 10;
+        /* 🔥 importante */
     }
 
     .boton-slide .btnBack,
-.boton-slide .btnNext {
-  pointer-events: all;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--color-blanco);
-  border: 1px solid var(--color-negro);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.2s ease;
-  position: relative;
-  z-index: 11;
-}
+    .boton-slide .btnNext {
+        pointer-events: all;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--color-blanco);
+        border: 1px solid var(--color-negro);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.2s ease;
+        position: relative;
+        z-index: 11;
+    }
 
-        .icono-btn {
-            width: 22px;
-            height: 22px;
-            display: block;
+    .icono-btn {
+        width: 22px;
+        height: 22px;
+        display: block;
 
-            svg {
-                width: 24px;
-                height: 24px;
+        svg {
+            width: 24px;
+            height: 24px;
 
-            }
         }
+    }
 
     /*COL-L*/
 
@@ -161,6 +162,7 @@
         position: relative;
 
         .leyendas-img {
+             height: 400px; 
             position: relative;
             width: 100%;
             margin-left: 0;
@@ -180,16 +182,11 @@
                 min-width: 100%;
 
                 img {
-                    width: auto;
-                    /* ancho proporcional */
-                    max-width: 100%;
-                    /* no se salga del contenedor */
-                    height: 100%;
-                    /* ocupa todo el alto del contenedor */
-                    object-fit: contain;
-                    /* evita recorte */
+                    width: 100%;
+                    height: 400px;
+                    /* o el alto que quieras */
+                    object-fit: cover;
                     display: block;
-                    margin: 0 auto;
                 }
             }
         }
