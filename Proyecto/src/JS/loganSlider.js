@@ -495,34 +495,173 @@ const leyendasInfo = [
   {
     titulo: "La leyenda del Balam",
     descripcion: "    En la tradición maya, la palabra Balam significa jaguar, pero no se refiere únicamente al animal: es un ser protector, un guardián espiritual relacionado con la noche, la selva y la fuerza sagrada. El Balam aparece en muchas leyendas y relatos donde cumple el papel de defensor del pueblo, del maíz, de los hogares y de los caminos.",
-    detalle: `Hace mucho tiempo, los dioses crearon a los Balames, cuatro jaguares guardianes, para proteger a los pueblos mayas. Cada Balam estaba asociado con un punto cardinal y tenía la misión de vigilar la selva y proteger a los humanos de los peligros de la noche, como espíritus malignos y animales que amenazaban los cultivos. Se decía que los Balames tenían la capacidad de ver en la oscuridad y caminar sin dejar rastro, ahuyentando a los intrusos con un rugido fuerte.
+    detalle: `Hace mucho tiempo, cuando la selva era más densa y el mundo aún guardaba secretos que los hombres no podían comprender, los dioses mayas crearon a los Balames, cuatro poderosos jaguares guardianes. No eran simples animales: eran espíritus antiguos, nacidos del corazón de la tierra y del cielo nocturno, destinados a proteger a los pueblos y mantener el equilibrio entre lo visible y lo oculto.
 
-Los campesinos ofrecían ofrendas y velas para honrar a los Balames, quienes también cuidaban las milpas. Con el tiempo, el Balam se convirtió en símbolo de fuerza y sabiduría. Hoy en día, se cree que cada persona tiene un Balam que la cuida, protegiéndola en su camino, especialmente en la selva o en momentos difíciles.
+Cada Balam vigilaba un punto cardinal. Uno custodiaba el oriente, donde nace el sol; otro el poniente, donde muere la luz; el tercero guardaba el norte, frío y misterioso; y el último protegía el sur, profundo y lleno de vida. Juntos formaban un círculo invisible que rodeaba a los hombres, aunque pocos podían percibirlo.
 
-Esta leyenda resalta el papel del Balam como guardián y protector del pueblo maya.
+Se decía que al caer la noche, cuando el viento dejaba de moverse y la selva quedaba en silencio absoluto, los Balames despertaban. Sus ojos brillaban entre la oscuridad como brasas encendidas, y su caminar no dejaba huella alguna. Nadie podía verlos con claridad… pero todos podían sentirlos.
+
+Los ancianos contaban que si un intruso, un espíritu maligno o un hombre con malas intenciones se adentraba en la selva, un rugido profundo retumbaba en la distancia. No era un sonido común: era un eco que parecía venir de todas partes al mismo tiempo. Quienes lo escuchaban sabían que debían retroceder… porque el Balam ya los había encontrado.
+
+Los campesinos, conscientes de su presencia, dejaban ofrendas de maíz, velas y copal en los bordes de sus milpas. No lo hacían por miedo, sino por respeto. Sabían que los Balames cuidaban sus cultivos, alejaban a los depredadores y protegían a sus familias mientras dormían.
+
+Sin embargo, no todos comprendían su poder.
+
+Se cuenta que un hombre arrogante, que no creía en las antiguas historias, decidió internarse en la selva una noche sin pedir permiso. Caminó durante horas, ignorando el silencio extraño que lo rodeaba… hasta que el aire cambió. Un olor húmedo y pesado lo envolvió, y el sonido de sus propios pasos dejó de escucharse.
+
+Entonces lo vio.
+
+Dos ojos brillando entre los árboles.
+
+El hombre intentó correr, pero sus piernas no respondieron. El rugido que escuchó no fue fuerte… fue profundo, como si viniera desde dentro de la tierra misma. Nadie volvió a verlo.
+
+Desde entonces, los mayas dicen que los Balames no solo protegen… también castigan.
+
+Con el paso del tiempo, su figura dejó de ser solo la de un jaguar y se convirtió en símbolo de fuerza, sabiduría y guía espiritual. Hoy en día, muchos creen que cada persona tiene un Balam que la acompaña, observando en silencio, protegiéndola en los momentos más oscuros, especialmente cuando se adentra en la selva… o en su propio destino.
+
+Y aunque ya no todos pueden verlos, hay quienes aseguran que, en noches muy tranquilas, cuando todo parece detenerse…
+
+todavía se escuchan sus pasos.
 `,
     img: "./public/assets/img/leyenda-balam2.jpg"
   },
   {
     titulo: "La Xtá’abay: La mujer seductora de la selva",
     descripcion: "Esta es una de las leyendas más conocidas en la zona maya de Quintana Roo, narrada en pueblos como Felipe Carrillo Puerto, Lázaro Cárdenas, Tulum y José María Morelos. ",
-    detalle: `Xtá’abay es una hermosa mujer que emerge de la selva en noches de luna llena, atrayendo a hombres ebrios o infieles con su encanto. Viste un hipil transparente y se peina con espinas de cactus venenoso (tzá’akan) bajo un yaxche’ (ceiba sagrada). Sus pies son mutados: uno como pezuña de chivo y otro como pata de pavo, produciendo un sonido "tsss’ tak" al caminar. Lleva a sus víctimas a una cueva para "amarlas" hasta la muerte.
-El origen se remonta a dos mujeres: la "x k’eban" (pecadora pero bondadosa), que se transformó en la flor dulce del xtabentún, y la "utz kó’olel" (aparentemente virtuosa pero egoísta), que se convirtió en la Xtá’abay, una flor espinosa y venenosa. Para protegerse, se recomienda no embriagarse y, si aparece, dar tres cintarazos para transformarla en una serpiente que huye. En Felipe Carrillo Puerto, el museo Noh Kah Santa Cruz Balan Nah expone pinturas sobre esta leyenda, y recientemente (octubre 2025) se inauguró una exposición en la Casa de la Cultura.
+    detalle: `Dicen los abuelos que, cuando la luna llena se alza sobre la selva y el aire se vuelve pesado y silencioso, hay algo que despierta entre los árboles…
+
+La llaman Xtá’abay.
+
+No llega con ruido ni con pasos apresurados. Aparece lentamente, como si la noche misma tomara forma de mujer. Es hermosa, imposible de ignorar. Su piel parece brillar bajo la luz de la luna, y viste un hipil tan ligero que se mueve con el viento como si fuera parte de la niebla. Sentada bajo un yaxche’, la ceiba sagrada, se peina con espinas de cactus venenoso, sin mostrar dolor, como si su cuerpo no perteneciera del todo a este mundo.
+
+Los hombres que la ven —especialmente aquellos que han bebido de más o que cargan culpas en el corazón— sienten cómo algo los llama. No es su voz… es algo más profundo. Una atracción que no pueden explicar.
+
+—Ven… —parece susurrar el viento.
+
+Y ellos van.
+
+Pero hay algo que no todos notan… hasta que es demasiado tarde.
+
+Sus pies.
+
+Uno tiene forma de pezuña de chivo, el otro de pata de pavo. Y al caminar, produce un sonido seco y extraño…
+
+“tsss’ tak… tsss’ tak…”
+
+Quienes alcanzan a escucharlo sienten un escalofrío recorrerles la espalda. Pero para entonces, ya no pueden detenerse.
+
+La Xtá’abay los guía hacia lo más profundo de la selva, donde la luz ya no entra y los caminos desaparecen. Allí, en una cueva oculta, cumple su destino: abrazar a sus víctimas en un acto que mezcla deseo y muerte… hasta que su aliento se apaga para siempre.
+
+Nadie regresa.
+
+Pero esta historia no comenzó con un espíritu… sino con dos mujeres.
+
+Hace mucho tiempo vivían x k’eban, conocida por su vida “pecadora” pero con un corazón generoso, y utz kó’olel, admirada por su aparente virtud, aunque fría y egoísta por dentro. Cuando murieron, algo extraño ocurrió: del cuerpo de x k’eban nació una flor dulce y fragante, el xtabentún, mientras que del de utz kó’olel brotó una planta espinosa, amarga y venenosa.
+
+Los dioses habían revelado la verdad.
+
+Y de esa oscuridad nació la Xtá’abay.
+
+Un espíritu de engaño, belleza y castigo.
+
+Los antiguos sabían cómo protegerse. Decían que no debías caminar solo en la noche, ni dejarte dominar por el alcohol o los malos deseos. Y si alguna vez la veías… debías tener el valor de enfrentarla.
+
+Tres golpes.
+
+Tres cintarazos.
+
+Solo así su belleza se rompería, revelando su verdadera forma: una serpiente que huye entre la maleza.
+
+Hoy en día, en lugares como Felipe Carrillo Puerto, aún se cuentan estas historias. Algunos aseguran haber escuchado ese sonido en la selva… otros dicen haber sentido su presencia sin verla.
+
+Y hay quienes juran que, si te quedas en silencio bajo la luna…
+
+puedes escucharla llamarte.
 `,
     img: "./public/assets/img/Xtabay_2.png"
   },
   {
     titulo: "La Cruz Parlante: El símbolo de la resistencia maya",
     descripcion: "Esta leyenda histórica surge durante la Guerra de Castas (1847-1901), un levantamiento maya contra la opresión en Quintana Roo.",
-    detalle: `En un manantial cerca de lo que hoy es Felipe Carrillo Puerto (antes Chan Santa Cruz), un mestizo llamado José María Barrera encontró un cedro y pintó una cruz en él. El árbol creció y "habló", guiando a los rebeldes mayas con mensajes divinos transmitidos por líderes como Barrera o Manuel Nahuat. La cruz, tallada en madera de caoba (de 7-10 cm), se convirtió en oráculo: otorgaba protección, legitimidad y estrategias militares, fusionando creencias católicas con elementos prehispánicos como la ceiba sagrada y el maíz.
-    Representó un gobierno teocrático independiente, inspirando a figuras como la sacerdotisa María Petrona Uicab, quien consultaba el oráculo en Tulum. Aunque el ejército mexicano tomó Chan Santa Cruz en 1901, el culto persiste. Hoy, la cruz se venera en el Santuario de la Cruz Parlante en Felipe Carrillo Puerto, con fiestas el 3 de mayo.`,
+    detalle: `En lo profundo de la selva, donde el agua brota silenciosa de la tierra y los árboles guardan secretos antiguos, ocurrió un suceso que cambiaría para siempre el destino del pueblo maya.
+
+Cuentan que, cerca de un manantial en lo que hoy es Felipe Carrillo Puerto —entonces conocido como Chan Santa Cruz—, un hombre llamado José María Barrera encontró un árbol de cedro distinto a todos los demás. No era más alto ni más frondoso… pero algo en él parecía observarlo.
+
+Movido por una fuerza que no comprendía, tomó un cuchillo y talló en su corteza una cruz.
+
+Lo que ocurrió después no tuvo explicación.
+
+Con el paso de los días, el árbol comenzó a crecer de forma extraña. Su tronco se expandió, envolviendo la cruz, como si la estuviera protegiendo… o dándole vida. Y entonces, una noche, cuando el silencio de la selva era absoluto…
+
+la cruz habló.
+
+No con una voz humana, sino con un susurro profundo que parecía surgir del viento, del agua, de la tierra misma. Un mensaje que solo algunos podían escuchar, pero que todos podían sentir.
+
+Pronto, los rebeldes mayas comenzaron a reunirse alrededor de ella. Decían que la cruz les daba instrucciones, que les advertía de peligros, que les indicaba cuándo avanzar y cuándo resistir. Sus palabras eran transmitidas por hombres como Barrera y Manuel Nahuat, quienes se convirtieron en sus intérpretes.
+
+La cruz dejó de ser un símbolo… y se convirtió en guía.
+
+Tallada después en madera de caoba, pequeña pero poderosa, se transformó en un oráculo sagrado. Bajo su presencia, nació un gobierno distinto, uno donde lo divino y lo humano se entrelazaban. Un gobierno guiado no por reyes… sino por la voluntad de la cruz.
+
+Se decía que otorgaba protección en la batalla, legitimidad a los líderes y sabiduría para enfrentar al enemigo. Su poder no solo venía de la fe católica, sino también de las raíces más profundas del mundo maya: la ceiba sagrada, el maíz, la conexión con los ancestros.
+
+Entre quienes creyeron en ella estuvo María Petrona Uicab, sacerdotisa que consultaba el oráculo y transmitía sus mensajes. Para muchos, la cruz no solo hablaba… sino que elegía.
+
+Pero no todos aceptaron su poder.
+
+Con el tiempo, el ejército mexicano avanzó hasta tomar Chan Santa Cruz en 1901. Sin embargo, aunque el territorio fue conquistado, la voz de la cruz nunca fue silenciada.
+
+Porque lo que había nacido en aquel manantial no era solo un objeto… era una creencia.
+
+Hoy en día, la Cruz Parlante sigue siendo venerada en su santuario. Cada 3 de mayo, las personas se reúnen para honrarla, encender velas y escuchar, en medio del murmullo del viento…
+
+si aún queda algo de su voz.
+
+Y hay quienes aseguran que, si uno guarda silencio suficiente…
+
+la cruz todavía responde.`,
     img: "./public/assets/img/CruzParlante_2.png"
   },
   {
     titulo: "Los Aluxes: Los guardianes traviesos de la naturaleza",
     descripcion: "Los aluxes (aluxo’ob en maya) son pequeños duendes de la mitología maya, altos como hasta las rodillas, vestidos como antiguos mayas.",
-    detalle: `Viven en selvas, grutas y cenotes de la península de Yucatán, incluyendo Quintana Roo. Son invisibles pero pueden materializarse para interactuar. Protegen el Xibalbá (inframundo maya) y los campos: ayudan a crecer el maíz, llaman la lluvia y espantan ladrones si se les deja ofrendas. Si se les irrespeta, causan accidentes, enfermedades o travesuras como ruidos extraños.
-Creados por sacerdotes mayas con barro, miel y flores, se activan con rituales. En Quintana Roo, una famosa anécdota es el puente de Cancún, derribado por aluxes hasta que les construyeron una casa. Para entrar en sus territorios, pide permiso y deja ofrendas para buena suerte.
+    detalle: `En lo más profundo de la selva maya, donde la luz apenas logra atravesar las copas de los árboles y el silencio se siente vivo, habitan seres que pocos han visto… pero muchos han sentido.
+
+Los llaman aluxes.
+
+Son pequeños, apenas del tamaño de un niño, pero no deben ser subestimados. Viven ocultos en grutas, entre raíces de árboles antiguos y en las profundidades de cenotes que parecen no tener fondo. La mayoría del tiempo son invisibles, moviéndose entre el mundo de los hombres y el del Xibalbá, el inframundo maya.
+
+Pero cuando lo desean… pueden aparecer.
+
+Se dice que los aluxes fueron creados hace siglos por sacerdotes mayas, quienes moldeaban figuras con barro, miel y flores sagradas. Mediante rituales y palabras antiguas, les daban vida. No eran simples juguetes ni espíritus cualquiera… eran guardianes.
+
+Guardianes de la tierra.
+
+Protegen las milpas, hacen crecer el maíz y llaman a la lluvia cuando la sequía amenaza. Si un campesino les deja ofrendas —comida, maíz, miel o incluso pequeñas casas— los aluxes cuidan sus tierras como si fueran propias. Nadie roba, nadie daña… porque ellos vigilan.
+
+Pero no todo es protección.
+
+También son traviesos.
+
+Si alguien entra en su territorio sin permiso, comienzan las señales: piedras que se mueven solas, pasos que se escuchan detrás de ti, susurros que no puedes entender. Y si el visitante ignora estas advertencias… las cosas empeoran.
+
+Accidentes inexplicables. Enfermedades repentinas. Ruidos en la noche que no dejan dormir.
+
+Dicen que los aluxes no atacan por maldad… sino por respeto.
+
+En Quintana Roo, una historia es repetida una y otra vez: la del puente en Cancún. Cada vez que intentaban construirlo, algo fallaba. Estructuras que caían, materiales que desaparecían, trabajadores que escuchaban risas en la oscuridad. Hasta que alguien comprendió…
+
+ese lugar ya tenía dueños.
+
+Solo cuando les construyeron una pequeña casa, un santuario para ellos, los problemas cesaron. Desde entonces, el puente permanece en pie.
+
+Los ancianos aconsejan: si vas a entrar a la selva, pide permiso. Habla en voz baja. Deja una ofrenda.
+
+Porque nunca sabes quién te está observando.
+
+Y hay quienes aseguran que, si te detienes en completo silencio, puedes escuchar risitas suaves entre los árboles…
+
+como si alguien pequeño corriera cerca de ti… pero sin dejar huellas.
 `,
     img: "./public/assets/img/Aluxes.png"
   },
@@ -530,75 +669,410 @@ Creados por sacerdotes mayas con barro, miel y flores, se activan con rituales. 
     titulo: "El Huay Chivo: El brujo transformado en bestia",
     descripcion: "Esta leyenda de terror maya habla de un hechicero que se transforma en un ser mitad hombre, mitad chivo, con ojos rojos, pelo negro y cuernos...",
     detalle: `
-    Ataca a viajeros, ganado o infieles por las noches, dejando un hedor a azufre. En una versión local cerca de Felipe Carrillo Puerto, un curandero respetado llamado Don Eustaquio curaba con rituales, pero se convertía en Huay Chivo bajo la luna llena. Un joven lo descubrió y el pueblo lo confrontó, obligándolo a huir a un cenote, donde maldijo al lugar. Desde entonces, se escucha su aullido en tormentas, y se advierte no confiar en curanderos sospechosos ni invocar espíritus.
+    Dicen que hay criaturas que no nacen… se hacen.
+
+En los caminos solitarios, donde la selva se cierra y la noche cae sin aviso, los viajeros han contado historias de una presencia que no se ve… pero se siente antes de aparecer.
+
+Un olor.
+
+Fuerte. Pesado. Como azufre quemado.
+
+Y luego… el silencio.
+
+Los animales dejan de moverse, el viento se detiene… y algo comienza a acercarse.
+
+Lo llaman Huay Chivo.
+
+Una bestia que camina entre dos mundos. Mitad hombre, mitad chivo. Ojos encendidos en la oscuridad, cuerpo cubierto de sombras y un aliento que anuncia desgracia. Se dice que ataca a quienes vagan solos por la noche: viajeros, ganado… o aquellos que han traicionado, engañado o cargan culpas en el alma.
+
+Pero en los alrededores de Felipe Carrillo Puerto, la historia toma un giro aún más inquietante.
+
+Había una vez un curandero llamado Don Eustaquio. Era respetado, buscado por muchos por sus remedios, sus rezos y su aparente conexión con lo espiritual. Sanaba enfermedades, quitaba males… y hablaba con fuerzas que pocos entendían.
+
+Pero no todo era lo que parecía.
+
+Un joven del pueblo, movido por la curiosidad, decidió seguirlo una noche de luna llena. Caminó en silencio entre los árboles, ocultándose entre sombras, hasta que vio algo que jamás podría olvidar.
+
+Don Eustaquio se detuvo.
+
+El aire cambió.
+
+Su cuerpo comenzó a retorcerse, sus huesos crujieron como ramas secas… y su figura humana se deformó hasta convertirse en algo monstruoso. Sus ojos brillaron, su espalda se encorvó… y un hedor insoportable llenó el aire.
+
+El curandero había desaparecido.
+
+En su lugar… estaba el Huay Chivo.
+
+El joven huyó, pero no antes de escuchar un gruñido que parecía perseguirlo desde la oscuridad misma. Cuando contó lo sucedido, el pueblo no dudó. Sabían que algo estaba mal.
+
+Esa misma noche, lo confrontaron.
+
+Don Eustaquio no negó nada.
+
+Dicen que sus ojos ya no eran los mismos… que hablaba con una voz que no parecía suya. Antes de que pudieran hacer algo, escapó hacia la selva, perdiéndose en la espesura hasta llegar a un cenote profundo.
+
+Ahí, acorralado, lanzó una maldición.
+
+Su voz resonó entre las piedras y el agua:
+
+—Nadie que me busque aquí encontrará paz…
+
+Y desapareció.
+
+Desde entonces, durante las noches de tormenta, cuando el cielo ruge y el viento sacude los árboles, hay quienes aseguran escuchar un aullido. No es de perro, ni de cabra… es algo más.
+
+Algo que duele al escucharlo.
+
+Los ancianos advierten: no confíes en todo curandero. No invoques lo que no entiendes. Y nunca sigas un sonido extraño en la noche.
+
+Porque hay cosas que, una vez que te encuentran…
+
+ya no te sueltan.
 `,
     img: "./public/assets/img/Huay-Chivo.png"
   },
   {
     titulo: "Los hermanos Kinich y Tizic: El origen del Chechén y el Chacá",
     descripcion: "Esta leyenda, narrada por habitantes de Felipe Carrillo Puerto como Gregorio Canchén, se ambienta en la selva de Quintana Roo y explica el equilibrio natural entre el bien y el mal...",
-    detalle: `Dos príncipes guerreros mayas, Kinich (el bondadoso y amado) y Tizic (el arrogante y cruel), se enamoran de la hermosa Nicté-Ha. Para resolver su rivalidad, se enfrentan en un duelo mortal donde ambos perecen. En el inframundo, suplican a los dioses mayas por una segunda oportunidad para ver a Nicté-Ha. Los dioses les permiten regresar, pero unidos para siempre: Tizic se transforma en el árbol chechén (Metopium brownei), cuya resina causa quemaduras y llagas, simbolizando el mal; Kinich en el chacá (Bursera simaruba), cuyo néctar alivia los efectos del chechén, representando el bien. En la selva, estos árboles siempre crecen cerca uno del otro, y se usan en la medicina tradicional maya. La moraleja enseña el respeto a la naturaleza y el dualismo del mundo.`,
+    detalle: `Hace mucho tiempo, cuando los dioses aún caminaban entre los hombres y la selva susurraba secretos al viento, existieron dos príncipes guerreros cuyo destino estaba entrelazado desde antes de nacer.
+
+Sus nombres eran Kinich y Tizic.
+
+Kinich era amado por su pueblo: valiente, justo y de corazón noble. Su presencia inspiraba paz, y su palabra era tan firme como la tierra misma. Tizic, en cambio, era fuerte y temido. Orgulloso, impulsivo y consumido por su propio poder, no aceptaba ser inferior a nadie.
+
+Ambos compartían algo más que sangre y rivalidad…
+
+Compartían el amor por una misma mujer.
+
+Su nombre era Nicté-Ha, cuya belleza era tan pura que parecía haber sido creada por los dioses mismos. Su voz era suave como el agua y su mirada calmaba incluso al más feroz de los guerreros.
+
+Pero el amor… se convirtió en guerra.
+
+La tensión entre los príncipes creció como una tormenta a punto de estallar. Ninguno estaba dispuesto a ceder, ninguno aceptaba perder. Así, una noche, bajo la mirada silenciosa de la luna, decidieron resolver su destino de la única forma que conocían:
+
+con un duelo a muerte.
+
+El combate fue feroz.
+
+Espadas chocaron, la tierra se levantó bajo sus pies y el aire se llenó de furia. Kinich luchaba con honor… Tizic, con rabia. Ninguno retrocedió. Ninguno dudó.
+
+Hasta que, en un último golpe, ambos cayeron.
+
+La selva quedó en silencio.
+
+Nicté-Ha, al verlos, lloró con un dolor que atravesó los cielos. Sus lágrimas tocaron la tierra… y los dioses escucharon.
+
+En el inframundo, las almas de Kinich y Tizic despertaron. Frente a ellos, las deidades observaron su destino marcado por el amor y el odio.
+
+—Denos otra oportunidad —suplicaron—. Solo queremos verla una vez más.
+
+Los dioses, sabios y severos, aceptaron… pero con una condición.
+
+Regresarían al mundo de los vivos.
+
+Pero no como hombres.
+
+Y jamás volverían a separarse.
+
+Así, Tizic fue transformado en el árbol chechén, oscuro y peligroso, cuya savia quema la piel y deja heridas profundas. Su esencia seguía siendo la misma: intensa, hiriente, dominada por su propio veneno.
+
+Kinich, en cambio, se convirtió en el árbol chacá, de corteza clara y espíritu sanador. Su savia tiene el poder de curar las heridas del chechén, como si su bondad aún intentara equilibrar el daño de su antiguo rival.
+
+Desde entonces, en lo profundo de la selva, ambos árboles crecen siempre uno junto al otro.
+
+Inseparables.
+
+Eternos.
+
+Como si incluso después de la muerte, su historia se negara a terminar.
+
+Los mayas aprendieron a reconocerlos, a respetarlos. Sabían que no podían tocar uno sin considerar al otro. Que el daño y la cura, el bien y el mal… siempre coexistían.
+
+Y aún hoy, cuando alguien se adentra en la selva y encuentra un chechén, no tarda en descubrir que, muy cerca…
+
+el chacá también está ahí.
+
+Esperando.`,
     img: "./public/assets/img/Kinich-Tizic_2.png"
   },
   {
     titulo: "La leyenda de Jacinto Pat: El guerrero protegido por la Cruz",
     descripcion: "Originaria de comunidades como Tihosuco y Chumpon, cerca de Felipe Carrillo Puerto, esta historia heroica de la Guerra de Castas (1847-1901) retrata a Jacinto Pat como un líder invulnerable...",
-    detalle: `. Pat, un "tigre" con machete, es protegido por la gracia divina de la Santísima Cruz y poderes de way (transformación). En una noche, corta 60 cabezas de enemigos sin ser herido, guiado por órdenes de Dios.
-     Embosca a perseguidores en rutas hacia Bacalar y Ascensión, usando tácticas como falsos campamentos con cadáveres enterrados en pib (hornos tradicionales) para aterrorizar a los soldados, simulando canibalismo.
-      La leyenda enfatiza la resistencia maya y la fe en lo divino para la liberación.`,
+    detalle: `En tiempos de guerra, cuando la selva ardía en silencio y el miedo caminaba junto a los hombres, surgió una figura que muchos no sabían si llamar guerrero… o leyenda.
+
+Su nombre era Jacinto Pat.
+
+Pero entre sus enemigos, tenía otro nombre.
+
+Lo llamaban “el tigre”.
+
+Decían que no peleaba como un hombre común. Que algo lo protegía. Que algo lo guiaba. Mientras otros caían en combate, él avanzaba sin temor, como si la muerte no pudiera tocarlo.
+
+Los ancianos aseguraban que estaba bajo la protección de la Santísima Cruz, y que poseía el poder del way, la capacidad de transformarse, de volverse más que humano cuando la batalla lo exigía.
+
+Una noche, marcada por la oscuridad y la sangre, su nombre se volvió imposible de olvidar.
+
+El cielo estaba cubierto, la selva en completo silencio. Sus enemigos avanzaban confiados, seguros de su número… sin saber que ya estaban siendo observados.
+
+Entonces ocurrió.
+
+Como una sombra entre los árboles, Jacinto Pat apareció. Su machete brilló apenas con la poca luz… y lo que siguió fue tan rápido como brutal. Uno tras otro, sus enemigos cayeron sin entender de dónde venían los ataques.
+
+Se dice que esa noche…
+
+cortó más de sesenta cabezas.
+
+Y no recibió ni una sola herida.
+
+Algunos juraron haber visto algo más. No solo a un hombre… sino a una figura que se movía con velocidad imposible, que desaparecía y reaparecía entre la selva, como si no perteneciera del todo a este mundo.
+
+El miedo comenzó a crecer.
+
+Pero Jacinto Pat no solo peleaba… también pensaba.
+
+En las rutas hacia Bacalar y Ascensión, comenzó a tender trampas. Creaba falsos campamentos, dejaba rastros engañosos, enterraba cuerpos en pib, los hornos tradicionales, haciendo creer a los soldados que se enfrentaban a algo más oscuro… algo que no seguía las reglas humanas.
+
+El rumor se esparció:
+
+—No es un hombre… es algo más.
+
+Los enemigos comenzaron a temer a la selva misma. Cada árbol, cada sombra… podía ocultarlo.
+
+Porque Jacinto Pat no solo luchaba por la guerra.
+
+Luchaba por su pueblo.
+
+Por su libertad.
+
+Por algo más grande que él.
+
+Y en cada paso, en cada emboscada, en cada golpe de machete… creía estar guiado por una fuerza divina que lo protegía.
+
+Con el tiempo, su figura se volvió historia… y la historia, leyenda.
+
+Hoy en día, algunos dicen que su espíritu aún recorre los caminos antiguos. Que en las noches más oscuras, cuando la selva se queda en silencio…
+
+puede sentirse una presencia vigilando.
+
+Como si el “tigre” nunca hubiera dejado de pelear.`,
     img: "./public/assets/img/Jacinto-Pat.png"
   },
   {
     titulo: "La leyenda de la violación de la hija de Cecilio Chi: El detonante de la Guerra de Castas",
     descripcion: "Esta narración fundacional se cuenta en Tihosuco, Chetumal y Nohbec, cercanas a Felipe Carrillo Puerto, y explica el inicio de la rebelión maya...",
-    detalle: `Un sacerdote viola a la hija de Cecilio Chi (o en variantes, de Jacinto Pat), entregada para educación. Los mayas, furiosos, decapitan al cura en Polenk'in ("cabeza del cura"). Simboliza la opresión colonial y la redención de la feminidad maya y la tierra. Esto lleva al levantamiento contra los "dzules" (blancos), oponiendo la Iglesia Católica a la Santísima Cruz. La moraleja resalta la justicia y la defensa de la dignidad indígena.`,
+    detalle: `La noche caía pesada sobre la selva, y el silencio no era paz… era advertencia. Entre los árboles antiguos, donde el viento apenas se atrevía a pasar, comenzó a correr un susurro que encendería la furia de todo un pueblo.
+
+Se decía que un sacerdote, enviado para “educar” y guiar, había cometido un acto imperdonable: abusó de la hija de un gran líder maya, ya fuera de Cecilio Chi o, en otras versiones, de Jacinto Pat. La joven, entregada con confianza, fue traicionada en lo más profundo de su dignidad. Pero la selva no olvida… y el pueblo maya tampoco.
+
+Cuando la verdad salió a la luz, no hubo gritos innecesarios ni discusiones largas. Solo una decisión firme, nacida del dolor y del honor. Bajo el cielo oscuro, un grupo de hombres se reunió, con los ojos encendidos por la rabia contenida. No buscaban venganza… buscaban justicia.
+
+El sacerdote fue llevado hasta un sitio que con el tiempo sería conocido como Polenk’in, “la cabeza del cura”. Ahí, entre sombras y antorchas temblorosas, su destino quedó sellado. El machete descendió en un instante que partió no solo carne, sino también el dominio de una autoridad impuesta. Su cabeza fue separada de su cuerpo como símbolo de lo que ya no sería tolerado.
+
+Dicen que esa noche la selva rugió. Que los árboles crujieron como si aprobaran el acto. Que la tierra misma absorbió la sangre como testigo de una justicia antigua, más vieja que cualquier iglesia.
+
+A partir de ese momento, el hecho no quedó como un simple castigo, sino como una chispa. Un fuego que se extendió entre los mayas, alimentando el levantamiento contra los dzules, los extranjeros que habían traído opresión y abuso. La Iglesia, que antes imponía temor, comenzó a perder su poder frente a la fe en la Santísima Cruz, símbolo de resistencia y guía espiritual del pueblo.
+
+Hasta hoy, quienes conocen esta historia dicen que no es solo una leyenda… es un recordatorio. Un eco que advierte que la dignidad no se negocia, que la tierra protege a los suyos, y que cuando la injusticia cruza el límite, la selva misma se levanta para reclamar equilibrio.
+
+Y hay quienes aseguran que, si pasas por Polenk’in en una noche sin luna, el viento susurra entre los árboles… como si aún recordara aquel momento en que la justicia cayó, rápida y definitiva.`,
     img: "./public/assets/img/Cecilio-Chi.png"
   },
   {
     titulo: "La historia de Bernardino Ken y Florentino Cituk",
     descripcion: "Proveniente de relatos orales en Noh Kah Balam Na (Felipe Carrillo Puerto) y Vigía Chico, esta leyenda describe la tenaz oposición de Ken y Cituk contra el general Bravo a inicios del siglo XX...",
-    detalle: `Con 100 hombres, se esconden en cuevas, reciben mensajes divinos del cielo y sabotean trenes con dinamita, protegidos por rezos. La lucha termina con una epidemia de viruela negra, dejando solo "semilla" para futuras generaciones. Enfatiza la devoción a Dios y la entrega por la libertad maya, con elementos de profecías catastrofistas.`,
+    detalle: `La historia de Bernardino Ken y Florentino Cituk no se cuenta en voz alta en cualquier lugar. Dicen que sólo debe narrarse cuando la noche es espesa y el viento parece susurrar entre los árboles, como si aún guardara memoria de lo ocurrido.
+
+Hace muchos años, cuando la tierra ardía de injusticia y el pueblo maya luchaba por su libertad, Bernardino Ken y Florentino Cituk reunieron a cien hombres valientes. No eran soldados comunes: eran hombres marcados por la fe, por la desesperación y por una extraña certeza de que algo más grande los guiaba.
+
+Se ocultaban en cuevas profundas, donde la luz apenas tocaba las paredes y el eco deformaba las voces. Allí, en la oscuridad, comenzaron a recibir lo que juraban eran mensajes divinos. Decían que venían del cielo, susurrados en sueños o escuchados como un murmullo en el silencio absoluto. Algunos afirmaban haber visto señales: luces en la noche, sombras que se movían sin dueño, o símbolos grabados en piedra que nadie recordaba haber hecho.
+
+Convencidos de que estaban protegidos por fuerzas sagradas, iniciaron actos de sabotaje contra los trenes que cruzaban sus tierras. Usaban dinamita, pero antes de cada explosión, rezaban. Rezaban con fervor, con miedo, con la esperanza de que ninguna bala los alcanzaría mientras su fe se mantuviera firme. Y por un tiempo… parecía funcionar. Las historias cuentan que salían ilesos, como si algo invisible desviara el peligro.
+
+Pero toda leyenda tiene su precio.
+
+Poco a poco, algo comenzó a cambiar. Los mensajes se volvieron más oscuros, más urgentes, como advertencias de un destino inevitable. Algunos hombres empezaron a dudar, otros se aferraron aún más a su fe, convencidos de que una gran prueba estaba por llegar.
+
+Y entonces llegó.
+
+Una enfermedad silenciosa, cruel, comenzó a extenderse entre ellos. La llamaron viruela negra. No hacía ruido como las explosiones ni dejaba huellas visibles al principio, pero avanzaba sin detenerse. Uno por uno, los hombres fueron cayendo. Las oraciones se volvieron más desesperadas, más intensas… pero el mal no se detenía.
+
+Las cuevas, que antes eran refugio, se transformaron en tumbas.
+
+Se dice que al final, casi nadie quedó en pie. Sólo unos pocos sobrevivieron, a quienes llamaron “la semilla”, los destinados a mantener viva la memoria y la lucha en las generaciones futuras.
+
+Hasta hoy, algunos aseguran que si te adentras en ciertas cuevas y guardas silencio, puedes escuchar rezos lejanos… o incluso el eco de una explosión que nunca termina.
+
+Y hay quienes creen que los mensajes del cielo… nunca dejaron de llegar.`,
     img: "./public/assets/img/Bernardino_Ken-Florentino_Cituk.png"
   },
   {
     titulo: "El tesoro arqueológico de los aluxes",
     descripcion: "En esta leyenda, asociada a comunidades rurales de Quintana Roo, un hombre llamado Santiago entra en una gruta durante excavaciones y...",
-    detalle: `En esta leyenda, asociada a comunidades rurales de Quintana Roo, un hombre llamado Santiago entra en una gruta durante excavaciones y encuentra aluxes que lo guían a un tesoro de figuras de jade y 
-    barro custodiado por una serpiente. Él distribuye las piezas, pero una cobra vida por las noches, recordando el respeto a los guardianes mayas y el castigo por profanar sitios sagrados.`,
+    detalle: `En algunas comunidades rurales de Quintana Roo, se cuenta una historia que pocos se atreven a repetir cuando cae la noche. Dicen que no es un simple relato, sino una advertencia que ha pasado de generación en generación.
+
+Hace años, un hombre llamado Santiago participaba en unas excavaciones cerca de la selva. Era conocido por su valentía, pero también por su curiosidad desmedida. Una tarde, mientras el sol comenzaba a ocultarse, descubrió la entrada a una gruta oculta entre raíces y piedra, como si la misma tierra intentara esconderla.
+
+Impulsado por algo que no supo explicar, decidió entrar.
+
+Dentro, el aire era frío y pesado. Cada paso que daba parecía despertar ecos antiguos. Fue entonces cuando los vio: pequeñas figuras que se movían entre las sombras. Eran los aluxes, guardianes traviesos y misteriosos de la tradición maya. No hablaban con palabras, pero Santiago entendía sus intenciones, como si le susurraran directamente en la mente.
+
+Lo guiaron a lo más profundo de la gruta.
+
+Ahí encontró un tesoro oculto desde tiempos antiguos: figuras de jade y barro, perfectamente conservadas, alineadas como si aún esperaran ser protegidas. Pero no estaban solas. Enroscada alrededor del tesoro, inmóvil y silenciosa, yacía una serpiente. Sus ojos brillaban en la oscuridad, vigilantes, como si hubiera esperado ese momento durante siglos.
+
+Santiago dudó… pero la tentación fue más fuerte.
+
+Tomó las piezas y salió de la gruta, convencido de que había sido elegido para encontrarlas. Durante días, repartió las figuras entre conocidos, vendió algunas y guardó otras, ignorando las advertencias que parecían perseguirlo en sueños.
+
+Entonces comenzaron las noches.
+
+Una de las figuras… cambió.
+
+Al principio fue un ligero movimiento, casi imperceptible. Luego, sonidos en la oscuridad. Finalmente, quienes dormían cerca juraron ver cómo una de las piezas cobraba vida: se deslizaba como serpiente, recorriendo la casa, observando en silencio. Sus ojos, antes inertes, ahora parecían juzgar.
+
+El miedo creció.
+
+Santiago empezó a enfermar, y las personas que recibieron las figuras también reportaron sucesos extraños: susurros, sombras, pesadillas con la gruta… y con la serpiente.
+
+Los ancianos del lugar no tardaron en entenderlo.
+
+Aquello no era un tesoro, era un legado protegido. Los aluxes no habían guiado a Santiago para recompensarlo, sino para probarlo. Y él había fallado.
+
+Dicen que, con el tiempo, las piezas regresaron misteriosamente a la selva, una por una. Nadie sabe quién las llevó de vuelta… o si regresaron solas.
+
+Desde entonces, la historia se cuenta como advertencia: los lugares sagrados no deben ser perturbados, y los guardianes antiguos no olvidan.
+
+Y hay quienes aseguran que, en noches silenciosas, si te acercas a una gruta… puedes escuchar el leve arrastre de algo que vigila, esperando que alguien más cometa el mismo error.`,
     img: "./public/assets/img/Tesoro_Aluxes.png"
   },
   {
     titulo: "El primer encuentro con los aluxes",
     descripcion: "Esta leyenda, relatada por Gaspar Antonio Xiu Cachón, ocurrió en 1954 en la comunidad de Sabán, Quintana Roo...",
-    detalle: `Dos niños mayas observan a dos aluxes saliendo de la selva, quienes los invitan a su morada con promesas de diversión y comida. Los niños, prudentes, rechazan la oferta y huyen al oír a su hermana.
-    Enseña sobre la curiosidad infantil y el respeto a los espíritus guardianes de la naturaleza, comunes en zonas rurales mayas`,
+    detalle: `En las comunidades mayas de Quintana Roo, los ancianos suelen advertir a los más jóvenes que no todo lo que habita la selva desea ser visto… y mucho menos seguido.
+
+Cuentan que, hace tiempo, dos niños caminaban cerca del monte al caer la tarde. La luz del sol se filtraba entre los árboles, y el canto de los pájaros comenzaba a apagarse, dando paso a un silencio extraño, casi inquietante. Fue entonces cuando notaron movimiento entre la vegetación.
+
+De entre las sombras salieron dos pequeños seres: eran aluxes. Sus ojos brillaban con una luz difícil de describir, y sus sonrisas parecían amables… pero había algo en ellas que no terminaba de ser humano.
+
+Los aluxes se acercaron sin hacer ruido, como si flotaran sobre la tierra. Con voces suaves, casi como un susurro que se cuela en la mente, invitaron a los niños a acompañarlos. Les prometieron juegos, comida abundante y un lugar secreto donde nunca se aburrirían. Hablaban de su morada como un sitio maravilloso, oculto en lo profundo de la selva, donde el tiempo no existía.
+
+Los niños se miraron entre sí.
+
+La curiosidad los tentaba, pero también recordaban las palabras de sus mayores: “No sigas a quienes no pertenecen a este mundo”. Algo en su interior les decía que debían desconfiar.
+
+Por un momento, el silencio se volvió pesado.
+
+Y entonces, desde la distancia, se escuchó una voz.
+
+Era su hermana, llamándolos con urgencia. Su grito rompió el encanto, como si despertara a los niños de un sueño. Sin pensarlo más, dieron un paso atrás. Los aluxes dejaron de sonreír.
+
+El ambiente cambió.
+
+Los pequeños seres los observaron fijamente, sin moverse, sin parpadear… como si algo en ellos se hubiera quebrado. Los niños, dominados por un miedo repentino, salieron corriendo sin mirar atrás, mientras la voz de su hermana los guiaba de regreso a casa.
+
+Dicen que, al voltear por última vez, uno de ellos alcanzó a ver que los aluxes ya no estaban… o quizá nunca estuvieron donde creían.
+
+Esa noche, los ancianos explicaron lo ocurrido: los aluxes son guardianes de la naturaleza, seres antiguos que protegen la selva. A veces se muestran juguetones, pero también pueden ser peligrosos si alguien cae en su engaño o invade su mundo.
+
+Desde entonces, la historia se repite como advertencia: la curiosidad puede abrir puertas que no deben cruzarse, y no todas las invitaciones deben aceptarse… especialmente cuando provienen de la selva.
+
+Y hay quienes aseguran que, cuando el viento sopla entre los árboles al anochecer, aún se escuchan risas suaves… esperando a que alguien más decida seguirlas.`,
     img: "./public/assets/img/Encuentro-Alux.png"
   },
  {
     titulo: "La Pila de los Azotes: El castigo indígena",
     descripcion: "Más que una leyenda pura, es un relato histórico con tintes míticos de Chan Santa Cruz (actual Felipe Carrillo Puerto).",
-    detalle: `Durante la Guerra de Castas y hasta 1920, esta pila de piedra se usaba para azotar a infractores de las leyes mayas, como adúlteros (50 azotes cada uno, seguidos de jugo de naranja agria en las heridas) o desobedientes. Construida en 1918 por el general Francisco May Pech, simboliza la justicia indígena y el rigor social.
-    Se dice que los gritos de los castigados aún resuenan en el sitio, advirtiendo sobre el respeto a las costumbres.`,
+    detalle: `En los años oscuros de la Guerra de Castas de Yucatán, cuando la ley no se escribía en papel sino en la memoria del pueblo, existía un lugar del que pocos se atrevían a hablar: la Pila de los Azotes.
+
+Construida en 1918 por el general Francisco May Pech, esta estructura de piedra no era simplemente un objeto, sino un símbolo del orden y del castigo dentro de las comunidades mayas. Allí se hacía cumplir la justicia indígena con un rigor que no dejaba lugar a dudas.
+
+Quienes rompían las normas —adúlteros, desobedientes o aquellos que atentaban contra las costumbres— eran llevados hasta la pila. Frente a la comunidad, se ejecutaba el castigo: cincuenta azotes que caían uno tras otro, marcando no solo la piel, sino también el espíritu. Y como si el dolor no fuera suficiente, las heridas eran bañadas con jugo de naranja agria, intensificando el sufrimiento como recordatorio de la falta cometida.
+
+Dicen que nadie olvidaba aquel castigo.
+
+Con el paso del tiempo, la pila quedó en silencio… o eso parecía.
+
+Los ancianos cuentan que, cuando la noche cae y el viento sopla entre los árboles, algo despierta en ese lugar. Un murmullo apenas perceptible, que poco a poco se transforma en lamentos. Algunos aseguran haber escuchado gritos lejanos, como si el eco de aquellos castigos aún permaneciera atrapado entre las piedras.
+
+Hay quienes afirman que no es solo el viento.
+
+Que son las voces de quienes fueron castigados, repitiendo su dolor una y otra vez, como advertencia para quienes olvidan el respeto a las costumbres y a la ley de sus antepasados.
+
+Pocos se atreven a acercarse a la pila durante la noche. Y los que lo han hecho… rara vez vuelven a hablar de lo que escucharon.
+
+Porque en ese lugar, la justicia no solo dejó huellas en la tierra… sino también en el tiempo.`,
     img: "./public/assets/img/Azotes.png"
   },
   {
     titulo: "Xunaan Tunich: La piedra mujer",
     descripcion: "En Muna (Yucatán, pero con paralelos en Quintana Roo), Saasil Eek, hija de un sacerdote, se enamora de un guerrero enemigo y queda embarazada...",
-    detalle: `Su padre la mata y entierra, dejando su busto expuesto en una cueva como humillación. El cuerpo se petrifica, visible aún hoy. Advierte sobre la castidad y conflictos sociales en la era prehispánica, común en relatos de la península.
-Hay muchas más en antologías universitarias y orales, como variaciones de aluxes o espíritus en cenotes. Si quieres enfocarte en una temática (ej. más sobre justicia o naturaleza) o versiones completas, dime para buscar más detalles.
-`,
+    detalle: `En lo profundo de la selva de la península, donde la humedad cubre las piedras y el silencio parece guardar secretos antiguos, existe una cueva de la que pocos hablan sin bajar la voz. En ella, dicen, permanece Xunaan Tunich, “la mujer de piedra”.
+
+Cuentan los ancianos que, en tiempos antiguos, cuando las normas sociales eran estrictas y el honor familiar lo era todo, vivía una joven de gran belleza. Su nombre se ha perdido con el tiempo, pero su historia no. Era admirada por todos, pero también vigilada, pues su pureza representaba el orgullo de su linaje.
+
+Un día, su destino cambió.
+
+Los rumores comenzaron a crecer como sombra al atardecer. Palabras sin prueba, miradas acusadoras, susurros que se deslizaban entre la gente. Su propio padre, consumido por la vergüenza y la ira, decidió castigarla de la forma más cruel, convencido de que así limpiaría el honor de su familia.
+
+La llevó a una cueva, lejos de la mirada del pueblo.
+
+Ahí, entre la oscuridad y el eco de la tierra, terminó con su vida. Pero no bastó con eso. En un acto de humillación que desafió incluso a los espíritus, dejó parte de su cuerpo expuesto, como advertencia para quienes osaran desafiar las normas.
+
+Entonces ocurrió algo que nadie pudo explicar.
+
+Con el paso del tiempo, el cuerpo no se descompuso… se petrificó.
+
+La piedra tomó forma humana, conservando rasgos que aún hoy, dicen, parecen demasiado reales. Algunos aseguran que su expresión no es de ira, sino de tristeza profunda, como si aún recordara el momento de su traición.
+
+Desde entonces, la cueva se convirtió en un lugar sagrado y temido. No solo por lo que ocurrió, sino por lo que representa.
+
+Los mayores advierten que Xunaan Tunich no es solo una historia, sino un recordatorio de los conflictos sociales, del peso del honor y de las decisiones impulsadas por el miedo y la vergüenza. Una advertencia silenciosa que permanece inmóvil, pero presente.
+
+Hay quienes aseguran que, si te acercas demasiado y guardas silencio, puedes sentir una extraña presión en el aire… como si alguien te observara. Otros dicen que en ciertas noches húmedas, gotas de agua recorren la piedra como lágrimas.
+
+Y algunos, los más valientes o los más imprudentes, juran que la piedra… no siempre ha estado exactamente en la misma posición.
+
+Por eso, quienes conocen la historia recomiendan respeto. Porque en la selva, hay relatos que no solo se cuentan… se quedan.`,
     img: "./public/assets/img/Piedra-Mujer.png"
   },
   {
     titulo: "El Boop (o Boob): La bestia fétida",
     descripcion: "Una criatura peluda y maloliente que ataca a viajeros solitarios en la selva, causando vómitos y muerte. Advierte sobre los peligros de la noche y el respeto al inframundo maya...",
-    detalle: `En los montes de la antigua tierra maya, se dice que existe una criatura llamada El Boop, La Bestia Fétida. No corre ni ruge como otros animales, pero su presencia se anuncia por un olor tan fuerte y repulsivo que aterra a quien lo percibe.
+    detalle: `En los montes profundos de la antigua tierra maya, donde la selva se vuelve tan densa que la luz apenas logra tocar el suelo, existe un relato que pocos se atreven a ignorar. Es la historia del Boop, también llamado “La Bestia Fétida”, una presencia que no necesita mostrarse para ser temida.
 
-El Boop es un espíritu atrapado en el cuerpo de un animal, similar a un cerdo salvaje cubierto de lodo y heridas. Su misión es proteger la selva y alejar a los intrusos. Cuando aparece, la selva queda en completo silencio, y el hedor es tan intenso que quien lo respira se pierde o cae debilitado.
+A diferencia de otros seres, el Boop no anuncia su llegada con pasos ni rugidos. Su señal es más sutil… y mucho más perturbadora.
 
-Los antiguos sabían que, si olían este olor, debían retroceder, ya que el Boop no ataca por hambre, sino para advertir a los que desafiaban la selva. Se cuenta que un cazador, al ignorar esta advertencia, encontró al Boop en el monte y nunca más se le vio.
+Primero llega el silencio.
 
-Hoy, se dice que el Boop sigue caminando por los montes, esperando a aquellos que ignoran su aviso.
+Las aves dejan de cantar, los insectos desaparecen, y el viento parece detenerse por completo. Es entonces cuando aparece el olor: un hedor espeso, penetrante, imposible de confundir. Un aroma a podredumbre y tierra vieja que se mete en la garganta y hace difícil respirar. Quienes lo han percibido aseguran que no es un simple olor… es una advertencia.
+
+Dicen que el Boop es un espíritu atrapado en la forma de un animal, parecido a un cerdo salvaje, cubierto de lodo seco y heridas que nunca cicatrizan. Sus ojos, ocultos entre la suciedad, observan en silencio, como si juzgaran a quien se atreve a entrar en su territorio.
+
+No caza por hambre.
+
+No persigue por instinto.
+
+El Boop protege.
+
+Los antiguos mayas sabían que, al percibir ese olor, debían retroceder sin dudar. No mirar atrás, no intentar encontrar el origen, no desafiar lo que no debía ser comprendido. Porque quien ignoraba la advertencia… no regresaba igual.
+
+O no regresaba.
+
+Se cuenta que un cazador, confiado en su experiencia, decidió seguir adelante cuando el hedor lo envolvió. Pensó que era solo un animal muerto, algo común en el monte. Pero mientras avanzaba, el silencio se hizo más profundo, casi insoportable.
+
+Entonces lo vio.
+
+Una figura inmóvil entre los árboles, apenas distinguible, como si la selva misma intentara ocultarla. El aire se volvió pesado, y el olor, insoportable. El cazador intentó retroceder… pero ya era tarde.
+
+Nunca volvió.
+
+Algunos dicen que se perdió en la selva, desorientado por el olor. Otros creen que el Boop se lo llevó, no como castigo, sino como ejemplo para los demás.
+
+Hasta hoy, en regiones como Quintana Roo, hay quienes aseguran haber percibido ese hedor en medio del monte. Y todos coinciden en lo mismo: cuando el Boop se anuncia, no hay que buscarlo.
+
+Porque hay advertencias que no están hechas para ser desafiadas.
+
+Y en lo profundo de la selva, la bestia fétida sigue caminando… esperando a que alguien más decida ignorar su aviso.
 `,
     img: "./public/assets/img/Boop.png"
   },
