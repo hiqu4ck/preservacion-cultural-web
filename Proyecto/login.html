@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título de la pestaña -->
+  <title>Iniciar sesión</title>
+
+  <!-- Importar el archivo CSS donde está el estilo -->
+  <link rel="stylesheet" href="src/CSS/login.css">
+</head>
+
+<body>
+
+  <!-- ============================= -->
+  <!--            HEADER             -->
+  <!-- ============================= -->
+  <header class="topbar">
+    <div class="header-logo">
+      
+      <!-- LOGO del proyecto -->
+      <img src="/img/logo.png" alt="Logo K’ajóol Lu’um">
+
+      <!-- Texto del nombre del proyecto -->
+      <span>K’ajóol Lu’um</span>
+    </div>
+
+    <!-- Icono para el menú (versión móvil) -->
+    <div class="menu-icon">☰</div>
+  </header>
+
+  <!-- ============================= -->
+  <!--           CONTENIDO           -->
+  <!-- ============================= -->
+  <main>
+    <section class="login-box">
+
+      <!-- Botón para cerrar el modal o pantalla -->
+      <button class="close-btn">✕</button>
+
+      <!-- Título principal -->
+      <h2 class="title">Inicia sesión</h2>
+
+      <!-- línea decorativa -->
+      <hr class="line">
+
+      <!-- Subtítulo de bienvenida -->
+      <h3 class="welcome">¡Te damos la bienvenida!</h3>
+
+      <!-- FORMULARIO DE LOGIN -->
+      <form id="form-login">
+
+        <!-- SELECT: selección de país -->
+        <label class="label">País/Región</label>
+
+        <div class="select-wrapper">
+          <select id="country">
+            <!-- Solo México, pero podrías agregar más -->
+            <option value="MX">México (+52)</option>
+          </select>
+        </div>
+
+        <!-- INPUT: número telefónico -->
+        <!-- required obliga a que se llene -->
+        <input 
+          type="text" 
+          id="user" 
+          placeholder="Número telefónico" 
+          required
+        >
+
+        <!-- Texto informativo debajo del input -->
+        <p class="text-info">
+          Te vamos a confirmar el número por teléfono o mensaje de texto.
+          Sujeto a tarifas estándar para mensajes y datos.
+        </p>
+
+        <!-- BOTÓN PRINCIPAL DEL LOGIN -->
+        <button type="submit" class="btn-main">Continuar</button>
+
+        <!-- Enlace para ir a registrar -->
+        <p class="login-link">
+          ¿No tienes cuenta aún? 
+          <a href="register.html">Crear cuenta</a>
+        </p>
+      </form>
+
+      <hr class="line">
+
+      <!-- BOTONES DE LOGIN SOCIAL -->
+      <!-- Google -->
+      <button class="btn-social google">
+        <img src="/img/google.png">
+        Continuar con Google
+      </button>
+
+      <!-- Apple -->
+      <button class="btn-social apple">
+        <img src="/img/apple.png">
+        Continuar con Apple
+      </button>
+
+      <!-- Correo -->
+      <button class="btn-social mail">
+        <img src="/img/mail.png">
+        Continuar con correo electrónico
+      </button>
+
+      <!-- Facebook -->
+      <button class="btn-social facebook">
+        <img src="/img/facebook.png">
+        Continuar con Facebook
+      </button>
+
+    </section>
+  </main>
+
+</body>
+
+</html>
+
+<!--
+
+¿Qué hace este HTML?
+✔ Muestra una pantalla de inicio de sesión tipo app
+Con logo, selección de país, campo de teléfono y un botón para continuar.
+
+✔ Incluye botones sociales
+Para Google, Apple, Email y Facebook (aún sin funcionalidad, pero listos para conectar).
+
+-->
