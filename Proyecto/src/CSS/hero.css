@@ -208,7 +208,8 @@
         justify-content: flex-end;
     }
 
-    .modal-juegos__next {
+    .modal-juegos__next, 
+    .modal-juegos__back {
         margin-right: 10px;
         background: transparent;
         border: none;
@@ -219,14 +220,16 @@
         justify-content: center;
     }
 
-    .modal-juegos__next:hover {
+    .modal-juegos__next:hover, 
+    .modal-juegos__back:hover {
         transform: scale(1.08);
         /* crecimiento MUY leve (8%) */
         color: var(--color-negro);
         /* sigue negro */
     }
 
-    .modal-juegos__next svg {
+    .modal-juegos__next svg, 
+    .modal-juegos__back svg {
         width: 34px;
         /* tamaño base un poco más pequeño */
         height: 34px;
@@ -490,7 +493,8 @@
         justify-content: flex-end;
     }
 
-    .modal-fiestas__next {
+    .modal-fiestas__next,
+    .modal-fiestas__back {
         margin-right: 10px;
         background: transparent;
         border: none;
@@ -501,14 +505,16 @@
         justify-content: center;
     }
 
-    .modal-fiestas__next:hover {
+    .modal-fiestas__next:hover,
+   .modal-fiestas__back:hover  {
         transform: scale(1.08);
         /* crecimiento MUY leve (8%) */
         color: var(--color-negro);
         /* sigue negro */
     }
 
-    .modal-fiestas__next svg {
+    .modal-fiestas__next svg,
+    .modal-fiestas__back svg {
         width: 34px;
         /* tamaño base un poco más pequeño */
         height: 34px;
