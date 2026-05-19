@@ -1,0 +1,27 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.topbar__nav a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.topbar__nav a.active {
+  color: #FFD700; /* amarillo */
+}
+
+.topbar__nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #FFD700;
+}

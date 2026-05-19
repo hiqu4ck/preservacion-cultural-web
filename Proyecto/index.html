@@ -13,9 +13,10 @@
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
   <!-- Aquí luego enlazan TODOS los CSS -->
+  <link rel="stylesheet" href="src/CSS/style.css" />
+  <link rel="stylesheet" href="src/CSS/appBar.css" />
 </head>
- <link rel="stylesheet" href="src/CSS/style.css" />
- <link rel="stylesheet" href="src/CSS/style.css?v=1.0" />
+
 
 <body>
 
@@ -24,7 +25,7 @@
   </header>
 
 
-<!--
+  <!--
 
 ----- PARTE DE HANNIA ----
 
@@ -33,7 +34,8 @@
 
 
   <main>
-    <section id="sec-hannia">
+    <!-- ESTA ES LA SECCION DE HANNIA, ACTUAL: INICIO -->
+    <section id="inicio">
       <div class="page">
         <!-- HEADER -->
         <header class="topbar">
@@ -43,6 +45,8 @@
           </div>
 
           <nav class="topbar__nav">
+            <a href="#inicio" class="active">Inicio</a>
+            <a href="/productos.html">Productos artesanales</a>
             <!-- Aquí luego puedes agregar más enlaces si quieres -->
             <button class="topbar__btn">Iniciar sesión</button>
             <div class="topbar__menu">
@@ -896,7 +900,7 @@
                   data-description="Aquí va una introducción corta a la leyenda.">
                   <img src="./public/assets/img/Piedra-Mujer.png" alt="imagen">
                 </div>
-                
+
                 <div class="slide-L" data-subtitulo="Boop"
                   data-description="Aquí va una introducción corta a la leyenda.">
                   <img src="./public/assets/img/Boop.png" alt="imagen">
@@ -1538,6 +1542,8 @@ En conjunto, la organización política maya combinaba autoridad divina, adminis
     </section>
 
   </main>
+
+
 
   <!-- Script de Vite -->
   <div id="app"></div>
