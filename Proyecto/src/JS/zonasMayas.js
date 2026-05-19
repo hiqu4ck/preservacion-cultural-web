@@ -12,6 +12,30 @@ const LUGARES_ZONA_MAYA = [
     imagen: "/assets/img/muyil.jpg"
   },
   {
+    id: "Felipe Carrillo Puerto",
+    nombre: "Felipe Carrillo Puerto",
+    tipo: "Ciudad",
+    etiquetas: ["cultura", "historia", "artesanías"],
+    descripcionCorta:
+    "Felipe Carrillo Puerto es una ciudad del estado mexicano de Quintana Roo, cabecera del municipio de Felipe Carrillo Puerto, situada en el centro del estado, en la denominada zona maya. Fue fundada por los mayas bajo el nombre de Noj Kaaj Santa Cruz Xbalam Naj, comúnmente conocida como Chan Santa Cruz.",
+    lat: 19.57851,
+    lng: -88.046586666667,
+    direccion: "Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/Fcp.jpg"
+  },
+  {
+    id: "mercado municipal fcp",
+    nombre: "Mercado Municipal de Felipe Carrillo Puerto",
+    tipo: "Mercado",
+    etiquetas: ["mercado", "artesanías", "cultura", "comida"],
+    descripcionCorta:
+    "El Mercado Municipal de Felipe Carrillo Puerto (conocido como Mercado Municipal Benito Juárez), es el corazón de la comunidad, ofreciendo productos frescos (frutas, verduras, carnes), artesanías mayas únicas (textiles, madera) y comida tradicional como cochinita pibil, tamales y aguas frescas, siendo un vibrante punto de encuentro cultural y comercial para locales y turistas.",
+    lat: 19.580760109354117, 
+    lng: -88.04403860000593,
+    direccion: "Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/mercado-fcp.jpg"
+  },
+  {
     id: "coba",
     nombre: "Zona arqueológica de Cobá",
     tipo: "Zona arqueológica",
@@ -60,7 +84,7 @@ const LUGARES_ZONA_MAYA = [
     imagen: "/assets/img/Santuario-de-la-Cruz-Parlante.jpg"
   },
   {
-    id: "tulum",
+    id: "Tulum",
     nombre: "Zona arqueológica de Tulum",
     tipo: "Zona arqueológica",
     etiquetas: ["costa", "mar caribe", "muralla", "turismo"],
@@ -72,7 +96,7 @@ const LUGARES_ZONA_MAYA = [
     imagen: "/assets/img/tulum.jpg"
   },
   {
-    id: "chichen_itza",
+    id: "Chichen_itza",
     nombre: "Chichén Itzá",
     tipo: "Zona arqueológica",
     etiquetas: ["pirámide", "jaguar", "cenote", "patrimonio mundial"],
@@ -84,7 +108,7 @@ const LUGARES_ZONA_MAYA = [
     imagen: "/assets/img/chichen-itza.jpg"
   },
   {
-    id: "sian_kaan",
+    id: "Sian_kaan",
     nombre: "Reserva de la Biosfera Sian Ka’an",
     tipo: "Reserva natural",
     etiquetas: ["reserva", "naturaleza", "patrimonio mundial", "lagunas"],
