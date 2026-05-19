@@ -9,6 +9,8 @@ const cors = require("cors");
 // Mongoose: Librería para conectar y trabajar con MongoDB Atlas
 const mongoose = require("mongoose");
 
+const mysql = require("mysql2");
+
 
 
 // ===================== CONFIGURACIÓN INICIAL =====================
@@ -18,6 +20,27 @@ const app = express();
 
 // Puerto donde correrá el backend (http://localhost:4000)
 const PORT = 4000;
+
+// ===================== CONEXIÓN MYSQL =====================
+
+const mysqlConnection = mysql.createConnection({
+  host: "127.0.0.1",
+  port: 3307,
+  user: "root",
+  password: "Mysql123*",
+  database: "productos_web"
+});
+
+mysqlConnection.connect((err) => {
+
+  if (err) {
+    console.error("❌ Error MySQL:", err);
+    return;
+  }
+
+  console.log("✔ Conectado a MySQL");
+
+});
 
 
 
@@ -109,7 +132,28 @@ app.post("/comments", async (req, res) => {
 });
 
 
+// ===================== RUTA PRODUCTOS MYSQL =====================
 
+app.get("/productos", (req, res) => {
+
+  mysqlConnection.query(
+    "SELECT * FROM productos",
+    (err, results) => {
+
+      if (err) {
+
+        return res.status(500).json({
+          error: "Error al obtener productos"
+        });
+
+      }
+
+      res.json(results);
+
+    }
+  );
+
+});
 // ===================== INICIAR EL SERVIDOR =====================
 
 // Escuchar y levantar el servidor en el puerto 4000
