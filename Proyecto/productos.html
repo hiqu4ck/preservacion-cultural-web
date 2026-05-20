@@ -46,20 +46,56 @@
                 </header>
 
                 <!-- HERO / CARRUSEL -->
-                <section class="hero" id="hero">
-                    <!-- SLIDE 1 -->
-                    <div class="hero__slide hero__slide--active" style="background-image:url('/img/carrusel-1.jpg');"
-                        data-subtitle="Donde la memoria de la tierra late"></div>
+               <section class="hero" id="hero">
 
-                    <div class="hero__overlay"></div>
+    <!-- SLIDE -->
+    <div
+        class="hero__slide hero__slide--active"
+        style="background-image:url('/img/carrusel-1.jpg');"
+        data-subtitle="Donde la memoria de la tierra late"
+    ></div>
 
-                    <div class="hero__content">
-                        <h1 class="hero__title">K’ajóol Lu’um</h1>
-                        <p class="hero__subtitle">
-                            Donde la memoria de la tierra late
-                        </p>
-                    </div>
-                </section>
+    <!-- OVERLAY -->
+    <div class="hero__overlay"></div>
+
+    <!-- CONTENIDO -->
+    <div class="hero__content">
+
+        <h1 class="hero__title">
+            K’ajóol Lu’um
+        </h1>
+
+        <p class="hero__subtitle">
+            Donde la memoria de la tierra late
+        </p>
+
+    </div>
+
+    <!-- CONTROLES HERO -->
+    <div class="hero__controls">
+
+        <button
+            class="hero__btn hero__btn--prev"
+            id="heroPrev"
+        >
+            ❮
+        </button>
+
+        <div
+            class="hero__dots"
+            id="heroDots"
+        ></div>
+
+        <button
+            class="hero__btn hero__btn--next"
+            id="heroNext"
+        >
+            ❯
+        </button>
+
+    </div>
+
+</section>
 
                 <section class="catalog-section"><!-- ================= COMESTIBLE SECCION ================= -->
 
@@ -75,9 +111,9 @@
                             <!-- ================= Artesanal ================= -->
                             <h3 class="empresa-title">Artesanal</h3>
 
-                            <div class="products-grid" id="productos-container">
+                            <div class="products-grid" >
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="2">
                                     <img src="/productos/Artesanal/palenqueta1.jpg" alt="">
 
                                     <h3>Gel de aloe vera y menta</h3>
@@ -85,7 +121,7 @@
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="2">
                                     <img src="/productos/Artesanal/palenqueta2.jpg" alt="">
 
                                     <h3>Palenqueta tradicional</h3>
@@ -93,7 +129,7 @@
                                     <p>$120</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="2">
                                     <img src="/productos/Artesanal/palenqueta3.jpg" alt="">
                                     <h3>Gomínolas antiinflamatorias</h3>
                                     <p>$99</p>
@@ -107,27 +143,27 @@
                             <!-- ================= Dulce salud ================= -->
                             <h3 class="empresa-title">Dulce salud</h3>
 
-                            <div class="products-grid" id="productos-container">
+                            <div class="products-grid" >
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="3">
                                     <img src="/productos/Dulce salud/gelatinas1.jpg" alt="">
                                     <h3>Gomínolas antiinflamatorias</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="3">
                                     <img src="/productos/Dulce salud/gelatinas2.jpg" alt="">
                                     <h3>Gomínolas antiinflamatorias</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="3">
                                     <img src="/productos/Dulce salud/gelatinas3.jpg" alt="">
                                     <h3>Gomínolas antiinflamatorias</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="3">
                                     <img src="/productos/Dulce salud/gelatinas4.jpg" alt="">
                                     <h3>Gomínolas antiinflamatorias</h3>
                                     <p>$99</p>
@@ -142,21 +178,21 @@
                             <!-- ================= Amigomi ================= -->
                             <h3 class="empresa-title">Amigomi</h3>
 
-                            <div class="products-grid" id="productos-container">
+                            <div class="products-grid" >
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="9">
                                     <img src="/productos/Amigomi/gomitas1.jpg" alt="">
                                     <h3>Gomínolas antiinflamatorias</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="9">
                                     <img src="/productos/Amigomi/gomitas2.jpg" alt="">
                                     <h3>Gomínolas antiinflamatorias</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="9">
                                     <img src="/productos/Amigomi/gomitas3.jpg" alt="">
                                     <h3>Gomínolas antiinflamatorias</h3>
                                     <p>$99</p>
@@ -171,21 +207,21 @@
                             <!-- ================= Dulce Herencia ================= -->
                             <h3 class="empresa-title">Dulce Herencia</h3>
 
-                            <div class="products-grid" id="productos-container">
+                            <div class="products-grid" >
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="11">
                                     <img src="/productos/Dulce Herencia/dulce1.jpg" alt="">
                                     <h3>Gomínolas antiinflamatorias</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="11">
                                     <img src="/productos/Dulce Herencia/dulce2.jpg" alt="">
                                     <h3>Gomínolas antiinflamatorias</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="11">
                                     <img src="/productos/Dulce Herencia/dulce3.jpg" alt="">
                                     <h3>Gomínolas antiinflamatorias</h3>
                                     <p>$99</p>
@@ -211,21 +247,21 @@
                             <!-- ================= La manzanilla ================= -->
                             <h3 class="empresa-title">La manzanilla</h3>
 
-                            <div class="products-grid" id="productos-container">
+                            <div class="products-grid" >
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="4">
                                     <img src="/productos/La manzanilla/manzanilla1.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="4">
                                     <img src="/productos/La manzanilla/manzanilla2.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="4">
                                     <img src="/productos/La manzanilla/manzanilla3.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
@@ -250,27 +286,27 @@
                             <!-- ================= OLEUM ================= -->
                             <h3 class="empresa-title">OLEUM</h3>
 
-                            <div class="products-grid" id="productos-container">
+                            <div class="products-grid" >
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="6">
                                     <img src="/productos/OLEUM/jabon1.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="6">
                                     <img src="/productos/OLEUM/jabon2.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="6">
                                     <img src="/productos/OLEUM/jabon3.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="6">
                                     <img src="/productos/OLEUM/jabon4.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
@@ -293,27 +329,27 @@
                             <!-- ================= Mentolitos ================= -->
                             <h3 class="empresa-title">Mentolitos</h3>
 
-                            <div class="products-grid" id="productos-container">
+                            <div class="products-grid" >
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="5">
                                     <img src="/productos/Mentolitos/mentol1.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="5">
                                     <img src="/productos/Mentolitos/mentol2.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="5">
                                     <img src="/productos/Mentolitos/mentol3.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="5">
                                     <img src="/productos/Mentolitos/mentol4.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
@@ -327,21 +363,21 @@
                             <!-- ================= TSA´AK SUK U BET´A ================= -->
                             <h3 class="empresa-title">TSA´AK SUK U BET´A</h3>
 
-                            <div class="products-grid" id="productos-container">
+                            <div class="products-grid" >
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="10">
                                     <img src="/productos/TSA´AK SUK U BET´A/crema1.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="10">
                                     <img src="/productos/TSA´AK SUK U BET´A/crema2.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="10">
                                     <img src="/productos/TSA´AK SUK U BET´A/crema3.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
@@ -366,21 +402,21 @@
                             <!-- ================= Espuma y Aroma ================= -->
                             <h3 class="empresa-title">Espuma y Aroma</h3>
 
-                            <div class="products-grid" id="productos-container">
+                            <div class="products-grid">
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="7">
                                     <img src="/productos/Espuma y Aroma/jabonmiel1.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="7">
                                     <img src="/productos/Espuma y Aroma/jabonmiel2.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="7">
                                     <img src="/productos/Espuma y Aroma/jabonmiel3.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
@@ -403,27 +439,27 @@
                             <!-- ================= Sha´ana Maya ================= -->
                             <h3 class="empresa-title">Sha´ana Maya</h3>
 
-                            <div class="products-grid" id="productos-container">
+                            <div class="products-grid" >
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="8">
                                     <img src="/productos/Sha'ana Maya/sandaliacaballero1.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="8">
                                     <img src="/productos/Sha'ana Maya/sandaliacaballero2.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="8">
                                     <img src="/productos/Sha'ana Maya/sandaliamujer1.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>
                                 </div>
 
-                                <div class="product-card">
+                                <div class="product-card" data-id="8">
                                     <img src="/productos/Sha'ana Maya/sandaliamujer1.jpg" alt="">
                                     <h3>Gel de aloe vera y menta</h3>
                                     <p>$99</p>

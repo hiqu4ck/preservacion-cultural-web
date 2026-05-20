@@ -154,6 +154,40 @@ app.get("/productos", (req, res) => {
   );
 
 });
+
+// ===================== RUTA PRODUCTO POR ID =====================
+
+app.get("/productos/:id", (req, res) => {
+
+  const id = req.params.id;
+
+  mysqlConnection.query(
+    "SELECT * FROM productos WHERE id = ?",
+    [id],
+    (err, results) => {
+
+      if (err) {
+
+        return res.status(500).json({
+          error: "Error al obtener producto"
+        });
+
+      }
+
+      if (results.length === 0) {
+
+        return res.status(404).json({
+          error: "Producto no encontrado"
+        });
+
+      }
+
+      res.json(results[0]);
+
+    }
+  );
+
+});
 // ===================== INICIAR EL SERVIDOR =====================
 
 // Escuchar y levantar el servidor en el puerto 4000

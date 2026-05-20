@@ -8,15 +8,15 @@ import './JS/slider.js';
 import './CSS/galeria.css';
 import './JS/galeria.js';
 import './CSS/video.css';
-import './CSS/comida.css';
-import './JS/comidas.js';
+//import './CSS/comida.css';
+//import './JS/comidas.js';
 import './CSS/medicina.css';
 import './JS/medicina.js';
 import './CSS/cultura.css';
 import './JS/cultura.js';
 import './CSS/comentarios.css';
 import './JS/comentarios.js';
-import './JS/loganSlider.js'
+//import './JS/loganSlider.js'
 import './CSS/leyendas.css'
 import './CSS/artesanias.css'
 import './CSS/comunidades.css'
@@ -49,6 +49,7 @@ const dots = Array.from(document.querySelectorAll(".hero__dot"));
 
 // Mostrar un slide específico
 function showSlide(index) {
+
   if (index < 0) index = slides.length - 1;
   if (index >= slides.length) index = 0;
 
@@ -61,11 +62,13 @@ function showSlide(index) {
   });
 
   const subtitle = slides[index].dataset.subtitle;
+
   if (subtitleEl && subtitle) {
     subtitleEl.textContent = subtitle;
   }
 
   currentIndex = index;
+
 }
 
 // Avanzar
@@ -86,28 +89,40 @@ function restartAuto() {
 
 // Eventos de botones
 if (nextBtn) {
+
   nextBtn.addEventListener("click", () => {
     nextSlide();
     restartAuto();
   });
+
 }
 
 if (prevBtn) {
+
   prevBtn.addEventListener("click", () => {
     prevSlide();
     restartAuto();
   });
+
 }
 
 // Click en dots
 if (dotsContainer) {
+
   dotsContainer.addEventListener("click", (e) => {
+
     if (e.target.classList.contains("hero__dot")) {
+
       const i = parseInt(e.target.dataset.index, 10);
+
       showSlide(i);
+
       restartAuto();
+
     }
+
   });
+
 }
 
 // Iniciar autoplay
@@ -117,81 +132,13 @@ if (slides.length > 1) {
 
 
 
+// ===== MAPA =====
 
 import { initMapaZonaMaya } from "./JS/zonasMayas.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   initMapaZonaMaya();
 });
-
-fetch("http://localhost:4000/productos")
-  .then(res => res.json())
-  .then(data => {
-
-    console.log(data);
-
-    // CONTENEDOR DONDE IRÁN LAS CARDS
-    const container = document.getElementById("productos-container");
-
-    // RECORRER PRODUCTOS
-    data.forEach(producto => {
-
-      // CREAR CARD
-      const card = document.createElement("div");
-
-      // AGREGAR CLASE CSS
-      card.classList.add("product-card");
-
-      // CONTENIDO HTML
-      card.innerHTML = `
-      
-        <img src="/productos/${producto.imagen}" alt="${producto.nombre}">
-
-        <h3>${producto.nombre}</h3>
-
-        <p>$${producto.precio}</p>
-
-      `;
-
-      // ABRIR MODAL AL DAR CLICK
-      card.addEventListener("click", () => {
-
-        // ACTIVAR MODAL
-        modal.classList.add("active");
-
-        // METER INFO
-        document.getElementById("modalImg").src =
-          `/productos/${producto.imagen}`;
-
-        document.getElementById("modalTitle").textContent =
-          producto.nombre;
-
-        document.getElementById("modalPrice").textContent =
-          `$${producto.precio}`;
-
-        document.getElementById("modalDescription").textContent =
-          producto.descripcion;
-
-        document.getElementById("modalIngredientes").textContent =
-          producto.ingredientes;
-
-        document.getElementById("modalPreparacion").textContent =
-          producto.preparacion;
-
-        document.getElementById("modalUso").textContent =
-          producto.modo_uso;
-
-        document.getElementById("modalPrecauciones").textContent =
-          producto.precauciones;
-
-      });
-
-      // METER CARD AL HTML
-      container.appendChild(card);
-
-    });
-
-  })
-  .catch(error => console.log(error));
 
 
 
@@ -203,6 +150,7 @@ const modal = document.getElementById("productModal");
 const modalClose = document.getElementById("modalClose");
 
 const modalOverlay = document.getElementById("modalOverlay");
+
 
 // CERRAR MODAL
 modalClose.addEventListener("click", () => {
@@ -216,15 +164,69 @@ modalOverlay.addEventListener("click", () => {
 
 
 
-// TODAS LAS CARDS MANUALES
+// ================= PRODUCTOS MYSQL =================
+
+// TODAS LAS CARDS
 const cards = document.querySelectorAll(".product-card");
 
-// ABRIR MODAL
+// CLICK EN CADA CARD
 cards.forEach(card => {
 
-  card.addEventListener("click", () => {
+  card.addEventListener("click", async () => {
 
-    modal.classList.add("active");
+    // OBTENER ID DEL PRODUCTO
+    const id = card.dataset.id;
+
+    try {
+
+      // CONSULTAR BACKEND
+      const response = await fetch(
+        `http://localhost:4000/productos/${id}`
+      );
+
+      // CONVERTIR A JSON
+      const producto = await response.json();
+
+      // ACTIVAR MODAL
+      modal.classList.add("active");
+
+      // IMAGEN
+      document.getElementById("modalImg").src =
+        card.querySelector("img").src;
+
+      // NOMBRE
+      document.getElementById("modalTitle").textContent =
+        producto.nombre;
+
+      // PRECIO
+      document.getElementById("modalPrice").textContent =
+        `$${producto.precio}`;
+
+      // DESCRIPCIÓN
+      document.getElementById("modalDescription").textContent =
+        producto.descripcion;
+
+      // INGREDIENTES
+      document.getElementById("modalIngredientes").textContent =
+        producto.ingredientes;
+
+      // PREPARACIÓN
+      document.getElementById("modalPreparacion").textContent =
+        producto.preparacion;
+
+      // MODO DE USO
+      document.getElementById("modalUso").textContent =
+        producto.modo_uso;
+
+      // PRECAUCIONES
+      document.getElementById("modalPrecauciones").textContent =
+        producto.precauciones;
+
+    } catch (error) {
+
+      console.log("Error:", error);
+
+    }
 
   });
 
