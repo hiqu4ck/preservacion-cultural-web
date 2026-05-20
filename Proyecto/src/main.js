@@ -115,7 +115,117 @@ if (slides.length > 1) {
   autoTimer = setInterval(nextSlide, AUTO_INTERVAL);
 }
 
+
+
+
 import { initMapaZonaMaya } from "./JS/zonasMayas.js";
 document.addEventListener("DOMContentLoaded", () => {
   initMapaZonaMaya();
+});
+
+fetch("http://localhost:4000/productos")
+  .then(res => res.json())
+  .then(data => {
+
+    console.log(data);
+
+    // CONTENEDOR DONDE IRÁN LAS CARDS
+    const container = document.getElementById("productos-container");
+
+    // RECORRER PRODUCTOS
+    data.forEach(producto => {
+
+      // CREAR CARD
+      const card = document.createElement("div");
+
+      // AGREGAR CLASE CSS
+      card.classList.add("product-card");
+
+      // CONTENIDO HTML
+      card.innerHTML = `
+      
+        <img src="/productos/${producto.imagen}" alt="${producto.nombre}">
+
+        <h3>${producto.nombre}</h3>
+
+        <p>$${producto.precio}</p>
+
+      `;
+
+      // ABRIR MODAL AL DAR CLICK
+      card.addEventListener("click", () => {
+
+        // ACTIVAR MODAL
+        modal.classList.add("active");
+
+        // METER INFO
+        document.getElementById("modalImg").src =
+          `/productos/${producto.imagen}`;
+
+        document.getElementById("modalTitle").textContent =
+          producto.nombre;
+
+        document.getElementById("modalPrice").textContent =
+          `$${producto.precio}`;
+
+        document.getElementById("modalDescription").textContent =
+          producto.descripcion;
+
+        document.getElementById("modalIngredientes").textContent =
+          producto.ingredientes;
+
+        document.getElementById("modalPreparacion").textContent =
+          producto.preparacion;
+
+        document.getElementById("modalUso").textContent =
+          producto.modo_uso;
+
+        document.getElementById("modalPrecauciones").textContent =
+          producto.precauciones;
+
+      });
+
+      // METER CARD AL HTML
+      container.appendChild(card);
+
+    });
+
+  })
+  .catch(error => console.log(error));
+
+
+
+// ================= MODAL PRODUCTO =================
+
+// ELEMENTOS
+const modal = document.getElementById("productModal");
+
+const modalClose = document.getElementById("modalClose");
+
+const modalOverlay = document.getElementById("modalOverlay");
+
+// CERRAR MODAL
+modalClose.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+// CERRAR TOCANDO AFUERA
+modalOverlay.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+
+
+// TODAS LAS CARDS MANUALES
+const cards = document.querySelectorAll(".product-card");
+
+// ABRIR MODAL
+cards.forEach(card => {
+
+  card.addEventListener("click", () => {
+
+    modal.classList.add("active");
+
+  });
+
 });
