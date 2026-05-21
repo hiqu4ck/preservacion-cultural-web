@@ -170,58 +170,55 @@ cazador le haya pegado o más bien, haya cazado a todos los venados.
 
 const juegosBtn = document.querySelector(".hero-juegos .ver-mas-j");
 const modalJuegos = document.getElementById("modal-juegos");
-const modalJuegosTitle = modalJuegos.querySelector(".modal-juegos__title");
-const modalJuegosText = modalJuegos.querySelector(".modal-juegos__text");
-const modalJuegosImg = modalJuegos.querySelector(".modal-juegos__img");
-const nextJuegoBtnBack = modalJuegos.querySelector(".modal-juegos__back");
-const nextJuegoBtn = modalJuegos.querySelector(".modal-juegos__next");
-const modalJuegosClose = modalJuegos.querySelector(".modal-juegos__close");
-const modalJuegosOverlay = modalJuegos.querySelector(".modal-juegos__overlay");
-const modalJuegosContent = modalJuegos?.querySelector(".modal-juegos__content");
 
-let juegoActual = 0;
+if (modalJuegos) {
+  const modalJuegosTitle = modalJuegos.querySelector(".modal-juegos__title");
+  const modalJuegosText = modalJuegos.querySelector(".modal-juegos__text");
+  const modalJuegosImg = modalJuegos.querySelector(".modal-juegos__img");
+  const nextJuegoBtnBack = modalJuegos.querySelector(".modal-juegos__back");
+  const nextJuegoBtn = modalJuegos.querySelector(".modal-juegos__next");
+  const modalJuegosClose = modalJuegos.querySelector(".modal-juegos__close");
+  const modalJuegosOverlay = modalJuegos.querySelector(".modal-juegos__overlay");
+  const modalJuegosContent = modalJuegos.querySelector(".modal-juegos__content");
 
-// Mostrar juego
-function mostrarJuego(index) {
-  const juego = juegosInfoList[index];
-  modalJuegosTitle.textContent = juego.titulo;
-  modalJuegosText.textContent = juego.descripcionLarga;
-  modalJuegosImg.src = juego.imagen;
+  let juegoActual = 0;
 
-  if (modalJuegosContent) {
-    modalJuegosContent.scrollTop = 0;
+  function mostrarJuego(index) {
+    const juego = juegosInfoList[index];
+    modalJuegosTitle.textContent = juego.titulo;
+    modalJuegosText.textContent = juego.descripcionLarga;
+    modalJuegosImg.src = juego.imagen;
+    if (modalJuegosContent) {
+      modalJuegosContent.scrollTop = 0;
+    }
   }
-}
 
-// Abrir modal
-juegosBtn.addEventListener("click", () => {
-  juegoActual = 0;
-  mostrarJuego(juegoActual);
-  modalJuegos.classList.add("is-open");
-  document.body.classList.add("modal-open");
-});
+  if (juegosBtn) {
+    juegosBtn.addEventListener("click", () => {
+      juegoActual = 0;
+      mostrarJuego(juegoActual);
+      modalJuegos.classList.add("is-open");
+      document.body.classList.add("modal-open");
+    });
+  }
 
-// Regresar al juego anterior
-nextJuegoBtnBack.addEventListener("click", () => {
-  // Sumamos la longitud antes de restar para evitar números negativos
-  // y luego aplicamos el módulo.
-  juegoActual = (juegoActual - 1 + juegosInfoList.length) % juegosInfoList.length;
-  mostrarJuego(juegoActual);
-});
-
-// Cambiar al siguiente juego
-nextJuegoBtn.addEventListener("click", () => {
-  juegoActual = (juegoActual + 1) % juegosInfoList.length;
-  mostrarJuego(juegoActual);
-});
-
-// Cerrar modal
-[modalJuegosClose, modalJuegosOverlay].forEach(el => {
-  el.addEventListener("click", () => {
-    modalJuegos.classList.remove("is-open");
-    document.body.classList.remove("modal-open");
+  nextJuegoBtnBack.addEventListener("click", () => {
+    juegoActual = (juegoActual - 1 + juegosInfoList.length) % juegosInfoList.length;
+    mostrarJuego(juegoActual);
   });
-});
+
+  nextJuegoBtn.addEventListener("click", () => {
+    juegoActual = (juegoActual + 1) % juegosInfoList.length;
+    mostrarJuego(juegoActual);
+  });
+
+  [modalJuegosClose, modalJuegosOverlay].forEach(el => {
+    el.addEventListener("click", () => {
+      modalJuegos.classList.remove("is-open");
+      document.body.classList.remove("modal-open");
+    });
+  });
+}
 
 
 
@@ -416,62 +413,57 @@ La fiesta refuerza la identidad maya y la unidad familiar, adaptándose a los ca
 
 const fiestasBtn = document.querySelector(".hero-fiestas .ver-mas-f");
 const modalFiestas = document.getElementById("modal-fiestas");
-const modalFiestasTitle = modalFiestas.querySelector(".modal-fiestas__title");
-const modalFiestasText = modalFiestas.querySelector(".modal-fiestas__text");
-const modalFiestasImg = modalFiestas.querySelector(".modal-fiestas__img");
-const nextFiestaBtnBack = modalFiestas.querySelector(".modal-fiestas__back");
-const nextFiestasBtn = modalFiestas.querySelector(".modal-fiestas__next");
-const modalFiestasClose = modalFiestas.querySelector(".modal-fiestas__close");
-const modalFiestasOverlay = modalFiestas.querySelector(".modal-fiestas__overlay");
-const modalFiestasComunidad = modalFiestas.querySelector(".modal-fiestas-comunidad");
-const modalFiestasContent = modalFiestas?.querySelector(".modal-fiestas__content");
 
+if (modalFiestas) {
+  const modalFiestasTitle = modalFiestas.querySelector(".modal-fiestas__title");
+  const modalFiestasText = modalFiestas.querySelector(".modal-fiestas__text");
+  const modalFiestasImg = modalFiestas.querySelector(".modal-fiestas__img");
+  const nextFiestaBtnBack = modalFiestas.querySelector(".modal-fiestas__back");
+  const nextFiestasBtn = modalFiestas.querySelector(".modal-fiestas__next");
+  const modalFiestasClose = modalFiestas.querySelector(".modal-fiestas__close");
+  const modalFiestasOverlay = modalFiestas.querySelector(".modal-fiestas__overlay");
+  const modalFiestasComunidad = modalFiestas.querySelector(".modal-fiestas-comunidad");
+  const modalFiestasContent = modalFiestas.querySelector(".modal-fiestas__content");
 
-let fiestaActual = 0;
+  let fiestaActual = 0;
 
-// Mostrar fiesta
-function mostrarFiesta(index) {
-  const fiesta = fiestasInfoList[index];
-  modalFiestasTitle.textContent = fiesta.titulo;
-  modalFiestasComunidad.textContent = fiesta.comunidad;
-  modalFiestasText.innerHTML = fiesta.descripcionLarga;
-  modalFiestasImg.src = fiesta.imagen;
-
-
-  if (modalFiestasContent) {
-    modalFiestasContent.scrollTop = 0;
+  function mostrarFiesta(index) {
+    const fiesta = fiestasInfoList[index];
+    modalFiestasTitle.textContent = fiesta.titulo;
+    modalFiestasComunidad.textContent = fiesta.comunidad;
+    modalFiestasText.innerHTML = fiesta.descripcionLarga;
+    modalFiestasImg.src = fiesta.imagen;
+    if (modalFiestasContent) {
+      modalFiestasContent.scrollTop = 0;
+    }
   }
-}
 
-// Abrir modal
-fiestasBtn.addEventListener("click", () => {
-  fiestaActual = 0;
-  mostrarFiesta(fiestaActual);
-  modalFiestas.classList.add("is-open");
-  document.body.classList.add("modal-open");
-});
+  if (fiestasBtn) {
+    fiestasBtn.addEventListener("click", () => {
+      fiestaActual = 0;
+      mostrarFiesta(fiestaActual);
+      modalFiestas.classList.add("is-open");
+      document.body.classList.add("modal-open");
+    });
+  }
 
-// Regresar a la fiesta anterior
-nextFiestaBtnBack.addEventListener("click", () => {
-  // Sumamos la longitud antes de restar para evitar números negativos
-  // y luego aplicamos el módulo.
-  fiestaActual = (fiestaActual - 1 + fiestasInfoList.length) % fiestasInfoList.length;
-  mostrarFiesta(fiestaActual);
-});
-
-// Cambiar a la siguiente fiesta 
-nextFiestasBtn.addEventListener("click", () => {
-  fiestaActual = (fiestaActual + 1) % fiestasInfoList.length;
-  mostrarFiesta(fiestaActual);
-});
-
-// Cerrar modal
-[modalFiestasClose, modalFiestasOverlay].forEach(el => {
-  el.addEventListener("click", () => {
-    modalFiestas.classList.remove("is-open");
-    document.body.classList.remove("modal-open");
+  nextFiestaBtnBack.addEventListener("click", () => {
+    fiestaActual = (fiestaActual - 1 + fiestasInfoList.length) % fiestasInfoList.length;
+    mostrarFiesta(fiestaActual);
   });
-});
+
+  nextFiestasBtn.addEventListener("click", () => {
+    fiestaActual = (fiestaActual + 1) % fiestasInfoList.length;
+    mostrarFiesta(fiestaActual);
+  });
+
+  [modalFiestasClose, modalFiestasOverlay].forEach(el => {
+    el.addEventListener("click", () => {
+      modalFiestas.classList.remove("is-open");
+      document.body.classList.remove("modal-open");
+    });
+  });
+}
 
 
 
@@ -1443,62 +1435,57 @@ const artesaniaCards = document.querySelectorAll(".artesanias-grid .artesania-ca
 
 // 2. Elementos del modal
 const modalArtesania = document.getElementById("modal-artesania");
-const modalArtTitle = modalArtesania.querySelector(".modal-artesania__title");
-const modalArtText = modalArtesania.querySelector(".modal-artesania__text");
-const modalArtGrid = modalArtesania.querySelector(".modal-artesania__grid");
-const modalArtClose = modalArtesania.querySelector(".modal-artesania__close");
-const modalArtOverlay = modalArtesania.querySelector(".modal-artesania__overlay");
 
-if (modalArtesania.parentElement !== document.body) {
-  document.body.appendChild(modalArtesania);
-}
+if (modalArtesania) {
+  const modalArtTitle = modalArtesania.querySelector(".modal-artesania__title");
+  const modalArtText = modalArtesania.querySelector(".modal-artesania__text");
+  const modalArtGrid = modalArtesania.querySelector(".modal-artesania__grid");
+  const modalArtClose = modalArtesania.querySelector(".modal-artesania__close");
+  const modalArtOverlay = modalArtesania.querySelector(".modal-artesania__overlay");
 
-// 3. Evento clic — abrir modal
-artesaniaCards.forEach(card => {
-  card.addEventListener("click", () => {
+  if (modalArtesania.parentElement !== document.body) {
+    document.body.appendChild(modalArtesania);
+  }
 
-    const categoryId = card.getAttribute("data-id");
-    const categoryData = artesaniasData[categoryId];
+  // 3. Evento clic — abrir modal
+  artesaniaCards.forEach(card => {
+    card.addEventListener("click", () => {
 
-    if (!categoryData) return;
+      const categoryId = card.getAttribute("data-id");
+      const categoryData = artesaniasData[categoryId];
 
-    // Título
-    modalArtTitle.textContent = categoryId.replace(/-/g, " ").toUpperCase();
+      if (!categoryData) return;
 
-    // Descripción general (si existe)
-    modalArtText.textContent = categoryData.descripcion || "";
+      modalArtTitle.textContent = categoryId.replace(/-/g, " ").toUpperCase();
+      modalArtText.textContent = categoryData.descripcion || "";
+      modalArtGrid.innerHTML = "";
 
-    // Limpiar grid
-    modalArtGrid.innerHTML = "";
+      categoryData.items.forEach(item => {
+        const article = document.createElement("article");
+        article.classList.add("artesania-card");
 
-    // Crear tarjetas internas
-    categoryData.items.forEach(item => {
-      const article = document.createElement("article");
-      article.classList.add("artesania-card");
+        article.innerHTML = `
+          <div class="artesania-card__img-contenedor">
+            <img src="${item.img}" alt="${item.title}" class="artesania-card__img">
+          </div>
 
-      article.innerHTML = `
-        <div class="artesania-card__img-contenedor">
-          <img src="${item.img}" alt="${item.title}" class="artesania-card__img">
-        </div>
+          <h3 class="artesania-card__title">${item.title}</h3>
+          <p>${item.description}</p>
+        `;
 
-        <h3 class="artesania-card__title">${item.title}</h3>
-        <p>${item.description}</p>
-      `;
+        modalArtGrid.appendChild(article);
+      });
 
-      modalArtGrid.appendChild(article);
+      modalArtesania.classList.add("activo");
+      document.body.classList.add("modal-open");
     });
-
-    // Abrir modal
-    modalArtesania.classList.add("activo");
-    document.body.classList.add("modal-open");
   });
-});
 
-
-// 4. Cerrar modal
-[modalArtClose, modalArtOverlay].forEach(el => {
-  el.addEventListener("click", () => {
-    modalArtesania.classList.remove("activo");
-    document.body.classList.remove("modal-open");
+  // 4. Cerrar modal
+  [modalArtClose, modalArtOverlay].forEach(el => {
+    el.addEventListener("click", () => {
+      modalArtesania.classList.remove("activo");
+      document.body.classList.remove("modal-open");
+    });
   });
-});
+}

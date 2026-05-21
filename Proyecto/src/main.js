@@ -8,15 +8,15 @@ import './JS/slider.js';
 import './CSS/galeria.css';
 import './JS/galeria.js';
 import './CSS/video.css';
-//import './CSS/comida.css';
-//import './JS/comidas.js';
+import './CSS/comida.css';
+import './JS/comidas.js';
 import './CSS/medicina.css';
 import './JS/medicina.js';
 import './CSS/cultura.css';
 import './JS/cultura.js';
 import './CSS/comentarios.css';
 import './JS/comentarios.js';
-//import './JS/loganSlider.js'
+import './JS/loganSlider.js'
 import './CSS/leyendas.css'
 import './CSS/artesanias.css'
 import './CSS/comunidades.css'
@@ -153,14 +153,18 @@ const modalOverlay = document.getElementById("modalOverlay");
 
 
 // CERRAR MODAL
-modalClose.addEventListener("click", () => {
-  modal.classList.remove("active");
-});
+if (modalClose) {
+  modalClose.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+}
 
 // CERRAR TOCANDO AFUERA
-modalOverlay.addEventListener("click", () => {
-  modal.classList.remove("active");
-});
+if (modalOverlay) {
+  modalOverlay.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+}
 
 
 

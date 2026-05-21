@@ -126,24 +126,25 @@ const datosComidas = {
 };
 
 const modal = document.getElementById('modal-comidas');
-const modalBody = document.getElementById('modal-body');
-const overlay = modal.querySelector('.modal-overlay');
-const cerrarBtn = modal.querySelector('.modal-close');
 
-// Abrir modal cuando se hace clic en una tarjeta
-document.querySelectorAll('.seccion-comidas .tarjeta').forEach(tarjeta => {
-  tarjeta.addEventListener('click', () => {
-    const tipo = tarjeta.dataset.tipo;
-    modalBody.innerHTML = datosComidas[tipo] || '<p>No hay información disponible.</p>';
-    modal.classList.add('activo');
+if (modal) {
+  const modalBody = document.getElementById('modal-body');
+  const overlay = modal.querySelector('.modal-overlay');
+  const cerrarBtn = modal.querySelector('.modal-close');
+
+  document.querySelectorAll('.seccion-comidas .tarjeta').forEach(tarjeta => {
+    tarjeta.addEventListener('click', () => {
+      const tipo = tarjeta.dataset.tipo;
+      modalBody.innerHTML = datosComidas[tipo] || '<p>No hay información disponible.</p>';
+      modal.classList.add('activo');
+    });
   });
-});
 
-// Cerrar modal al hacer clic en la X o en el overlay
-function cerrarModal() {
-  modal.classList.remove('activo');
+  function cerrarModal() {
+    modal.classList.remove('activo');
+  }
+
+  cerrarBtn.addEventListener('click', cerrarModal);
+  overlay.addEventListener('click', cerrarModal);
 }
-
-cerrarBtn.addEventListener('click', cerrarModal);
-overlay.addEventListener('click', cerrarModal);
 
