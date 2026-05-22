@@ -155,6 +155,37 @@ if (modalOverlay) {
 
 // ================= PRODUCTOS MYSQL =================
 
+// Helper: llena un campo y oculta su sección/elemento si el valor es null/vacío
+function fillSection(elementId, value) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  const section = el.closest('.modal-section');
+  const hasValue = value != null && String(value).trim() !== '';
+  el.textContent = hasValue ? value : '';
+  if (section) section.style.display = hasValue ? '' : 'none';
+  else el.style.display = hasValue ? '' : 'none';
+}
+
+// CARGAR NOMBRES REALES DESDE LA BD AL INICIO DE LA PÁGINA
+(async () => {
+  const firstCards = document.querySelectorAll('.product-card h3');
+  const ids = new Set([...firstCards].map(h3 => h3.closest('.product-card')?.dataset.id).filter(Boolean));
+
+  const productMap = {};
+  await Promise.all([...ids].map(async id => {
+    try {
+      const res = await fetch(`http://localhost:4000/productos/${id}`);
+      if (res.ok) productMap[id] = await res.json();
+    } catch {}
+  }));
+
+  firstCards.forEach(h3 => {
+    const card = h3.closest('.product-card');
+    const producto = productMap[card?.dataset.id];
+    if (producto?.nombre) h3.textContent = producto.nombre;
+  });
+})();
+
 // TODAS LAS CARDS
 const cards = document.querySelectorAll(".product-card");
 
@@ -163,58 +194,40 @@ cards.forEach(card => {
 
   card.addEventListener("click", async () => {
 
-    // OBTENER ID DEL PRODUCTO
     const id = card.dataset.id;
 
     try {
 
-      // CONSULTAR BACKEND
-      const response = await fetch(
-        `http://localhost:4000/productos/${id}`
-      );
-
-      // CONVERTIR A JSON
+      const response = await fetch(`http://localhost:4000/productos/${id}`);
       const producto = await response.json();
 
-      // ACTIVAR MODAL
       modal.classList.add("active");
 
       // IMAGEN
-      document.getElementById("modalImg").src =
-        card.querySelector("img").src;
+      document.getElementById("modalImg").src = card.querySelector("img").src;
 
       // NOMBRE
-      document.getElementById("modalTitle").textContent =
-        producto.nombre;
+      document.getElementById("modalTitle").textContent = producto.nombre ?? '';
 
       // PRECIO
-      document.getElementById("modalPrice").textContent =
-        `$${producto.precio}`;
+      const priceEl = document.getElementById("modalPrice");
+      if (priceEl) {
+        const hasPrice = producto.precio != null;
+        priceEl.textContent = hasPrice ? `$${producto.precio}` : '';
+        priceEl.style.display = hasPrice ? '' : 'none';
+      }
 
       // DESCRIPCIÓN
-      document.getElementById("modalDescription").textContent =
-        producto.descripcion;
+      fillSection("modalDescription", producto.descripcion);
 
-      // INGREDIENTES
-      document.getElementById("modalIngredientes").textContent =
-        producto.ingredientes;
-
-      // PREPARACIÓN
-      document.getElementById("modalPreparacion").textContent =
-        producto.preparacion;
-
-      // MODO DE USO
-      document.getElementById("modalUso").textContent =
-        producto.modo_uso;
-
-      // PRECAUCIONES
-      document.getElementById("modalPrecauciones").textContent =
-        producto.precauciones;
+      // SECCIONES
+      fillSection("modalIngredientes", producto.ingredientes);
+      fillSection("modalPreparacion", producto.preparacion);
+      fillSection("modalUso", producto.modo_uso);
+      fillSection("modalPrecauciones", producto.precauciones);
 
     } catch (error) {
-
       console.log("Error:", error);
-
     }
 
   });
