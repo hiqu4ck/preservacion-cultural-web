@@ -6,7 +6,7 @@
     margin: auto;
     position: relative;
     aspect-ratio: 16/6;
-    background-image: url("./assets/img/casa-guano.png");
+    background-image: url("/assets/img/casa-guano.png");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;

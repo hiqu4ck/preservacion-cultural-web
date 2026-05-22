@@ -32,14 +32,14 @@
     margin: 0 auto;
 }
 
-/* Cada tarjeta – COMO LAS TENÍAS ANTES */
+/* Cada tarjeta */
 .tarjeta {
     width: 230px;
     border-radius: 22px;
     overflow: hidden;
     background-color: white;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    /* quitamos display:flex y flex-direction */
+    cursor: pointer;
 }
 
 /* Parte gris de arriba – alta */
@@ -56,17 +56,17 @@
 
 /* Imagen 1 */
 .tarjeta-imagen1 {
-    background-image: url("./assets/img/dulce-fondo.png");
+    background-image: url("/assets/img/dulce-fondo.png");
 }
 
 /* Imagen 2 */
 .tarjeta-imagen2 {
-    background-image: url("./assets/img/fondo-comida.png");
+    background-image: url("/assets/img/fondo-comida.png");
 }
 
 /* Imagen 3 */
 .tarjeta-imagen3 {
-    background-image: url("./assets/img/bebida-fondo.png");
+    background-image: url("/assets/img/bebida-fondo.png");
 }
 
 /* Texto debajo – centrado y más grande */

@@ -12,11 +12,10 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
-    <link rel="stylesheet" href="src/CSS/variables.css" />
-    <link rel="stylesheet" href="src/CSS/landing.css" />
     <link rel="stylesheet" href="src/CSS/style.css" />
+    <link rel="stylesheet" href="src/CSS/landing.css" />
     <link rel="stylesheet" href="src/CSS/appBar.css" />
-    <link rel="stylesheet" href="src/CSS/hero.css" />
+    <link rel="stylesheet" href="src/CSS/variables.css" />
     <link rel="stylesheet" href="src/CSS/productosArt.css" />
 
 </head>
@@ -50,11 +49,25 @@
                 <!-- HERO / CARRUSEL -->
                <section class="hero" id="hero">
 
-    <!-- SLIDE -->
+    <!-- SLIDE 1 -->
     <div
         class="hero__slide hero__slide--active"
         style="background-image:url('/img/carrusel-1.jpg');"
         data-subtitle="Donde la memoria de la tierra late"
+    ></div>
+
+    <!-- SLIDE 2 -->
+    <div
+        class="hero__slide"
+        style="background-image:url('/img/carrusel-2.jpeg');"
+        data-subtitle="Es comunidad y territorio vivo"
+    ></div>
+
+    <!-- SLIDE 3 -->
+    <div
+        class="hero__slide"
+        style="background-image:url('/img/carrusel-3.jpeg');"
+        data-subtitle="Es tradición, lengua y saber maya"
     ></div>
 
     <!-- OVERLAY -->
@@ -75,27 +88,11 @@
 
     <!-- CONTROLES HERO -->
     <div class="hero__controls">
-
-        <button
-            class="hero__btn hero__btn--prev"
-            id="heroPrev"
-        >
-            ❮
-        </button>
-
-        <div
-            class="hero__dots"
-            id="heroDots"
-        ></div>
-
-        <button
-            class="hero__btn hero__btn--next"
-            id="heroNext"
-        >
-            ❯
-        </button>
-
+        <button class="hero__arrow" id="heroPrev">❮</button>
+        <button class="hero__arrow" id="heroNext">❯</button>
     </div>
+
+    <div class="hero__dots" id="heroDots"></div>
 
 </section>
 
