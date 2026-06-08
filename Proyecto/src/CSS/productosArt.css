@@ -39,11 +39,6 @@
   transform: scale(1.06);
 }
 
-/*OCULTAR H3 MIENTRAS CARGA EL NOMBRE*/
-.product-card h3:empty {
-  display: none;
-}
-
 /*TEXTO ELEGANTE*/
 .product-card h3 {
   font-size: 16px;

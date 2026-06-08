@@ -152,6 +152,14 @@ if (modalOverlay) {
 
 // ================= PRODUCTOS MYSQL =================
 
+// ACTUALIZAR CONTEO DE PRODUCTOS EN CADA CATEGORÍA
+document.querySelectorAll('.catalog-section').forEach(section => {
+  const span = section.querySelector('.catalog-header h2 span');
+  if (!span) return;
+  const count = section.querySelectorAll('.product-card').length;
+  span.textContent = `(${count})`;
+});
+
 // Helper: llena un campo y oculta su sección/elemento si el valor es null/vacío
 function fillSection(elementId, value) {
   const el = document.getElementById(elementId);
@@ -162,26 +170,6 @@ function fillSection(elementId, value) {
   if (section) section.style.display = hasValue ? '' : 'none';
   else el.style.display = hasValue ? '' : 'none';
 }
-
-// CARGAR NOMBRES REALES DESDE LA BD AL INICIO DE LA PÁGINA
-(async () => {
-  const firstCards = document.querySelectorAll('.product-card h3');
-  const ids = new Set([...firstCards].map(h3 => h3.closest('.product-card')?.dataset.id).filter(Boolean));
-
-  const productMap = {};
-  await Promise.all([...ids].map(async id => {
-    try {
-      const res = await fetch(`http://localhost:4000/productos/${id}`);
-      if (res.ok) productMap[id] = await res.json();
-    } catch {}
-  }));
-
-  firstCards.forEach(h3 => {
-    const card = h3.closest('.product-card');
-    const producto = productMap[card?.dataset.id];
-    if (producto?.nombre) h3.textContent = producto.nombre;
-  });
-})();
 
 // TODAS LAS CARDS
 const cards = document.querySelectorAll(".product-card");
@@ -213,6 +201,25 @@ cards.forEach(card => {
         priceEl.textContent = hasPrice ? `$${producto.precio}` : '';
         priceEl.style.display = hasPrice ? '' : 'none';
       }
+
+      // ETIQUETAS SEGÚN CATEGORÍA
+      const categoriaTitle = card.closest('.catalog-section')
+        ?.querySelector('.catalog-header h2')
+        ?.textContent ?? '';
+      const esVestimenta = categoriaTitle.toLowerCase().includes('vestimenta');
+
+      function setLabel(fieldId, defaultLabel, vestimentaLabel) {
+        const el = document.getElementById(fieldId);
+        if (!el) return;
+        el.closest('.modal-section')
+          ?.querySelector('.modal-section-title')
+          ?.childNodes.forEach(n => { if (n.nodeType === 3) n.textContent = esVestimenta ? vestimentaLabel : defaultLabel; });
+      }
+
+      setLabel('modalIngredientes', 'Ingredientes', 'Materiales');
+      setLabel('modalPreparacion',  'Preparación',  'Elaboración');
+      setLabel('modalUso',          'Modo de uso',  'Modo de uso');
+      setLabel('modalPrecauciones', 'Precauciones', 'Cuidados');
 
       // DESCRIPCIÓN
       fillSection("modalDescription", producto.descripcion);
