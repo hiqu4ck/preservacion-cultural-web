@@ -1,252 +1,263 @@
-const LUGARES_ZONA_MAYA = [
+export const LUGARES_ZONA_MAYA = [
+  
+  {
+    id: "parque-ignacio-zaragoza",
+    nombre: "Parque Principal Ignacio Zaragoza",
+    tipo: "Plaza Pública",
+    etiquetas: ["parque", "centro", "kiosco", "historia", "comida"],
+    descripcionCorta: "El corazón de la ciudad y el punto de encuentro por excelencia de los carrilloportenses. Rodeado por la iglesia y los edificios gubernamentales, es el lugar ideal para caminar por la tarde, disfrutar de un helado o una tradicional marquesita.",
+    lat: 19.578278,
+    lng: -88.046395,
+    direccion: "Colonia Centro, Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/parque-zaragoza.png"
+  },
+  {
+    id: "cenote-sayab-kuxtal",
+    nombre: "Cenote y Rancho Sayab Kuxtal",
+    tipo: "Cenote y Aventura",
+    etiquetas: ["cenote", "naturaleza", "aventura", "cuatrimotos", "gotcha"],
+    descripcionCorta: "Un paraíso escondido en la selva cerca de la ciudad. Además de nadar y relajarte en las aguas cristalinas de su cenote sagrado, ofrece actividades de ecoturismo como recorridos en cuatrimotos, senderismo y gotcha.",
+    lat: 19.6105,
+    lng: -88.0102,
+    direccion: "A las afueras de Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/sayab-kuxtal.png"
+  },
+  {
+    id: "laguna-chunyaxche",
+    nombre: "Laguna de Chunyaxché",
+    tipo: "Laguna",
+    etiquetas: ["laguna", "sian ka'an", "canales mayas", "flotada", "naturaleza"],
+    descripcionCorta: "Un espectacular cuerpo de agua turquesa conectado a las ruinas de Muyil, dentro de Sian Ka'an. Es mundialmente famosa por sus antiguos canales construidos por los mayas, donde puedes usar chaleco salvavidas y dejarte llevar por la suave corriente.",
+    lat: 20.0636,
+    lng: -87.5950,
+    direccion: "Reserva de Sian Ka'an, Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/chunyaxche.png"
+  },
+  {
+    id: "pueblo-tepich",
+    nombre: "Iglesia y Pueblo de Tepich",
+    tipo: "Pueblo Histórico",
+    etiquetas: ["historia", "guerra de castas", "arquitectura", "cecilio chi", "rebelión"],
+    descripcionCorta: "Tepich es el histórico pueblo donde estalló oficialmente la Guerra de Castas en 1847. Es el lugar de origen del líder maya Cecilio Chi y aún alberga impresionantes ruinas de su antigua iglesia de piedra colonial.",
+    lat: 20.2286,
+    lng: -88.2741,
+    direccion: "Delegación Tepich, Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/tepich.png"
+  },
+  {
+    id: "punta-herrero",
+    nombre: "Faro y Playas de Punta Herrero",
+    tipo: "Comunidad Costera",
+    etiquetas: ["playa", "mar caribe", "faro", "pesca", "sian ka'an"],
+    descripcionCorta: "Aunque pocos lo saben, el municipio de Felipe Carrillo Puerto tiene acceso al Mar Caribe. Punta Herrero es una pintoresca y remota comunidad de pescadores con playas vírgenes, un faro histórico y un estuario perfecto para observar aves.",
+    lat: 19.3138,
+    lng: -87.4430,
+    direccion: "Costa de Felipe Carrillo Puerto (Reserva de Sian Ka'an)",
+    imagen: "/assets/img/punta-herrero.png"
+  },
+  {
+    id: "casa-de-la-cronica",
+    nombre: "Casa de la Crónica",
+    tipo: "Centro Histórico",
+    etiquetas: ["historia", "crónica", "archivos", "identidad", "guerra de castas"],
+    descripcionCorta: "Un espacio vital para la memoria histórica del municipio. Expone fotografías antiguas, planos y documentos que relatan el surgimiento y la evolución de la antigua Chan Santa Cruz, conservando la identidad del pueblo maya.",
+    lat: 19.577900, 
+    lng: -88.045500,
+    direccion: "Centro, Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/casa-cronica.png"
+  },
+  {
+    id: "casa-de-la-cultura",
+    nombre: "Casa de la Cultura",
+    tipo: "Centro Cultural",
+    etiquetas: ["arte", "cultura", "talleres", "teatro", "música", "danza"],
+    descripcionCorta: "El epicentro de las expresiones artísticas urbanas. En este recinto se imparten talleres para preservar la lengua maya, la música y la danza, y funciona como escenario para las principales presentaciones teatrales y musicales de la ciudad.",
+    lat: 19.576800,
+    lng: -88.044200,
+    direccion: "Av. Benito Juárez, Centro, Felipe Carrillo Puerto",
+    imagen: "/assets/img/casa-cultura-fcp.png"
+  },
+  {
+    id: "iglesia-balam-nah",
+    nombre: "Iglesia Balam Nah (Casa del Jaguar)",
+    tipo: "Iglesia Histórica",
+    etiquetas: ["religión", "arquitectura", "centro", "historia", "chan santa cruz"],
+    descripcionCorta: "Ubicada frente al parque central, es un edificio imponente que fue construido a mediados del siglo XIX con el trabajo de los prisioneros capturados por los mayas durante la Guerra de Castas. Actualmente es la parroquia principal.",
+    lat: 19.578650,
+    lng: -88.046100,
+    direccion: "Frente al parque principal, Centro, Felipe Carrillo Puerto",
+    imagen: "/assets/img/balam-nah.png"
+  },
+  {
+    id: "museo-guerra-castas",
+    nombre: "Museo de la Guerra de Castas",
+    tipo: "Museo Histórico",
+    etiquetas: ["museo", "historia", "rebelión", "tihosuco"],
+    descripcionCorta: "Ubicado en el histórico pueblo de Tihosuco dentro de una casona del siglo XVIII, este museo conserva armas, documentos y pinturas que relatan a detalle la gran rebelión social maya iniciada en 1847.",
+    lat: 20.1968,
+    lng: -88.3745,
+    direccion: "Centro de Tihosuco, Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/museo-tihosuco.png"
+  },
   {
     id: "muyil",
     nombre: "Zona arqueológica de Muyil",
     tipo: "Zona arqueológica",
     etiquetas: ["selva", "arqueología", "sian ka'an", "cultura maya"],
-    descripcionCorta:
-      "Muyil era ya una importante ciudad en la que se construyeron importantes edificios de estilo Petén, como El Castillo y los tres basamentos del Grupo de la Entrada. ",
+    descripcionCorta: "Muyil era ya una importante ciudad en la que se construyeron importantes edificios de estilo Petén, como El Castillo y los tres basamentos del Grupo de la Entrada.",
     lat: 20.0784,
     lng: -87.6151,
-    direccion: "Felipe Carrrillo Puerto, Q. Roo",
+    direccion: "Felipe Carrillo Puerto, Q. Roo",
     imagen: "/assets/img/muyil.jpg"
   },
   {
-    id: "Felipe Carrillo Puerto",
+    id: "felipe-carrillo-puerto",
     nombre: "Felipe Carrillo Puerto",
     tipo: "Ciudad",
-    etiquetas: ["cultura", "historia", "artesanías"],
-    descripcionCorta:
-    "Felipe Carrillo Puerto es una ciudad del estado mexicano de Quintana Roo, cabecera del municipio de Felipe Carrillo Puerto, situada en el centro del estado, en la denominada zona maya. Fue fundada por los mayas bajo el nombre de Noj Kaaj Santa Cruz Xbalam Naj, comúnmente conocida como Chan Santa Cruz.",
+    etiquetas: ["cultura", "historia", "artesanías", "centro"],
+    descripcionCorta: "Felipe Carrillo Puerto es una ciudad del estado mexicano de Quintana Roo, cabecera del municipio homónimo, situada en el centro del estado. Fue fundada por los mayas bajo el nombre de Noj Kaaj Santa Cruz Xbalam Naj, comúnmente conocida como Chan Santa Cruz.",
     lat: 19.57851,
-    lng: -88.046586666667,
-    direccion: "Felipe Carrillo Puerto, Q. Roo",
+    lng: -88.046586,
+    direccion: "Felipe Carrillo Puerto, Centro, Q. Roo",
     imagen: "/assets/img/Fcp.jpg"
   },
   {
-    id: "mercado municipal fcp",
+    id: "mercado-municipal-fcp",
     nombre: "Mercado Municipal de Felipe Carrillo Puerto",
     tipo: "Mercado",
-    etiquetas: ["mercado", "artesanías", "cultura", "comida"],
-    descripcionCorta:
-    "El Mercado Municipal de Felipe Carrillo Puerto (conocido como Mercado Municipal Benito Juárez), es el corazón de la comunidad, ofreciendo productos frescos (frutas, verduras, carnes), artesanías mayas únicas (textiles, madera) y comida tradicional como cochinita pibil, tamales y aguas frescas, siendo un vibrante punto de encuentro cultural y comercial para locales y turistas.",
-    lat: 19.580760109354117, 
-    lng: -88.04403860000593,
-    direccion: "Felipe Carrillo Puerto, Q. Roo",
+    etiquetas: ["mercado", "artesanías", "cultura", "comida", "tradición"],
+    descripcionCorta: "El Mercado Municipal Benito Juárez es el corazón de la comunidad, ofreciendo productos frescos, artesanías mayas únicas hechas de madera o textiles y deliciosa comida tradicional de la región.",
+    lat: 19.580760, 
+    lng: -88.044038,
+    direccion: "Calle Benito Juárez, Felipe Carrillo Puerto, Q. Roo",
     imagen: "/assets/img/mercado-fcp.jpg"
   },
   {
-    id: "coba",
-    nombre: "Zona arqueológica de Cobá",
-    tipo: "Zona arqueológica",
-    etiquetas: ["arqueología", "lagunas", "nohoch mul", "turismo"],
-    descripcionCorta:
-      "La zona arqueológica de Cobá es un importante y extenso asentamiento maya precolombino ubicado en el estado de Quintana Roo, México, conocido por su densa vegetación, su ubicación entre lagunas y sus antiguos caminos elevados, o sacbe'ob",
-    lat: 20.4887,
-    lng: -87.732,
-    direccion: "Tulum, Quintana Roo",
-    imagen: "/assets/img/coba.jpg"
-  },
-  {
-    id: "Tihosuco",
+    id: "tihosuco",
     nombre: "Tihosuco",
     tipo: "Pueblo histórico",
     etiquetas: ["historia", "cultura", "guerra de castas", "arquitectura"],
-    descripcionCorta:
-    "Tihosuco es una villa del estado mexicano de Quintana Roo, localizada al noroeste del territorio estatal en el Municipio de Felipe Carrillo Puerto, es una de las poblaciones más antiguas de Quintana Roo, famosa por sus construcciones coloniales y fue uno de los lugares de inicio de la Guerra de Castas.",
+    descripcionCorta: "Tihosuco es una de las poblaciones más antiguas de Quintana Roo, famosa por sus construcciones coloniales de piedra y por haber sido uno de los focos iniciales de la Guerra de Castas en 1847.",
     lat: 20.197147,
     lng: -88.374148,
-    direccion: "Felipe Carrillo Puerto, Q. Roo",
+    direccion: "Al noroeste de Felipe Carrillo Puerto, Q. Roo",
     imagen: "/assets/img/Tihosuco.jpg"
   },
   {
-    id: "Museo Cultural de Felipe Carrillo Puerto",
+    id: "museo-cultural-fcp",
     nombre: "Museo Cultural de Felipe Carrillo Puerto",
     tipo: "Museo",
-    etiquetas: ["museo", "cultura", "historia", "arte"],
-    descripcionCorta:
-    "El Museo Histórico de Felipe Carrillo Puerto es un recinto cultural en Quintana Roo que narra la historia de la resistencia maya y la creación del estado, destacando la importancia de la Santa Cruz Parlante y figuras como María Uicab, a través de exposiciones que cubren desde la Guerra de Castas hasta el auge del chicle, mostrando la profunda identidad y cultura maya local, con salas temáticas que exploran la vida, la fe y la lucha por la autonomía de este pueblo.",
-    lat : 19.577790363163654,
-    lng: -88.04539789274929,
+    etiquetas: ["museo", "cultura", "historia", "arte", "resistencia"],
+    descripcionCorta: "Recinto cultural que narra detalladamente la historia de la resistencia maya, exhibiendo artefactos e historias desde la Guerra de Castas hasta el auge de la época chiclera.",
+    lat: 19.577790,
+    lng: -88.045397,
     direccion: "Felipe Carrillo Puerto, Q. Roo",
     imagen: "/assets/img/museo-felipe-carrillo.png"
   },
   {
-    id: "Santuario de la Santa Cruz Parlante",
+    id: "santa-cruz-parlante",
     nombre: "Santuario de la Santa Cruz Parlante",
     tipo: "Sitio religioso",
-    etiquetas: ["religión", "cultura", "historia", "santuario"],
-    descripcionCorta:
-    "La Cruz Parlante es el corazón espiritual de Felipe Carrillo Puerto, Quintana Roo (antes Chan Santa Cruz), un símbolo sagrado y oráculo militar maya que surgió durante la Guerra de Castas (1847-1901)",
-    lat: 19.58052804959756, 
-    lng: -88.04885497116413,
+    etiquetas: ["religión", "cultura", "historia", "santuario", "sagrado"],
+    descripcionCorta: "La Cruz Parlante es el centro espiritual e histórico de la comunidad, sirviendo originalmente como un símbolo sagrado y oráculo militar maya durante los movimientos sociales del siglo XIX.",
+    lat: 19.580528, 
+    lng: -88.048854,
     direccion: "Felipe Carrillo Puerto, Q. Roo",
     imagen: "/assets/img/Santuario-de-la-Cruz-Parlante.jpg"
-  },
-  {
-    id: "Tulum",
-    nombre: "Zona arqueológica de Tulum",
-    tipo: "Zona arqueológica",
-    etiquetas: ["costa", "mar caribe", "muralla", "turismo"],
-    descripcionCorta:
-      "Antigua ciudad maya amurallada frente al mar Caribe, uno de los sitios más emblemáticos de la región.",
-    lat: 20.214,
-    lng: -87.429,
-    direccion: "Tulum, Quintana Roo",
-    imagen: "/assets/img/tulum.jpg"
-  },
-  {
-    id: "Chichen_itza",
-    nombre: "Chichén Itzá",
-    tipo: "Zona arqueológica",
-    etiquetas: ["pirámide", "jaguar", "cenote", "patrimonio mundial"],
-    descripcionCorta:
-    "Chichén Itzá es una impresionante zona arqueológica maya en Yucatán, México, reconocida como Patrimonio de la Humanidad por la UNESCO y una de las Nuevas 7 Maravillas del Mundo, famosa por su centro ceremonial y arquitectónico, destacando la majestuosa Pirámide de Kukulcán, el Juego de Pelota y el Observatorio, que reflejan la avanzada cosmovisión maya-tolteca, especialmente durante los equinoccios, cuando se aprecia el descenso de la serpiente emplumada en la pirámide.",
-    lat: 20.6843,
-    lng: -88.5678,
-    direccion: "Tinum, Yucatán",
-    imagen: "/assets/img/chichen-itza.jpg"
-  },
-  {
-    id: "Sian_kaan",
-    nombre: "Reserva de la Biosfera Sian Ka’an",
-    tipo: "Reserva natural",
-    etiquetas: ["reserva", "naturaleza", "patrimonio mundial", "lagunas"],
-    descripcionCorta:
-      "La Reserva de la Biósfera de Sian Ka'an es un espacio natural protegido que se localiza en la costa caribeña del estado de Quintana Roo, México. Fue declarada Patrimonio de la Humanidad por la Unesco en el año 1987 y sitio Ramsar en 2003.​",
-    lat: 19.363,
-    lng: -87.802,
-    direccion: "Costa de Quintana Roo",
-    imagen: "/assets/img/sian-ka-an.jpg"
-  },
+  }
 ];
 
 let mapa;          
-let marcadores = [];
+let marcadorActual = null; 
 
-const CENTRO_ZONA_MAYA = { lat: 19.577, lng: -88.045 };
+const CENTRO_QUINTANA_ROO = { lat: 19.577, lng: -88.045 };
 
 export function initMapaZonaMaya() {
-  console.log("Iniciando mapa con Leaflet (Plan B sin Google Places)...");
+  console.log("Cargando mapa interactivo libre de marcadores iniciales...");
 
   const contenedor = document.getElementById("mapaComunidad");
-  if (!contenedor) {
-    console.error("No se encontró el elemento #mapaComunidad");
-    return;
-  }
+  if (!contenedor) return;
 
-  mapa = L.map(contenedor).setView(
-    [CENTRO_ZONA_MAYA.lat, CENTRO_ZONA_MAYA.lng],
-    7
-  );
+  mapa = L.map(contenedor).setView([CENTRO_QUINTANA_ROO.lat, CENTRO_QUINTANA_ROO.lng], 9);
 
-  // Mapa público OpenStreetMap
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+    attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
   }).addTo(mapa);
 
-  // Geolocalización
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        const userLatLng = [pos.coords.latitude, pos.coords.longitude];
-
-        const userIcon = L.circleMarker(userLatLng, {
-          radius: 6,
-          color: "#ffffff",
-          weight: 2,
-          fillColor: "#4285F4",
-          fillOpacity: 1
-        }).addTo(mapa);
-
-        userIcon.bindPopup("Tu ubicación aproximada").openPopup();
-
-        mapa.setView(userLatLng, 9);
-      },
-      () => {
-        console.warn("No se pudo obtener la ubicación del usuario.");
-      }
-    );
-  }
-
-  // Barra de búsqueda
   const inputBusqueda = document.getElementById("inputBusquedaLugar");
   const btnBuscar = document.getElementById("btnBuscarLugar");
 
   if (inputBusqueda && btnBuscar) {
-    const hacerBusqueda = () => {
-      const termino = inputBusqueda.value.trim();
-      if (!termino) return;
-      buscarEnListaLocal(termino);
+    const procesarBusqueda = () => {
+      const texto = inputBusqueda.value.trim();
+      if (!texto) return;
+      buscarLugarLocal(texto);
     };
 
-    btnBuscar.addEventListener("click", hacerBusqueda);
+    btnBuscar.addEventListener("click", procesarBusqueda);
     inputBusqueda.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
-        hacerBusqueda();
+        procesarBusqueda();
       }
     });
   }
 }
 
-function buscarEnListaLocal(query) {
-  if (!mapa) return;
-
+function buscarLugarLocal(query) {
   const q = query.toLowerCase();
 
-  const resultados = LUGARES_ZONA_MAYA.filter((lugar) => {
+  const lugarEncontrado = LUGARES_ZONA_MAYA.find((lugar) => {
     return (
       lugar.nombre.toLowerCase().includes(q) ||
       lugar.tipo.toLowerCase().includes(q) ||
-      (lugar.direccion && lugar.direccion.toLowerCase().includes(q)) ||
-      lugar.etiquetas.some((tag) => tag.toLowerCase().includes(q))
+      lugar.etiquetas.some(tag => tag.toLowerCase().includes(q))
     );
   });
 
-  console.log("Buscando en lista local:", query, resultados);
+  if (lugarEncontrado) {
+    if (marcadorActual) {
+      mapa.removeLayer(marcadorActual);
+    }
 
-  if (resultados.length === 0) {
-    alert("No se encontraron lugares para: " + query);
-    return;
+    marcadorActual = L.marker([lugarEncontrado.lat, lugarEncontrado.lng]).addTo(mapa);
+
+    marcadorActual.bindTooltip(lugarEncontrado.nombre, { direction: "top" });
+
+    const imagenPopup = lugarEncontrado.imagen || "https://via.placeholder.com/150x90?text=Sitio+Cultural";
+    marcadorActual.bindPopup(`
+      <div style="max-width: 180px; font-family: Arial, sans-serif;">
+        <h4 style="margin: 0 0 4px 0; font-size: 13px;">${lugarEncontrado.nombre}</h4>
+        <img src="${imagenPopup}" style="width: 100%; height: 80px; object-fit: cover; border-radius: 4px; margin-bottom: 4px;">
+        <p style="margin: 0; font-size: 11px; color: #555;">${lugarEncontrado.tipo}</p>
+      </div>
+    `);
+
+    marcadorActual.on("click", () => {
+      actualizarTarjetasHTML(lugarEncontrado);
+    });
+
+    mapa.setView([lugarEncontrado.lat, lugarEncontrado.lng], 14);
+    marcadorActual.openPopup();
+
+    actualizarTarjetasHTML(lugarEncontrado);
+
+  } else {
+    alert("No se encontró ningún sitio cultural que coincida con: " + query);
   }
-
-  const lugarSeleccionado = resultados[0];
-
-  limpiarMarcadores();
-
-  const marker = crearMarcadorLugarEstatico(lugarSeleccionado);
-
-  mapa.setView(marker.getLatLng(), 11);
-
-  actualizarTarjetas(lugarSeleccionado);
 }
 
-function limpiarMarcadores() {
-  marcadores.forEach((m) => mapa.removeLayer(m));
-  marcadores = [];
-}
-
-function crearMarcadorLugarEstatico(lugar) {
-  const marker = L.marker([lugar.lat, lugar.lng]).addTo(mapa);
-
-  marker.bindTooltip(lugar.nombre, { direction: "top" });
-
-  marker.on("click", () => {
-    actualizarTarjetas(lugar);
-  });
-
-  marcadores.push(marker);
-  return marker;
-}
-
-function actualizarTarjetas(lugar) {
+function actualizarTarjetasHTML(lugar) {
   const grid = document.getElementById("comunidadesGrid");
   if (!grid) return;
 
   grid.classList.add("visible");
+
+  // --- SOLUCIÓN AL ESPACIO DEL VIDEO ---
+  // Esto fuerza un margen transparente debajo de la tarjeta para empujar el video
+  grid.style.marginBottom = "80px"; 
+  // -------------------------------------
 
   const primeraCard = grid.querySelector(".com-item.color1");
   if (!primeraCard) return;
@@ -254,19 +265,17 @@ function actualizarTarjetas(lugar) {
   const fotoEl = primeraCard.querySelector(".com-foto");
   const nombreEl = primeraCard.querySelector(".com-nombre");
 
-  const foto =
-    lugar.imagen ||
-    "https://via.placeholder.com/400x250?text=Sitio+cultural+maya";
-
-  const direccion = lugar.direccion || "Dirección aproximada en la zona maya";
+  const foto = lugar.imagen || "https://via.placeholder.com/400x250?text=Sitio+cultural+maya";
+  const direccion = lugar.direccion || "Dirección aproximada en Quintana Roo";
 
   if (fotoEl) {
     fotoEl.innerHTML = `
-      <img src="${foto}" alt="${lugar.nombre}"
-           style="width:100%;border-radius:8px;margin-bottom:8px;">
-      <span><strong>Tipo:</strong> ${lugar.tipo}</span><br>
-      <span><strong>Dirección:</strong> ${direccion}</span><br>
-      <span><strong>Descripción:</strong> ${lugar.descripcionCorta}</span>
+      <img src="${foto}" alt="${lugar.nombre}" style="width:100%; height:260px; object-fit:cover; border-radius:8px; margin-bottom:12px; display:block;">
+      <span style="display:block; margin-bottom:4px;"><strong>Tipo:</strong> ${lugar.tipo}</span>
+      <span style="display:block; margin-bottom:4px;"><strong>Dirección:</strong> ${direccion}</span>
+      <p style="margin: 8px 0 0 0; font-size: 0.95em; color: #333; border-top: 1px solid #eee; padding-top: 8px; line-height: 1.5;">
+        <strong>Descripción:</strong> ${lugar.descripcionCorta}
+      </p>
     `;
   }
 

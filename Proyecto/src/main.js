@@ -1,10 +1,12 @@
+import { initMapaZonaMaya } from "./JS/zonasMayas.js";
+
 import './JS/slider.js';
 import './JS/galeria.js';
 import './JS/comidas.js';
 import './JS/medicina.js';
 import './JS/cultura.js';
 import './JS/comentarios.js';
-import './JS/loganSlider.js'
+import './JS/loganSlider.js';
 
 // ===== TÍTULO DE LA PÁGINA =====
 document.title = "K’ajóol Lu’um";
@@ -116,15 +118,11 @@ if (slides.length > 1) {
 }
 
 
-
 // ===== MAPA =====
-
-import { initMapaZonaMaya } from "./JS/zonasMayas.js";
-
+// Inicializamos el mapa gratuito (Leaflet) en cuanto el DOM esté listo
 document.addEventListener("DOMContentLoaded", () => {
   initMapaZonaMaya();
 });
-
 
 
 // ================= MODAL PRODUCTO =================
@@ -150,7 +148,6 @@ if (modalOverlay) {
     modal.classList.remove("active");
   });
 }
-
 
 
 // ================= PRODUCTOS MYSQL =================
