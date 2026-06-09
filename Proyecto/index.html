@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="src/CSS/galeria.css" />
   <link rel="stylesheet" href="src/CSS/video.css" />
   <link rel="stylesheet" href="src/CSS/comida.css" />
+  <link rel="stylesheet" href="src/CSS/maps.css" />
   <link rel="stylesheet" href="src/CSS/medicina.css" />
   <link rel="stylesheet" href="src/CSS/cultura.css" />
   <link rel="stylesheet" href="src/CSS/comentarios.css" />
@@ -195,29 +196,33 @@
 
     <section id="sec-josue">
       <h2 class="comunidades-titulo">Comunidades</h2>
-      <p class="comunidades-desc">
-        Usa el buscador para localizar zonas arqueológicas, museos y otros lugares culturales
-        de la zona maya.
-      </p>
+    <p class="comunidades-desc">
+      Usa el buscador para localizar zonas arqueológicas, museos y otros lugares culturales de la zona maya.
+    </p>
 
-      <div class="comunidades-busqueda">
-        <input id="inputBusquedaLugar" type="text" placeholder="Buscar" aria-label="Buscar lugares en el mapa" />
-        <button id="btnBuscarLugar" type="button">Buscar</button>
-      </div>
+    <div class="comunidades-busqueda">
+      <input id="inputBusquedaLugar" type="text" placeholder="Escribe el nombre de un lugar" aria-label="Buscar lugares en el mapa" />
+      <button id="btnBuscarLugar" type="button">Buscar</button>
+    </div>
 
-      <div class="comunidades-mapa">
-        <div id="mapaComunidad"></div>
+    <div class="comunidades-mapa">
+      <div id="mapaComunidad"></div>
+    </div>
+    
+    <div class="comunidades-grid" id="comunidadesGrid">
+      <div class="com-item color1">
+        <p class="com-foto">
+          Selecciona un marcador en el mapa o usa el buscador para ver la foto, la dirección y una breve descripción del sitio cultural.
+        </p>
+        <h3 class="com-nombre">Nombre del sitio</h3>
       </div>
-      <div class="comunidades-grid" id="comunidadesGrid">
-        <div class="com-item color1">
-          <p class="com-foto">
-            Selecciona un marcador en el mapa para ver la foto, el tipo de lugar,
-            la dirección y una breve descripción.
-          </p>
-          <h3 class="com-nombre">Nombre del sitio</h3>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <script type="module" src="./JS/main.js"></script>
+</body>
+</html>
 
     <section id="sec-alexandra">
       <div class="overlay-video">
