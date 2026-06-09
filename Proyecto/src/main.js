@@ -233,3 +233,66 @@ cards.forEach(card => {
   });
 
 });
+
+// ===== DRAWER HAMBURGUESA =====
+
+const drawer = document.getElementById('drawer');
+const drawerOverlay = document.getElementById('drawerOverlay');
+const drawerClose = document.getElementById('drawerClose');
+const menuBtn = document.querySelector('.topbar__menu');
+
+function abrirDrawer() {
+  drawer.classList.add('open');
+  drawerOverlay.classList.add('visible');
+  document.body.style.overflow = 'hidden';
+}
+
+window.cerrarDrawer = function() {
+  drawer.classList.remove('open');
+  drawerOverlay.classList.remove('visible');
+  document.body.style.overflow = '';
+}
+
+if (menuBtn) menuBtn.addEventListener('click', abrirDrawer);
+if (drawerClose) drawerClose.addEventListener('click', cerrarDrawer);
+if (drawerOverlay) drawerOverlay.addEventListener('click', cerrarDrawer);
+
+// Cerrar con Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') cerrarDrawer();
+});
+
+// ── Estado de sesión (localStorage) ──
+function actualizarDrawerSesion() {
+  const user = JSON.parse(localStorage.getItem('kajool_user') || 'null');
+  const sinSesion = document.getElementById('drawer-sin-sesion');
+  const conSesion = document.getElementById('drawer-con-sesion');
+  const btnTopbar = document.querySelector('.topbar__btn');
+
+  if (user) {
+    sinSesion.style.display = 'none';
+    conSesion.style.display = 'block';
+    document.getElementById('drawerNombre').textContent = user.nombre || 'Usuario';
+    document.getElementById('drawerEmail').textContent = user.email || '';
+    document.getElementById('drawerAvatar').textContent = (user.nombre || 'U')[0].toUpperCase();
+    if (btnTopbar) {
+      btnTopbar.textContent = user.nombre.split(' ')[0];
+      btnTopbar.onclick = abrirDrawer;
+    }
+  } else {
+    sinSesion.style.display = 'block';
+    conSesion.style.display = 'none';
+    if (btnTopbar) {
+      btnTopbar.textContent = 'Iniciar sesión';
+      btnTopbar.onclick = () => window.location.href = '/login.html';
+    }
+  }
+}
+
+window.cerrarSesionDrawer = function() {
+  localStorage.removeItem('kajool_user');
+  cerrarDrawer();
+  actualizarDrawerSesion();
+}
+
+actualizarDrawerSesion();

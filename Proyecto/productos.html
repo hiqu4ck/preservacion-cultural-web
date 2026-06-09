@@ -20,6 +20,40 @@
 
 </head>
 
+
+<!-- DRAWER MENÚ HAMBURGUESA -->
+<div class="drawer" id="drawer">
+  <button class="drawer__close" id="drawerClose">✕</button>
+
+  <!-- SECCIÓN 1: Navegación -->
+  <div class="drawer__section">
+    <span class="drawer__label">Navegación</span>
+    <a href="index.html" class="drawer__link" onclick="cerrarDrawer()">Inicio</a>
+    <a href="/productos.html" class="drawer__link">Productos artesanales</a>
+  </div>
+
+  <!-- SECCIÓN 2: Panel de usuario -->
+  <div class="drawer__section" id="drawer-usuario">
+    <span class="drawer__label">Mi cuenta</span>
+    <!-- Si NO hay sesión -->
+    <div id="drawer-sin-sesion">
+      <a href="/login.html" class="drawer__link">Iniciar sesión</a>
+      <a href="/login.html" class="drawer__link">Registrarse</a>
+    </div>
+    <!-- Si HAY sesión (oculto por defecto) -->
+    <div id="drawer-con-sesion" style="display:none;">
+      <div class="drawer__user-info">
+        <div class="drawer__avatar" id="drawerAvatar">U</div>
+        <div>
+          <p class="drawer__user-name" id="drawerNombre">Usuario</p>
+          <p class="drawer__user-email" id="drawerEmail">correo@ejemplo.com</p>
+        </div>
+      </div>
+      <a href="#" class="drawer__link" onclick="cerrarSesionDrawer()">🚪 Cerrar sesión</a>
+    </div>
+  </div>
+</div>
+
 <body>
 
     <main>
@@ -37,7 +71,7 @@
                         <a href="/index.html">Inicio</a>
                         <a href="/productos.html" class="active">Productos artesanales</a>
                         <!-- Aquí luego puedes agregar más enlaces si quieres -->
-                        <button class="topbar__btn">Iniciar sesión</button>
+                        <button class="topbar__btn" onclick="window.location.href='/login.html'">Iniciar sesión</button>
                         <div class="topbar__menu">
                             <span></span>
                             <span></span>

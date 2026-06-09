@@ -1,134 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <!-- Configuración básica del documento -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Título de la pestaña -->
-  <title>Iniciar sesión</title>
-
-  <!-- Importar el archivo CSS donde está el estilo -->
+  <title>K'ajóol Lu'um — Acceso</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/CSS/login.css">
 </head>
-
 <body>
 
-  <!-- ============================= -->
-  <!--            HEADER             -->
-  <!-- ============================= -->
-  <header class="topbar">
-    <div class="header-logo">
-      
-      <!-- LOGO del proyecto -->
-      <img src="/img/logo.png" alt="Logo K’ajóol Lu’um">
+<!-- HERO STRIP -->
+<div class="hero-strip">
+  <a href="#" class="btn-volver" onclick="history.back(); return false;">← Volver</a>
+  <div class="hero-strip-text">
+    <h1>K'ajóol Lu'um</h1>
+    <p>Donde la memoria de la tierra Maya late</p>
+  </div>
+</div>
 
-      <!-- Texto del nombre del proyecto -->
-      <span>K’ajóol Lu’um</span>
+<!-- FORGOT PANEL -->
+<div class="form-panel" id="panel-forgot">
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-diamond"></div>
+    <div class="ornament-line"></div>
+  </div>
+
+  <div class="form-intro">
+    <h2>Recuperar contraseña</h2>
+    <p>Ingresa tu correo y te mostraremos tu contraseña registrada.</p>
+  </div>
+
+  <div class="toast" id="forgot-toast"></div>
+
+  <form id="forgot-form" novalidate onsubmit="handleForgot(event)">
+    <div class="field">
+      <label for="forgot-email">Correo electrónico</label>
+      <input type="email" id="forgot-email" placeholder="tucorreo@ejemplo.com" autocomplete="email">
+      <div class="field-error" id="forgot-email-err">Ingresa un correo válido.</div>
     </div>
+    <button class="btn-primary" type="submit">Buscar cuenta</button>
+  </form>
 
-    <!-- Icono para el menú (versión móvil) -->
-    <div class="menu-icon">☰</div>
-  </header>
+  <div style="margin-top:1.2rem; text-align:center;">
+    <a href="#" onclick="switchTab('login', document.querySelectorAll('.tab-btn')[0]); return false;" 
+       style="font-size:.82rem; color:var(--amber); text-decoration:none;">
+      ← Volver
+    </a>
+  </div>
+</div>
 
-  <!-- ============================= -->
-  <!--           CONTENIDO           -->
-  <!-- ============================= -->
+  <!-- MAIN -->
   <main>
-    <section class="login-box">
+    <div class="auth-card">
 
-      <!-- Botón para cerrar el modal o pantalla -->
-      <button class="close-btn">✕</button>
+      <!-- TABS -->
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('login', this)">Iniciar sesión</button>
+        <button class="tab-btn" onclick="switchTab('register', this)">Registrarse</button>
+      </div>
 
-      <!-- Título principal -->
-      <h2 class="title">Inicia sesión</h2>
-
-      <!-- línea decorativa -->
-      <hr class="line">
-
-      <!-- Subtítulo de bienvenida -->
-      <h3 class="welcome">¡Te damos la bienvenida!</h3>
-
-      <!-- FORMULARIO DE LOGIN -->
-      <form id="form-login">
-
-        <!-- SELECT: selección de país -->
-        <label class="label">País/Región</label>
-
-        <div class="select-wrapper">
-          <select id="country">
-            <!-- Solo México, pero podrías agregar más -->
-            <option value="MX">México (+52)</option>
-          </select>
+      <!-- LOGIN PANEL -->
+      <div class="form-panel active" id="panel-login">
+        <div class="ornament">
+          <div class="ornament-line"></div>
+          <div class="ornament-diamond"></div>
+          <div class="ornament-line"></div>
         </div>
 
-        <!-- INPUT: número telefónico -->
-        <!-- required obliga a que se llene -->
-        <input 
-          type="text" 
-          id="user" 
-          placeholder="Número telefónico" 
-          required
-        >
+        <div class="form-intro">
+          <h2>Bienvenido de nuevo</h2>
+          <p>Accede a tu cuenta para continuar explorando la cultura maya.</p>
+        </div>
 
-        <!-- Texto informativo debajo del input -->
-        <p class="text-info">
-          Te vamos a confirmar el número por teléfono o mensaje de texto.
-          Sujeto a tarifas estándar para mensajes y datos.
-        </p>
+        <div class="toast" id="login-toast"></div>
 
-        <!-- BOTÓN PRINCIPAL DEL LOGIN -->
-        <button type="submit" class="btn-main">Continuar</button>
+        <form id="login-form" novalidate onsubmit="handleLogin(event)">
+          <div class="field">
+            <label for="login-email">Correo electrónico</label>
+            <input type="email" id="login-email" placeholder="tucorreo@ejemplo.com" autocomplete="email">
+            <div class="field-error" id="login-email-err">Ingresa un correo válido.</div>
+          </div>
 
-        <!-- Enlace para ir a registrar -->
-        <p class="login-link">
-          ¿No tienes cuenta aún? 
-          <a href="register.html">Crear cuenta</a>
-        </p>
-      </form>
+          <div class="field">
+            <label for="login-password">Contraseña</label>
+            <div class="pw-wrap">
+              <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password">
+              <button type="button" class="pw-toggle" onclick="togglePw('login-password', this)">👁</button>
+            </div>
+            <div class="field-error" id="login-pw-err">Ingresa tu contraseña.</div>
+          </div>
 
-      <hr class="line">
+<div class="forgot"><a href="#" onclick="switchTab('forgot', this); return false;">¿Olvidaste tu contraseña?</a></div>
+          <button class="btn-primary" type="submit" id="login-btn">Iniciar sesión</button>
+        </form>
+          </button>
+      </div>
 
-      <!-- BOTONES DE LOGIN SOCIAL -->
-      <!-- Google -->
-      <button class="btn-social google">
-        <img src="/img/google.png">
-        Continuar con Google
-      </button>
+      <!-- REGISTER PANEL -->
+      <div class="form-panel" id="panel-register">
+        <div class="ornament">
+          <div class="ornament-line"></div>
+          <div class="ornament-diamond"></div>
+          <div class="ornament-line"></div>
+        </div>
 
-      <!-- Apple -->
-      <button class="btn-social apple">
-        <img src="/img/apple.png">
-        Continuar con Apple
-      </button>
+        <div class="form-intro">
+          <h2>Crea tu cuenta</h2>
+          <p>Únete a nuestra comunidad y descubre la riqueza cultural maya.</p>
+        </div>
 
-      <!-- Correo -->
-      <button class="btn-social mail">
-        <img src="/img/mail.png">
-        Continuar con correo electrónico
-      </button>
+        <div class="toast" id="register-toast"></div>
 
-      <!-- Facebook -->
-      <button class="btn-social facebook">
-        <img src="/img/facebook.png">
-        Continuar con Facebook
-      </button>
+        <form id="register-form" novalidate onsubmit="handleRegister(event)">
+          <div class="input-row">
+            <div class="field">
+              <label for="reg-nombre">Nombre</label>
+              <input type="text" id="reg-nombre" placeholder="Tu nombre" autocomplete="given-name">
+              <div class="field-error" id="reg-nombre-err">Campo requerido.</div>
+            </div>
+            <div class="field">
+              <label for="reg-apellido">Apellido</label>
+              <input type="text" id="reg-apellido" placeholder="Tu apellido" autocomplete="family-name">
+              <div class="field-error" id="reg-apellido-err">Campo requerido.</div>
+            </div>
+          </div>
 
-    </section>
+          <div class="field">
+            <label for="reg-email">Correo electrónico</label>
+            <input type="email" id="reg-email" placeholder="tucorreo@ejemplo.com" autocomplete="email">
+            <div class="field-error" id="reg-email-err">Ingresa un correo válido.</div>
+          </div>
+
+          <div class="field">
+            <label for="reg-password">Contraseña</label>
+            <div class="pw-wrap">
+              <input type="password" id="reg-password" placeholder="Mínimo 8 caracteres" autocomplete="new-password" oninput="checkStrength(this.value)">
+              <button type="button" class="pw-toggle" onclick="togglePw('reg-password', this)">👁</button>
+            </div>
+            <div class="strength-bar"><div class="strength-fill" id="strength-fill"></div></div>
+            <div class="strength-label" id="strength-label"></div>
+            <div class="field-error" id="reg-pw-err">Mínimo 8 caracteres.</div>
+          </div>
+
+          <div class="field">
+            <label for="reg-confirm">Confirmar contraseña</label>
+            <div class="pw-wrap">
+              <input type="password" id="reg-confirm" placeholder="Repite tu contraseña" autocomplete="new-password">
+              <button type="button" class="pw-toggle" onclick="togglePw('reg-confirm', this)">👁</button>
+            </div>
+            <div class="field-error" id="reg-confirm-err">Las contraseñas no coinciden.</div>
+          </div>
+
+          <div class="check-row">
+            <input type="checkbox" id="reg-terms">
+            <label for="reg-terms">Acepto los <a href="#">Términos de uso</a> y la <a href="#">Política de privacidad</a> de K'ajóol Lu'um.</label>
+          </div>
+          <div class="field-error" id="reg-terms-err" style="margin-top:-.8rem;margin-bottom:.8rem">Debes aceptar los términos.</div>
+
+          <button class="btn-primary" type="submit" id="register-btn">Crear cuenta</button>
+        </form>
+      </div>
+
+    </div>
   </main>
 
+  <footer>© 2026 K'ajóol Lu'um · Felipe Carrillo Puerto, Quintana Roo</footer>
+
+  <script src="src/JS/login.js"></script>
 </body>
-
 </html>
-
-<!--
-
-¿Qué hace este HTML?
-✔ Muestra una pantalla de inicio de sesión tipo app
-Con logo, selección de país, campo de teléfono y un botón para continuar.
-
-✔ Incluye botones sociales
-Para Google, Apple, Email y Facebook (aún sin funcionalidad, pero listos para conectar).
-
--->
