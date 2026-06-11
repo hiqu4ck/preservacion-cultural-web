@@ -12,6 +12,72 @@ export const LUGARES_ZONA_MAYA = [
     imagen: "/assets/img/parque-zaragoza.png"
   },
   {
+    id: "caminos-ancestrales-sacbe",
+    nombre: "Caminos Ancestrales (Sacbé)",
+    tipo: "Sendero / Sitio Histórico",
+    etiquetas: ["sacbé", "historia", "selva", "caminata", "antigüedad"],
+    descripcionCorta: "Vestigios de los antiguos 'caminos blancos' o sacbeob. Estas impresionantes rutas de piedra fueron construidas por los antiguos mayas para conectar ciudades y centros ceremoniales a través de la espesa selva, y aún hoy se pueden recorrer tramos preservados.",
+    lat: 19.569500, 
+    lng: -88.051000,
+    direccion: "Alrededores y brechas de Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/ancestral.jpeg"
+  },
+  {
+    id: "casa-del-cronista",
+    nombre: "Casa del Cronista",
+    tipo: "Archivo Histórico",
+    etiquetas: ["historia", "archivo", "crónica", "memoria", "cultura"],
+    descripcionCorta: "El guardián de la memoria de la ciudad. Un espacio dedicado a la recopilación, resguardo y difusión de los relatos, fotografías y documentos históricos que cuentan la evolución de la antigua Chan Santa Cruz directamente de las voces locales.",
+    lat: 19.577950, 
+    lng: -88.045200,
+    direccion: "Colonia Centro, Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/casa-cronista.png"
+  },
+  {
+    id: "parque-de-los-tres-reyes",
+    nombre: "Comunidad Ecoturística Tres Reyes",
+    tipo: "Ecoturismo",
+    etiquetas: ["cenote", "comunidad", "naturaleza", "tradición", "parque"],
+    descripcionCorta: "Ubicada en la zona maya, esta comunidad ofrece un acercamiento profundo a la naturaleza y las tradiciones vivas. Cuenta con cenotes impresionantes (como el cenote de la vida), senderos por la selva y la cálida hospitalidad de las familias mayas locales.",
+    lat: 19.5750756, 
+    lng: -88.0396985,
+    direccion: "Comunidad Tres Reyes, Q. Roo",
+    imagen: "/assets/img/tres-reyes.png"
+  },
+  {
+    id: "teatro-ciudad-fcp",
+    nombre: "Teatro de la Ciudad",
+    tipo: "Teatro y Arte",
+    etiquetas: ["teatro", "cultura", "arte", "espectáculos", "música"],
+    descripcionCorta: "El principal recinto de artes escénicas en Felipe Carrillo Puerto. Es la sede de importantes eventos culturales, obras de teatro, festivales de danza folclórica y ceremonias que enaltecen la identidad maya contemporánea.",
+    lat: 19.576500, 
+    lng: -88.043800,
+    direccion: "Centro, Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/teatro.png"
+  },
+  {
+    id: "expo-maya",
+    nombre: "Centro de Eventos y Expo Maya",
+    tipo: "Exposición Cultural",
+    etiquetas: ["exposición", "artesanías", "feria", "eventos", "comercio"],
+    descripcionCorta: "El espacio oficial donde se celebran las tradicionales ferias y la Expo Maya. Es un evento y lugar que reúne a los mejores artesanos, productores agrícolas y artistas de toda la zona maya para exhibir su trabajo y gastronomía.",
+    lat: 19.582200, 
+    lng: -88.042500,
+    direccion: "Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/expo-maya.png"
+  },
+  {
+    id: "pila-de-los-azotes",
+    nombre: "La Pila de los Azotes",
+    tipo: "Monumento Histórico",
+    etiquetas: ["historia", "guerra de castas", "monumento", "chan santa cruz"],
+    descripcionCorta: "Un monumento histórico crudo y emblemático de la época de la Guerra de Castas. En esta estructura de la antigua Chan Santa Cruz, los líderes mayas aplicaban castigos y disciplina militar a los rebeldes o prisioneros de guerra.",
+    lat: 19.579200, 
+    lng: -88.044100,
+    direccion: "Centro Histórico, Felipe Carrillo Puerto, Q. Roo",
+    imagen: "/assets/img/pila-azotes.png"
+  },
+  {
     id: "cenote-sayab-kuxtal",
     nombre: "Cenote y Rancho Sayab Kuxtal",
     tipo: "Cenote y Aventura",
